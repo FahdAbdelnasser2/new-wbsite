@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartBiz - منصة الحلول الذكية للأعمال</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --gradient-primary: linear-gradient(135deg, #428315cc 0%, #0b555e 100%);
+        --gradient-secondary: linear-gradient(100deg, #17aabd, #3fd6dd);
+        --main-color: #17aabd;
+        --secondary-color: #68ca2a;
+        --dark-color: #0b555e;
+        --light-color: #f8f9fa;
+        --border-radius: 15px;
+        --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        --transition: all 0.3s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Cairo", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      /* RTL Support */
+      [dir="rtl"] .me-2 {
+        margin-left: 0.5rem !important;
+        margin-right: 0 !important;
+      }
+
+      [dir="rtl"] .me-3 {
+        margin-left: 1rem !important;
+        margin-right: 0 !important;
+      }
+
+      [dir="rtl"] .ms-2 {
+        margin-right: 0.5rem !important;
+        margin-left: 0 !important;
+      }
+
+      /* Header & Navigation */
+      .navbar {
+        background: rgba(11, 85, 94, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: var(--transition);
+        padding: 1rem 0;
+      }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+        color: var(--main-color) !important;
+      }
+
+      .navbar-nav .nav-link {
+        color: rgba(255, 255, 255, 0.8) !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem !important;
+        transition: var(--transition);
+        position: relative;
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+        color: var(--main-color) !important;
+      }
+
+      .navbar-nav .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--gradient-secondary);
+        transition: var(--transition);
+      }
+
+      .navbar-nav .nav-link:hover::after,
+      .navbar-nav .nav-link.active::after {
+        width: 100%;
+        right: 0;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        background: var(--gradient-primary);
+        min-height: 100vh;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>')
+          repeat;
+        opacity: 0.3;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        padding-top: 100px;
+      }
+
+      .gradient-text {
+        background: var(--gradient-secondary);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        display: block;
+      }
+
+      .hero-buttons .btn {
+        margin-bottom: 1rem;
+        padding: 1rem 2rem;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-primary {
+        background: var(--gradient-secondary);
+        border: none;
+        box-shadow: var(--box-shadow);
+      }
+
+      .btn-primary:hover {
+        background: var(--gradient-secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 15px 35px rgba(23, 170, 189, 0.4);
+      }
+
+      /* Floating Elements */
+      .hero-image {
+        position: relative;
+      }
+
+      .floating-card {
+        width: 200px;
+        height: 200px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        animation: float 3s ease-in-out infinite;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      /* Animations */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease-out forwards;
+      }
+
+      .fade-in-delay {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease-out 0.3s forwards;
+      }
+
+      .fade-in-delay-2 {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease-out 0.6s forwards;
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Solutions Section */
+      .solutions-section {
+        padding: 100px 0;
+        background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%);
+        position: relative;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--dark-color);
+        margin-bottom: 1rem;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 80px;
+        height: 4px;
+        background: var(--gradient-secondary);
+        border-radius: 2px;
+      }
+
+      .solution-card {
+        background: white;
+        padding: 2.5rem 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        text-align: center;
+        transition: var(--transition);
+        border: 1px solid rgba(23, 170, 189, 0.1);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .solution-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--gradient-secondary);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: var(--transition);
+      }
+
+      .solution-card:hover::before {
+        transform: scaleX(1);
+      }
+
+      .solution-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(23, 170, 189, 0.15);
+      }
+
+      .solution-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 1.5rem;
+        background: var(--gradient-secondary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+      }
+
+      .solution-card h4 {
+        font-weight: 600;
+        color: var(--dark-color);
+        margin-bottom: 1rem;
+      }
+
+      .solution-card p {
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+      }
+
+      .solution-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+      }
+
+      .feature-tag {
+        background: rgba(23, 170, 189, 0.1);
+        color: var(--main-color);
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+
+      /* Features Section */
+      .features-section {
+        padding: 100px 0;
+        background: white;
+      }
+
+      .feature-item {
+        display: flex;
+        align-items: flex-start;
+        padding: 1rem 0;
+      }
+
+      .feature-icon {
+        flex-shrink: 0;
+        font-size: 1.5rem;
+      }
+
+      .feature-item h5 {
+        color: var(--dark-color);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .features-image {
+        position: relative;
+        height: 400px;
+      }
+
+      .floating-elements {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .floating-element {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: var(--gradient-secondary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        box-shadow: var(--box-shadow);
+      }
+
+      .element-1 {
+        top: 20%;
+        right: 20%;
+        animation: floatElement1 4s ease-in-out infinite;
+      }
+
+      .element-2 {
+        bottom: 30%;
+        right: 60%;
+        animation: floatElement2 3s ease-in-out infinite;
+      }
+
+      .element-3 {
+        top: 60%;
+        right: 10%;
+        animation: floatElement3 5s ease-in-out infinite;
+      }
+
+      @keyframes floatElement1 {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(20px, -30px);
+        }
+      }
+
+      @keyframes floatElement2 {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-20px, 20px);
+        }
+      }
+
+      @keyframes floatElement3 {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(30px, -20px);
+        }
+      }
+
+      /* Stats Section */
+      .stats-section {
+        background: var(--gradient-primary);
+        color: white;
+      }
+
+      .stat-card {
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--main-color);
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 500;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: var(--gradient-primary);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>')
+          repeat;
+        opacity: 0.5;
+      }
+
+      /* Footer */
+      .footer {
+        background: #1a1a1a;
+        color: white;
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        color: var(--main-color);
+        margin-bottom: 1rem;
+      }
+
+      .social-links .social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(23, 170, 189, 0.1);
+        color: var(--main-color);
+        border-radius: 50%;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .social-links .social-link:hover {
+        background: var(--main-color);
+        color: white;
+        transform: translateY(-3px);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero-content {
+          padding-top: 120px;
+          text-align: center;
+        }
+
+        .display-4 {
+          font-size: 2.5rem;
+        }
+
+        .hero-buttons .btn {
+          display: block;
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+
+        .solution-card {
+          margin-bottom: 2rem;
+        }
+
+        .features-image {
+          margin-top: 3rem;
+          height: 300px;
+        }
+
+        .stat-number {
+          font-size: 2.5rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+
+      /* Smooth Scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Loading Animation */
+      .loading {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: var(--transition);
+      }
+
+      .loading.loaded {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: var(--gradient-secondary);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--main-color);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="hero-section">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#" id="logo">
+            <i class="fas fa-lightbulb me-2"></i>SmartBiz
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">الخدمات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#solutions">الحلول</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">تواصل معنا</a>
+              </li>
+            </ul>
+            <button class="btn btn-outline-light">تجربة مجانية</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container hero-content">
+        <div class="row align-items-center min-vh-100">
+          <div class="col-lg-6">
+            <div class="hero-text">
+              <h1 class="display-4 fw-bold text-white mb-4 fade-in">
+                حلول ذكية متكاملة
+                <span class="gradient-text">لإدارة أعمالك</span>
+              </h1>
+              <p class="lead text-white-50 mb-4 fade-in-delay">
+                منصة شاملة تجمع كل ما تحتاجه لإدارة عملك بكفاءة عالية من خلال
+                تقنيات متقدمة وحلول مبتكرة
+              </p>
+              <div class="hero-buttons fade-in-delay-2">
+                <button class="btn btn-primary btn-lg me-3" id="startBtn">
+                  <i class="fas fa-rocket me-2"></i>ابدأ الآن
+                </button>
+                <button class="btn btn-outline-light btn-lg">
+                  <i class="fas fa-play me-2"></i>شاهد العرض
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image text-center">
+              <div class="floating-card">
+                <i class="fas fa-chart-line fa-3x text-primary"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">منصة واحدة لجميع احتياجاتك التقنية</h2>
+          <p class="lead text-muted">
+            اكتشف مجموعة شاملة من الحلول الذكية المصممة خصيصاً لتطوير أعمالك
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Solution Card 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div class="solution-card h-100" data-aos="fade-up">
+              <div class="solution-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h4>تطبيقات الجوال الذكية</h4>
+              <p>
+                تطبيقات متقدمة لإدارة العمليات التجارية من أي مكان وفي أي وقت
+              </p>
+              <div class="solution-features">
+                <span class="feature-tag">Android</span>
+                <span class="feature-tag">iOS</span>
+                <span class="feature-tag">متعدد المنصات</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution Card 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="solution-card h-100"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="solution-icon">
+                <i class="fas fa-desktop"></i>
+              </div>
+              <h4>أنظمة إدارة متقدمة</h4>
+              <p>لوحات تحكم ذكية لمتابعة الأداء والإحصائيات في الوقت الفعلي</p>
+              <div class="solution-features">
+                <span class="feature-tag">تقارير ذكية</span>
+                <span class="feature-tag">تحليل البيانات</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution Card 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="solution-card h-100"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="solution-icon">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <h4>الحوسبة السحابية</h4>
+              <p>حلول سحابية آمنة لتخزين البيانات والوصول إليها من أي مكان</p>
+              <div class="solution-features">
+                <span class="feature-tag">آمان عالي</span>
+                <span class="feature-tag">نسخ احتياطي</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution Card 4 -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="solution-card h-100"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="solution-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h4>الذكاء الاصطناعي</h4>
+              <p>تقنيات الذكاء الاصطناعي لتحليل البيانات والتنبؤ بالاتجاهات</p>
+              <div class="solution-features">
+                <span class="feature-tag">تعلم آلي</span>
+                <span class="feature-tag">تحليل ذكي</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution Card 5 -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="solution-card h-100"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="solution-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h4>أمان المعلومات</h4>
+              <p>حلول أمان متطورة لحماية بياناتك ومعلوماتك الحساسة</p>
+              <div class="solution-features">
+                <span class="feature-tag">تشفير متقدم</span>
+                <span class="feature-tag">مصادقة ثنائية</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution Card 6 -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="solution-card h-100"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div class="solution-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h4>إدارة الفرق</h4>
+              <p>أدوات تعاون متقدمة لإدارة الفرق وتنسيق العمل بفعالية</p>
+              <div class="solution-features">
+                <span class="feature-tag">تعاون سلس</span>
+                <span class="feature-tag">إدارة المهام</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="features-content">
+              <h2 class="fw-bold mb-4">لماذا تختار منصتنا؟</h2>
+              <p class="mb-4">
+                نوفر لك مجموعة شاملة من المزايا التي تساعدك على تحقيق النجاح في
+                عالم الأعمال الرقمي
+              </p>
+
+              <div class="feature-item mb-3">
+                <div class="feature-icon me-3">
+                  <i class="fas fa-check-circle text-primary"></i>
+                </div>
+                <div>
+                  <h5>سهولة الاستخدام</h5>
+                  <p class="text-muted mb-0">
+                    واجهة بسيطة ومفهومة لجميع المستخدمين
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-item mb-3">
+                <div class="feature-icon me-3">
+                  <i class="fas fa-sync-alt text-primary"></i>
+                </div>
+                <div>
+                  <h5>تحديث مستمر</h5>
+                  <p class="text-muted mb-0">
+                    ميزات جديدة وتحسينات دورية بشكل مستمر
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-item mb-4">
+                <div class="feature-icon me-3">
+                  <i class="fas fa-headset text-primary"></i>
+                </div>
+                <div>
+                  <h5>دعم فني متميز</h5>
+                  <p class="text-muted mb-0">
+                    فريق دعم متخصص متاح على مدار الساعة
+                  </p>
+                </div>
+              </div>
+
+              <button class="btn btn-primary btn-lg">
+                <i class="fas fa-arrow-left me-2"></i>تعرف على المزيد
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="features-image text-center">
+              <div class="floating-elements">
+                <div class="floating-element element-1">
+                  <i class="fas fa-chart-bar"></i>
+                </div>
+                <div class="floating-element element-2">
+                  <i class="fas fa-cog"></i>
+                </div>
+                <div class="floating-element element-3">
+                  <i class="fas fa-bell"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-lg-3 col-6 mb-4">
+            <div class="stat-card">
+              <div class="stat-number" data-count="10000">0</div>
+              <div class="stat-label">عميل راضٍ</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6 mb-4">
+            <div class="stat-card">
+              <div class="stat-number" data-count="50">0</div>
+              <div class="stat-label">حل متكامل</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6 mb-4">
+            <div class="stat-card">
+              <div class="stat-number" data-count="99">0</div>
+              <div class="stat-label">% وقت تشغيل</div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6 mb-4">
+            <div class="stat-card">
+              <div class="stat-number" data-count="24">0</div>
+              <div class="stat-label">ساعة دعم</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="text-white fw-bold mb-4">جاهز لتطوير أعمالك؟</h2>
+            <p class="text-white-50 mb-4">
+              ابدأ رحلتك معنا اليوم واكتشف كيف يمكن لحلولنا الذكية أن تحول
+              أعمالك إلى المستوى التالي
+            </p>
+            <button class="btn btn-light btn-lg me-3">
+              <i class="fas fa-play me-2"></i>ابدأ تجربتك المجانية
+            </button>
+            <button class="btn btn-outline-light btn-lg">
+              <i class="fas fa-phone me-2"></i>تحدث مع خبير
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="footer-brand">
+              <i class="fas fa-lightbulb me-2"></i>
+              <span class="fw-bold">SmartBiz</span>
+            </div>
+            <p class="text-muted">منصة الحلول الذكية للأعمال</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="social-links">
+              <a href="#" class="social-link me-3">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="#" class="social-link me-3">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link me-3">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="text-muted mb-0">
+              &copy; 2024 SmartBiz. جميع الحقوق محفوظة.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-muted me-3">الخصوصية</a>
+            <a href="#" class="text-muted">الشروط والأحكام</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize animations
+        initializeAnimations();
+
+        // Initialize counter animations
+        initializeCounters();
+
+        // Initialize smooth scrolling
+        initializeSmoothScroll();
+
+        // Initialize navbar effects
+        initializeNavbarEffects();
+
+        // Initialize interactive elements
+        initializeInteractiveElements();
+      });
+
+      // Animation functions
+      function initializeAnimations() {
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("loaded");
+            }
+          });
+        }, observerOptions);
+
+        // Observe solution cards
+        document.querySelectorAll(".solution-card").forEach((card) => {
+          card.classList.add("loading");
+          observer.observe(card);
+        });
+
+        // Observe feature items
+        document.querySelectorAll(".feature-item").forEach((item) => {
+          item.classList.add("loading");
+          observer.observe(item);
+        });
+      }
+
+      // Counter animation
+      function initializeCounters() {
+        const counters = document.querySelectorAll(".stat-number");
+        const counterObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+
+        counters.forEach((counter) => {
+          counterObserver.observe(counter);
+        });
+      }
+
+      function animateCounter(element) {
+        const target = parseInt(element.getAttribute("data-count"));
+        const increment = target / 100;
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            current = target;
+            clearInterval(timer);
+          }
+          element.textContent = Math.floor(current);
+        }, 20);
+      }
+
+      // Smooth scrolling for navigation links
+      function initializeSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      }
+
+      // Navbar scroll effects
+      function initializeNavbarEffects() {
+        const navbar = document.querySelector(".navbar");
+        let scrolled = false;
+
+        window.addEventListener("scroll", () => {
+          const scrollTop = window.pageYOffset;
+
+          if (scrollTop > 100 && !scrolled) {
+            navbar.style.background = "rgba(11, 85, 94, 0.98)";
+            navbar.style.boxShadow = "0 2px 20px rgba(0,0,0,0.1)";
+            scrolled = true;
+          } else if (scrollTop <= 100 && scrolled) {
+            navbar.style.background = "rgba(11, 85, 94, 0.95)";
+            navbar.style.boxShadow = "none";
+            scrolled = false;
+          }
+        });
+      }
+
+      // Interactive elements
+      function initializeInteractiveElements() {
+        // Add hover effects to solution cards
+        document.querySelectorAll(".solution-card").forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-10px) scale(1.02)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+          });
+        });
+
+        // Add click animation to buttons
+        document.querySelectorAll(".btn").forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            // Create ripple effect
+            const ripple = document.createElement("span");
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+
+            ripple.style.cssText = `
+                position: absolute;
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}px;
+                top: ${y}px;
+                background: rgba(255,255,255,0.3);
+                border-radius: 50%;
+                transform: scale(0);
+                animation: ripple 0.6s ease-out;
+                pointer-events: none;
+            `;
+
+            this.style.position = "relative";
+            this.style.overflow = "hidden";
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+              ripple.remove();
+            }, 600);
+          });
+        });
+
+        // Add floating animation to floating elements
+        document
+          .querySelectorAll(".floating-element")
+          .forEach((element, index) => {
+            element.addEventListener("mouseenter", function () {
+              this.style.transform = "scale(1.1)";
+              this.style.boxShadow = "0 20px 40px rgba(23, 170, 189, 0.3)";
+            });
+
+            element.addEventListener("mouseleave", function () {
+              this.style.transform = "scale(1)";
+              this.style.boxShadow = "0 10px 30px rgba(0,0,0,0.1)";
+            });
+          });
+
+        // Add parallax effect to hero section
+        window.addEventListener("scroll", () => {
+          const scrolled = window.pageYOffset;
+          const parallaxElements = document.querySelectorAll(".floating-card");
+
+          parallaxElements.forEach((element) => {
+            const speed = 0.5;
+            element.style.transform = `translateY(${scrolled * speed}px)`;
+          });
+        });
+
+        // Logo animation
+        const logo = document.getElementById("logo");
+        logo.addEventListener("mouseenter", function () {
+          this.style.transform = "scale(1.1) rotate(10deg)";
+        });
+
+        logo.addEventListener("mouseleave", function () {
+          this.style.transform = "scale(1) rotate(0deg)";
+        });
+
+        // Start button special effect
+        const startBtn = document.getElementById("startBtn");
+        if (startBtn) {
+          startBtn.addEventListener("click", function () {
+            // Add success animation
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check me-2"></i>تم البدء!';
+            this.classList.add("btn-success");
+            this.classList.remove("btn-primary");
+
+            setTimeout(() => {
+              this.innerHTML = originalText;
+              this.classList.remove("btn-success");
+              this.classList.add("btn-primary");
+            }, 2000);
+          });
+        }
+      }
+
+      // Add CSS animation keyframes dynamically
+      const style = document.createElement("style");
+      style.textContent = `
+    @keyframes ripple {
+        to {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+    
+    @keyframes bounce {
+        0%, 20%, 53%, 80%, 100% {
+            transform: translate3d(0,0,0);
+        }
+        40%, 43% {
+            transform: translate3d(0, -30px, 0);
+        }
+        70% {
+            transform: translate3d(0, -15px, 0);
+        }
+        90% {
+            transform: translate3d(0, -4px, 0);
+        }
+    }
+    
+    .bounce-animation {
+        animation: bounce 1s ease-in-out;
+    }
+`;
+      document.head.appendChild(style);
+
+      // Add particle effect to hero section
+      function createParticles() {
+        const particlesContainer = document.createElement("div");
+        particlesContainer.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    `;
+
+        for (let i = 0; i < 50; i++) {
+          const particle = document.createElement("div");
+          particle.style.cssText = `
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            animation: float ${3 + Math.random() * 4}s ease-in-out infinite;
+            animation-delay: ${Math.random() * 2}s;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+        `;
+          particlesContainer.appendChild(particle);
+        }
+
+        const heroSection = document.querySelector(".hero-section");
+        if (heroSection) {
+          heroSection.appendChild(particlesContainer);
+        }
+      }
+
+      // Initialize particles when DOM is loaded
+      document.addEventListener("DOMContentLoaded", createParticles);
+
+      // Add loading screen
+      function showLoadingScreen() {
+        const loadingScreen = document.createElement("div");
+        loadingScreen.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #428315cc 0%, #0B555E 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: opacity 0.5s ease-out;
+    `;
+
+        loadingScreen.innerHTML = `
+        <div style="text-align: center; color: white;">
+            <div style="width: 50px; height: 50px; border: 3px solid rgba(255,255,255,0.3); border-top: 3px solid #17aabd; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px;"></div>
+            <h3 style="margin: 0; font-family: 'Cairo', sans-serif;">جاري التحميل...</h3>
+        </div>
+    `;
+
+        document.body.appendChild(loadingScreen);
+
+        // Add spin animation
+        const spinStyle = document.createElement("style");
+        spinStyle.textContent = `
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    `;
+        document.head.appendChild(spinStyle);
+
+        // Remove loading screen after page load
+        window.addEventListener("load", () => {
+          setTimeout(() => {
+            loadingScreen.style.opacity = "0";
+            setTimeout(() => {
+              loadingScreen.remove();
+            }, 500);
+          }, 1000);
+        });
+      }
+
+      // Show loading screen immediately
+      showLoadingScreen();
+    </script>
+  </body>
+</html>
