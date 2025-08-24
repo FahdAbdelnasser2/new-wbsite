@@ -3334,6 +3334,10 @@ color: var(--color-hover);
         .banner {
           padding-right: 100px;
         }
+        .banner h2,
+        .banner p{
+          color: white;
+        }
 
         .solution-card {
           background: white;
