@@ -830,8 +830,8 @@ color: var(--color-hover);
 
       /*footer*/
       .component-footer {
+        background-color: #1d2426;
         position: relative;
-        background-color: black;
         /* background-image: url(../img/footer.jpg);
         background-position: center;
         background-repeat: no-repeat;
