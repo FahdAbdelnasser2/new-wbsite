@@ -36,7 +36,7 @@ function toggleLanguage(lang) {
   localStorage.setItem("selectedLanguage", lang);
 
   // Optional: Update page content dynamically if needed
-  updateContentLanguage(lang);
+  // updateContentLanguage(lang);
 }
 // تحديد العناصر داخل الشجرة
 document.addEventListener('DOMContentLoaded', () => {

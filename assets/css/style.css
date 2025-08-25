@@ -830,13 +830,12 @@ color: var(--color-hover);
 
       /*footer*/
       .component-footer {
-        /* background-color: #1d2426;
-        color: var(--color-primary); */
-        background-image: url(../img/footer.jpg);
+        position: relative;
+        background-color: black;
+        /* background-image: url(../img/footer.jpg);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
+        background-size: cover; */
       }
 
       .img-footer-logo {
