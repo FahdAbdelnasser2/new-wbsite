@@ -16,35 +16,35 @@
       }
 
       @font-face {
-        src: url(../font/Cairo/static/Cairo-Bold.ttf);
-        font-family: 'Cairo', sans-serif;
+        src: url(../font/Tajawal/static/Tajawal-Bold.ttf);
+        font-family: 'Tajawal', sans-serif;
         font-weight: 700;
       }
 
       @font-face {
-        src: url(../font/Cairo/static/Cairo-Regular.ttf);
-        font-family: 'Cairo', sans-serif;
+        src: url(../font/Tajawal/static/Tajawal-Regular.ttf);
+        font-family: 'Tajawal', sans-serif;
 
         font-weight: 400;
       }
 
       @font-face {
-        src: url(../font/Cairo/static/Cairo-Medium.ttf);
-        font-family: 'Cairo', sans-serif;
+        src: url(../font/Tajawal/static/Tajawal-Medium.ttf);
+        font-family: 'Tajawal', sans-serif;
 
         font-weight: 500;
       }
 
       @font-face {
-        src: url(../font/Cairo/static/Cairo-Light.ttf);
-        font-family: 'Cairo', sans-serif;
+        src: url(../font/Tajawal/static/Tajawal-Light.ttf);
+        font-family: 'Tajawal', sans-serif;
 
         font-weight: 300;
       }
 
       @font-face {
-        src: url(../font/Cairo/static/Cairo-ExtraBold.ttf);
-        font-family: 'Cairo', sans-serif;
+        src: url(../font/Tajawal/static/Tajawal-ExtraBold.ttf);
+        font-family: 'Tajawal', sans-serif;
         font-weight: 800;
       }
 
@@ -55,7 +55,7 @@
       }
 
       [dir="rtl"] body {
-        font-family: 'Cairo', sans-serif;
+        font-family: 'Tajawal', sans-serif;
       }
 
       [dir="ltr"] body {
@@ -1074,7 +1074,7 @@ color: var(--color-hover);
 
       .form-content .form-label {
         color: #6C727D;
-        font-family: 'Cairo', sans-serif;
+        font-family: 'Tajawal', sans-serif;
         font-size: 16px;
       }
 
@@ -4351,6 +4351,9 @@ color: var(--color-hover);
           text-align: center;
           gap: 2rem;
         }
+              .contact-form-container {
+        padding: 2rem !important;
+      }
 
         .section-title, .about-title {
           font-size: 2rem;
