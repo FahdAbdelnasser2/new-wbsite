@@ -197,17 +197,18 @@
   background-color: #fff;
   display: grid;
   align-content: flex-start;
-  grid-template-rows: 0.25fr 1fr 0.25fr;
+  grid-template-rows: 0.25fr 1fr 0.1fr;
   transition: all 0.3s ease-in-out;
   /* لإضافة تأثير الانتقال */
 }
 
+.price_box_inner.active,
 .price_box_inner:hover {
-  box-shadow: 0px 0px 10px #aaaaaac8;
-  transform: translateY(-5px);
-  background: linear-gradient(222deg, #0b555ee6, #4383156e);
+  /* box-shadow: 0px 0px 10px #aaaaaac8;
   color: #fff;
-
+  background: linear-gradient(222deg, #0b555ee6, #4383156e); */
+  transform: translateY(-5px);
+  border: 1px solid var(--secondary-color);
 }
 
 .component-decient {
@@ -216,7 +217,7 @@
   padding: 10px;
   margin: 0px 10px;
   top: 0px;
-  border-radius: 0px 0px 10px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 .component-decient p {
@@ -230,7 +231,7 @@
   font-weight: 800;
 }
 
-.price_box_inner:hover .p-decerption, .price_box_inner:hover .price-component {
+/* .price_box_inner:hover .p-decerption, .price_box_inner:hover .price-component {
   color: #fff;
 }
 
@@ -244,7 +245,7 @@
 
 .price_box_inner:hover li img {
   filter: brightness(0) invert(1);
-}
+} */
 
 .price-component {
 
@@ -253,8 +254,8 @@
 }
 
 .nk-pricing-body li img {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
 }
 
 /**اهم*/
