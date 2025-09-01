@@ -1,0 +1,2798 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع مودرن فائق التطور - 8 أقسام مبتكرة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  =<style>* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gradient-primary: linear-gradient(135deg, #428315cc 0%, #0B555E 100%);
+    --gradient-secondary: linear-gradient(100deg, #17aabd, #3fd6dd);
+    --main-color: #17aabd;
+    --secondary-color: #6cce69;
+    --dark-color: #0B555E;
+    --light-color: #f8fafc;
+    --text-color: #2d3748;
+    --border-color: #e2e8f0;
+    --glass-bg: rgba(23, 170, 189, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'Tajawal', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    overflow-x: hidden;
+    background: #0a0a0a;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Loading Screen - Futuristic */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+}
+
+.loading-animation {
+    text-align: center;
+    color: white;
+}
+
+.loading-circle {
+    width: 80px;
+    height: 80px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid var(--secondary-color);
+    border-radius: 50%;
+    animation: quantumSpin 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite;
+    margin: 0 auto 24px;
+    position: relative;
+}
+
+.loading-circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid rgba(108, 206, 105, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: innerPulse 1.5s ease-in-out infinite;
+}
+
+.loading-text {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes quantumSpin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes innerPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+}
+
+@keyframes textGlow {
+    from { text-shadow: 0 0 10px rgba(108, 206, 105, 0.5); }
+    to { text-shadow: 0 0 20px rgba(108, 206, 105, 0.8), 0 0 30px rgba(23, 170, 189, 0.5); }
+}
+
+/* Navigation - Glass Morphism */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.navbar.scrolled {
+    background: rgba(11, 85, 94, 0.95);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: relative;
+}
+
+.nav-logo {
+    font-size: 28px;
+    font-weight: 800;
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -1px;
+    position: relative;
+}
+
+.nav-logo::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-secondary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-logo:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.nav-menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--glass-bg);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.nav-menu a:hover::before {
+    opacity: 1;
+}
+
+.nav-menu a:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: var(--secondary-color);
+    margin: 3px 0;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-radius: 2px;
+}
+
+/* Section 1: Hero - Quantum Design */
+.hero-section {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at center, #0B555E 0%, #000 70%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.quantum-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: 
+        linear-gradient(rgba(23, 170, 189, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23, 170, 189, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridFlow 20s linear infinite;
+}
+
+@keyframes gridFlow {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
+
+.floating-orbs {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--gradient-secondary);
+    filter: blur(1px);
+    animation: orbFloat 8s ease-in-out infinite;
+}
+
+.orb-1 {
+    width: 120px;
+    height: 120px;
+    top: 15%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.orb-2 {
+    width: 80px;
+    height: 80px;
+    top: 70%;
+    right: 20%;
+    animation-delay: 2s;
+}
+
+.orb-3 {
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+    left: 30%;
+    animation-delay: 4s;
+}
+
+.orb-4 {
+    width: 100px;
+    height: 100px;
+    top: 30%;
+    right: 10%;
+    animation-delay: 6s;
+}
+
+@keyframes orbFloat {
+    0%, 100% { 
+        transform: translateY(0px) translateX(0px) scale(1);
+        opacity: 0.6;
+    }
+    25% { 
+        transform: translateY(-30px) translateX(20px) scale(1.1);
+        opacity: 0.8;
+    }
+    50% { 
+        transform: translateY(-10px) translateX(-15px) scale(0.9);
+        opacity: 1;
+    }
+    75% { 
+        transform: translateY(20px) translateX(10px) scale(1.05);
+        opacity: 0.7;
+    }
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    margin-bottom: 24px;
+    opacity: 0;
+    animation: quantumReveal 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+    line-height: 1.1;
+}
+
+.title-gradient {
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.title-gradient::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.hero-subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: quantumReveal 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s forwards;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 80px;
+    opacity: 0;
+    animation: quantumReveal 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.1s forwards;
+}
+
+.btn-quantum {
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 8px 32px rgba(66, 131, 21, 0.3);
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 16px 48px rgba(66, 131, 21, 0.4);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: var(--glass-bg);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(23, 170, 189, 0.2);
+}
+
+.hero-metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    opacity: 0;
+    animation: quantumReveal 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.4s forwards;
+}
+
+.metric-card {
+    text-align: center;
+    padding: 24px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(23, 170, 189, 0.15);
+    box-shadow: 0 20px 60px rgba(23, 170, 189, 0.2);
+}
+
+.metric-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.metric-label {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@keyframes quantumReveal {
+    from {
+        opacity: 0;
+        transform: translateY(60px) rotateX(20deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0deg);
+    }
+}
+
+/* Section 2: About - Glassmorphism Cards */
+.about-section {
+    padding: 120px 0;
+    background: linear-gradient(180deg, #000 0%, #0a1a1a 100%);
+    position: relative;
+}
+
+.neural-network {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
+.neural-node {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--main-color);
+    border-radius: 50%;
+    animation: neuralPulse 4s ease-in-out infinite;
+}
+
+.neural-node:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+.neural-node:nth-child(2) { top: 40%; left: 30%; animation-delay: 1s; }
+.neural-node:nth-child(3) { top: 60%; left: 60%; animation-delay: 2s; }
+.neural-node:nth-child(4) { top: 80%; left: 80%; animation-delay: 3s; }
+.neural-node:nth-child(5) { top: 30%; right: 20%; animation-delay: 0.5s; }
+
+@keyframes neuralPulse {
+    0%, 100% { 
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(23, 170, 189, 0.7);
+    }
+    50% { 
+        transform: scale(1.5);
+        box-shadow: 0 0 0 20px rgba(23, 170, 189, 0);
+    }
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 800;
+    margin-bottom: 24px;
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    animation: lineGrow 1s ease 0.5s both;
+}
+
+@keyframes lineGrow {
+    from { width: 0; }
+    to { width: 80px; }
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.about-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 48px 32px;
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(108, 206, 105, 0.1), transparent);
+    transition: left 0.8s ease;
+}
+
+.about-card:hover::before {
+    left: 100%;
+}
+
+.about-card:hover {
+    transform: translateY(-12px) rotateY(5deg);
+    box-shadow: 0 32px 80px rgba(23, 170, 189, 0.2);
+    border-color: rgba(108, 206, 105, 0.3);
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--gradient-primary);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 24px;
+    transition: all 0.4s ease;
+}
+
+.about-card:hover .card-icon {
+    transform: rotateY(180deg) scale(1.1);
+    background: var(--gradient-secondary);
+}
+
+.about-card h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.about-card p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* Section 3: Services - Hexagonal Matrix */
+.services-section {
+    padding: 120px 0;
+    background: var(--gradient-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.hex-matrix {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+}
+
+.hex-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 20px;
+    transform: rotate(30deg) scale(1.5);
+    animation: matrixRotate 30s linear infinite;
+}
+
+.hex-cell {
+    width: 60px;
+    height: 60px;
+    background: rgba(108, 206, 105, 0.2);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    animation: hexPulse 3s ease-in-out infinite;
+}
+
+.hex-cell:nth-child(odd) { animation-delay: 0.5s; }
+.hex-cell:nth-child(3n) { animation-delay: 1s; }
+
+@keyframes matrixRotate {
+    from { transform: rotate(30deg) scale(1.5); }
+    to { transform: rotate(390deg) scale(1.5); }
+}
+
+@keyframes hexPulse {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    position: relative;
+    z-index: 2;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 32px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-secondary);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover::after {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-16px) scale(1.02);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.3);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-secondary);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover .service-icon {
+    transform: rotateY(360deg) scale(1.1);
+}
+
+.service-card h3 {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Section 4: Portfolio - Isotope Grid */
+.portfolio-section {
+    padding: 120px 0;
+    background: linear-gradient(180deg, #0a1a1a 0%, #1a1a2e 100%);
+    position: relative;
+}
+
+.cosmic-dust {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.dust-particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    animation: dustFloat 15s linear infinite;
+}
+
+.dust-particle:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.dust-particle:nth-child(2) { top: 30%; left: 80%; animation-delay: 3s; }
+.dust-particle:nth-child(3) { top: 70%; left: 10%; animation-delay: 6s; }
+.dust-particle:nth-child(4) { top: 50%; left: 50%; animation-delay: 9s; }
+.dust-particle:nth-child(5) { top: 80%; left: 70%; animation-delay: 12s; }
+
+@keyframes dustFloat {
+    0% { 
+        transform: translateY(0px) translateX(0px);
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { 
+        transform: translateY(-100px) translateX(50px);
+        opacity: 0;
+    }
+}
+
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin: 40px 0 60px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 12px 24px;
+    border: 2px solid var(--main-color);
+    background: transparent;
+    color: var(--main-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-secondary);
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.filter-btn.active::before,
+.filter-btn:hover::before {
+    left: 0;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    color: white;
+    border-color: transparent;
+    transform: scale(1.05);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 32px;
+}
+
+.portfolio-item {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    height: 280px;
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    background: var(--gradient-primary);
+}
+
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
+    opacity: 0.8;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: scale(0.8);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.portfolio-item:hover {
+    transform: translateY(-12px) rotateX(5deg);
+    box-shadow: 0 32px 80px rgba(23, 170, 189, 0.3);
+}
+
+.portfolio-overlay h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.portfolio-overlay p {
+    font-size: 1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Section 5: Team - Orbital Layout */
+.team-section {
+    padding: 120px 0;
+    background: radial-gradient(ellipse at center, #0B555E 0%, #000 70%);
+    position: relative;
+    overflow: hidden;
+}
+
+.orbital-system {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid rgba(23, 170, 189, 0.2);
+    border-radius: 50%;
+    animation: orbitRotate 20s linear infinite;
+}
+
+.orbit-1 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-2 {
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-direction: reverse;
+    animation-duration: 30s;
+}
+
+.orbit-3 {
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: 40s;
+}
+
+@keyframes orbitRotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.team-member {
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.member-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: var(--gradient-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 auto 24px;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.member-avatar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.team-member:hover .member-avatar {
+    transform: scale(1.15) rotateY(15deg);
+    box-shadow: 0 20px 60px rgba(23, 170, 189, 0.4);
+}
+
+.team-member:hover .member-avatar::before {
+    opacity: 1;
+}
+
+.member-info h3 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.member-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Section 6: Testimonials - Carousel 3D */
+.testimonials-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    position: relative;
+}
+
+.testimonials-3d {
+    position: relative;
+    height: 400px;
+    perspective: 1000px;
+    margin: 60px auto 0;
+    max-width: 800px;
+}
+
+.testimonial-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 48px;
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    transform: translateX(100px) rotateY(45deg);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.testimonial-card.active {
+    opacity: 1;
+    transform: translateX(0) rotateY(0deg);
+}
+
+.testimonial-content {
+    text-align: center;
+}
+
+.testimonial-quote {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    color: white;
+    font-style: italic;
+    font-weight: 300;
+    position: relative;
+}
+
+.testimonial-quote::before,
+.testimonial-quote::after {
+    content: '"';
+    font-size: 3rem;
+    color: var(--secondary-color);
+    position: absolute;
+    font-family: serif;
+}
+
+.testimonial-quote::before {
+    top: -10px;
+    left: -20px;
+}
+
+.testimonial-quote::after {
+    bottom: -40px;
+    right: -20px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.author-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.author-info h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: white;
+}
+
+.author-info span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.testimonial-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.control-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    backdrop-filter: blur(10px);
+}
+
+.control-btn:hover {
+    background: var(--main-color);
+    transform: scale(1.1);
+    box-shadow: 0 8px 32px rgba(23, 170, 189, 0.3);
+}
+
+.testimonial-dots {
+    display: flex;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--secondary-color);
+    transform: scale(1.3);
+    box-shadow: 0 0 20px rgba(108, 206, 105, 0.5);
+}
+
+/* Section 7: Blog - Magazine Layout */
+.blog-section {
+    padding: 120px 0;
+    background: linear-gradient(180deg, #000 0%, #0a1a1a 100%);
+    position: relative;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.blog-post {
+    border-radius: 20px;
+    overflow: hidden;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+}
+
+.blog-post.featured {
+    grid-row: 1 / 3;
+}
+
+.blog-post:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 32px 80px rgba(23, 170, 189, 0.2);
+}
+
+.post-image {
+    height: 200px;
+    background: var(--gradient-primary);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    overflow: hidden;
+}
+
+.blog-post.featured .post-image {
+    height: 300px;
+}
+
+.post-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.8s ease;
+}
+
+.blog-post:hover .post-image::before {
+    left: 100%;
+}
+
+.post-category {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--gradient-secondary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.post-content {
+    padding: 32px 24px;
+}
+
+.post-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: white;
+    line-height: 1.4;
+}
+
+.post-content p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 300;
+}
+
+/* Section 8: Contact - Holographic Form */
+.contact-section {
+    padding: 120px 0;
+    background: var(--gradient-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.holographic-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.holo-line {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+    animation: holoScan 4s ease-in-out infinite;
+}
+
+.holo-line:nth-child(1) { top: 20%; animation-delay: 0s; }
+.holo-line:nth-child(2) { top: 40%; animation-delay: 1s; }
+.holo-line:nth-child(3) { top: 60%; animation-delay: 2s; }
+.holo-line:nth-child(4) { top: 80%; animation-delay: 3s; }
+
+@keyframes holoScan {
+    0% { 
+        left: -100%;
+        width: 0%;
+        opacity: 0;
+    }
+    50% { 
+        left: 0%;
+        width: 100%;
+        opacity: 1;
+    }
+    100% { 
+        left: 100%;
+        width: 0%;
+        opacity: 0;
+    }
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-info {
+    color: white;
+}
+
+.contact-info h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    background: var(--gradient-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.contact-info > p {
+    font-size: 1.2rem;
+    margin-bottom: 48px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(8px);
+    background: rgba(23, 170, 189, 0.15);
+}
+
+.contact-icon {
+    font-size: 1.8rem;
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-item h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: white;
+}
+
+.contact-item p {
+    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+}
+
+.contact-form {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 48px;
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    position: relative;
+}
+
+.contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gradient-secondary);
+    animation: formGlow 3s ease-in-out infinite;
+}
+
+@keyframes formGlow {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 20px 16px 16px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-size: 16px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--main-color);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 4px rgba(23, 170, 189, 0.1);
+    transform: scale(1.02);
+}
+
+.form-group label {
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    pointer-events: none;
+    font-weight: 300;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+    top: 4px;
+    right: 12px;
+    font-size: 12px;
+    background: var(--main-color);
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 20px;
+    background: var(--gradient-secondary);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(23, 170, 189, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: rgba(11, 85, 94, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 60px;
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-metrics {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .orbital-system {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .orbit-1 { width: 150px; height: 150px; }
+    .orbit-2 { width: 200px; height: 200px; }
+    .orbit-3 { width: 250px; height: 250px; }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-metrics {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        padding: 32px 24px;
+    }
+}
+
+/* Scroll Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.8) rotateY(20deg);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1) rotateY(0deg);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--main-color);
+}
+
+/* Selection */
+::selection {
+    background: var(--main-color);
+    color: white;
+}
+
+/* Focus styles */
+*:focus {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+</style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-animation">
+            <div class="loading-circle"></div>
+            <div class="loading-text">جاري التحميل...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-logo">كوانتم</div>
+                <ul class="nav-menu">
+                    <li><a href="#hero">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#portfolio">الأعمال</a></li>
+                    <li><a href="#team">الفريق</a></li>
+                    <li><a href="#testimonials">آراء العملاء</a></li>
+                    <li><a href="#blog">المدونة</a></li>
+                    <li><a href="#contact">التواصل</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero - Quantum Design -->
+    <section id="hero" class="hero-section">
+        <div class="quantum-grid"></div>
+        <div class="floating-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="orb orb-4"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-gradient">المستقبل الرقمي</span><br>
+                    يبدأ من هنا
+                </h1>
+                <p class="hero-subtitle">نحن نبني تجارب رقمية استثنائية تجمع بين الإبداع والتكنولوجيا المتقدمة</p>
+                <div class="hero-cta">
+                    <button class="btn-quantum btn-primary">ابدأ رحلتك</button>
+                    <button class="btn-quantum btn-secondary">اكتشف المزيد</button>
+                </div>
+                <div class="hero-metrics">
+                    <div class="metric-card">
+                        <span class="metric-number" data-target="500">0</span>
+                        <span class="metric-label">مشروع مكتمل</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-number" data-target="200">0</span>
+                        <span class="metric-label">عميل سعيد</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-number" data-target="50">0</span>
+                        <span class="metric-label">خبير متخصص</span>
+                    </div>
+                    <div class="metric-card">
+                        <span class="metric-number" data-target="15">0</span>
+                        <span class="metric-label">دولة نخدمها</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: About - Glassmorphism Cards -->
+    <section id="about" class="about-section">
+        <div class="neural-network">
+            <div class="neural-node"></div>
+            <div class="neural-node"></div>
+            <div class="neural-node"></div>
+            <div class="neural-node"></div>
+            <div class="neural-node"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">من نحن</h2>
+                <p class="section-subtitle">نحن فريق من المبدعين والمطورين المتخصصين في التكنولوجيا المتقدمة</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card fade-in">
+                    <div class="card-icon">🎯</div>
+                    <h3>رؤيتنا المستقبلية</h3>
+                    <p>أن نكون الرائدين في تقديم الحلول الرقمية المبتكرة التي تحول أفكار عملائنا إلى واقع رقمي متطور ومميز</p>
+                </div>
+                <div class="about-card fade-in">
+                    <div class="card-icon">🚀</div>
+                    <h3>مهمتنا الأساسية</h3>
+                    <p>نساعد الشركات على النمو والازدهار من خلال تطوير منصات رقمية متطورة وحلول تقنية مبتكرة تواكب العصر</p>
+                </div>
+                <div class="about-card fade-in">
+                    <div class="card-icon">💎</div>
+                    <h3>قيمنا الجوهرية</h3>
+                    <p>الجودة، الإبداع، والالتزام هي القيم الأساسية التي توجه عملنا وتضمن تحقيق أعلى مستويات رضا عملائنا</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Services - Hexagonal Matrix -->
+    <section id="services" class="services-section">
+        <div class="hex-matrix">
+            <div class="hex-grid">
+                <div class="hex-cell"></div>
+                <div class="hex-cell"></div>
+                <div class="hex-cell"></div>
+                <div class="hex-cell"></div>
+                <div class="hex-cell"></div>
+                <div class="hex-cell"></div>
+                <div class="hex-cell"></div>
+                <div class="hex-cell"></div>
+                <div class="hex-cell"></div>
+                <div class="hex-cell"></div>
+                <div class="hex-cell"></div>
+                <div class="hex-cell"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">خدماتنا المتطورة</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">نقدم مجموعة شاملة من الخدمات الرقمية المتقدمة</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card slide-left">
+                    <div class="service-icon">🌐</div>
+                    <h3>تطوير المواقع المتقدمة</h3>
+                    <p>مواقع ويب متجاوبة وسريعة مع تقنيات حديثة</p>
+                </div>
+                <div class="service-card slide-right">
+                    <div class="service-icon">📱</div>
+                    <h3>تطبيقات الجوال الذكية</h3>
+                    <p>تطبيقات متطورة لجميع المنصات والأجهزة</p>
+                </div>
+                <div class="service-card slide-left">
+                    <div class="service-icon">🎨</div>
+                    <h3>التصميم الإبداعي</h3>
+                    <p>هوية بصرية مميزة ومبتكرة تعكس شخصيتك</p>
+                </div>
+                <div class="service-card slide-right">
+                    <div class="service-icon">⚡</div>
+                    <h3>الأتمتة الذكية</h3>
+                    <p>حلول متطورة لأتمتة العمليات والمهام</p>
+                </div>
+                <div class="service-card slide-left">
+                    <div class="service-icon">🔒</div>
+                    <h3>الأمان السيبراني</h3>
+                    <p>حماية متقدمة للبيانات والأنظمة</p>
+                </div>
+                <div class="service-card slide-right">
+                    <div class="service-icon">🤖</div>
+                    <h3>الذكاء الاصطناعي</h3>
+                    <p>حلول ذكية مدعومة بالذكاء الاصطناعي</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Portfolio - Isotope Grid -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="cosmic-dust">
+            <div class="dust-particle"></div>
+            <div class="dust-particle"></div>
+            <div class="dust-particle"></div>
+            <div class="dust-particle"></div>
+            <div class="dust-particle"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">أعمالنا المميزة</h2>
+                <p class="section-subtitle">مجموعة مختارة من أفضل مشاريعنا</p>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">الكل</button>
+                    <button class="filter-btn" data-filter="web">مواقع</button>
+                    <button class="filter-btn" data-filter="mobile">تطبيقات</button>
+                    <button class="filter-btn" data-filter="design">تصميم</button>
+                    <button class="filter-btn" data-filter="ai">ذكاء اصطناعي</button>
+                </div>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item scale-in" data-category="web">
+                    <div class="portfolio-overlay">
+                        <h3>منصة التجارة الإلكترونية</h3>
+                        <p>متجر إلكتروني متكامل مع نظام دفع متطور</p>
+                    </div>
+                </div>
+                <div class="portfolio-item scale-in" data-category="mobile">
+                    <div class="portfolio-overlay">
+                        <h3>تطبيق التوصيل الذكي</h3>
+                        <p>تطبيق متطور لخدمات التوصيل مع تتبع مباشر</p>
+                    </div>
+                </div>
+                <div class="portfolio-item scale-in" data-category="design">
+                    <div class="portfolio-overlay">
+                        <h3>هوية بصرية متكاملة</h3>
+                        <p>تصميم شعار وهوية بصرية شاملة</p>
+                    </div>
+                </div>
+                <div class="portfolio-item scale-in" data-category="ai">
+                    <div class="portfolio-overlay">
+                        <h3>نظام ذكي للتحليل</h3>
+                        <p>منصة تحليل البيانات بالذكاء الاصطناعي</p>
+                    </div>
+                </div>
+                <div class="portfolio-item scale-in" data-category="web">
+                    <div class="portfolio-overlay">
+                        <h3>نظام إدارة متقدم</h3>
+                        <p>لوحة تحكم شاملة للإدارة والمتابعة</p>
+                    </div>
+                </div>
+                <div class="portfolio-item scale-in" data-category="mobile">
+                    <div class="portfolio-overlay">
+                        <h3>تطبيق تعليمي تفاعلي</h3>
+                        <p>منصة تعلم ذكية مع واقع معزز</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Team - Orbital Layout -->
+    <section id="team" class="team-section">
+        <div class="orbital-system">
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">فريق النخبة</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">خبراء متخصصون في أحدث التقنيات</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member fade-in">
+                    <div class="member-avatar">أ</div>
+                    <div class="member-info">
+                        <h3>أحمد محمد</h3>
+                        <p>مطور واجهات متقدمة</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="member-avatar">س</div>
+                    <div class="member-info">
+                        <h3>سارة أحمد</h3>
+                        <p>مصممة تجربة المستخدم</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="member-avatar">م</div>
+                    <div class="member-info">
+                        <h3>محمد علي</h3>
+                        <p>مهندس أنظمة خلفية</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="member-avatar">ف</div>
+                    <div class="member-info">
+                        <h3>فاطمة حسن</h3>
+                        <p>مديرة المشاريع التقنية</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="member-avatar">ع</div>
+                    <div class="member-info">
+                        <h3>عبدالله سعد</h3>
+                        <p>خبير الذكاء الاصطناعي</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="member-avatar">ن</div>
+                    <div class="member-info">
+                        <h3>نورا خالد</h3>
+                        <p>أخصائية الأمان السيبراني</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Testimonials - 3D Carousel -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">آراء عملائنا</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">ما يقوله عملاؤنا عن تجربتهم معنا</p>
+            </div>
+            <div class="testimonials-3d">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <p class="testimonial-quote">خدمة استثنائية وفريق محترف للغاية. تم تسليم المشروع بجودة تفوق التوقعات وفي الوقت المحدد</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">ع</div>
+                            <div class="author-info">
+                                <h4>عبدالله السعيد</h4>
+                                <span>الرئيس التنفيذي - شركة التقنية المتقدمة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-quote">تصميم رائع وأداء ممتاز. الموقع أصبح أسرع وأكثر جاذبية للعملاء مما زاد من مبيعاتنا بشكل ملحوظ</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">ن</div>
+                            <div class="author-info">
+                                <h4>نورا أحمد</h4>
+                                <span>مؤسسة - متجر الأناقة الرقمية</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p class="testimonial-quote">فريق متعاون ومبدع. ساعدونا في تحويل فكرتنا إلى تطبيق ناجح يخدم آلاف المستخدمين يومياً</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">خ</div>
+                            <div class="author-info">
+                                <h4>خالد محمود</h4>
+                                <span>مدير التطوير - شركة الابتكار التقني</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="control-btn prev-btn">‹</button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="control-btn next-btn">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Blog - Magazine Layout -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">المدونة التقنية</h2>
+                <p class="section-subtitle">آخر المقالات والأخبار في عالم التكنولوجيا</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-post featured scale-in">
+                    <div class="post-image">
+                        <div class="post-category">ذكاء اصطناعي</div>
+                        🤖
+                    </div>
+                    <div class="post-content">
+                        <h3>مستقبل الذكاء الاصطناعي في التطوير</h3>
+                        <p>كيف يغير الذكاء الاصطناعي طريقة تطوير البرمجيات والمواقع الإلكترونية ويفتح آفاقاً جديدة للإبداع</p>
+                        <div class="post-meta">
+                            <span class="post-date">15 ديسمبر 2024</span>
+                            <span class="post-author">أحمد محمد</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-post scale-in">
+                    <div class="post-image">
+                        <div class="post-category">تصميم</div>
+                        🎨
+                    </div>
+                    <div class="post-content">
+                        <h3>اتجاهات التصميم 2025</h3>
+                        <p>أحدث اتجاهات التصميم التي ستهيمن على عالم الويب</p>
+                        <div class="post-meta">
+                            <span class="post-date">12 ديسمبر 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-post scale-in">
+                    <div class="post-image">
+                        <div class="post-category">أمان</div>
+                        🛡️
+                    </div>
+                    <div class="post-content">
+                        <h3>أفضل ممارسات الأمان</h3>
+                        <p>كيفية حماية تطبيقاتك من التهديدات السيبرانية</p>
+                        <div class="post-meta">
+                            <span class="post-date">10 ديسمبر 2024</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-post scale-in">
+                    <div class="post-image">
+                        <div class="post-category">تقنية</div>
+                        ⚙️
+                    </div>
+                    <div class="post-content">
+                        <h3>التحول الرقمي للشركات</h3>
+                        <p>خطوات عملية لتحويل شركتك رقمياً</p>
+                        <div class="post-meta">
+                            <span class="post-date">8 ديسمبر 2024</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Contact - Holographic Form -->
+    <section id="contact" class="contact-section">
+        <div class="holographic-bg">
+            <div class="holo-line"></div>
+            <div class="holo-line"></div>
+            <div class="holo-line"></div>
+            <div class="holo-line"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">تواصل معنا</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">نحن هنا لمساعدتك في تحقيق أهدافك الرقمية</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>ابدأ مشروعك معنا</h2>
+                    <p>دعنا نحول أفكارك إلى واقع رقمي مذهل</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>العنوان</h4>
+                                <p>الرياض، المملكة العربية السعودية</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>الهاتف</h4>
+                                <p>+966 50 123 4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>البريد الإلكتروني</h4>
+                                <p>info@quantum.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🌐</div>
+                            <div>
+                                <h4>الموقع الإلكتروني</h4>
+                                <p>www.quantum.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">الاسم الكامل</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">البريد الإلكتروني</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" required>
+                        <label for="phone">رقم الهاتف</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" required>
+                        <label for="subject">موضوع الرسالة</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">تفاصيل المشروع</label>
+                    </div>
+                    <button type="submit" class="submit-btn">إرسال الرسالة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Loading Screen with Quantum Effect
+window.addEventListener('load', () => {
+    const loadingScreen = document.querySelector('.loading-screen');
+    setTimeout(() => {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 800);
+    }, 2000);
+});
+
+// Enhanced Mobile Navigation
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    });
+});
+
+// Advanced Navbar Scroll Effect
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    
+    if (currentScrollY > 100) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+    
+    // Hide/show navbar based on scroll direction
+    if (currentScrollY > lastScrollY && currentScrollY > 200) {
+        navbar.style.transform = 'translateY(-100%)';
+    } else {
+        navbar.style.transform = 'translateY(0)';
+    }
+    
+    lastScrollY = currentScrollY;
+});
+
+// Quantum Counter Animation
+function quantumCounter(element, target, duration = 2500) {
+    let start = 0;
+    const increment = target / (duration / 16);
+    const startTime = performance.now();
+    
+    function animate(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing function for smooth animation
+        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(target * easeOutQuart);
+        
+        element.textContent = current;
+        
+        if (progress < 1) {
+            requestAnimationFrame(animate);
+        } else {
+            element.textContent = target;
+        }
+    }
+    
+    requestAnimationFrame(animate);
+}
+
+// Advanced Intersection Observer
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            
+            // Animate counters with stagger effect
+            const counters = entry.target.querySelectorAll('[data-target]');
+            counters.forEach((counter, index) => {
+                setTimeout(() => {
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    quantumCounter(counter, target);
+                }, index * 200);
+            });
+        }
+    });
+}, observerOptions);
+
+// Initialize animations on DOM load
+document.addEventListener('DOMContentLoaded', () => {
+    // Observe all animated elements
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-left, .slide-right, .scale-in');
+    animatedElements.forEach((el, index) => {
+        el.style.transitionDelay = `${index * 0.1}s`;
+        observer.observe(el);
+    });
+    
+    // Observe metric sections for counter animation
+    const metricSections = document.querySelectorAll('.hero-metrics, .stats-section');
+    metricSections.forEach(section => observer.observe(section));
+});
+
+// Enhanced Testimonials 3D Carousel
+let currentTestimonial = 0;
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+const testimonialDots = document.querySelectorAll('.testimonial-dots .dot');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+function showTestimonial(index) {
+    testimonialCards.forEach((card, i) => {
+        card.classList.toggle('active', i === index);
+        if (i === index) {
+            card.style.transform = 'translateX(0) rotateY(0deg)';
+            card.style.opacity = '1';
+        } else if (i < index) {
+            card.style.transform = 'translateX(-100px) rotateY(-45deg)';
+            card.style.opacity = '0';
+        } else {
+            card.style.transform = 'translateX(100px) rotateY(45deg)';
+            card.style.opacity = '0';
+        }
+    });
+    
+    testimonialDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
+
+function nextTestimonial() {
+    currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
+    showTestimonial(currentTestimonial);
+}
+
+function prevTestimonial() {
+    currentTestimonial = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
+    showTestimonial(currentTestimonial);
+}
+
+if (nextBtn && prevBtn) {
+    nextBtn.addEventListener('click', nextTestimonial);
+    prevBtn.addEventListener('click', prevTestimonial);
+}
+
+testimonialDots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        currentTestimonial = index;
+        showTestimonial(currentTestimonial);
+    });
+});
+
+// Auto-play testimonials with pause on hover
+let testimonialInterval = setInterval(nextTestimonial, 6000);
+
+const testimonialSection = document.querySelector('.testimonials-3d');
+if (testimonialSection) {
+    testimonialSection.addEventListener('mouseenter', () => {
+        clearInterval(testimonialInterval);
+    });
+    
+    testimonialSection.addEventListener('mouseleave', () => {
+        testimonialInterval = setInterval(nextTestimonial, 6000);
+    });
+}
+
+// Advanced Portfolio Filter with Isotope Effect
+const filterBtns = document.querySelectorAll('.filter-btn');
+const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.getAttribute('data-filter');
+        
+        portfolioItems.forEach((item, index) => {
+            const category = item.getAttribute('data-category');
+            
+            setTimeout(() => {
+                if (filter === 'all' || category === filter) {
+                    item.style.display = 'block';
+                    item.style.animation = 'quantumReveal 0.6s ease forwards';
+                } else {
+                    item.style.animation = 'quantumHide 0.4s ease forwards';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 400);
+                }
+            }, index * 50);
+        });
+    });
+});
+
+// Enhanced Contact Form with Validation
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+        };
+        
+        // Enhanced validation
+        const errors = [];
+        if (!formData.name.trim()) errors.push('الاسم مطلوب');
+        if (!formData.email.trim()) errors.push('البريد الإلكتروني مطلوب');
+        if (!formData.message.trim()) errors.push('الرسالة مطلوبة');
+        
+        if (errors.length > 0) {
+            showNotification('يرجى ملء جميع الحقول المطلوبة', 'error');
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            showNotification('يرجى إدخال بريد إلكتروني صحيح', 'error');
+            return;
+        }
+        
+        // Simulate form submission with loading state
+        const submitBtn = document.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        
+        submitBtn.textContent = 'جاري الإرسال...';
+        submitBtn.disabled = true;
+        submitBtn.style.background = 'linear-gradient(135deg, #6b7280, #9ca3af)';
+        
+        setTimeout(() => {
+            showNotification('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً', 'success');
+            contactForm.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            submitBtn.style.background = '';
+        }, 2500);
+    });
+}
+
+// Notification System
+function showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.textContent = message;
+    
+    const styles = {
+        position: 'fixed',
+        top: '100px',
+        right: '20px',
+        padding: '16px 24px',
+        borderRadius: '12px',
+        color: 'white',
+        fontWeight: '500',
+        zIndex: '10000',
+        transform: 'translateX(400px)',
+        transition: 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        backdropFilter: 'blur(10px)',
+        border: '1px solid rgba(255, 255, 255, 0.2)'
+    };
+    
+    Object.assign(notification.style, styles);
+    
+    if (type === 'success') {
+        notification.style.background = 'linear-gradient(135deg, #10b981, #34d399)';
+    } else if (type === 'error') {
+        notification.style.background = 'linear-gradient(135deg, #ef4444, #f87171)';
+    } else {
+        notification.style.background = 'linear-gradient(135deg, #3b82f6, #60a5fa)';
+    }
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    setTimeout(() => {
+        notification.style.transform = 'translateX(400px)';
+        setTimeout(() => {
+            document.body.removeChild(notification);
+        }, 400);
+    }, 4000);
+}
+
+// Smooth Scrolling Enhancement
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offsetTop = target.offsetTop - 80;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Advanced Parallax Effect
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.quantum-grid, .floating-orbs, .neural-network');
+    
+    parallaxElements.forEach((element, index) => {
+        const speed = 0.5 + (index * 0.1);
+        element.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+    
+    // Orb movement based on scroll
+    const orbs = document.querySelectorAll('.orb');
+    orbs.forEach((orb, index) => {
+        const speed = 0.2 + (index * 0.1);
+        const rotation = scrolled * (0.1 + index * 0.05);
+        orb.style.transform = `translateY(${scrolled * speed}px) rotate(${rotation}deg)`;
+    });
+});
+
+// Mouse Movement Parallax
+document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX / window.innerWidth;
+    const mouseY = e.clientY / window.innerHeight;
+    
+    const orbs = document.querySelectorAll('.orb');
+    orbs.forEach((orb, index) => {
+        const speed = 10 + (index * 5);
+        const x = (mouseX - 0.5) * speed;
+        const y = (mouseY - 0.5) * speed;
+        orb.style.transform += ` translate(${x}px, ${y}px)`;
+    });
+    
+    const particles = document.querySelectorAll('.dust-particle');
+    particles.forEach((particle, index) => {
+        const speed = 5 + (index * 2);
+        const x = (mouseX - 0.5) * speed;
+        const y = (mouseY - 0.5) * speed;
+        particle.style.transform = `translate(${x}px, ${y}px)`;
+    });
+});
+
+// Enhanced Button Ripple Effect
+document.querySelectorAll('.btn-quantum, .filter-btn, .control-btn, .submit-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            left: ${x}px;
+            top: ${y}px;
+            background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: quantumRipple 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            pointer-events: none;
+            z-index: 1;
+        `;
+        
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 800);
+    });
+});
+
+// Add quantum ripple animation
+const quantumRippleStyle = document.createElement('style');
+quantumRippleStyle.textContent = `
+    @keyframes quantumRipple {
+        0% {
+            transform: scale(0);
+            opacity: 1;
+        }
+        50% {
+            transform: scale(0.5);
+            opacity: 0.8;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 0;
+        }
+    }
+    
+    @keyframes quantumHide {
+        from {
+            opacity: 1;
+            transform: scale(1) rotateY(0deg);
+        }
+        to {
+            opacity: 0;
+            transform: scale(0.8) rotateY(45deg);
+        }
+    }
+`;
+document.head.appendChild(quantumRippleStyle);
+
+// Enhanced Scroll Progress Indicator
+const createScrollProgress = () => {
+    const progressBar = document.createElement('div');
+    progressBar.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #17aabd, #6cce69);
+        z-index: 10000;
+        transition: width 0.1s ease;
+        box-shadow: 0 0 10px rgba(23, 170, 189, 0.5);
+    `;
+    document.body.appendChild(progressBar);
+    
+    window.addEventListener('scroll', () => {
+        const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        progressBar.style.width = scrollPercent + '%';
+    });
+};
+
+createScrollProgress();
+
+// Quantum Cursor Effect
+const createQuantumCursor = () => {
+    const cursor = document.createElement('div');
+    const cursorDot = document.createElement('div');
+    
+    cursor.style.cssText = `
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #17aabd;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transition: all 0.1s ease;
+        mix-blend-mode: difference;
+    `;
+    
+    cursorDot.style.cssText = `
+        position: fixed;
+        width: 6px;
+        height: 6px;
+        background: #6cce69;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 10000;
+        transition: all 0.05s ease;
+    `;
+    
+    document.body.appendChild(cursor);
+    document.body.appendChild(cursorDot);
+    
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX - 20 + 'px';
+        cursor.style.top = e.clientY - 20 + 'px';
+        cursorDot.style.left = e.clientX - 3 + 'px';
+        cursorDot.style.top = e.clientY - 3 + 'px';
+    });
+    
+    // Cursor interactions
+    const interactiveElements = document.querySelectorAll('a, button, .portfolio-item, .about-card, .service-card');
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'scale(1.5)';
+            cursor.style.borderColor = '#6cce69';
+            cursorDot.style.transform = 'scale(2)';
+        });
+        
+        el.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'scale(1)';
+            cursor.style.borderColor = '#17aabd';
+            cursorDot.style.transform = 'scale(1)';
+        });
+    });
+};
+
+// Initialize quantum cursor on desktop only
+if (window.innerWidth > 768) {
+    createQuantumCursor();
+}
+
+// Enhanced Form Field Animations
+document.querySelectorAll('.form-group input, .form-group textarea').forEach(field => {
+    field.addEventListener('focus', function() {
+        this.parentElement.style.transform = 'scale(1.02)';
+        this.style.boxShadow = '0 0 0 4px rgba(23, 170, 189, 0.1), 0 8px 32px rgba(23, 170, 189, 0.2)';
+    });
+    
+    field.addEventListener('blur', function() {
+        this.parentElement.style.transform = 'scale(1)';
+        this.style.boxShadow = '';
+    });
+});
+
+// Quantum Particle System
+const createParticleSystem = () => {
+    const particleContainer = document.createElement('div');
+    particleContainer.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+    `;
+    
+    document.body.appendChild(particleContainer);
+    
+    function createParticle() {
+        const particle = document.createElement('div');
+        particle.style.cssText = `
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #17aabd;
+            border-radius: 50%;
+            opacity: 0;
+            animation: particleLife 4s linear forwards;
+        `;
+        
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = '100%';
+        
+        particleContainer.appendChild(particle);
+        
+        setTimeout(() => {
+            particle.remove();
+        }, 4000);
+    }
+    
+    // Create particles periodically
+    setInterval(createParticle, 300);
+};
+
+// Add particle life animation
+const particleStyle = document.createElement('style');
+particleStyle.textContent = `
+    @keyframes particleLife {
+        0% {
+            opacity: 0;
+            transform: translateY(0) scale(0);
+        }
+        10% {
+            opacity: 1;
+            transform: translateY(-20px) scale(1);
+        }
+        90% {
+            opacity: 1;
+            transform: translateY(-80vh) scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-100vh) scale(0);
+        }
+    }
+`;
+document.head.appendChild(particleStyle);
+
+// Initialize particle system
+createParticleSystem();
+
+// Enhanced Keyboard Navigation
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        // Close mobile menu
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+    }
+    
+    if (e.key === 'ArrowLeft' && document.querySelector('.testimonials-section')) {
+        nextTestimonial();
+    }
+    
+    if (e.key === 'ArrowRight' && document.querySelector('.testimonials-section')) {
+        prevTestimonial();
+    }
+});
+
+// Performance optimization - Reduce animations on low-end devices
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (reduceMotion.matches) {
+    document.documentElement.style.setProperty('--animation-duration', '0.01s');
+}
+
+// Initialize all animations with stagger effect
+setTimeout(() => {
+    const allCards = document.querySelectorAll('.about-card, .service-card, .portfolio-item, .team-member');
+    allCards.forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
+}, 100);
+    </script>
+</body>
+</html>
