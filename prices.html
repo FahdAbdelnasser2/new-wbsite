@@ -587,13 +587,13 @@
     <script>
       let userCount = 7;
       const appList = document.querySelector('.app-list');
+      let total = document.querySelector(".total").textContent;
         // Add click interaction to app cards
         document.querySelectorAll('.app-card').forEach(card => {
           card.addEventListener('click', function() {
               this.classList.toggle('selected');
               let element = this.querySelector(".app-card-name").textContent;
               let elementPrice = this.querySelector(".app-card-price").textContent;
-              let total = document.querySelector(".total").textContent;
               if (this.classList.contains("selected")) {
                 // إنشاء عنصر li جديد
                 let li = document.createElement("li");
@@ -602,8 +602,8 @@
                 li.innerHTML =`<span class="app-name">${element}</span>
                       <span class="app-price">${elementPrice} / user</span>`
                 appList.appendChild(li);
-                // total=elementPrice; 
-              } 
+                total=elementPrice;
+              }
               else {
                 let liToRemove = appList.querySelector(`li[data-app-name="${element}"]`);
                 liToRemove.remove();
