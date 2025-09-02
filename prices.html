@@ -4,23 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="hadeer hussein" />
-    <meta property="og:title" content="" />
+    <meta
+      name="keywords"
+      content="مع رايتو أحصل على حلول برمجية وأنظمة برمجية مبتكرة"
+    />
+    <meta
+      name="description"
+      content="اكتشف حلول برمجية مبتكرة وأنظمة برمجية متخصصة تلبي احتياجات شركتك مع رايتو. نحن نقدم حلولًا مخصصة لتحسين كفاءة العمليات وزيادة الإنتاجية.
+     "
+    />
+    <meta name="author" content="مع رايتو أحصل على حلول برمجية وأنظمة برمجية مبتكرة" />
+    <meta
+      property="og:title"
+      content="حلول برمجية مبتكرة وأنظمة برمجية متخصصة - شركة رايتو"
+    />
     <meta property="og:type" content="Website" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="assets/img/LOGO.png" />
     <link href="assets/img/LOGO.png" rel="shortcut icon" />
     <title>أنظمة رايتو المحاسبية - Raito ERP systems</title>
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
-
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -29,220 +41,169 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="./assets/font/font-awesome/css/all.css" rel="stylesheet" />
-    <link href="./assets/css/style.css" rel="stylesheet" />
-
-    <link href="./assets/css/style-en.css" rel="stylesheet" />
-    <link href="./assets/css/style-system.css" rel="stylesheet" />
-    <!--لينك خاص بالتصميم الجديد-->
+    <link rel="stylesheet" href="assets/css/newCss.css">
   </head>
   <body>
-    <!-------------------------start-loading-pag------------------------->
-    <div class="component-stert">
-      <div class="component--intro status--loaded">
-        <img src="./assets/img/logoar.webp" alt="logo" loading="lazy" />
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">جاري التحميل...</div>
       </div>
     </div>
-    <!---------------------------end-loading-pag------------------------->
-    <!--nav-->
-    <nav class="navbar navbar-expand-lg fixed-top navber-index">
-      <div class="container">
-        <a class="navbar-brand border-0" href="index.html">
-          <img src="./assets/img/logoar.webp" alt="logo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html"
-                >الرئيسية</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">من نحن</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle justify-content-center"
-                href="#"
-              >
-                الخدمات
-                <span class="arrow">▼</span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="services-web.html">
-                    <i class="fas fa-laptop-code"></i>
-                    تصميم المواقع الالكترونية
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="services-mobile.html">
-                    <i class="fas fa-mobile-screen-button"></i>
-                    تصميم تطبيقات الجوال
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle justify-content-center"
-                href="Programs.html"
-                role="button"
-              >
-                البرامج
-                <span class="arrow">▼</span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a
-                    class="dropdown-item"
-                    href="Programs-Asset-system-tow.html"
+    <div class="overlay"></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a class="logo-icon" href="index.html">
+            <img src="./assets/img/logoar.webp" alt="logo" class="mw-100" />
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="about.html" class="nav-link">من نحن</a></li>
+          <!-- التطبيقات (Mega Menu) -->
+          <li class="nav-item mega-parent">
+            <a href="#" class="nav-link text-center">قطاعات اعمالنا ▾</a>
+            <div class="mega-menu">
+              <div class="container">
+                <div class="mega-row">
+                  <div
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
                   >
-                    <i class="fas fa-industry"></i>
-                    برنامج ادارة الاصول والصيانة</a
+                    <h6>سلسلة التوريد</h6>
+                    <a href="#">المستودعات</a>
+                    <a href="#">التصنيع</a>
+                    <a href="#">المشتريات</a>
+                    <a href="#">الصيانة</a>
+                    <a href="#">الجودة</a>
+                  </div>
+                  <div
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
                   >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="Programs-Accounting.html">
-                    <i class="fas fa-calculator"></i>
-                    برنامج المحاسبة</a
+                    <h6>المواقع الإلكترونية</h6>
+                    <a href="#">أداة بناء المواقع</a>
+                    <a href="#">متاجر إلكترونية</a>
+                    <a href="#">مدونة</a>
+                    <a href="#">منتدى</a>
+                  </div>
+                  <div
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
                   >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="Programs-stores.html">
-                    <i class="fas fa-boxes-stacked"></i>
-                    برنامج ادارة المخازن
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="Programs-delegates.html">
-                    <i class="fas fa-people-carry"></i>
-                    برنامج ادارة المناديب
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="Programs-Personnel.html">
-                    <i class="fas fa-gas-pump"></i>
-                    برنامج ادارة المحطات
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="prices.html"> اسعارنا</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Blog.html">المدونة</a>
-            </li>
-            <li class="nav-item nav-login-lang">
-              <a class="nav-link" href="contact.html">تواصل معنا</a>
-            </li>
-
-            <li class="nav-item dropdown lang-item">
-              <!-- <a class="nav-link dropdown-toggle" href="#">
+                    <h6>المبيعات</h6>
+                    <a href="#">إدارة علاقات العملاء</a>
+                    <a href="#">المبيعات</a>
+                    <a href="#">نقطة البيع</a>
+                    <a href="#">الاشتراكات</a>
+                  </div>
+                  <div
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
+                  >
+                    <h6>الخدمات</h6>
+                    <a href="#">المشاريع</a>
+                    <a href="#">الجدول الزمني</a>
+                    <a href="#">الخدمة الميدانية</a>
+                    <a href="#">التخطيط</a>
+                  </div>
+                  <div
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
+                  >
+                    <h6>المالية</h6>
+                    <a href="#">المحاسبة</a>
+                    <a href="#">الفواتير</a>
+                    <a href="#">النفقات</a>
+                    <a href="#">المستندات</a>
+                  </div>
+                  <div
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
+                  >
+                    <h6>الموارد البشرية</h6>
+                    <a href="#">الموظفون</a>
+                    <a href="#">التوظيف</a>
+                    <a href="#">إجازات</a>
+                    <a href="#">التقييمات</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item mega-parent mega-parent-last">
+            <a href="#" class="nav-link text-center">الخدمات ▾</a>
+            <div class="mega-menu">
+              <div class="mega-row">
+                <div class="mega-col">
+                  <h6>سلسلة التوريد</h6>
+                  <a href="#">المستودعات</a>
+                  <a href="#">التصنيع</a>
+                  <a href="#">المشتريات</a>
+                  <a href="#">الصيانة</a>
+                  <a href="#">الجودة</a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="prices.html" class="nav-link">اسعارنا</a></li>
+          <li><a href="Blog.html" class="nav-link">المدونة</a></li>
+          <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+          <li class="lang-item">
+            <div class="language-switcher">
+              <button
+                class="lang-btn btn border-0"
+                id="arabic-btn"
+                title="Switch to Arabic"
+              >
                 <img
                   src="./assets/Asset-system/icon/Flag-Saudi-Arabia.webp"
                   alt="Arabic"
                   loading="lazy"
                   width="24"
-                  class="me-2"
+                  class="me-2 align-middle"
                 />
                 العربية
-                <span class="arrow">▼</span>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    <img
-                      src="./assets/Asset-system/icon/united-kingdom.png"
-                      alt="English"
-                      loading="lazy"
-                      width="24"
-                      class="me-2"
-                    />
-                    English
-                  </a>
-                </li>
-              </ul> -->
-              <div class="language-switcher">
-                <button
-                  class="lang-btn btn border-0"
-                  id="arabic-btn"
-                  title="Switch to Arabic"
-                >
-                  <img
-                    src="./assets/Asset-system/icon/Flag-Saudi-Arabia.webp"
-                    alt="Arabic"
-                    loading="lazy"
-                    width="24"
-                    class="me-2"
-                  />
-                  العربية
-                </button>
-                <button
-                  class="lang-btn btn border-0"
-                  id="english-btn"
-                  title="Switch to english"
-                  style="display: none"
-                >
-                  <img
-                    src="./assets/Asset-system/icon/united-kingdom.png"
-                    alt="English"
-                    loading="lazy"
-                    width="24"
-                    class="me-2"
-                  />
-                  English
-                </button>
-              </div>
-            </li>
-          </ul>
+              </button>
+              <button
+                class="lang-btn btn border-0"
+                id="english-btn"
+                title="Switch to english"
+                style="display: none"
+              >
+                <img
+                  src="./assets/Asset-system/icon/united-kingdom.png"
+                  alt="English"
+                  loading="lazy"
+                  width="24"
+                  class="ms-2 align-bottom"
+                />
+                English
+              </button>
+            </div>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
       </div>
     </nav>
-    <!--end-nav-->
-    <div class="floating-elements">
-      <div class="floating-circle circle-1"></div>
-      <div class="floating-circle circle-2"></div>
-      <div class="floating-circle circle-3"></div>
-      <div class="floating-triangle triangle-1"></div>
-      <div class="floating-triangle triangle-2"></div>
-      <div class="floating-square square-1"></div>
-      <div class="floating-square square-2"></div>
-    </div>
-    <!-- Floating Background Elements -->
-    <section class="component-prices section-padding2">
+    <section class="component-prices section-padding">
       <div class="container">
-        <div class="text-center">
-          <div class="section-badge">
-            <i class="fa-solid fa-money-bills"></i>
-            <span>الاسعار</span>
-          </div>
+        <div class="section-header">
           <h2 class="section-title">أسعار تنافسية ومحدثة يومياً</h2>
           <p class="section-subtitle">
             تتضمن جميع الباقات جميع الادوات المتقدمة لتعزيز منتجك. اختر الباقة
             الأنسب لاحتياجاتك.
           </p>
           <div class="switcher text-center">
-            <button id="monthly" class="btn toggle-btn active">شهري</button>
             <button id="yearly" class="btn toggle-btn">سنوي</button>
+            <button id="monthly" class="btn toggle-btn active">شهري</button>
           </div>
         </div>
 
-        <div class="row mx-0 row-cols-lg-3 g-4 row-cols-md-2 row-cols-1 mt-4">
-          <div class="col col-peicess">
-            <div class="price_box_inner p-md-4 p-2 h-100 active">
+        <div class="row mx-0 g-4 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 row-cols-1">
+          <div class="col col-peicess mt-3 mt-lg-0">
+            <div class="price_box_inner p-xl-4 p-3 h-100 active">
               <div class="component-decient">
                 <p>
                   خصم
@@ -267,73 +228,43 @@
               </div>
               <ul class="nk-pricing-body mt-4">
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold"> عدد الفواتير:لانهائي </span>
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6"> عدد الفواتير:لانهائي </span>
                 </li>
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold">
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6">
                     التقارير:الأساسية والمتقدمة وتحليلة
                   </span>
                 </li>
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold"> لوحة التحكم:متطورة </span>
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6"> لوحة التحكم:متطورة </span>
                 </li>
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold"> عدد الفواتير:لانهائي </span>
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6"> عدد الفواتير:لانهائي </span>
                 </li>
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold">
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6">
                     التقارير:الأساسية والمتقدمة وتحليلة
                   </span>
                 </li>
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold"> لوحة التحكم:متطورة </span>
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6"> لوحة التحكم:متطورة </span>
                 </li>
               </ul>
-              <div class="text-center">
-                <a href="contact.html" class="btn button-mor button-stert"
-                  >تواصل معنا</a
-                >
+              <div class="text-center mb-2">
+                <a href="contact.html" class="btn btn-primary btn-full py-2">
+                  تواصل معنا
+                </a>
               </div>
             </div>
           </div>
-          <div class="col col-peicess">
-            <div class="price_box_inner p-md-4 p-2 h-100">
+          <div class="col col-peicess mt-3 mt-lg-0">
+            <div class="price_box_inner p-xl-4 p-3 h-100">
               <div class="nk-pricing-head text-center">
                 <img
                   src="./assets/img/plane.png"
@@ -351,49 +282,34 @@
               </div>
               <ul class="nk-pricing-body mt-4">
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold"> عدد الفواتير:لانهائي </span>
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6"> عدد الفواتير:لانهائي </span>
                 </li>
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold">
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6">
                     التقارير:الأساسية والمتقدمة وتحليلة
                   </span>
                 </li>
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold"> لوحة التحكم:متطورة </span>
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6"> لوحة التحكم:متطورة </span>
                 </li>
               </ul>
-              <div class="text-center">
-                <a href="contact.html" class="btn button-mor button-stert"
-                  >تواصل معنا</a
-                >
+              <div class="text-center mb-2">
+                <a href="contact.html" class="btn btn-primary btn-full py-2">
+                  تواصل معنا
+                </a>
               </div>
             </div>
           </div>
-          <div class="col col-peicess">
-            <div class="price_box_inner p-md-4 p-2 h-100">
+          <div class="col col-peicess mt-3 mt-lg-0">
+            <div class="price_box_inner p-xl-4 p-3 h-100">
               <div class="nk-pricing-head text-center">
                 <img
                   src="./assets/img/paper-airplane.png"
                   alt="paper airplane icon"
-                  class="mb-5 nth-1"
+                  class="mb-5 nth-1" style="width: 112px;height: 129px;"
                 />
                 <h2 class="my-0">الباقة الاساسية</h2>
                 <h4 class="price-component fs-5 mt-2">
@@ -406,48 +322,148 @@
               </div>
               <ul class="nk-pricing-body mt-4">
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold"> عدد الفواتير:لانهائي </span>
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6"> عدد الفواتير:لانهائي </span>
                 </li>
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold">
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6">
                     التقارير:الأساسية والمتقدمة وتحليلة
                   </span>
                 </li>
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold"> لوحة التحكم:متطورة </span>
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6"> لوحة التحكم:متطورة </span>
                 </li>
                 <li class="mb-3 p-decerption">
-                  <img
-                    src="./assets/Asset-system/accept.png"
-                    class=""
-                    alt="chack"
-                    loading="lazy"
-                  />
-                  <span class="mx-1 fw-semibold"> عدد الفواتير:لانهائي </span>
+                  <i class="fas fa-check-circle"></i>
+                  <span class="fs-6"> عدد الفواتير:لانهائي </span>
                 </li>
               </ul>
+              <div class="text-center mb-2">
+                <a href="contact.html" class="btn btn-primary btn-full py-2">
+                  تواصل معنا
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="component-prices section-padding bg-gray">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">وفر الكثير مع رايتو</h2>
+          <p class="section-subtitle">
+            التكاليف التي توفرها بناءً على متوسط السعر لكل مستخدم لكل تطبيق.
+          </p>
+        </div>
+
+        <div class="row mx-0 g-4 justify-content-between">
+          <div class="col-lg-8 col-peicess mt-3 mt-lg-0">
+            <h3 class="card-title">جميع تطبيقات رايتو</h3>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">📝</div>
+                    <div class="app-card-name">المعرفة</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">👥</div>
+                    <div class="app-card-name">مناقشة</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">☁️</div>
+                    <div class="app-card-name">علاقات العملاء</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">🛍️</div>
+                    <div class="app-card-name">متاجر إلكترونية</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">💼</div>
+                    <div class="app-card-name">المحاسبة</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">📊</div>
+                    <div class="app-card-name">المشاريع</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">🔥</div>
+                    <div class="app-card-name">نقطة البيع</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">📧</div>
+                    <div class="app-card-name">المستندات</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">🌐</div>
+                    <div class="app-card-name">موقع إلكتروني</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">📦</div>
+                    <div class="app-card-name">المستودعات</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">🎨</div>
+                    <div class="app-card-name">توقيع إلكتروني</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+                <div class="app-card">
+                    <div class="check-mark">✓</div>
+                    <div class="app-icon">🌿</div>
+                    <div class="app-card-name">الموارد البشرية</div>
+                    <div class="app-card-price d-none">200</div>
+                </div>
+            </div>
+            <div class="user-counter">
+                <h6>كم عدد المستخدمين؟</h6>
+                <button class="counter-btn" onclick="changeUsers(-1)"><i class="fa fa-minus"></i></button>
+                <input type="number" min="1" value="7" name="Users" class="form-control bg-100 fs-5 fw-bold mx-2 userCount" style="width: 5rem;" onchange="changeUsersCount()">
+                <button class="counter-btn" onclick="changeUsers(1)"><i class="fa fa-plus"></i></button>
+            </div>
+          </div>
+          <div class="col-lg-3 col-peicess mt-3 mt-lg-0">
+            <div class="comparison-card">
+              <h5 class="fw-semibold">التطبيقات المراد استبدالها</h5>
+              <div class="d-flex justify-content-between">
+                <span>مقابل <b class="userCount">15</b> مستخدم(ين)</span>
+                <span>/ الشهر</span> 
+              </div>
+              <div class="seprator"></div>
+                <ul class="app-list list-style-type-none p-0">
+                </ul>
+              <div class="seprator"></div>
+              <div class="d-flex align-items-center justify-content-between fs-6 fw-bold mb-5">
+                  الإجمالي 
+                  <div><span class="total"></span>US$ / السنة </div>
+              </div>
               <div class="text-center">
-                <a href="contact.html" class="btn button-mor button-stert"
-                  >تواصل معنا</a
-                >
+                  <h3 class="mb-0">مدخراتك </h3>
+                  <div class="p-2 mb-1">
+                      <span class="total_savings">32,295.00&nbsp;US$</span> / السنة 
+                  </div>
+                  <p class="mb-0">لبرنامج متكامل تماماً. </p>
               </div>
             </div>
           </div>
@@ -455,207 +471,145 @@
       </div>
     </section>
 
-    <footer class="component-footer pt-55">
-      <div class="container">
-        <div class="row mx-0 justify-content-between">
-          <div class="col-12 col-lg-4 col-xl-5">
-            <div class="">
-              <div class="logo-footer">
-                <a href="index.html">
-                  <img
-                    class="img-footer-logo"
-                    src="./assets/img/logoar.webp"
-                    alt="logo"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-
-              <p class="p-footer my-4">
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bg">
+            <div class="footer-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                      <a class="logo-icon" href="index.html">
+                        <img src="./assets/img/logoar.webp" alt="logo" class="mw-100" />
+                      </a>
+                    </div>
+                    <p>
                 نحن شركة رائدة في مجال تطوير الحلول المحاسبية ERP، نقدم حلولًا
-                مبتكرة ومخصصة للشركات لتلبية احتياجاتها الفريدة، كما نعتمد على
-                التقنيات السحابية الحديثة، تتميز خدماتنا بالأمان العالي والدعم
-                الفني المتميز، نلتزم بتقديم حلول عالية الجودة، اكتشف كيف يمكن
-                لشركتك الاستفادة من خبرتنا وانضم إلى قائمة عملائنا المرموقة.
-              </p>
-              <div class="link-footer d-flex align-items-center mb-4 gap-2">
-                <a
-                  class="d-block"
-                  href="https://apps.apple.com/us/developer/raitotec/id1545363149"
-                >
-                  <img
-                    src="./assets/img/app_store.png"
-                    alt="app"
-                    width="150"
-                    height="50"
-                    loading="lazy"
-                  />
-                </a>
-                <a
-                  class="d-block"
-                  href="https://play.google.com/store/apps/developer?id=Raitotec&hl=ar&gl=US"
-                >
-                  <img
-                    src="./assets/img/google_play.png"
-                    alt="google"
-                    width="150"
-                    height="50"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-8 col-xl-6">
-            <div class="row mx-0">
-              <div class="col-6 col-md-4 mb-4">
-                <div class="">
-                  <h3 class="title-footer">عناوين سريعة</h3>
-                  <ul class="footer-nav pt-4">
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">من نحن </a></li>
-                    <li><a href="Services.html">خدمات </a></li>
-                    <li><a href="prices.html">الأسعار</a></li>
-                    <li><a href="Blog.html">المدونة</a></li>
-                    <li><a href="contact.html">تواصل معنا</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-6 col-md-4">
-                <div class="">
-                  <h3 class="title-footer">برامجنا</h3>
-                  <ul class="footer-nav pt-4">
-                    <li><a href="#">برنامج ادارة المبيعات والحسابات</a></li>
-                    <li><a href="#">برنامج إدارة المخزون</a></li>
-                    <li><a href="#">برنامج الصيانة</a></li>
-                    <li><a href="#">برنامج المحاماة</a></li>
-                    <li><a href="#">برنامج إدارة محطات الوقود</a></li>
-                    <li><a href="#">برنامج العقارات</a></li>
-                    <li><a href="#">برنامج إدارة شؤون الموظفين</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-12 col-md-4 mb-3 mb-md-0">
-                <div class="">
-                  <h3 class="title-footer">تواصل معنا</h3>
-                  <div class="pt-4">
-                    <div class="contact-content mb-2">
-                      <a
-                        class="content-box"
-                        href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9"
-                      >
-                        <i class="fa fa-location-dot"></i>
-                        الرياض ، المملكة العربية السعودية ، 4000 طريق دائري
-                        12993 ، 27
-                      </a>
-                    </div>
-                    <div class="contact-content mb-2">
-                      <a href="tel:+966538499438" class="content-box">
-                        <i class="fa fa-phone"></i>
-                        <span>966538499438+</span>
-                      </a>
-                    </div>
-                    <div class="contact-content mb-2">
-                      <a href="mailto:info@raitotec.com" class="content-box">
-                        <i class="fas fa-envelope"></i>
-                        info@raitotec.com
-                      </a>
-                    </div>
-                    <ul class="footer-nav pt-md-4 d-flex align-items-center">
-                      <li class="mb-0">
+                مبتكرة ومخصصة للشركات لتلبية احتياجاتها الفريدة
+                    </p>
+                  <div class="footer-social">
+                        <a href="https://www.facebook.com/Raitotec"
+                          target="_blank"><i class="fab fa-facebook"></i></a>
                         <a href="https://twitter.com/raitotec" target="_blank"
-                          ><i class="fab fa-twitter"></i
-                        ></a>
-                      </li>
-                      <li class="mb-0">
-                        <a
-                          href="https://www.facebook.com/Raitotec"
+                          ><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/raitotec1/"
+                          target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a    href="https://www.linkedin.com/in/raito-erp-software-830920234/"
                           target="_blank"
-                        >
-                          <i class="fab fa-facebook-f"></i
-                        ></a>
-                      </li>
-                      <li class="mb-0">
-                        <a
-                          href="https://www.youtube.com/@Raitotec"
-                          target="_blank"
-                          ><i class="fa-brands fa-youtube"></i
-                        ></a>
-                      </li>
-                      <li class="mb-0">
-                        <a
-                          href="https://www.instagram.com/raitotec1/"
-                          target="_blank"
-                          ><i class="fab fa-instagram"></i
-                        ></a>
-                      </li>
-                      <li class="mb-0">
-                        <a
-                          href="https://www.linkedin.com/in/raito-erp-software-830920234/"
-                          target="_blank"
-                        >
-                          <i class="fab fa-linkedin-in"></i
-                        ></a>
-                      </li>
-                      <li class="mb-0">
-                        <a
+                        ><i class="fab fa-linkedin"></i></a>
+                        <a  href="https://www.youtube.com/@Raitotec"
+                          target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a
                           href="https://wa.me/+966539387625?text=I'm%20interested%20in%20your%20website"
                           target="_blank"
                           ><i class="fab fa-whatsapp"></i
                         ></a>
-                      </li>
-                      <li class="mb-0">
-                        <a
-                          href="https://www.linkedin.com/in/raito-erp-software-830920234/"
-                          target="_blank"
-                        >
-                          <i class="fa-brands fa-snapchat"></i
-                        ></a>
-                      </li>
-                    </ul>
-                  </div>
+                    </div>
                 </div>
-              </div>
+                <div class="footer-section">
+                    <h4>عناوين سريعة</h4> 
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">خدمات</a></li>
+                        <li><a href="#">الأسعار</a></li>
+                        <li><a href="#">المدونة</a></li>
+                        <li><a href="#">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                  <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">برنامج ادارة المبيعات والحسابات</a></li>
+                        <li><a href="#">برنامج إدارة المخزون</a></li>
+                        <li><a href="#">برنامج الصيانة</a></li>
+                        <li><a href="#">برنامج  المحاماة</a></li>
+                        <li><a href="#">برنامج إدارة محطات الوقود</a></li>
+                        <li><a href="#">برنامج العقارات</a></li>
+                        <li><a href="#">برنامج إدارة شؤون الموظفين</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                
+                    <h4>تواصل معنا</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i><a
+                      
+                        href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9"
+                      >
+                         الرياض ، المملكة العربية السعودية ، 4000 طريق دائري
+                        12993 ، 2
+                        </a>
+                        </p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+966538499438" class">
+                          966538499438 +</p>
+                        </a>
+                          <p><i class="fas fa-envelope"></i>
+                                <a href="mailto:info@raitotec.com" >
+                            info@raitotec.com</p>
+                          </a>
+                    </div>
+                </div>
             </div>
-          </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 جميع الحقوق محفوظة لدى شركة Raito للبرمجيات.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">ملفات الارتباط</a>
+                </div>
+            </div>
         </div>
-        <div class="footer-copyright">
-          <div class="text text-center">
-            <p class="mb-0">
-              ©حقوق الطبع والنشر بواسطة رايتو
-              <span class="text-year"></span> جميع الحقوق محفوظة
-            </p>
-          </div>
-        </div>
-      </div>
     </footer>
-    <!--whatsapp-->
-    <!-- <div class="compoent-price-hadder">
-      <div class="back">
-        <a
-          href="https://wa.me/966538499438"
-          class="img-whatsapp px-2"
-          title="تواصل واتساب"
-        >
-          <img
-            src="./assets/Asset-system/icon/whatsapp.png"
-            alt="whatsapp"
-            loading="lazy"
-          />
-        </a>
-      </div>
-    </div> -->
+
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-btn">
+      <a href="https://wa.me/966501234567" target="_blank">
+        <div class="whatsapp-icon">💬</div>
+      </a>
+    </div>
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop">
       <i class="fas fa-arrow-up"></i>
     </button>
     <!--advertisements-->
-    <script src="./assets/js/jquery.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./assets/js/loade.js"></script>
+    <!-- <script src="./assets/js/loade.js"></script> -->
     <script src="./assets/js/chang-langth.js"></script>
     <script src="./assets/js/prices.js"></script>
+    <script src="./assets/js/newJs.js"></script>
+    <script>
+      let userCount = 7;
+      const appList = document.querySelector('.app-list');
+        // Add click interaction to app cards
+        document.querySelectorAll('.app-card').forEach(card => {
+          card.addEventListener('click', function() {
+              this.classList.toggle('selected');
+              let element = this.querySelector(".app-card-name").textContent;
+              let elementPrice = this.querySelector(".app-card-price").textContent;
+              let total = document.querySelector(".total").textContent;
+              if (this.classList.contains("selected")) {
+                // إنشاء عنصر li جديد
+                let li = document.createElement("li");
+                li.className = "app-item";
+                li.dataset.appName = element;  // ربط li بالاسم
+                li.innerHTML =`<span class="app-name">${element}</span>
+                      <span class="app-price">${elementPrice} / user</span>`
+                appList.appendChild(li);
+                // total=elementPrice; 
+              } 
+              else {
+                let liToRemove = appList.querySelector(`li[data-app-name="${element}"]`);
+                liToRemove.remove();
+              }
+          });
+        });
+    </script>
   </body>
 </html>
