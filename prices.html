@@ -439,7 +439,7 @@
             <div class="user-counter">
                 <h6>كم عدد المستخدمين؟</h6>
                 <button class="counter-btn" onclick="changeUsers(-1)"><i class="fa fa-minus"></i></button>
-                <input type="number" min="1" value="7" name="Users" class="form-control bg-100 fs-5 fw-bold mx-2 userCount" style="width: 5rem;" onchange="changeUsersCount()">
+                <input type="number" min="1" value="7" name="Users" class="form-control bg-100 fs-5 fw-bold mx-2" id="userCount" style="width: 5rem;" onchange="changeUsersCount()">
                 <button class="counter-btn" onclick="changeUsers(1)"><i class="fa fa-plus"></i></button>
             </div>
           </div>
@@ -585,7 +585,7 @@
     <script src="./assets/js/prices.js"></script>
     <script src="./assets/js/newJs.js"></script>
     <script>
-      let userCount = 7;
+      let userCountInput = document.querySelector("#userCount").value;
       const appList = document.querySelector('.app-list');
       let total = document.querySelector(".total").textContent;
         // Add click interaction to app cards
@@ -610,6 +610,11 @@
               }
           });
         });
+        function changeUsers(delta) {
+          userCount = Math.max(1, userCountInput + delta);
+          const user = document.querySelector('.userCount');
+          console.log(user);
+        }
     </script>
   </body>
 </html>
