@@ -552,7 +552,7 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: var(--gradient-secondary);
+    /* background: var(--gradient-secondary); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -564,7 +564,15 @@ body {
     position: relative;
     overflow: hidden;
 }
-
+.feature-icon{
+    width: 120px;
+    height: 120px;
+}
+.feature-icon .img-team{
+    width: 120px;
+    height: 120px;
+}
+/* 
 .member-avatar::before {
     content: '';
     position: absolute;
@@ -575,7 +583,7 @@ body {
     background: var(--gradient-primary);
     opacity: 0;
     transition: opacity 0.4s ease;
-}
+} */
 
 .team-member:hover .member-avatar {
     transform: scale(1.15) rotateY(15deg);
@@ -918,6 +926,7 @@ body {
     outline: 2px solid var(--secondary-color);
     outline-offset: 2px;
 }
+
 </style>
 </head>
 <body>
@@ -1012,45 +1021,92 @@ body {
             </div>
             <div class="team-grid">
                 <div class="team-member fade-in">
-                    <div class="member-avatar">أ</div>
+                    <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
                     <div class="member-info">
-                        <h3>أحمد محمد</h3>
-                        <p>مطور واجهات متقدمة</p>
+                        <h3>فهد بن عبد المحسن العاصم</h3>
+                        <p>مدير عام - مؤسس ورجل أعمال</p>
+                    </div>
+                </div>
+            <div class="team-member fade-in">
+                    <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                        <div class="member-info">
+                        <h3>هشام إبراهيم</h3>
+                        <p>مدير قطاع برمجة المشاريع</p>
+                        </div>
+                    </div>
+                
+                <div class="team-member fade-in">
+                    <div class="member-avatar">
+                    <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                        <div class="member-info">
+                            <h3>طلعت أبو كبيرة</h3>
+                            <p>مدير قسم التطوير الفني</p>
+                        </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>زياد بن فهد العاصم</h3>
+                        <p>مدير شؤون العاملين</p>
                     </div>
                 </div>
                 <div class="team-member fade-in">
-                    <div class="member-avatar">س</div>
+           <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
                     <div class="member-info">
-                        <h3>سارة أحمد</h3>
-                        <p>مصممة تجربة المستخدم</p>
+                        <h3>محمود مصطفى</h3>
+                        <p>مدير قسم الدعم الفني</p>
                     </div>
                 </div>
                 <div class="team-member fade-in">
-                    <div class="member-avatar">م</div>
+                          <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png"  />
+                        </div>
+                    </div>
                     <div class="member-info">
-                        <h3>محمد علي</h3>
-                        <p>مهندس أنظمة خلفية</p>
+                        <h3>محمد جمال علي</h3>
+                        <p>مدير قسم تصميم الويب والجرافيك</p>
                     </div>
                 </div>
                 <div class="team-member fade-in">
-                    <div class="member-avatar">ف</div>
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png"  />
+                        </div>
+                    </div>
                     <div class="member-info">
-                        <h3>فاطمة حسن</h3>
-                        <p>مديرة المشاريع التقنية</p>
+                        <h3>علي محروس</h3>
+                        <p>مبرمج</p>
                     </div>
                 </div>
                 <div class="team-member fade-in">
-                    <div class="member-avatar">ع</div>
-                    <div class="member-info">
-                        <h3>عبدالله سعد</h3>
-                        <p>خبير الذكاء الاصطناعي</p>
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
                     </div>
-                </div>
-                <div class="team-member fade-in">
-                    <div class="member-avatar">ن</div>
                     <div class="member-info">
-                        <h3>نورا خالد</h3>
-                        <p>أخصائية الأمان السيبراني</p>
+                        <h3>هيثم محمد</h3>
+                        <p>مبرمج تطبيقات</p>
                     </div>
                 </div>
             </div>
