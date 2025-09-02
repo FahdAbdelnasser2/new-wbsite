@@ -477,431 +477,7 @@ body {
     }
 }
 
-/* Section 2: About - Glassmorphism Cards */
-.about-section {
-    padding: 120px 0;
-    background: linear-gradient(180deg, #000 0%, #0a1a1a 100%);
-    position: relative;
-}
 
-.neural-network {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-}
-
-.neural-node {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--main-color);
-    border-radius: 50%;
-    animation: neuralPulse 4s ease-in-out infinite;
-}
-
-.neural-node:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
-.neural-node:nth-child(2) { top: 40%; left: 30%; animation-delay: 1s; }
-.neural-node:nth-child(3) { top: 60%; left: 60%; animation-delay: 2s; }
-.neural-node:nth-child(4) { top: 80%; left: 80%; animation-delay: 3s; }
-.neural-node:nth-child(5) { top: 30%; right: 20%; animation-delay: 0.5s; }
-
-@keyframes neuralPulse {
-    0%, 100% { 
-        transform: scale(1);
-        box-shadow: 0 0 0 0 rgba(23, 170, 189, 0.7);
-    }
-    50% { 
-        transform: scale(1.5);
-        box-shadow: 0 0 0 20px rgba(23, 170, 189, 0);
-    }
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 80px;
-    position: relative;
-}
-
-.section-title {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 800;
-    margin-bottom: 24px;
-    background: var(--gradient-secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    position: relative;
-}
-
-.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -16px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: var(--gradient-primary);
-    border-radius: 2px;
-    animation: lineGrow 1s ease 0.5s both;
-}
-
-@keyframes lineGrow {
-    from { width: 0; }
-    to { width: 80px; }
-}
-
-.section-subtitle {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.7);
-    max-width: 600px;
-    margin: 0 auto;
-    font-weight: 300;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-}
-
-.about-card {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    padding: 48px 32px;
-    border-radius: 24px;
-    backdrop-filter: blur(20px);
-    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    position: relative;
-    overflow: hidden;
-}
-
-.about-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(108, 206, 105, 0.1), transparent);
-    transition: left 0.8s ease;
-}
-
-.about-card:hover::before {
-    left: 100%;
-}
-
-.about-card:hover {
-    transform: translateY(-12px) rotateY(5deg);
-    box-shadow: 0 32px 80px rgba(23, 170, 189, 0.2);
-    border-color: rgba(108, 206, 105, 0.3);
-}
-
-.card-icon {
-    width: 80px;
-    height: 80px;
-    background: var(--gradient-primary);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    margin-bottom: 24px;
-    transition: all 0.4s ease;
-}
-
-.about-card:hover .card-icon {
-    transform: rotateY(180deg) scale(1.1);
-    background: var(--gradient-secondary);
-}
-
-.about-card h3 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-    color: white;
-}
-
-.about-card p {
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.8;
-    font-weight: 300;
-}
-
-/* Section 3: Services - Hexagonal Matrix */
-.services-section {
-    padding: 120px 0;
-    background: var(--gradient-primary);
-    position: relative;
-    overflow: hidden;
-}
-
-.hex-matrix {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-}
-
-.hex-grid {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 20px;
-    transform: rotate(30deg) scale(1.5);
-    animation: matrixRotate 30s linear infinite;
-}
-
-.hex-cell {
-    width: 60px;
-    height: 60px;
-    background: rgba(108, 206, 105, 0.2);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    animation: hexPulse 3s ease-in-out infinite;
-}
-
-.hex-cell:nth-child(odd) { animation-delay: 0.5s; }
-.hex-cell:nth-child(3n) { animation-delay: 1s; }
-
-@keyframes matrixRotate {
-    from { transform: rotate(30deg) scale(1.5); }
-    to { transform: rotate(390deg) scale(1.5); }
-}
-
-@keyframes hexPulse {
-    0%, 100% { opacity: 0.2; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.2); }
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 32px;
-    position: relative;
-    z-index: 2;
-}
-
-.service-card {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 40px 32px;
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    position: relative;
-    overflow: hidden;
-}
-
-.service-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--gradient-secondary);
-    transform: scaleX(0);
-    transition: transform 0.5s ease;
-}
-
-.service-card:hover::after {
-    transform: scaleX(1);
-}
-
-.service-card:hover {
-    transform: translateY(-16px) scale(1.02);
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.3);
-}
-
-.service-icon {
-    width: 70px;
-    height: 70px;
-    background: var(--gradient-secondary);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    margin-bottom: 24px;
-    transition: all 0.4s ease;
-}
-
-.service-card:hover .service-icon {
-    transform: rotateY(360deg) scale(1.1);
-}
-
-.service-card h3 {
-    color: white;
-    font-size: 1.4rem;
-    margin-bottom: 16px;
-    font-weight: 600;
-}
-
-.service-card p {
-    color: rgba(255, 255, 255, 0.8);
-    line-height: 1.7;
-    font-weight: 300;
-}
-
-/* Section 4: Portfolio - Isotope Grid */
-.portfolio-section {
-    padding: 120px 0;
-    background: linear-gradient(180deg, #0a1a1a 0%, #1a1a2e 100%);
-    position: relative;
-}
-
-.cosmic-dust {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.dust-particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: var(--secondary-color);
-    border-radius: 50%;
-    animation: dustFloat 15s linear infinite;
-}
-
-.dust-particle:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-.dust-particle:nth-child(2) { top: 30%; left: 80%; animation-delay: 3s; }
-.dust-particle:nth-child(3) { top: 70%; left: 10%; animation-delay: 6s; }
-.dust-particle:nth-child(4) { top: 50%; left: 50%; animation-delay: 9s; }
-.dust-particle:nth-child(5) { top: 80%; left: 70%; animation-delay: 12s; }
-
-@keyframes dustFloat {
-    0% { 
-        transform: translateY(0px) translateX(0px);
-        opacity: 0;
-    }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { 
-        transform: translateY(-100px) translateX(50px);
-        opacity: 0;
-    }
-}
-
-.portfolio-filters {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin: 40px 0 60px;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    padding: 12px 24px;
-    border: 2px solid var(--main-color);
-    background: transparent;
-    color: var(--main-color);
-    border-radius: 30px;
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
-}
-
-.filter-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-secondary);
-    transition: left 0.4s ease;
-    z-index: -1;
-}
-
-.filter-btn.active::before,
-.filter-btn:hover::before {
-    left: 0;
-}
-
-.filter-btn.active,
-.filter-btn:hover {
-    color: white;
-    border-color: transparent;
-    transform: scale(1.05);
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 32px;
-}
-
-.portfolio-item {
-    border-radius: 20px;
-    overflow: hidden;
-    position: relative;
-    height: 280px;
-    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    background: var(--gradient-primary);
-}
-
-.portfolio-item::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, var(--main-color), var(--secondary-color));
-    opacity: 0.8;
-    transition: opacity 0.4s ease;
-}
-
-.portfolio-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    opacity: 0;
-    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform: scale(0.8);
-}
-
-.portfolio-item:hover .portfolio-overlay {
-    opacity: 1;
-    transform: scale(1);
-}
-
-.portfolio-item:hover {
-    transform: translateY(-12px) rotateX(5deg);
-    box-shadow: 0 32px 80px rgba(23, 170, 189, 0.3);
-}
-
-.portfolio-overlay h3 {
-    font-size: 1.6rem;
-    margin-bottom: 12px;
-    font-weight: 700;
-}
-
-.portfolio-overlay p {
-    font-size: 1rem;
-    opacity: 0.9;
-    font-weight: 300;
-}
 
 /* Section 5: Team - Orbital Layout */
 .team-section {
@@ -1172,351 +748,6 @@ body {
     box-shadow: 0 0 20px rgba(108, 206, 105, 0.5);
 }
 
-/* Section 7: Blog - Magazine Layout */
-.blog-section {
-    padding: 120px 0;
-    background: linear-gradient(180deg, #000 0%, #0a1a1a 100%);
-    position: relative;
-}
-
-.blog-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 32px;
-    margin-top: 60px;
-}
-
-.blog-post {
-    border-radius: 20px;
-    overflow: hidden;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    backdrop-filter: blur(20px);
-    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    position: relative;
-}
-
-.blog-post.featured {
-    grid-row: 1 / 3;
-}
-
-.blog-post:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 32px 80px rgba(23, 170, 189, 0.2);
-}
-
-.post-image {
-    height: 200px;
-    background: var(--gradient-primary);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    overflow: hidden;
-}
-
-.blog-post.featured .post-image {
-    height: 300px;
-}
-
-.post-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.8s ease;
-}
-
-.blog-post:hover .post-image::before {
-    left: 100%;
-}
-
-.post-category {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: var(--gradient-secondary);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: white;
-    backdrop-filter: blur(10px);
-}
-
-.post-content {
-    padding: 32px 24px;
-}
-
-.post-content h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 16px;
-    color: white;
-    line-height: 1.4;
-}
-
-.post-content p {
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.7;
-    margin-bottom: 20px;
-    font-weight: 300;
-}
-
-.post-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
-    font-weight: 300;
-}
-
-/* Section 8: Contact - Holographic Form */
-.contact-section {
-    padding: 120px 0;
-    background: var(--gradient-primary);
-    position: relative;
-    overflow: hidden;
-}
-
-.holographic-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.holo-line {
-    position: absolute;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
-    animation: holoScan 4s ease-in-out infinite;
-}
-
-.holo-line:nth-child(1) { top: 20%; animation-delay: 0s; }
-.holo-line:nth-child(2) { top: 40%; animation-delay: 1s; }
-.holo-line:nth-child(3) { top: 60%; animation-delay: 2s; }
-.holo-line:nth-child(4) { top: 80%; animation-delay: 3s; }
-
-@keyframes holoScan {
-    0% { 
-        left: -100%;
-        width: 0%;
-        opacity: 0;
-    }
-    50% { 
-        left: 0%;
-        width: 100%;
-        opacity: 1;
-    }
-    100% { 
-        left: 100%;
-        width: 0%;
-        opacity: 0;
-    }
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-}
-
-.contact-info {
-    color: white;
-}
-
-.contact-info h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    margin-bottom: 24px;
-    background: var(--gradient-secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.contact-info > p {
-    font-size: 1.2rem;
-    margin-bottom: 48px;
-    opacity: 0.9;
-    font-weight: 300;
-}
-
-.contact-details {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
-    transition: all 0.4s ease;
-}
-
-.contact-item:hover {
-    transform: translateX(8px);
-    background: rgba(23, 170, 189, 0.15);
-}
-
-.contact-icon {
-    font-size: 1.8rem;
-    width: 60px;
-    height: 60px;
-    background: var(--gradient-secondary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.contact-item h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 4px;
-    color: white;
-}
-
-.contact-item p {
-    opacity: 0.8;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 300;
-}
-
-.contact-form {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    padding: 48px;
-    border-radius: 24px;
-    backdrop-filter: blur(20px);
-    position: relative;
-}
-
-.contact-form::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--gradient-secondary);
-    animation: formGlow 3s ease-in-out infinite;
-}
-
-@keyframes formGlow {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
-}
-
-.form-group {
-    position: relative;
-    margin-bottom: 32px;
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 20px 16px 16px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    color: white;
-    font-size: 16px;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    font-family: inherit;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--main-color);
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 0 4px rgba(23, 170, 189, 0.1);
-    transform: scale(1.02);
-}
-
-.form-group label {
-    position: absolute;
-    top: 20px;
-    right: 16px;
-    color: rgba(255, 255, 255, 0.6);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    pointer-events: none;
-    font-weight: 300;
-}
-
-.form-group input:focus + label,
-.form-group input:valid + label,
-.form-group textarea:focus + label,
-.form-group textarea:valid + label {
-    top: 4px;
-    right: 12px;
-    font-size: 12px;
-    background: var(--main-color);
-    padding: 4px 8px;
-    border-radius: 6px;
-    color: white;
-    font-weight: 500;
-}
-
-.form-group textarea {
-    height: 120px;
-    resize: vertical;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 20px;
-    background: var(--gradient-secondary);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    position: relative;
-    overflow: hidden;
-}
-
-.submit-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.6s ease;
-}
-
-.submit-btn:hover::before {
-    left: 100%;
-}
-
-.submit-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(23, 170, 189, 0.4);
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .hamburger {
@@ -1669,7 +900,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background: var(--gradient-secondary);
-    border-radius: 4px;
+    
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -1764,159 +995,8 @@ body {
         </div>
     </section>
 
-    <!-- Section 2: About - Glassmorphism Cards -->
-    <section id="about" class="about-section">
-        <div class="neural-network">
-            <div class="neural-node"></div>
-            <div class="neural-node"></div>
-            <div class="neural-node"></div>
-            <div class="neural-node"></div>
-            <div class="neural-node"></div>
-        </div>
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">من نحن</h2>
-                <p class="section-subtitle">نحن فريق من المبدعين والمطورين المتخصصين في التكنولوجيا المتقدمة</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-card fade-in">
-                    <div class="card-icon">🎯</div>
-                    <h3>رؤيتنا المستقبلية</h3>
-                    <p>أن نكون الرائدين في تقديم الحلول الرقمية المبتكرة التي تحول أفكار عملائنا إلى واقع رقمي متطور ومميز</p>
-                </div>
-                <div class="about-card fade-in">
-                    <div class="card-icon">🚀</div>
-                    <h3>مهمتنا الأساسية</h3>
-                    <p>نساعد الشركات على النمو والازدهار من خلال تطوير منصات رقمية متطورة وحلول تقنية مبتكرة تواكب العصر</p>
-                </div>
-                <div class="about-card fade-in">
-                    <div class="card-icon">💎</div>
-                    <h3>قيمنا الجوهرية</h3>
-                    <p>الجودة، الإبداع، والالتزام هي القيم الأساسية التي توجه عملنا وتضمن تحقيق أعلى مستويات رضا عملائنا</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 3: Services - Hexagonal Matrix -->
-    <section id="services" class="services-section">
-        <div class="hex-matrix">
-            <div class="hex-grid">
-                <div class="hex-cell"></div>
-                <div class="hex-cell"></div>
-                <div class="hex-cell"></div>
-                <div class="hex-cell"></div>
-                <div class="hex-cell"></div>
-                <div class="hex-cell"></div>
-                <div class="hex-cell"></div>
-                <div class="hex-cell"></div>
-                <div class="hex-cell"></div>
-                <div class="hex-cell"></div>
-                <div class="hex-cell"></div>
-                <div class="hex-cell"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" style="color: white;">خدماتنا المتطورة</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">نقدم مجموعة شاملة من الخدمات الرقمية المتقدمة</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card slide-left">
-                    <div class="service-icon">🌐</div>
-                    <h3>تطوير المواقع المتقدمة</h3>
-                    <p>مواقع ويب متجاوبة وسريعة مع تقنيات حديثة</p>
-                </div>
-                <div class="service-card slide-right">
-                    <div class="service-icon">📱</div>
-                    <h3>تطبيقات الجوال الذكية</h3>
-                    <p>تطبيقات متطورة لجميع المنصات والأجهزة</p>
-                </div>
-                <div class="service-card slide-left">
-                    <div class="service-icon">🎨</div>
-                    <h3>التصميم الإبداعي</h3>
-                    <p>هوية بصرية مميزة ومبتكرة تعكس شخصيتك</p>
-                </div>
-                <div class="service-card slide-right">
-                    <div class="service-icon">⚡</div>
-                    <h3>الأتمتة الذكية</h3>
-                    <p>حلول متطورة لأتمتة العمليات والمهام</p>
-                </div>
-                <div class="service-card slide-left">
-                    <div class="service-icon">🔒</div>
-                    <h3>الأمان السيبراني</h3>
-                    <p>حماية متقدمة للبيانات والأنظمة</p>
-                </div>
-                <div class="service-card slide-right">
-                    <div class="service-icon">🤖</div>
-                    <h3>الذكاء الاصطناعي</h3>
-                    <p>حلول ذكية مدعومة بالذكاء الاصطناعي</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 4: Portfolio - Isotope Grid -->
-    <section id="portfolio" class="portfolio-section">
-        <div class="cosmic-dust">
-            <div class="dust-particle"></div>
-            <div class="dust-particle"></div>
-            <div class="dust-particle"></div>
-            <div class="dust-particle"></div>
-            <div class="dust-particle"></div>
-        </div>
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">أعمالنا المميزة</h2>
-                <p class="section-subtitle">مجموعة مختارة من أفضل مشاريعنا</p>
-                <div class="portfolio-filters">
-                    <button class="filter-btn active" data-filter="all">الكل</button>
-                    <button class="filter-btn" data-filter="web">مواقع</button>
-                    <button class="filter-btn" data-filter="mobile">تطبيقات</button>
-                    <button class="filter-btn" data-filter="design">تصميم</button>
-                    <button class="filter-btn" data-filter="ai">ذكاء اصطناعي</button>
-                </div>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item scale-in" data-category="web">
-                    <div class="portfolio-overlay">
-                        <h3>منصة التجارة الإلكترونية</h3>
-                        <p>متجر إلكتروني متكامل مع نظام دفع متطور</p>
-                    </div>
-                </div>
-                <div class="portfolio-item scale-in" data-category="mobile">
-                    <div class="portfolio-overlay">
-                        <h3>تطبيق التوصيل الذكي</h3>
-                        <p>تطبيق متطور لخدمات التوصيل مع تتبع مباشر</p>
-                    </div>
-                </div>
-                <div class="portfolio-item scale-in" data-category="design">
-                    <div class="portfolio-overlay">
-                        <h3>هوية بصرية متكاملة</h3>
-                        <p>تصميم شعار وهوية بصرية شاملة</p>
-                    </div>
-                </div>
-                <div class="portfolio-item scale-in" data-category="ai">
-                    <div class="portfolio-overlay">
-                        <h3>نظام ذكي للتحليل</h3>
-                        <p>منصة تحليل البيانات بالذكاء الاصطناعي</p>
-                    </div>
-                </div>
-                <div class="portfolio-item scale-in" data-category="web">
-                    <div class="portfolio-overlay">
-                        <h3>نظام إدارة متقدم</h3>
-                        <p>لوحة تحكم شاملة للإدارة والمتابعة</p>
-                    </div>
-                </div>
-                <div class="portfolio-item scale-in" data-category="mobile">
-                    <div class="portfolio-overlay">
-                        <h3>تطبيق تعليمي تفاعلي</h3>
-                        <p>منصة تعلم ذكية مع واقع معزز</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
+   
 
     <!-- Section 5: Team - Orbital Layout -->
     <section id="team" class="team-section">
@@ -2034,146 +1114,7 @@ body {
         </div>
     </section>
 
-    <!-- Section 7: Blog - Magazine Layout -->
-    <section id="blog" class="blog-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">المدونة التقنية</h2>
-                <p class="section-subtitle">آخر المقالات والأخبار في عالم التكنولوجيا</p>
-            </div>
-            <div class="blog-grid">
-                <article class="blog-post featured scale-in">
-                    <div class="post-image">
-                        <div class="post-category">ذكاء اصطناعي</div>
-                        🤖
-                    </div>
-                    <div class="post-content">
-                        <h3>مستقبل الذكاء الاصطناعي في التطوير</h3>
-                        <p>كيف يغير الذكاء الاصطناعي طريقة تطوير البرمجيات والمواقع الإلكترونية ويفتح آفاقاً جديدة للإبداع</p>
-                        <div class="post-meta">
-                            <span class="post-date">15 ديسمبر 2024</span>
-                            <span class="post-author">أحمد محمد</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="blog-post scale-in">
-                    <div class="post-image">
-                        <div class="post-category">تصميم</div>
-                        🎨
-                    </div>
-                    <div class="post-content">
-                        <h3>اتجاهات التصميم 2025</h3>
-                        <p>أحدث اتجاهات التصميم التي ستهيمن على عالم الويب</p>
-                        <div class="post-meta">
-                            <span class="post-date">12 ديسمبر 2024</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="blog-post scale-in">
-                    <div class="post-image">
-                        <div class="post-category">أمان</div>
-                        🛡️
-                    </div>
-                    <div class="post-content">
-                        <h3>أفضل ممارسات الأمان</h3>
-                        <p>كيفية حماية تطبيقاتك من التهديدات السيبرانية</p>
-                        <div class="post-meta">
-                            <span class="post-date">10 ديسمبر 2024</span>
-                        </div>
-                    </div>
-                </article>
-                <article class="blog-post scale-in">
-                    <div class="post-image">
-                        <div class="post-category">تقنية</div>
-                        ⚙️
-                    </div>
-                    <div class="post-content">
-                        <h3>التحول الرقمي للشركات</h3>
-                        <p>خطوات عملية لتحويل شركتك رقمياً</p>
-                        <div class="post-meta">
-                            <span class="post-date">8 ديسمبر 2024</span>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 8: Contact - Holographic Form -->
-    <section id="contact" class="contact-section">
-        <div class="holographic-bg">
-            <div class="holo-line"></div>
-            <div class="holo-line"></div>
-            <div class="holo-line"></div>
-            <div class="holo-line"></div>
-        </div>
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" style="color: white;">تواصل معنا</h2>
-                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">نحن هنا لمساعدتك في تحقيق أهدافك الرقمية</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2>ابدأ مشروعك معنا</h2>
-                    <p>دعنا نحول أفكارك إلى واقع رقمي مذهل</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">📍</div>
-                            <div>
-                                <h4>العنوان</h4>
-                                <p>الرياض، المملكة العربية السعودية</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">📞</div>
-                            <div>
-                                <h4>الهاتف</h4>
-                                <p>+966 50 123 4567</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">✉️</div>
-                            <div>
-                                <h4>البريد الإلكتروني</h4>
-                                <p>info@quantum.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">🌐</div>
-                            <div>
-                                <h4>الموقع الإلكتروني</h4>
-                                <p>www.quantum.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" required>
-                        <label for="name">الاسم الكامل</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" required>
-                        <label for="email">البريد الإلكتروني</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" required>
-                        <label for="phone">رقم الهاتف</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" required>
-                        <label for="subject">موضوع الرسالة</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" required></textarea>
-                        <label for="message">تفاصيل المشروع</label>
-                    </div>
-                    <button type="submit" class="submit-btn">إرسال الرسالة</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
+    
     <script>
         // Loading Screen with Quantum Effect
 window.addEventListener('load', () => {
