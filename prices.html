@@ -437,7 +437,7 @@
                 </div>
             </div>
             <div class="user-counter">
-                <h6>كم عدد المستخدمين؟</h6>
+                <h4 class="mb-0">كم عدد المستخدمين؟</h4>
                 <button class="counter-btn" onclick="changeUsers(-1)"><i class="fa fa-minus"></i></button>
                 <input type="number" min="1" value="1" name="Users" class="form-control bg-100 fs-5 fw-bold mx-2" id="userCount" style="width: 5rem;">
                 <button class="counter-btn" onclick="changeUsers(1)"><i class="fa fa-plus"></i></button>
@@ -584,74 +584,86 @@
     <script src="./assets/js/chang-langth.js"></script>
     <script src="./assets/js/prices.js"></script>
     <script src="./assets/js/newJs.js"></script>
-    <script>
-        const appList = document.querySelector('.app-list');
-        let userCount = 0;
-        let selectedApps = []; // مصفوفة لتخزين العناصر المختارة
+<script>
+    const appList = document.querySelector('.app-list');
+    let userCount = 1;
+    let selectedApps = []; // مصفوفة لتخزين العناصر المختارة
 
-        // دالة لتحديث عدد المستخدمين من الإنبوت مباشرة
-        function updateUserCountFromInput() {
-            let inputValue = parseInt(document.getElementById('userCount').value);
-            if (inputValue >= 1) {
-                userCount = inputValue;
-            } else {
-                userCount = 1;
-                document.getElementById('userCount').value = 1;
-            }
-            updateUserCountDisplay();
-            updateTotalPrice();
+    // تحديث عدد المستخدمين من الإنبوت مباشرة
+    function updateUserCountFromInput() {
+        let inputValue = parseInt(document.getElementById('userCount').value);
+        if (inputValue >= 1) {
+            userCount = inputValue;
+        } else {
+            userCount = 1;
+            document.getElementById('userCount').value = 1;
         }
+        updateUserCountDisplay();
+        updateTotalPrice();
+    }
 
-        // دالة لتحديث عدد المستخدمين عند الضغط على + أو -
-        function changeUsers(delta) {
-            userCount = Math.max(1, userCount + delta);
-            document.getElementById('userCount').value = userCount;
-            updateUserCountDisplay();
-            updateTotalPrice();
-        }
+    // دالة لتحديث عدد المستخدمين عند الضغط على + أو -
+    function changeUsers(delta) {
+        userCount = Math.max(1, userCount + delta);
+        document.getElementById('userCount').value = userCount;
+        updateUserCountDisplay();
+        updateTotalPrice();
+    }
 
-        // دالة لتحديث عرض عدد المستخدمين في العنصر <b class="userCount">
-        function updateUserCountDisplay() {
-            document.querySelector('.userCount').textContent = userCount;
-        }
+    // دالة لتحديث عرض عدد المستخدمين في العنصر <b class="userCount">
+    function updateUserCountDisplay() {
+        document.querySelector('.userCount').textContent = userCount;
+    }
 
-        // دالة لحساب وعرض الإجمالي
-        function updateTotalPrice() {
-            let total = 0;
+    // دالة لحساب وعرض الإجمالي
+    function updateTotalPrice() {
+        let total = 0;
+        if (selectedApps.length > 0) {
             selectedApps.forEach(app => {
-                total += parseFloat(app.price) * userCount; // سعر التطبيق * عدد المستخدمين
+                total += parseFloat(app.price) * userCount; // سعر الكروت * عدد المستخدمين
             });
-            total += userCount * 10; // إضافة 10 دولار لكل مستخدم
-            document.getElementById('totalPrice').textContent = total.toFixed(2);
         }
+        total += userCount * 10; // إضافة 10 دولار لكل يوزر
+        document.getElementById('totalPrice').textContent = total.toFixed(2);
+    }
 
-        // إضافة التفاعل مع الكروت
-        document.querySelectorAll('.app-card').forEach(card => {
-            card.addEventListener('click', function() {
-                let element = this.querySelector(".app-card-name").textContent;
-                let elementPrice = this.querySelector(".app-card-price").textContent;
-                this.classList.toggle('selected');
+    // إضافة التفاعل مع الكروت
+    document.querySelectorAll('.app-card').forEach(card => {
+        card.addEventListener('click', function() {
+            let element = this.querySelector(".app-card-name").textContent;
+            let elementPrice = this.querySelector(".app-card-price").textContent;
+            this.classList.toggle('selected');
 
-                if (this.classList.contains("selected")) {
-                    // إضافة العنصر للقايمة
-                    let li = document.createElement("li");
-                    li.className = "app-item";
-                    li.dataset.appName = element;
-                    li.innerHTML = `<span class="app-name">${element}</span>
-                                    <span class="app-price">${elementPrice} / user</span>`;
-                    appList.appendChild(li);
-                    // إضافة العنصر للمصفوفة
-                    selectedApps.push({ name: element, price: parseFloat(elementPrice) });
-                } else {
-                    // إزالة العنصر من القايمة
-                    let liToRemove = appList.querySelector(`li[data-app-name="${element}"]`);
-                    if (liToRemove) liToRemove.remove();
-                    // إزالة العنصر من المصفوفة
-                    selectedApps = selectedApps.filter(app => app.name !== element);
-                }
-                updateTotalPrice();
-            });
+            if (this.classList.contains("selected")) {
+                // إضافة العنصر للقايمة
+                let li = document.createElement("li");
+                li.className = "app-item";
+                li.dataset.appName = element;
+                li.innerHTML = `<span class="app-name">${element}</span>
+                                <span class="app-price">$${elementPrice} / user</span>`;
+                appList.appendChild(li);
+
+                // إضافة العنصر للمصفوفة
+                selectedApps.push({ name: element, price: parseFloat(elementPrice) });
+            } else {
+                // إزالة العنصر من القايمة
+                let liToRemove = appList.querySelector(`li[data-app-name="${element}"]`);
+                if (liToRemove) liToRemove.remove();
+
+                // إزالة العنصر من المصفوفة
+                selectedApps = selectedApps.filter(app => app.name !== element);
+            }
+            updateTotalPrice();
         });
-    </script>
+    });
+
+    // ربط الإنبت بدالة التحديث
+    document.getElementById('userCount').addEventListener('input', updateUserCountFromInput);
+
+    // تشغيل أول مرة
+    updateUserCountDisplay();
+    updateTotalPrice();
+</script>
+
   </body>
 </html>
