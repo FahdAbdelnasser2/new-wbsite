@@ -1826,7 +1826,9 @@
       }
 
       .mega-col a {
-          display: block;
+          display: flex;
+          align-items: center;
+          gap: 8px;
           margin-bottom: 0.5rem;
           font-size: 14px;
           color: #333;
@@ -2849,12 +2851,12 @@
       .user-counter {
           display: flex;
           align-items: center;
-          justify-content: center;
           gap: 20px;
           margin-top: 30px;
-          padding: 20px;
+          /* padding: 20px;
+          justify-content: center;
           background: white;
-          border-radius: 15px;
+          border-radius: 15px; */
       }
 
       .counter-btn {
@@ -2906,5 +2908,3 @@
           position: relative;
           overflow: hidden;
       }
-
-      
