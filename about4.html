@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quotes of the Day – Replica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #eef1f7;
+      --card: #f7f9ff;
+      --text: #5e6978;
+      --title: #4a5568;
+      --pill: #f3f6ff;
+      --quote-dark: #1d2331;
+      --quote-mid: #2b3244;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 70% -200px, #ffffff 0%, var(--bg) 60%, #e7ebf3 100%);
+      display:grid;place-items:center;
+    }
+
+    .wrap{position:relative; padding:40px 20px}
+
+    /* floating shadow underneath */
+    .shadow{
+      position:absolute; inset:auto 0 -20px 0; margin:auto;
+      width:min(440px, 86vw); height:18px; border-radius:999px;
+      background: radial-gradient(60% 100% at 50% 50%, rgba(0,0,0,.25), rgba(0,0,0,0));
+      filter: blur(6px); opacity:.35;
+    }
+
+    .card{
+      width:min(520px, 92vw);
+      background: var(--card);
+      border-radius: 22px;
+      padding: 42px 36px 32px;
+      color: var(--text);
+      position:relative;
+      box-shadow:
+        0 28px 50px rgba(26, 39, 68, .15),
+        0 2px 6px rgba(26, 39, 68, .08);
+      border: 1px solid rgba(255,255,255,.7);
+    }
+
+    /* small rounded corners accent like the mock */
+    .card::before{
+      content:""; position:absolute; inset:0; border-radius:22px; pointer-events:none;
+      background: linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,255,255,0));
+      mix-blend-mode:overlay; opacity:.7;
+    }
+
+    .quote-badge{
+      position:absolute; left:50%; top:-26px; transform:translateX(-50%);
+      width:64px; height:64px;
+    }
+
+    /* build a stylized double quote using two droplets */
+    .q{position:absolute; top:0; width:36px; height:36px; border-radius:50%;
+       background: radial-gradient(120% 120% at 30% 20%, #30384e, var(--quote-dark));
+       filter: drop-shadow(0 6px 10px rgba(18,22,33,.32));}
+    .q::after{content:""; position:absolute; bottom:-8px; right:8px; width:12px; height:16px; border-radius:8px 8px 2px 8px; background: var(--quote-mid);} 
+    .q.left{left:0; z-index:2}
+    .q.right{right:0; transform:translateX(8px);}
+
+    .pill{
+      margin: 6px auto 18px; width: 72%; min-width:260px; max-width:360px;
+      background: var(--pill);
+      padding: 12px 18px; border-radius: 999px; text-align:center;
+      color: var(--title); font-weight:bold; letter-spacing:.2px;
+      box-shadow: inset 0 2px 6px rgba(45,60,90,.12), inset 0 -2px 8px rgba(255,255,255,.8);
+    }
+
+    .text{line-height:1.7; font-size:14.5px; text-align:center; padding:0 6px;}
+
+    .sig{margin-top:18px; text-align:center; font-family:"Dancing Script", cursive; font-size:26px; color:#2d3345;}
+
+    @media (max-width:420px){
+      .pill{width:84%}
+      .card{padding:38px 22px 26px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="quote-badge">
+        <span class="q left"></span>
+        <span class="q right"></span>
+      </div>
+
+      <div class="pill">رسالتنا</div>
+
+      <p class="text">طرح التقنية المعلوماتية بأسهل و أوضح طريقة وأكثرها إتقان و ملائمة و إنتاجية لعملائنا و شركاء النجاح تمهيدا لمواكبة التنمية المستدامة محققين نجاحاتهم الطموحة على الدوام.</p>
+
+      <div class="sig">شكراً</div>
+    </div>
+
+    <div class="shadow"></div>
+  </div>
+  <div class="wrap">
+    <div class="card">
+      <div class="quote-badge">
+        <span class="q left"></span>
+        <span class="q right"></span>
+      </div>
+
+      <div class="pill">رؤيتنا</div>
+
+      <p class="text">التطوير التقني ليس حكراً أن يستفيد منه كل فرد، و قد عقدنا العزم أن يصل لأحدث التطورات التقنية و ينجح معها كل من أراد النجاح و الرقي لنفسه و لوطننا الحبيب.</p>
+
+      <div class="sig">شكراً</div>
+    </div>
+
+    <div class="shadow"></div>
+  </div>
+</body>
+</html>

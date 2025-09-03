@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="من نحن - شركة رايتو | حلول برمجية وأنظمة برمجية مبتكرة"
+    />
+    <meta
+      name="description"
+      content="نحن شركة رايتو المتخصصة في تقديم حلول برمجية وأنظمة برمجية مبتكرة لتلبية احتياجات عملك. نقدم تصميم وتطوير برامج مخصصة، وتنفيذ أنظمة متكاملة، وحلول تحسين الأداء."
+    />
+    <meta name="author" content="hadeer hussein" />
+    <meta
+      property="og:title"
+      content="من نحن - شركة رايتو | حلول برمجية وأنظمة برمجية مبتكرة"
+    />
+    <meta property="og:type" content="Website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="assets/img/LOGO.png" />
+    <link href="assets/img/LOGO.png" rel="shortcut icon" />
+    <title>أنظمة رايتو المحاسبية - Raito ERP systems</title>
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="./assets/font/font-awesome/css/all.css" rel="stylesheet" />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+
+    <link href="./assets/css/style-en.css" rel="stylesheet" />
+    <link href="./assets/css/style-system.css" rel="stylesheet" />
+   <style>
+.team-section {
+    padding: 120px 0;
+    /* background: radial-gradient(ellipse at center, #0B555E 0%, #000 70%); */
+    position: relative;
+    overflow: hidden;
+}
+
+.orbital-system {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid #17aabd;
+    border-radius: 50%;
+    animation: orbitRotate 20s linear infinite;
+}
+
+.orbit-1 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit-2 {
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-direction: reverse;
+    animation-duration: 30s;
+}
+
+.orbit-3 {
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-duration: 40s;
+}
+
+@keyframes orbitRotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.team-member {
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.member-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    /* background: var(--gradient-secondary); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 auto 24px;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+}
+.feature-icon{
+    width: 120px;
+    height: 120px;
+}
+.feature-icon .img-team{
+    width: 120px;
+    height: 120px;
+}
+/* 
+.member-avatar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+} */
+
+.team-member:hover .member-avatar {
+    transform: scale(1.15) rotateY(15deg);
+    box-shadow: 0 20px 60px rgba(23, 170, 189, 0.4);
+}
+
+.team-member:hover .member-avatar::before {
+    opacity: 1;
+}
+
+.member-info h3 {
+    color: #17aabd;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.member-info p {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+
+/* Main Content */
+.main {
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(309.5deg, rgb(139, 92, 246) 0%, rgb(168, 85, 247) 25%, rgb(147, 51, 234) 50%, rgb(124, 58, 237) 75%, rgb(109, 40, 217) 100%);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    padding: 80px 0;
+}
+
+/* Text Section */
+.text-section {
+    z-index: 10;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: white;
+    letter-spacing: -1px;
+}
+ش
+.description {
+    font-size: 12px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    max-width: 400px;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #8B5CF6, #A855F7);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+    margin-bottom: 40px;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(139, 92, 246, 0.5);
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;ش
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+.facebook { background: #1877F2; }
+.twitter { background: #1DA1F2; }
+.instagram { background: #E4405F; }
+.linkedin { background: #0A66C2; }
+
+.social-text {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-left: 10px;
+    font-weight: 300;
+}
+
+/* Image Section */
+.image-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.workspace-image {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    z-index: 5;
+}
+
+.workspace-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating UI Elements */
+.floating-element {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    animation: float 3s ease-in-out infinite;
+}
+
+.profile-card {
+    width: 180px;
+    height: 60px;
+    top: 80px;
+    right: 50px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    gap: 12px;
+    animation-delay: 0s;
+}
+
+.profile-avatar {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(45deg, #00E5FF, #00BCD4);
+    border-radius: 50%;
+}
+
+.profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profile-name {
+    width: 80px;
+    height: 8px;
+    background: #333;
+    border-radius: 4px;
+}
+
+.profile-status {
+    width: 60px;
+    height: 6px;
+    background: #999;
+    border-radius: 3px;
+}
+
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.action-dot {
+    width: 4px;
+    height: 4px;
+    background: #666;
+    border-radius: 50%;
+}
+
+.chat-bubble {
+    width: 80px;
+    height: 50px;
+    top: 200px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #667EEA, #764BA2);
+    animation-delay: 1s;
+}
+
+.chat-dots {
+    display: flex;
+    gap: 4px;
+}
+
+.chat-dot {
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.chat-dot:nth-child(2) { animation-delay: 0.2s; }
+.chat-dot:nth-child(3) { animation-delay: 0.4s; }
+
+.notification-card {
+    width: 160px;
+    height: 70px;
+    bottom: 120px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 12px;
+    animation-delay: 2s;
+}
+
+.notification-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(45deg, #00E5FF, #00BCD4);
+    border-radius: 8px;
+    position: relative;
+}
+
+.notification-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+}
+
+.notification-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.notification-line {
+    height: 6px;
+    background: #333;
+    border-radius: 3px;
+}
+
+.notification-line.short {
+    width: 70%;
+}
+
+.email-card {
+    width: 140px;
+    height: 80px;
+    top: 50px;
+    left: 150px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    gap: 10px;
+    animation-delay: 0.5s;
+}
+
+.email-icon {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    border-radius: 6px;
+    position: relative;
+}
+
+.email-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 10px;
+    border: 2px solid white;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+}
+
+.email-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.email-line {
+    height: 5px;
+    background: #333;
+    border-radius: 2px;
+}
+
+.stats-card {
+    width: 100px;
+    height: 80px;
+    bottom: 200px;
+    right: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 15px;
+    animation-delay: 1.5s;
+}
+
+.stats-chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 4px;
+    height: 40px;
+}
+
+.chart-bar {
+    width: 8px;
+    background: linear-gradient(to top, #00E5FF, #00BCD4);
+    border-radius: 4px 4px 0 0;
+}
+
+.chart-bar:nth-child(1) { height: 20px; }
+.chart-bar:nth-child(2) { height: 35px; }
+.chart-bar:nth-child(3) { height: 25px; }
+.chart-bar:nth-child(4) { height: 40px; }
+
+.calendar-card {
+    width: 90px;
+    height: 90px;
+    top: 300px;
+    right: 20px;
+    padding: 12px;
+    animation-delay: 2.5s;
+}
+
+.calendar-header {
+    width: 100%;
+    height: 12px;
+    background: #333;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+}
+
+.calendar-day {
+    width: 20px;
+    height: 20px;
+    background: #f0f0f0;
+    border-radius: 4px;
+}
+
+.calendar-day.active {
+    background: linear-gradient(45deg, #00E5FF, #00BCD4);
+}
+
+/* Geometric Shapes */
+.geometric-shape {
+    position: absolute;
+    z-index: 1;
+}
+
+.triangle-1 {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid #00E5FF;
+    top: 150px;
+    right: 200px;
+    animation: rotate 8s linear infinite;
+}
+
+.triangle-2 {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 20px solid #FF6B6B;
+    bottom: 100px;
+    left: 100px;
+    animation: rotate 6s linear infinite reverse;
+}
+
+.circle-1 {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #00E5FF, #00BCD4);
+    border-radius: 50%;
+    top: 100px;
+    left: 200px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.circle-2 {
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+    border-radius: 50%;
+    bottom: 150px;
+    right: 150px;
+    animation: float 5s ease-in-out infinite 1s;
+}
+
+.square-1 {
+    width: 18px;
+    height: 18px;
+    background: linear-gradient(45deg, #00E5FF, #00BCD4);
+    border-radius: 4px;
+    top: 250px;
+    left: 80px;
+    animation: rotate 10s linear infinite;
+}
+
+/* Background Elements */
+.background-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.bg-gradient-1 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 229, 255, 0.1) 0%, transparent 70%);
+    top: 10%;
+    right: 10%;
+    border-radius: 50%;
+    animation: pulse-slow 8s ease-in-out infinite;
+}
+
+.bg-gradient-2 {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 107, 107, 0.08) 0%, transparent 70%);
+    bottom: 20%;
+    left: 15%;
+    border-radius: 50%;
+    animation: pulse-slow 6s ease-in-out infinite 2s;
+}
+
+.bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse-slow {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation Classes */
+.animate-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .content-grid {
+        gap: 60px;
+    }
+    
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .floating-element {
+        transform: scale(0.9);
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .nav {
+        gap: 25px;
+    }
+    
+    .nav-link {
+        font-size: 12px;
+    }
+    
+    .main {
+        padding-top: 140px;
+       }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .text-section {
+        order: 2;
+    }
+    
+    .image-section {
+        order: 1;
+        height: 400px;
+    }
+    
+    .workspace-image {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .description {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .floating-element {
+        transform: scale(0.8);
+    }
+    
+    .profile-card {
+        top: 60px;
+        right: 20px;
+    }
+    
+    .chat-bubble {
+        top: 150px;
+        left: 10px;
+    }
+    
+    .notification-card {
+        bottom: 80px;
+        left: 10px;
+    }
+    
+    .email-card {
+        top: 30px;
+        left: 80px;
+    }
+    
+    .stats-card {
+        bottom: 120px;
+        right: 40px;
+    }
+    
+    .calendar-card {
+        top: 200px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .workspace-image {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .description {
+        font-size: 11px;
+    }
+    
+    .floating-element {
+        transform: scale(0.7);
+    }
+    
+    .geometric-shape {
+        transform: scale(0.8);
+    }
+}
+
+/* Additional Hover Effects */
+.workspace-image:hover {
+    transform: scale(1.02);
+    transition: transform 0.4s ease;
+}
+
+.floating-element:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Ripple Effect */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+</style>
+    <!--لينك خاص بالتصميم الجديد-->
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loader">
+        <div class="loader-circle"></div>
+        <div class="loader-text">جاري التحميل...</div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a class="logo-icon" href="index.html">
+            <img src="./assets/img/logoar.webp" alt="logo" class="mw-100" />
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="about.html" class="nav-link">من نحن</a></li>
+          <!-- التطبيقات (Mega Menu) -->
+          <li class="nav-item mega-parent">
+            <a href="#" class="nav-link text-center">قطاعات اعمالنا ▾</a>
+              <div class="mega-menu">
+              <div class="container">
+                <div class="mega-row">
+                  <!-- <div class="mega-col">
+                    <h6>سلسلة التوريد</h6>
+                    <a href="#">المستودعات</a>
+                    <a href="#">التصنيع</a>
+                    <a href="#">المشتريات</a>
+                    <a href="#">الصيانة</a>
+                    <a href="#">الجودة</a>
+                  </div> -->
+                  <div
+                      class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
+                    >
+                      
+                      <a href="#">المستودعات</a>
+                      <a href="#">التصنيع</a>
+                      <a href="#">المشتريات</a>
+                      <a href="#">الصيانة</a>
+                      <a href="#">الجودة</a>
+                    </div>
+                    <div
+                      class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
+                    >
+                      <h6>المواقع الإلكترونية</h6>
+                      <a href="#">أداة بناء المواقع</a>
+                      <a href="#">متاجر إلكترونية</a>
+                      <a href="#">مدونة</a>
+                      <a href="#">منتدى</a>
+                    </div>
+                    <div
+                      class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
+                    >
+                      <h6>المبيعات</h6>
+                      <a href="#">إدارة علاقات العملاء</a>
+                      <a href="#">المبيعات</a>
+                      <a href="#">نقطة البيع</a>
+                      <a href="#">الاشتراكات</a>
+                    </div>
+                    <div
+                      class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
+                    >
+                      <h6>الخدمات</h6>
+                      <a href="#">المشاريع</a>
+                      <a href="#">الجدول الزمني</a>
+                      <a href="#">الخدمة الميدانية</a>
+                      <a href="#">التخطيط</a>
+                    </div>
+                    <div
+                      class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
+                    >
+                      <h6>المالية</h6>
+                      <a href="#">المحاسبة</a>
+                      <a href="#">الفواتير</a>
+                      <a href="#">النفقات</a>
+                      <a href="#">المستندات</a>
+                    </div>
+                    <div
+                      class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
+                    >
+                      <h6>الموارد البشرية</h6>
+                      <a href="#">الموظفون</a>
+                      <a href="#">التوظيف</a>
+                      <a href="#">إجازات</a>
+                      <a href="#">التقييمات</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item mega-parent">
+            <a href="#" class="nav-link text-center">الخدمات ▾</a>
+          <div class="mega-menu">
+              <div class="container">
+                <div class="mega-row">
+                    <div
+                      class="mega-col col-xl-3 col-lg-4 col-sm-6 col-12 col-6 mb-3 mb-xl-0"
+                    >
+                                          <a href="#"><i class="fa-solid fa-calculator icon" style="color:#2563eb"></i>
+                      نظام ادارة المحاسبة
+                    </a>
+                                          <a href="#"><i class="fa-solid fa-cart-shopping icon" style="color:#16a34a"></i>
+                      نظام ادارة المشتريات
+                    </a>
+                    <a href="#"><i class="fa-solid fa-bag-shopping icon" style="color:#db2777"></i>
+                      نظام ادارة نقاط البيع</a>
+                    <a href="#"><i class="fa-solid fa-boxes-stacked icon" style="color:#f97316"></i>
+                      نظام ادارة المخزون</a>
+                    <a href="#"><i class="fa-solid fa-building icon" style="color:#ca8a04"></i>
+                      نظام ادارة المقاولات</a>
+                    </div>
+                    <div
+                      class="mega-col col-xl-3 col-lg-4 col-sm-6 col-12 col-6 mb-3 mb-xl-0"
+                    >
+                    <a href="#"><i class="fa-solid fa-people-group icon" style="color:#9333ea"></i>
+                      نظام ادارة الموردين</a>
+                    <a href="#"><i class="fa-solid fa-screwdriver-wrench icon" style="color:#4b5563"></i>
+                      نظام ادارة الصيانة</a>
+                                          <a href="#"><i class="fa-solid fa-gas-pump icon" style="color:#dc2626"></i>
+                      نظام ادارة محطات الوقود</a>
+                    <a href="#"><i class="fa-solid fa-truck icon" style="color:#06b6d4"></i>
+                      نظام ادارة المناديب</a>
+                    </div>
+                    <div
+                      class="mega-col col-xl-3 col-lg-4 col-sm-6 col-12 col-6 mb-3 mb-xl-0"
+                    >
+                        <a href="#"><i class="fa-solid fa-database icon" style="color:#4f46e5"></i>
+                      نظام ادارة الأصول</a>
+                    <a href="#"><i class="fa-solid fa-industry icon" style="color:#0d9488"></i>
+                      نظام ادارة الانتاج و التصنيع</a>
+                    <a href="#"><i class="fa-solid fa-box icon" style="color:#0284c7"></i>
+                      نظام ادارة الشحن و التوصيل</a>
+                    <a href="#"><i class="fa-solid fa-scale-balanced icon" style="color:#d97706"></i>
+                      نظام ادارة المحاماة</a>
+                    </div>
+                    <div
+                      class="mega-col col-xl-3 col-lg-4 col-sm-6 col-12 col-6 mb-3 mb-xl-0"
+                    >
+                    <a href="#"><i class="fa-solid fa-user-tie icon" style="color:#ec4899"></i>
+                      نظام ادارة الموارد البشرية</a>
+                    <a href="#"><i class="fa-solid fa-handshake icon" style="color:#be123c"></i>
+                      CRM</a>
+                    <a href="#"><i class="fa-solid fa-gift icon" style="color:#dc2626"></i>
+                      نظام الولاء</a>
+                    <a href="#"><i class="fa-solid fa-graduation-cap icon" style="color:#1d4ed8"></i>
+                      نظام ادارة المدارس</a>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li><a href="prices.html" class="nav-link">اسعارنا</a></li>
+          <li><a href="Blog.html" class="nav-link">المدونة</a></li>
+          <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+          <li class="lang-item">
+            <div class="language-switcher">
+              <button
+                class="lang-btn btn border-0"
+                id="arabic-btn"
+                title="Switch to Arabic"
+              >
+                <img
+                  src="./assets/Asset-system/icon/Flag-Saudi-Arabia.webp"
+                  alt="Arabic"
+                  loading="lazy"
+                  width="24"
+                  class="me-2 align-middle"
+                />
+                العربية
+              </button>
+              <button
+                class="lang-btn btn border-0"
+                id="english-btn"
+                title="Switch to english"
+                style="display: none"
+              >
+                <img
+                  src="./assets/Asset-system/icon/united-kingdom.png"
+                  alt="English"
+                  loading="lazy"
+                  width="24"
+                  class="ms-2 align-bottom"
+                />
+                English
+              </button>
+            </div>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!--end-nav-->
+    <!-- 
+    <section class="component-hadeer">
+      <img
+        src="./assets/Asset-system/pngwing.com (1).png"
+        alt="img"
+        loading="lazy"
+      />
+      <div class="container">
+        <h2 class="page-title">من نحن</h2>
+      </div>
+    </section>
+    <section id="component-about" class="bg-white section-padding component-about">
+      <div class="container">
+        <div class="row mx-0 align-items-center">
+          <div class="col-lg-6">
+            <div class="row mx-0">
+              <div class="col-12 mb-4">
+                <h2 class="section-title-side">
+                  <i class="fas fa-users me-3 text-gradient"></i>
+                  ماذا عن رايتو؟
+                </h2>
+                <p class="section-subtitle mb-3">نبذة عن الشركة</p>
+              </div>
+              <div class="col-12">
+                <p class="hero-description2 mb-3 mb-lg-5">
+                  شركة رايتو للبرمجيات هي شركة تقنية رائدة تقدم منتجات وخدمات
+                  عالية الجودة لعملائها في جميع أنحاء العالم، تلتزم الشركة
+                  بالابتكار والتميز التقني، وتهدف لمساعدة عملائها على تحقيق
+                  أهدافهم، كما تمتلك الشركة فريقًا موهوبًا من المتخصصين في تطوير
+                  البرمجيات وتصميم الواجهات وإدارة المشاريع، وتستخدم الشركة أحدث
+                  التقنيات والأدوات لتطوير حلول برمجية مبتكرة ومخصصة تلبي
+                  متطلبات السوق الحالية والمستقبلية.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="video-container">
+              <div class="video-wrapper">
+                <video
+                  id="myVideo"
+                  class="w-100 rounded shadow-lg object-fit-cover"
+                  poster="./assets/img/Start-amploy.png"
+                  controls
+                  preload="metadata"
+                >
+                  <source
+                    src="https://raitotec.com/public/attachments/aboutUs/1702904407988.mp4"
+                    type="video/mp4"
+                  />
+                  <track
+                    kind="captions"
+                    src="https://raitotec.com/public/attachments/aboutUs/captions.vtt"
+                    srclang="ar"
+                    label="العربية"
+                    default=""
+                  />
+                  <div class="video-placeholder">
+                    <div class="placeholder-content">
+                      <i class="fas fa-play-circle fa-5x mb-3"></i>
+                      <h5>عرض توضيحي لنظام المبيعات</h5>
+                      <p class="text-muted">شاهد كيف يعمل النظام بشكل عملي</p>
+                      <button class="btn btn-primary">
+                        <i class="fas fa-play me-2"></i>
+                        تشغيل العرض التوضيحي
+                      </button>
+                    </div>
+                  </div>
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+      <div class="floating-circle circle-1"></div>
+      <div class="floating-circle circle-2"></div>
+      <div class="floating-circle circle-3"></div>
+      <div class="floating-triangle triangle-1"></div>
+      <div class="floating-triangle triangle-2"></div>
+      <div class="floating-square square-1"></div>
+      <div class="floating-square square-2"></div>
+    </div>
+  <section class="main">
+        <div class="container">
+            <div class="content-grid">
+                <div class="text-section">
+                    <h1 class="main-title">Working efficiently<br>in challenging times</h1>
+                    <p class="description">
+                        REMOTE WORK IS A WORKING STYLE THAT ALLOWS<br>
+                        PROFESSIONALS TO WORK OUTSIDE OF A TRADITIONAL OFFICE.
+                    </p>
+                    <button class="cta-button">LEARN MORE</button>
+                    
+                    <div class="social-links">
+                        <div class="social-icon facebook"></div>
+                        <div class="social-icon twitter"></div>
+                        <div class="social-icon instagram"></div>
+                        <div class="social-icon linkedin"></div>
+                        <span class="social-text">www.yourwebsite.com</span>
+                    </div>
+                </div>
+                
+                <div class="image-section">
+                    <div class="workspace-image">
+                        <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Professional Woman Working">
+                    </div>
+                    
+                    <!-- Floating UI Elements -->
+                    <div class="floating-element profile-card">
+                        <div class="profile-avatar"></div>
+                        <div class="profile-info">
+                            <div class="profile-name"></div>
+                            <div class="profile-status"></div>
+                        </div>
+                        <div class="profile-actions">
+                            <div class="action-dot"></div>
+                            <div class="action-dot"></div>
+                            <div class="action-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-element chat-bubble">
+                        <div class="chat-dots">
+                            <div class="chat-dot"></div>
+                            <div class="chat-dot"></div>
+                            <div class="chat-dot"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-element notification-card">
+                        <div class="notification-icon"></div>
+                        <div class="notification-content">
+                            <div class="notification-line"></div>
+                            <div class="notification-line short"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-element email-card">
+                        <div class="email-icon"></div>
+                        <div class="email-content">
+                            <div class="email-line"></div>
+                            <div class="email-line"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-element stats-card">
+                        <div class="stats-chart">
+                            <div class="chart-bar"></div>
+                            <div class="chart-bar"></div>
+                            <div class="chart-bar"></div>
+                            <div class="chart-bar"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="floating-element calendar-card">
+                        <div class="calendar-header"></div>
+                        <div class="calendar-grid">
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day"></div>
+                            <div class="calendar-day active"></div>
+                            <div class="calendar-day"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Geometric Shapes -->
+                    <div class="geometric-shape triangle-1"></div>
+                    <div class="geometric-shape triangle-2"></div>
+                    <div class="geometric-shape circle-1"></div>
+                    <div class="geometric-shape circle-2"></div>
+                    <div class="geometric-shape square-1"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="background-elements">
+            <div class="bg-gradient-1"></div>
+            <div class="bg-gradient-2"></div>
+            <div class="bg-pattern"></div>
+        </div>
+    </section>
+    <!--end-main-->
+
+    <!-- Vision & Mission Section -->
+    <section 
+      class="component-vision vision-mission position-relative section-padding"
+      id="vision"
+    >
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">رؤيتنا ورسالتنا</h2>
+          <p class="section-subtitle">نسعى لتحقيق التميز في كل ما نقدمه</p>
+        </div>
+        <div
+          class="vision-mission-grid row align-items-center justify-content-evenly mx-0"
+        >
+          <div class="col-md-6 col-xl-5 mb-3 mb-lg-0">
+            <div class="vision-card h-100">
+              <div class="card-icon vision-icon">
+                <div class="icon-eye">
+                  <div class="eye-outer"></div>
+                  <div class="eye-inner"></div>
+                  <div class="eye-pupil"></div>
+                </div>
+                <div class="icon-rays">
+                  <div class="ray ray-1"></div>
+                  <div class="ray ray-2"></div>
+                  <div class="ray ray-3"></div>
+                  <div class="ray ray-4"></div>
+                </div>
+              </div>
+              <h3 class="card-title">رؤيتنا</h3>
+              <p class="card-description">
+                التطوير التقني ليس حكراً أن يستفيد منه كل فرد، و قد عقدنا العزم
+                أن يصل لأحدث التطورات التقنية و ينجح معها كل من أراد النجاح و
+                الرقي لنفسه و لوطننا الحبيب.
+              </p>
+              <div class="card-glow vision-glow"></div>
+            </div>
+          </div>
+          <div class="col-md-6 col-xl-5 mb-3 mb-lg-0">
+            <div class="mission-card h-100">
+              <div class="card-icon mission-icon">
+                <div class="icon-message">
+                  <div class="message-body"></div>
+                  <div class="message-tail"></div>
+                </div>
+                <div class="icon-elements">
+                  <div class="element element-1"></div>
+                  <div class="element element-2"></div>
+                  <div class="element element-3"></div>
+                </div>
+              </div>
+              <h3 class="card-title">رسالتنا</h3>
+              <p class="card-description">
+                طرح التقنية المعلوماتية بأسهل و أوضح طريقة وأكثرها إتقان و
+                ملائمة و إنتاجية لعملائنا و شركاء النجاح تمهيدا لمواكبة التنمية
+                المستدامة محققين نجاحاتهم الطموحة على الدوام
+              </p>
+              <div class="card-glow mission-glow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--vision-->
+    <section class="demo-div section-padding">
+      <div class="container">
+        <div class="row align-items-center mx-0">
+          <div class="col-md-6 col-12 order-1">
+            <div class="banner">
+              <h2 class="mb-0">
+                نظام متكامل قابل للتخصيص<br />
+                ليناسب أكثر من 50 مجالًا مختلفًا
+              </h2>
+              <p class="my-4">
+                سجل حسابك مع رايتو الان بسهولة دون الحاجة إلى بطاقة ائتمان
+              </p>
+              <a href="#" class="btn demo-btn-offer">
+                <i class="fas fa-rocket"></i>
+                ابدأ الاستخدام مجانًا
+              </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-12 order-2">
+            <img
+              src="./assets/img/man-hand-mobile.png"
+              alt=""
+              class="img-man"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--ens-services-->
+
+    <!-- Solutions Section -->
+    <section id="solutions-section" class="section-padding">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">لماذا تعتمد على رايتو</h2>
+          <p class="section-subtitle">
+            اكتشف مجموعة شاملة من الحلول الذكية المصممة خصيصاً لتطوير أعمالك
+          </p>
+        </div>
+        <div class="row g-4 mx-0">
+          <!-- Solution Card 1 -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="solution-card h-100">
+              <div class="solution-icon">
+                <img
+                  src="./assets/Asset-system/icon/services-1.png"
+                  alt="Assets"
+                  loading="lazy"
+                />
+              </div>
+              <h6>دعم فني مجاني دايمًا معاك</h6>
+              <p>نلتزم بتقديم خدمة تخصيص مجانية لجميع عملائنا</p>
+              <div class="solution-features">
+                <span class="feature-tag">الوصول من أي مكان وفي أي وقت</span>
+                <span class="feature-tag">خدمة تخصيص مجانية</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution Card 2 -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="solution-card h-100">
+              <div class="solution-icon">
+                <img
+                  src="./assets/Asset-system/icon/Assets/Assets-2.png"
+                  loading="lazy"
+                  alt="Assets"
+                />
+              </div>
+              <h6>نعدّل النظام مجاني عشان يناسبك</h6>
+              <p>يتمكن عملاؤنا من تقليل التكاليف التشغيلية</p>
+              <div class="solution-features">
+                <span class="feature-tag">تعديل النظام مجاناً حتى يناسبك</span>
+                <span class="feature-tag">متوافق مع المعايير الحكومية</span>
+              </div>
+            </div>
+          </div>
+          <!-- Solution Card 2 -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="solution-card h-100">
+              <div class="solution-icon">
+                <img
+                  src="./assets/Asset-system/icon/Assets/Assets-3.png"
+                  loading="lazy"
+                  alt="Assets"
+                />
+              </div>
+              <h6>الوصول من أي مكان وفي أي وقت</h6>
+              <p>يتمكن عملاؤنا من تقليل التكاليف التشغيلية</p>
+              <div class="solution-features">
+                <span class="feature-tag">تعديل النظام مجاناً حتى يناسبك</span>
+                <span class="feature-tag">متوافق مع المعايير الحكومية</span>
+              </div>
+            </div>
+          </div>
+          <!-- Solution Card 2 -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="solution-card h-100">
+              <div class="solution-icon">
+                <img
+                  src="./assets/Asset-system/icon/decision-making/إدارة المصاريف.png"
+                  loading="lazy"
+                  alt="Assets"
+                />
+              </div>
+              <h6>سعر مناسب ليك</h6>
+              <p>يتمكن عملاؤنا من تقليل التكاليف التشغيلية</p>
+              <div class="solution-features">
+                <span class="feature-tag">تعديل النظام مجاناً حتى يناسبك</span>
+                <span class="feature-tag">متوافق مع المعايير الحكومية</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution Card 3 -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="solution-card h-100">
+              <div class="solution-icon">
+                <img
+                  src="./assets/Asset-system/icon/Assets/Assets-4.png"
+                  alt="Assets"
+                  loading="lazy"
+                />
+              </div>
+              <h6>تحليلات ذكية بذكاء اصطناعي</h6>
+              <p>حلول سحابية آمنة لتخزين البيانات والوصول إليها من أي مكان</p>
+              <div class="solution-features">
+                <span class="feature-tag">آمان عالي</span>
+                <span class="feature-tag">تكامل مع جميع الأجهزة</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution Card 4 -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="solution-card h-100">
+              <div class="solution-icon">
+                <img
+                  src="./assets/Asset-system/icon/Assets/Assets-4.png"
+                  alt="Assets"
+                  loading="lazy"
+                />
+              </div>
+              <h6>كل التقارير اللي تحتاجها جاهزة</h6>
+              <p>خبراء في البرمجة والمحاسبة والإدارة</p>
+              <div class="solution-features">
+                <span class="feature-tag">حلول دقيقة ومتخصصة</span>
+                <span class="feature-tag">تحليل ذكي</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution Card 5 -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="solution-card h-100">
+              <div class="solution-icon">
+                <img
+                  src="./assets/Asset-system/icon/application/application-1.png"
+                  alt="Assets"
+                  loading="lazy"
+                />
+              </div>
+              <h6>نظام يشتغل مع كل الأجهزة والأنظمة</h6>
+              <p>
+                أنظمة رايتو مبنية على بنية تحتية قوية تضمن الاستقرار والأمان
+                للبيانات
+              </p>
+              <div class="solution-features">
+                <span class="feature-tag">تشفير متقدم</span>
+                <span class="feature-tag">مصادقة ثنائية</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Solution Card 6 -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="solution-card h-100">
+              <div class="solution-icon">
+                <img
+                  src="./assets/Asset-system/icon/Assets/Assets-4.png"
+                  alt="Assets"
+                  loading="lazy"
+                />
+              </div>
+              <h6>متوافق مع المعايير الحكومية</h6>
+              <p>نحن نقدم نظام ERP متكامل يغطي جميع جوانب إدارة الأعمال</p>
+              <div class="solution-features">
+                <span class="feature-tag">تعاون سلس وتقليل التعقيدات</span>
+                <span class="feature-tag">
+                  إدارة كافة الاحتياجات من نظام واحد</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--team-->
+      <section id="team" class="team-section">
+        <div class="orbital-system">
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" style="color: white;">فريق العمل</h2>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">خبراء متخصصون في أحدث التقنيات</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member fade-in">
+                    <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>فهد بن عبد المحسن العاصم</h3>
+                        <p>مدير عام - مؤسس ورجل أعمال</p>
+                    </div>
+                </div>
+            <div class="team-member fade-in">
+                    <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                        <div class="member-info">
+                        <h3>هشام إبراهيم</h3>
+                        <p>مدير قطاع برمجة المشاريع</p>
+                        </div>
+                    </div>
+                
+                <div class="team-member fade-in">
+                    <div class="member-avatar">
+                    <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                        <div class="member-info">
+                            <h3>طلعت أبو كبيرة</h3>
+                            <p>مدير قسم التطوير الفني</p>
+                        </div>
+                </div>
+                <div class="team-member fade-in">
+                    <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>زياد بن فهد العاصم</h3>
+                        <p>مدير شؤون العاملين</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+           <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>محمود مصطفى</h3>
+                        <p>مدير قسم الدعم الفني</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                          <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png"  />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>محمد جمال علي</h3>
+                        <p>مدير قسم تصميم الويب والجرافيك</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png"  />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>علي محروس</h3>
+                        <p>مبرمج</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>هيثم محمد</h3>
+                        <p>مبرمج تطبيقات</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>أحمد حمدي</h3>
+                        <p>مبرمج </p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>محمد حمدي</h3>
+                        <p>دعم فني</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>مصطفى محمود</h3>
+                        <p>مبرمج</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>مصطفى قاعود</h3>
+                        <p>مبيعات</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>مصطفى ابراهيم</h3>
+                        <p>دعم فني</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>محمود عزت</h3>
+                        <p>مبيعات</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>فهد عبد الناصر</h3>
+                        <p>senior front end developer</p>
+                    </div>
+                </div>
+                <div class="team-member fade-in">
+                        <div class="member-avatar">
+                        <div class="feature-icon">
+                            <img class="img-team" src="./assets/img/free-user-icon-3296-thumb (1).png" alt="ceo" />
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>مصطفى ابراهيم</h3>
+                        <p>دعم فني</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--team-->
+
+    <!-- start custemer-section-->
+    <section
+      id="custemer-section"
+      class="component-custemer section-padding"
+      role="region"
+      aria-labelledby="customer-title"
+    >
+      <div class="container">
+        <div class="text-center">
+          <h2 class="section-title">أهم عملائنا</h2>
+          <p class="section-subtitle">شركاء النجاح الذين نفتخر بالتعاون معهم</p>
+        </div>
+        <div class="owl-carousel component-team-new">
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader01.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader02.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader03.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader04.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader05.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader06.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader07.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader08.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader09.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader10.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader11.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader12.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img
+              src="./assets/img/hader13.webp"
+              alt="custemer"
+              loading="lazy"
+            />
+          </div>
+          <div class="client-logo">
+            <img src="./assets/img/hader14.png" alt="custemer" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section 9: Newsletter - Futuristic Design -->
+    <section id="newsletter" class="section newsletter-section">
+        <div class="newsletter-bg">
+            <div class="cyber-grid"></div>
+            <div class="glow-effects">
+                <div class="glow-orb glow-1"></div>
+                <div class="glow-orb glow-2"></div>
+                <div class="glow-orb glow-3"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h2>ابق على اطلاع دائم</h2>
+                <p>اشترك في نشرتنا الإخبارية واحصل على أحدث الأخبار والعروض الحصرية</p>
+                
+                <form class="newsletter-form">
+                    <div class="form-container">
+                        <input type="email" placeholder="أدخل بريدك الإلكتروني" required>
+                        <button type="submit">
+                            <span>اشترك الآن</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="newsletter-benefits">
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>أحدث الأخبار التقنية</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>عروض حصرية للمشتركين</span>
+                    </div>
+                    <div class="benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>نصائح ومقالات مفيدة</span>
+                    </div>
+                </div>
+                
+                <div class="newsletter-stats">
+                    <div class="stat">
+                        <strong>10K+</strong>
+                        <span>مشترك</span>
+                    </div>
+                    <div class="stat">
+                        <strong>95%</strong>
+                        <span>معدل الرضا</span>
+                    </div>
+                    <div class="stat">
+                        <strong>Weekly</strong>
+                        <span>إرسال أسبوعي</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bg">
+            <div class="footer-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                      <a class="logo-icon" href="index.html">
+                        <img src="./assets/img/logoar.webp" alt="logo" class="mw-100" />
+                      </a>
+                    </div>
+                    <p>
+                نحن شركة رائدة في مجال تطوير الحلول المحاسبية ERP، نقدم حلولًا
+                مبتكرة ومخصصة للشركات لتلبية احتياجاتها الفريدة
+                    </p>
+                  <div class="footer-social">
+                        <a href="https://www.facebook.com/Raitotec"
+                          target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/raitotec" target="_blank"
+                          ><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/raitotec1/"
+                          target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a    href="https://www.linkedin.com/in/raito-erp-software-830920234/"
+                          target="_blank"
+                        ><i class="fab fa-linkedin"></i></a>
+                        <a  href="https://www.youtube.com/@Raitotec"
+                          target="_blank"><i class="fab fa-youtube"></i></a>
+                            <a
+                          href="https://wa.me/+966539387625?text=I'm%20interested%20in%20your%20website"
+                          target="_blank"
+                          ><i class="fab fa-whatsapp"></i
+                        ></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>عناوين سريعة</h4> 
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">خدمات</a></li>
+                        <li><a href="#">الأسعار</a></li>
+                        <li><a href="#">المدونة</a></li>
+                        <li><a href="#">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                  <div class="footer-section">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="#">برنامج ادارة المبيعات والحسابات</a></li>
+                        <li><a href="#">برنامج إدارة المخزون</a></li>
+                        <li><a href="#">برنامج الصيانة</a></li>
+                        <li><a href="#">برنامج  المحاماة</a></li>
+                        <li><a href="#">برنامج إدارة محطات الوقود</a></li>
+                        <li><a href="#">برنامج العقارات</a></li>
+                        <li><a href="#">برنامج إدارة شؤون الموظفين</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                
+                    <h4>تواصل معنا</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i><a
+                      
+                        href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9"
+                      >
+                         الرياض ، المملكة العربية السعودية ، 4000 طريق دائري
+                        12993 ، 2
+                        </a>
+                        </p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+966538499438" class">
+                          966538499438 +</p>
+                        </a>
+                          <p><i class="fas fa-envelope"></i>
+                                <a href="mailto:info@raitotec.com" >
+                            info@raitotec.com</p>
+                          </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 جميع الحقوق محفوظة لدى شركة Raito للبرمجيات.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">شروط الاستخدام</a>
+                    <a href="#">ملفات الارتباط</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- WhatsApp Button -->
+    <div class="whatsapp-btn">
+      <a href="https://wa.me/966501234567" target="_blank">
+        <div class="whatsapp-icon">💬</div>
+      </a>
+    </div>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!--advertisements-->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- <script src="./assets/js/loade.js"></script> -->
+    <script src="./assets/js/chang-langth.js"></script>
+    <script src="./assets/js/newJs.js"></script>
+  </body>
+</html>
