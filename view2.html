@@ -1,0 +1,2231 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خدماتنا - نظام متكامل</title>
+  <style>* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #8b5cf6;
+  --secondary-color: #06b6d4;
+  --secondary-dark: #0891b2;
+  --accent-color: #f59e0b;
+  --accent-dark: #d97706;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  
+  --neutral-900: #0f172a;
+  --neutral-800: #1e293b;
+  --neutral-700: #334155;
+  --neutral-600: #475569;
+  --neutral-500: #64748b;
+  --neutral-400: #94a3b8;
+  --neutral-300: #cbd5e1;
+  --neutral-200: #e2e8f0;
+  --neutral-100: #f1f5f9;
+  --neutral-50: #f8fafc;
+  --white: #ffffff;
+  
+  --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-dark) 100%);
+  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-dark: linear-gradient(135deg, var(--neutral-900) 0%, var(--neutral-800) 100%);
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  
+  --border-radius-sm: 6px;
+  --border-radius: 12px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+}
+
+body {
+  font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.7;
+  color: var(--neutral-800);
+  background-color: var(--white);
+  direction: rtl;
+  text-align: right;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+/* Enhanced Navigation */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--neutral-200);
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.nav-logo h2 {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  font-size: 1.75rem;
+  letter-spacing: -0.025em;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--neutral-700);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.nav-link:hover {
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.nav-link:hover::before {
+  opacity: 1;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+}
+
+.hamburger .bar {
+  width: 28px;
+  height: 3px;
+  background: var(--gradient-primary);
+  margin: 3px 0;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+/* Enhanced Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--gradient-hero);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
+  animation: float 20s infinite linear;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="rgba(255,255,255,0.03)" fill-opacity="0.4"><circle cx="30" cy="30" r="2"/></g></svg>');
+  animation: float 25s infinite linear reverse;
+}
+
+@keyframes float {
+  0% { transform: translateX(0) translateY(0) rotate(0deg); }
+  100% { transform: translateX(-60px) translateY(-60px) rotate(360deg); }
+}
+
+.hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.375rem;
+  margin-bottom: var(--spacing-2xl);
+  opacity: 0.95;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) var(--spacing-2xl);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--border-radius-lg);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  min-width: 180px;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn-primary {
+  background: var(--white);
+  color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-2xl);
+  background: var(--neutral-50);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--white);
+  transform: translateY(-3px);
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.floating-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  padding: var(--spacing-2xl);
+  border-radius: var(--border-radius-xl);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: floatUp 4s ease-in-out infinite;
+  box-shadow: var(--shadow-2xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: rotate 10s linear infinite;
+}
+
+.floating-card i {
+  font-size: 3.5rem;
+  margin-bottom: var(--spacing-md);
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+}
+
+.floating-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(2deg); }
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Enhanced Section Styles */
+section {
+  padding: var(--spacing-3xl) 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+  position: relative;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-900);
+  letter-spacing: -0.025em;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: var(--neutral-600);
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* Enhanced Services Section */
+.services {
+  background: linear-gradient(135deg, var(--neutral-50) 0%, var(--white) 100%);
+  position: relative;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><g fill="rgba(99, 102, 241, 0.03)"><circle cx="20" cy="20" r="1"/></g></svg>');
+  opacity: 0.5;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-2xl);
+  position: relative;
+  z-index: 1;
+}
+
+.service-card {
+  background: var(--white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--border-radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--neutral-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.service-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: var(--shadow-2xl);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient-primary);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-icon::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: rotate 8s linear infinite;
+}
+
+.service-card:hover .service-icon {
+  background: var(--white);
+  transform: scale(1.1);
+}
+
+.service-icon i {
+  font-size: 2rem;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease;
+}
+
+.service-card:hover .service-icon i {
+  color: var(--primary-color);
+}
+
+.service-card h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-900);
+  transition: color 0.4s ease;
+}
+
+.service-card:hover h3 {
+  color: var(--white);
+}
+
+.service-card p {
+  color: var(--neutral-600);
+  line-height: 1.7;
+  transition: color 0.4s ease;
+}
+
+.service-card:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Enhanced Video Section */
+.video-section {
+  background: var(--gradient-dark);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(6, 182, 212, 0.2) 0%, transparent 50%);
+}
+
+.video-section .section-title {
+  color: var(--white);
+}
+
+.video-section .section-title::after {
+  background: var(--gradient-secondary);
+}
+
+.video-section .section-subtitle {
+  color: var(--neutral-300);
+}
+
+.video-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-2xl);
+  z-index: 1;
+}
+
+.video-placeholder {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: var(--border-radius-xl);
+}
+
+.video-placeholder img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-placeholder:hover img {
+  transform: scale(1.05);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.play-button::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.play-button:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.play-button i {
+  font-size: 2rem;
+  color: var(--white);
+  margin-left: 6px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Enhanced Content Sections */
+.customization {
+  background: var(--white);
+  position: relative;
+}
+
+.section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: center;
+}
+
+.section-content.reverse .content-text {
+  order: 2;
+}
+
+.section-content.reverse .content-image {
+  order: 1;
+}
+
+.content-text .section-title {
+  text-align: right;
+  margin-bottom: var(--spacing-md);
+  font-size: 2.5rem;
+}
+
+.content-text .section-subtitle {
+  text-align: right;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.features-list {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.feature-item {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+  padding: var(--spacing-lg);
+  background: var(--neutral-50);
+  border-radius: var(--border-radius-lg);
+  transition: all 0.3s ease;
+  border: 1px solid var(--neutral-200);
+}
+
+.feature-item:hover {
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  transform: translateX(-8px);
+  border-color: var(--primary-color);
+}
+
+.feature-item i {
+  font-size: 1.75rem;
+  color: var(--primary-color);
+  margin-top: 4px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.feature-item h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--neutral-900);
+}
+
+.feature-item p {
+  color: var(--neutral-600);
+  line-height: 1.7;
+}
+
+.content-image {
+  position: relative;
+}
+
+.content-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-xl);
+  transition: transform 0.4s ease;
+}
+
+.content-image:hover img {
+  transform: scale(1.02);
+}
+
+/* Enhanced Reports Section */
+.reports {
+  background: linear-gradient(135deg, var(--neutral-50) 0%, rgba(99, 102, 241, 0.05) 100%);
+  position: relative;
+}
+
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+.report-card {
+  background: var(--white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--border-radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--neutral-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.report-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-accent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.report-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: var(--shadow-2xl);
+  color: var(--white);
+}
+
+.report-card:hover::before {
+  opacity: 1;
+}
+
+.report-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--gradient-accent);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg);
+  transition: all 0.4s ease;
+}
+
+.report-card:hover .report-icon {
+  background: var(--white);
+  transform: scale(1.1);
+}
+
+.report-icon i {
+  font-size: 2rem;
+  color: var(--white);
+  transition: color 0.4s ease;
+}
+
+.report-card:hover .report-icon i {
+  color: var(--accent-color);
+}
+
+.report-card h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-900);
+  transition: color 0.4s ease;
+}
+
+.report-card:hover h3 {
+  color: var(--white);
+}
+
+.report-card p {
+  color: var(--neutral-600);
+  line-height: 1.7;
+  transition: color 0.4s ease;
+}
+
+.report-card:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Enhanced Printing Section */
+.printing {
+  background: var(--white);
+  position: relative;
+}
+
+.printing-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+}
+
+.printing-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-xl);
+  background: var(--neutral-50);
+  border-radius: var(--border-radius-lg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--neutral-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.printing-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-secondary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.printing-item:hover {
+  color: var(--white);
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: var(--shadow-xl);
+}
+
+.printing-item:hover::before {
+  opacity: 1;
+}
+
+.printing-item i {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  transition: all 0.4s ease;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 182, 212, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.printing-item:hover i {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.printing-item span {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* Enhanced Integration Section */
+.integration {
+  background: linear-gradient(135deg, var(--neutral-50) 0%, rgba(6, 182, 212, 0.05) 100%);
+  position: relative;
+}
+
+.integration-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+.integration-card {
+  background: var(--white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--border-radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--neutral-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.integration-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-secondary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.integration-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: var(--shadow-2xl);
+  border-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.integration-card:hover::before {
+  opacity: 1;
+}
+
+.integration-card i {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-lg);
+  transition: all 0.4s ease;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 182, 212, 0.1);
+  border-radius: var(--border-radius-lg);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.integration-card:hover i {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.integration-card h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--neutral-900);
+  transition: color 0.4s ease;
+}
+
+.integration-card:hover h3 {
+  color: var(--white);
+}
+
+.integration-card p {
+  color: var(--neutral-600);
+  line-height: 1.7;
+  transition: color 0.4s ease;
+}
+
+.integration-card:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Enhanced Features Section */
+.features {
+  background: var(--white);
+  position: relative;
+}
+
+.features-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--spacing-3xl);
+  align-items: start;
+}
+
+.main-feature {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  background: var(--gradient-primary);
+  color: var(--white);
+  border-radius: var(--border-radius-xl);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-2xl);
+}
+
+.main-feature::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%),
+    conic-gradient(from 0deg, transparent, rgba(255,255,255,0.1), transparent);
+  animation: rotate 20s infinite linear;
+}
+
+.feature-icon-large {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--border-radius-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.feature-icon-large i {
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.main-feature h3 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.025em;
+}
+
+.main-feature > p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: var(--spacing-2xl);
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+}
+
+.support-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  position: relative;
+  z-index: 1;
+}
+
+.support-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.support-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-4px);
+}
+
+.support-item i {
+  font-size: 1.75rem;
+  color: var(--accent-color);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 158, 11, 0.2);
+  border-radius: var(--border-radius);
+}
+
+.support-item span {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.other-features {
+  display: grid;
+  gap: var(--spacing-lg);
+}
+
+.feature-card {
+  padding: var(--spacing-xl);
+  background: var(--neutral-50);
+  border-radius: var(--border-radius-lg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--neutral-200);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.feature-card:hover {
+  background: var(--white);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px) scale(1.02);
+  color: var(--white);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  transition: color 0.4s ease;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: var(--border-radius);
+}
+
+.feature-card:hover i {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-sm);
+  color: var(--neutral-900);
+  transition: color 0.4s ease;
+}
+
+.feature-card:hover h4 {
+  color: var(--white);
+}
+
+.feature-card p {
+  color: var(--neutral-600);
+  line-height: 1.7;
+  font-size: 1rem;
+  transition: color 0.4s ease;
+}
+
+.feature-card:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Enhanced Footer */
+.footer {
+  background: var(--gradient-dark);
+  color: var(--white);
+  padding: var(--spacing-3xl) 0 var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-2xl);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--white);
+}
+
+.footer-section h3 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-section h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.footer-section p {
+  color: var(--neutral-300);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-lg);
+  font-size: 1.1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-section ul li a {
+  color: var(--neutral-300);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.05rem;
+  padding: var(--spacing-xs) 0;
+  display: inline-block;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+  transform: translateX(-4px);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-links a {
+  width: 50px;
+  height: 50px;
+  background: var(--neutral-800);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-300);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--neutral-700);
+}
+
+.social-links a:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-4px) scale(1.1);
+  border-color: var(--primary-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--neutral-800);
+  color: var(--neutral-400);
+  position: relative;
+  z-index: 1;
+  font-size: 1.05rem;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .section-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+  
+  .features-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+  
+  .printing-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .support-features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-xl);
+    padding: var(--spacing-lg) 0;
+    border-top: 1px solid var(--neutral-200);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .section-title {
+    font-size: 2.25rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 250px;
+    justify-content: center;
+  }
+  
+  .services-grid,
+  .reports-grid,
+  .integration-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .printing-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .support-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  section {
+    padding: var(--spacing-2xl) 0;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .video-placeholder img {
+    height: 300px;
+  }
+  
+  .main-feature {
+    padding: var(--spacing-xl);
+  }
+  
+  .main-feature h3 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  
+  .section-title {
+    font-size: 1.875rem;
+  }
+  
+  .service-card,
+  .report-card,
+  .integration-card {
+    padding: var(--spacing-lg);
+  }
+  
+  .main-feature {
+    padding: var(--spacing-lg);
+  }
+  
+  .main-feature h3 {
+    font-size: 1.5rem;
+  }
+  
+  .main-feature > p {
+    font-size: 1.125rem;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+  
+  .hero-buttons {
+    width: 100%;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+/* Enhanced Scroll Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Loading States */
+.loading {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.loaded .loading {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Selection */
+::selection {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+::-moz-selection {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* Focus States */
+.btn:focus,
+.nav-link:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .navbar,
+  .footer,
+  .hero-buttons {
+    display: none;
+  }
+  
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  section {
+    padding: 1rem 0;
+  }
+}
+</style>
+    
+  </head>
+  <body>
+    <div id="app">
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <h2>النظام المتكامل</h2>
+          </div>
+          <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item">
+              <a href="#services" class="nav-link">الخدمات</a>
+            </li>
+            <li class="nav-item">
+              <a href="#video" class="nav-link">فيديو</a>
+            </li>
+            <li class="nav-item">
+              <a href="#customization" class="nav-link">التخصيص</a>
+            </li>
+            <li class="nav-item">
+              <a href="#reports" class="nav-link">التقارير</a>
+            </li>
+            <li class="nav-item">
+              <a href="#printing" class="nav-link">المطبوعات</a>
+            </li>
+            <li class="nav-item">
+              <a href="#integration" class="nav-link">التكامل</a>
+            </li>
+            <li class="nav-item">
+              <a href="#features" class="nav-link">المميزات</a>
+            </li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1 class="hero-title">نظام متكامل لإدارة أعمالك</h1>
+            <p class="hero-subtitle">حلول تقنية شاملة مع دعم فني متميز</p>
+            <div class="hero-buttons">
+              <a href="#services" class="btn btn-primary">استكشف خدماتنا</a>
+              <a href="#video" class="btn btn-secondary">شاهد العرض التوضيحي</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="floating-card">
+              <i class="fas fa-chart-line"></i>
+              <h3>نمو مستمر</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">خدماتنا</h2>
+            <p class="section-subtitle">نقدم مجموعة شاملة من الخدمات التقنية المتطورة</p>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h3>إدارة النظام</h3>
+              <p>نظام إدارة شامل يتيح لك التحكم الكامل في جميع جوانب عملك</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3>إدارة العملاء</h3>
+              <p>أدوات متطورة لإدارة قاعدة بيانات العملاء وتتبع التفاعلات</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <h3>التحليلات</h3>
+              <p>تحليلات متقدمة ورؤى ذكية لاتخاذ قرارات مدروسة</p>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>الأمان</h3>
+              <p>حماية متقدمة لبياناتك مع أعلى معايير الأمان والخصوصية</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video Section -->
+      <section id="video" class="video-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">شاهد النظام في العمل</h2>
+            <p class="section-subtitle">عرض توضيحي شامل لجميع إمكانيات النظام</p>
+          </div>
+          <div class="video-container">
+            <div class="video-placeholder" id="video-placeholder">
+              <div class="play-button" id="play-button">
+                <i class="fas fa-play"></i>
+              </div>
+              <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="عرض النظام">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customization Section -->
+      <section id="customization" class="customization">
+        <div class="container">
+          <div class="section-content">
+            <div class="content-text">
+              <h2 class="section-title">التخصيص</h2>
+              <p class="section-subtitle">نظام قابل للتخصيص بالكامل ليناسب احتياجات عملك</p>
+              <div class="features-list">
+                <div class="feature-item">
+                  <i class="fas fa-palette"></i>
+                  <div>
+                    <h4>تخصيص الواجهة</h4>
+                    <p>اختر الألوان والتخطيط المناسب لهوية شركتك</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-sliders-h"></i>
+                  <div>
+                    <h4>إعدادات مرنة</h4>
+                    <p>تحكم كامل في جميع الإعدادات والخصائص</p>
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-puzzle-piece"></i>
+                  <div>
+                    <h4>وحدات إضافية</h4>
+                    <p>أضف وحدات جديدة حسب احتياجات عملك</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-image">
+              <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600" alt="التخصيص">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reports Section -->
+      <section id="reports" class="reports">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">التقارير</h2>
+            <p class="section-subtitle">تقارير تفصيلية وتحليلات متقدمة لمتابعة الأداء</p>
+          </div>
+          <div class="reports-grid">
+            <div class="report-card">
+              <div class="report-icon">
+                <i class="fas fa-chart-pie"></i>
+              </div>
+              <h3>تقارير المبيعات</h3>
+              <p>تحليل شامل لأداء المبيعات والإيرادات</p>
+            </div>
+            <div class="report-card">
+              <div class="report-icon">
+                <i class="fas fa-users-cog"></i>
+              </div>
+              <h3>تقارير العملاء</h3>
+              <p>إحصائيات مفصلة عن العملاء وسلوكياتهم</p>
+            </div>
+            <div class="report-card">
+              <div class="report-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h3>التقارير الزمنية</h3>
+              <p>تقارير يومية وأسبوعية وشهرية مفصلة</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Printing Section -->
+      <section id="printing" class="printing">
+        <div class="container">
+          <div class="section-content reverse">
+            <div class="content-text">
+              <h2 class="section-title">المطبوعات</h2>
+              <p class="section-subtitle">إمكانيات طباعة متقدمة لجميع المستندات والتقارير</p>
+              <div class="printing-features">
+                <div class="printing-item">
+                  <i class="fas fa-file-pdf"></i>
+                  <span>تصدير PDF</span>
+                </div>
+                <div class="printing-item">
+                  <i class="fas fa-print"></i>
+                  <span>طباعة مباشرة</span>
+                </div>
+                <div class="printing-item">
+                  <i class="fas fa-file-excel"></i>
+                  <span>تصدير Excel</span>
+                </div>
+                <div class="printing-item">
+                  <i class="fas fa-envelope"></i>
+                  <span>إرسال بالبريد</span>
+                </div>
+              </div>
+            </div>
+            <div class="content-image">
+              <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="المطبوعات">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Integration Section -->
+      <section id="integration" class="integration">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">التكامل مع باقي الأنظمة</h2>
+            <p class="section-subtitle">تكامل سلس مع جميع الأنظمة والتطبيقات الأخرى</p>
+          </div>
+          <div class="integration-grid">
+            <div class="integration-card">
+              <i class="fas fa-database"></i>
+              <h3>قواعد البيانات</h3>
+              <p>ربط مع جميع أنواع قواعد البيانات</p>
+            </div>
+            <div class="integration-card">
+              <i class="fas fa-cloud"></i>
+              <h3>الخدمات السحابية</h3>
+              <p>تكامل مع AWS، Azure، Google Cloud</p>
+            </div>
+            <div class="integration-card">
+              <i class="fas fa-credit-card"></i>
+              <h3>أنظمة الدفع</h3>
+              <p>ربط مع بوابات الدفع المختلفة</p>
+            </div>
+            <div class="integration-card">
+              <i class="fas fa-envelope"></i>
+              <h3>البريد الإلكتروني</h3>
+              <p>تكامل مع خدمات البريد الإلكتروني</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="features" class="features">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">المميزات</h2>
+            <p class="section-subtitle">مميزات فريدة تجعلنا الخيار الأمثل لعملك</p>
+          </div>
+          <div class="features-content">
+            <div class="main-feature">
+              <div class="feature-icon-large">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3>الدعم الفني المتميز</h3>
+              <p>فريق دعم فني محترف متاح على مدار 24/7 لمساعدتك في أي وقت. نقدم الدعم باللغة العربية مع خبراء متخصصين في جميع جوانب النظام.</p>
+              <div class="support-features">
+                <div class="support-item">
+                  <i class="fas fa-clock"></i>
+                  <span>دعم على مدار الساعة</span>
+                </div>
+                <div class="support-item">
+                  <i class="fas fa-phone"></i>
+                  <span>دعم هاتفي مباشر</span>
+                </div>
+                <div class="support-item">
+                  <i class="fas fa-comments"></i>
+                  <span>دردشة مباشرة</span>
+                </div>
+                <div class="support-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>تدريب وتأهيل</span>
+                </div>
+              </div>
+            </div>
+            <div class="other-features">
+              <div class="feature-card">
+                <i class="fas fa-rocket"></i>
+                <h4>أداء سريع</h4>
+                <p>نظام محسن للسرعة والكفاءة</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h4>متوافق مع الجوال</h4>
+                <p>يعمل على جميع الأجهزة</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-sync"></i>
+                <h4>تحديثات مستمرة</h4>
+                <p>تحديثات دورية ومميزات جديدة</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-lock"></i>
+                <h4>أمان عالي</h4>
+                <p>حماية متقدمة للبيانات</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3>النظام المتكامل</h3>
+              <p>الحل الأمثل لإدارة أعمالك بكفاءة واحترافية</p>
+            </div>
+            <div class="footer-section">
+              <h4>الخدمات</h4>
+              <ul>
+                <li><a href="#services">جميع الخدمات</a></li>
+                <li><a href="#customization">التخصيص</a></li>
+                <li><a href="#reports">التقارير</a></li>
+                <li><a href="#integration">التكامل</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>الدعم</h4>
+              <ul>
+                <li><a href="#features">الدعم الفني</a></li>
+                <li><a href="#">التوثيق</a></li>
+                <li><a href="#">الأسئلة الشائعة</a></li>
+                <li><a href="#">تواصل معنا</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h4>تابعنا</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 النظام المتكامل. جميع الحقوق محفوظة.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>// Navigation functionality
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+  });
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const offsetTop = target.offsetTop - 70; // Account for fixed navbar
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Navbar background change on scroll
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 100) {
+    navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+    navbar.style.boxShadow = '0 4px 6px -1px rgb(0 0 0 / 0.1)';
+  } else {
+    navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+    navbar.style.boxShadow = 'none';
+  }
+});
+
+// Video play functionality
+const videoPlaceholder = document.getElementById('video-placeholder');
+const playButton = document.getElementById('play-button');
+
+if (videoPlaceholder && playButton) {
+  videoPlaceholder.addEventListener('click', () => {
+    // Simulate video play - you can replace this with actual video embed
+    playButton.style.transform = 'translate(-50%, -50%) scale(1.2)';
+    playButton.style.opacity = '0';
+    
+    setTimeout(() => {
+      // Here you would typically embed the actual video
+      alert('سيتم تشغيل الفيديو التوضيحي');
+      playButton.style.transform = 'translate(-50%, -50%) scale(1)';
+      playButton.style.opacity = '1';
+    }, 500);
+  });
+}
+
+// Scroll animations
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+// Add animation classes and observe elements
+document.addEventListener('DOMContentLoaded', () => {
+  // Service cards animation
+  document.querySelectorAll('.service-card').forEach((card, index) => {
+    card.classList.add('fade-in');
+    card.style.transitionDelay = `${index * 0.1}s`;
+    observer.observe(card);
+  });
+
+  // Report cards animation
+  document.querySelectorAll('.report-card').forEach((card, index) => {
+    card.classList.add('fade-in');
+    card.style.transitionDelay = `${index * 0.1}s`;
+    observer.observe(card);
+  });
+
+  // Integration cards animation
+  document.querySelectorAll('.integration-card').forEach((card, index) => {
+    card.classList.add('fade-in');
+    card.style.transitionDelay = `${index * 0.1}s`;
+    observer.observe(card);
+  });
+
+  // Feature cards animation
+  document.querySelectorAll('.feature-card').forEach((card, index) => {
+    card.classList.add('slide-in-right');
+    card.style.transitionDelay = `${index * 0.1}s`;
+    observer.observe(card);
+  });
+
+  // Main feature animation
+  const mainFeature = document.querySelector('.main-feature');
+  if (mainFeature) {
+    mainFeature.classList.add('slide-in-left');
+    observer.observe(mainFeature);
+  }
+
+  // Section content animations
+  document.querySelectorAll('.content-text').forEach(content => {
+    content.classList.add('slide-in-left');
+    observer.observe(content);
+  });
+
+  document.querySelectorAll('.content-image').forEach(image => {
+    image.classList.add('slide-in-right');
+    observer.observe(image);
+  });
+
+  // Section headers animation
+  document.querySelectorAll('.section-header').forEach(header => {
+    header.classList.add('fade-in');
+    observer.observe(header);
+  });
+
+  // Video container animation
+  const videoContainer = document.querySelector('.video-container');
+  if (videoContainer) {
+    videoContainer.classList.add('fade-in');
+    observer.observe(videoContainer);
+  }
+});
+
+// Add hover effects for interactive elements
+document.querySelectorAll('.service-card, .report-card, .integration-card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.style.transform = 'translateY(-8px) scale(1.02)';
+  });
+  
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'translateY(0) scale(1)';
+  });
+});
+
+// Parallax effect for hero section
+window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+  const heroContent = document.querySelector('.hero-content');
+  const floatingCard = document.querySelector('.floating-card');
+  
+  if (heroContent && scrolled < window.innerHeight) {
+    heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+  }
+  
+  if (floatingCard && scrolled < window.innerHeight) {
+    floatingCard.style.transform = `translateY(${scrolled * 0.3}px)`;
+  }
+});
+
+// Add loading animation
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+  
+  // Animate hero elements
+  const heroTitle = document.querySelector('.hero-title');
+  const heroSubtitle = document.querySelector('.hero-subtitle');
+  const heroButtons = document.querySelector('.hero-buttons');
+  const floatingCard = document.querySelector('.floating-card');
+  
+  if (heroTitle) {
+    heroTitle.style.animation = 'slideInUp 1s ease-out forwards';
+  }
+  
+  if (heroSubtitle) {
+    heroSubtitle.style.animation = 'slideInUp 1s ease-out 0.2s forwards';
+    heroSubtitle.style.opacity = '0';
+  }
+  
+  if (heroButtons) {
+    heroButtons.style.animation = 'slideInUp 1s ease-out 0.4s forwards';
+    heroButtons.style.opacity = '0';
+  }
+  
+  if (floatingCard) {
+    floatingCard.style.animation = 'slideInRight 1s ease-out 0.6s forwards, floatUp 3s ease-in-out 1.6s infinite';
+    floatingCard.style.opacity = '0';
+  }
+});
+
+// Add CSS keyframes for loading animations
+const style = document.createElement('style');
+style.textContent = `
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .hero-subtitle,
+  .hero-buttons,
+  .floating-card {
+    opacity: 0;
+  }
+`;
+document.head.appendChild(style);
+
+// Add click effects for buttons
+document.querySelectorAll('.btn').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    const ripple = document.createElement('span');
+    const rect = this.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
+    
+    ripple.style.width = ripple.style.height = size + 'px';
+    ripple.style.left = x + 'px';
+    ripple.style.top = y + 'px';
+    ripple.classList.add('ripple');
+    
+    this.appendChild(ripple);
+    
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
+  });
+});
+
+// Add ripple effect styles
+const rippleStyle = document.createElement('style');
+rippleStyle.textContent = `
+  .btn {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: rippleEffect 0.6s linear;
+    pointer-events: none;
+  }
+  
+  @keyframes rippleEffect {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+  }
+`;
+document.head.appendChild(rippleStyle);
+
+console.log
+('تم تحميل النظام المتكامل بنجاح! 🚀');</script>
+  </body>
+</html>
