@@ -25,155 +25,7 @@
     <title>أنظمة رايتو المحاسبية - Raito ERP systems</title>
   
     <style>
-  /* Global Styles */
-  .body {
-        background-color: var(--bg-light);
-        color: var(--text-dark);
-        font-size: 16px;
-        line-height: 1.6;
-      }
-      :root {
-        --primary-color: #2563eb;
-        --secondary-color: #10b981;
-        --accent-color: #f59e0b;
-        --text-dark: #1f2937;
-        --text-light: #6b7280;
-        --bg-light: #f8fafc;
-        --white: #ffffff;
-        --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        --gradient-primary: linear-gradient(135deg, #428315cc 0%, #0B555E 100%);
-        --gradient-secondary: linear-gradient(100deg, #17aabd, #3fd6dd);
-        --main-color: #17aabd;
-        --secoundry-color: #6cce69;
-      }
-
-      @font-face {
-        src: url(../font/Tajawal/static/Tajawal-Bold.ttf);
-        font-family: 'Tajawal', sans-serif;
-        font-weight: 700;
-      }
-
-      @font-face {
-        src: url(../font/Tajawal/static/Tajawal-Regular.ttf);
-        font-family: 'Tajawal', sans-serif;
-
-        font-weight: 400;
-      }
-
-      @font-face {
-        src: url(../font/Tajawal/static/Tajawal-Medium.ttf);
-        font-family: 'Tajawal', sans-serif;
-
-        font-weight: 500;
-      }
-
-      @font-face {
-        src: url(../font/Tajawal/static/Tajawal-Light.ttf);
-        font-family: 'Tajawal', sans-serif;
-
-        font-weight: 300;
-      }
-
-      @font-face {
-        src: url(../font/Tajawal/static/Tajawal-ExtraBold.ttf);
-        font-family: 'Tajawal', sans-serif;
-        font-weight: 800;
-      }
-
-      body {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-      }
-
-      [dir="rtl"] body {
-        font-family: 'Tajawal', sans-serif;
-      }
-
-      [dir="ltr"] body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      h1, h2, h3, h4, h5, h6 {
-        margin: 0px;
-        padding: 0px;
-      }
-
-      ul, ol {
-        padding-inline-start: 0px;
-        padding-left: 0px;
-      }
-
-      a:hover, a {
-        text-decoration: none;
-      }
-
-      ul li {
-        list-style: none;
-      }
-
-      p {
-        color: var(--color-primary);
-
-        font-weight: 400;
-      }
-
-      @media (min-width: 1200px) {
-        .container, .container-lg, .container-md, .container-sm, .container-xl {
-          max-width: 1200px;
-        }
-
-      }
-
-      @media (max-width: 1200px) {
-        .container, .container-lg, .container-md, .container-sm, .container-xl {
-          max-width: 1200px;
-        }
-
-        [dir="ltr"] .banner {
-          padding-left: 0px !important;
-        }
-      }
-
-      .animate-float-y {
-        -webkit-animation-name: float-y;
-        animation-name: float-y;
-        -webkit-animation-duration: 2s;
-        /* animation-duration: 2s; */
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-        animation-timing-function: linear;
-      }
-
-      @keyframes float-y {
-        0% {
-          -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-        }
-
-        50% {
-          -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-        }
-
-        100% {
-          -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-        }
-      }
-
-      /* Colors */
-      :root {
-        --color-default: #000000;
-        --color-primary: #6C727D;
-        --color-secondary: #0A1426;
-        --color-hover: #ffffff;
-        --color-back: #4c8f3a;
-        --color-logo: #0B555E
-      }
-
+ 
       .component-stert {
         position: fixed;
         background-color: var(--color-default);
@@ -208,8 +60,124 @@
         height: auto;
 
       }
-/* Video Section */
+      
+/* Enhanced Video 1 Section */
 .video-section {
+  background: var(--gradient-dark);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.video-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(6, 182, 212, 0.2) 0%, transparent 50%);
+}
+
+.video-section .section-title {
+  color: var(--white);
+}
+
+.video-section .section-title::after {
+  background: var(--gradient-secondary);
+}
+
+.video-section .section-subtitle {
+  color: var(--neutral-300);
+}
+
+.video-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: var(--border-radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-2xl);
+  z-index: 1;
+}
+
+.video-placeholder {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: var(--border-radius-xl);
+}
+
+.video-placeholder img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-placeholder:hover img {
+  transform: scale(1.05);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.play-button::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+.play-button:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.play-button i {
+  font-size: 2rem;
+  color: var(--white);
+  margin-left: 6px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Video 2 Section */
+.video-section2 {
     padding: 100px 0;
     background: linear-gradient(135deg, #000 0%, var(--dark-color) 100%);
     position: relative;
@@ -1187,7 +1155,24 @@
     </style>
   </head>
 <body>
-    <section id="video" class="video-section">
+  <!-- Video 1 Section -->
+      <section id="video" class="video-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">شاهد النظام في العمل</h2>
+            <p class="section-subtitle">عرض توضيحي شامل لجميع إمكانيات النظام</p>
+          </div>
+          <div class="video-container">
+            <div class="video-placeholder" id="video-placeholder">
+              <div class="play-button" id="play-button">
+                <i class="fas fa-play"></i>
+              </div>
+              <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" alt="عرض النظام">
+            </div>
+          </div>
+        </div>
+      </section>
+    <section id="video" class="video-section2">
         <div class="container">
             <div class="video-content">
                 <div class="video-text">
@@ -1236,7 +1221,6 @@
                 </div>
             </div>
         </div>
-    
     </section>
        <!-- Customization Section -->
       <section id="customization" class="customization">
