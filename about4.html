@@ -648,7 +648,78 @@ body {
     .floating-icon {
         display: none;
     }
-}</style>
+}
+
+/* Section 4: Timeline */
+.section-4 {
+    background: white;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #3498db;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    margin-right: -1px;
+}
+
+.timeline-item {
+    padding: 1rem 2rem;
+    /* position: relative; */
+    background: inherit;
+    width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    right: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #3498db;
+    border-radius: 50%;
+    top: 15px;
+}
+
+.timeline-item:nth-child(odd)::after {
+    left: -10px;
+}
+
+.timeline-item:nth-child(even)::after {
+    right: -10px;
+}
+
+.timeline-date {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content {
+    background: #000000;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+</style>
 </head>
 <body>
     <!-- 3D Vision & Mission Section -->
@@ -786,6 +857,36 @@ body {
             <div class="particle particle-8"></div>
         </div>
     </section>
+       <!-- Section 4: Timeline Style -->
+    <section class="section section-4">
+        <div class="container">
+            <h2 class="section-title">تاريخنا</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2020</div>
+                    <div class="timeline-content">
+                        <h3>التأسيس</h3>
+                        <p>تأسست الشركة بفكرة بسيطة: تقديم حلول تقنية مبتكرة</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2022</div>
+                    <div class="timeline-content">
+                        <h3>التوسع</h3>
+                        <p>توسعنا لنشمل المزيد من الخدمات والتخصصات</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h3>الحاضر</h3>
+                        <p>اليوم نحن فريق متخصص يعمل مع عملاء من جميع أنحاء العالم</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <script>
       // Initialize 3D Vision & Mission Section
