@@ -1,1196 +1,440 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الرؤية والرسالة - تصميم ثلاثي الأبعاد</title>
-<style>/* Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --gradient-primary: linear-gradient(135deg, #428315cc 0%, #0B555E 100%);
-    --gradient-secondary: linear-gradient(100deg, #17aabd, #3fd6dd);
-    --main-color: #17aabd;
-    --secondary-color: #6cce69;
-    --dark-bg: #0a0a0a;
-    --light-text: #ffffff;
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-}
-
-body {
-    font-family: 'Tajawal', sans-serif;
-    background: var(--dark-bg);
-    color: var(--light-text);
-    overflow-x: hidden;
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 2;
-}
-
-/* Vision & Mission 3D Section */
-.vision-mission-3d {
-    min-height: 100vh;
-    padding: 100px 0;
-    position: relative;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-/* Floating Shapes Background */
-.floating-shapes {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.shape {
-    position: absolute;
-    border-radius: 50%;
-    background: var(--gradient-secondary);
-    opacity: 0.1;
-    animation: floatShape 20s infinite ease-in-out;
-}
-
-.shape-1 {
-    width: 200px;
-    height: 200px;
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.shape-2 {
-    width: 150px;
-    height: 150px;
-    top: 60%;
-    right: 15%;
-    animation-delay: -5s;
-}
-
-.shape-3 {
-    width: 100px;
-    height: 100px;
-    top: 30%;
-    right: 30%;
-    animation-delay: -10s;
-}
-
-.shape-4 {
-    width: 80px;
-    height: 80px;
-    bottom: 20%;
-    left: 20%;
-    animation-delay: -15s;
-}
-
-.shape-5 {
-    width: 120px;
-    height: 120px;
-    bottom: 40%;
-    right: 10%;
-    animation-delay: -7s;
-}
-
-@keyframes floatShape {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    25% { transform: translateY(-30px) rotate(90deg); }
-    50% { transform: translateY(-60px) rotate(180deg); }
-    75% { transform: translateY(-30px) rotate(270deg); }
-}
-
-/* Section Header */
-.section-header {
-    text-align: center;
-    margin-bottom: 80px;
-    position: relative;
-    z-index: 3;
-}
-
-.section-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    padding: 12px 24px;
-    border-radius: 50px;
-    margin-bottom: 30px;
-    font-weight: 600;
-    color: var(--main-color);
-    animation: badgeGlow 3s ease-in-out infinite;
-}
-
-.section-badge i {
-    font-size: 18px;
-}
-
-@keyframes badgeGlow {
-    0%, 100% { box-shadow: 0 0 20px rgba(23, 170, 189, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(23, 170, 189, 0.6); }
-}
-
-.section-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    background: var(--gradient-secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: titleSlide 1s ease-out;
-}
-
-.section-subtitle {
-    font-size: 1.3rem;
-    color: rgba(255, 255, 255, 0.8);
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-    animation: subtitleFade 1s ease-out 0.3s both;
-}
-
-@keyframes titleSlide {
-    from { transform: translateY(50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes subtitleFade {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* Cards Container */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 3;
-}
-
-/* 3D Cards */
-.card-3d {
-    position: relative;
-    background: var(--glass-bg);
-    backdrop-filter: blur(30px);
-    border: 1px solid var(--glass-border);
-    border-radius: 30px;
-    padding: 50px 40px;
-    transform-style: preserve-3d;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    cursor: pointer;
-    overflow: hidden;
-    animation: cardFloat 1s ease-out;
-}
-
-.card-3d:hover {
-    transform: translateY(-20px) rotateX(5deg) rotateY(5deg);
-    box-shadow: 
-        0 50px 100px rgba(23, 170, 189, 0.3),
-        0 20px 40px rgba(0, 0, 0, 0.4);
-}
-
-.mission-card {
-    animation-delay: 0.2s;
-}
-
-.vision-card {
-    animation-delay: 0.4s;
-}
-
-@keyframes cardFloat {
-    from { 
-        transform: translateY(100px) rotateX(-10deg); 
-        opacity: 0; 
-    }
-    to { 
-        transform: translateY(0) rotateX(0deg); 
-        opacity: 1; 
-    }
-}
-
-/* Card Background */
-.card-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 30px;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.bg-gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--gradient-primary);
-    opacity: 0.1;
-    transition: opacity 0.6s ease;
-}
-
-.card-3d:hover .bg-gradient {
-    opacity: 0.2;
-}
-
-.bg-pattern {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(circle at 20% 20%, rgba(23, 170, 189, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(108, 206, 105, 0.1) 0%, transparent 50%);
-    animation: patternMove 10s ease-in-out infinite;
-}
-
-@keyframes patternMove {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(20px, -20px); }
-}
-
-/* Icon Container */
-.icon-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.icon-3d {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-style: preserve-3d;
-    animation: iconRotate 20s linear infinite;
-}
-
-.icon-sphere {
-    width: 80px;
-    height: 80px;
-    background: var(--gradient-secondary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    color: white;
-    position: relative;
-    z-index: 3;
-    box-shadow: 
-        0 20px 40px rgba(23, 170, 189, 0.4),
-        inset 0 0 20px rgba(255, 255, 255, 0.2);
-    transition: all 0.6s ease;
-}
-
-.card-3d:hover .icon-sphere {
-    transform: scale(1.1);
-    box-shadow: 
-        0 30px 60px rgba(23, 170, 189, 0.6),
-        inset 0 0 30px rgba(255, 255, 255, 0.3);
-}
-
-.icon-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    background: radial-gradient(circle, rgba(23, 170, 189, 0.4) 0%, transparent 70%);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    animation: glowPulse 3s ease-in-out infinite;
-}
-
-@keyframes glowPulse {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.4; }
-    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
-}
-
-.icon-rings {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.ring {
-    position: absolute;
-    border: 2px solid rgba(23, 170, 189, 0.3);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: ringRotate 15s linear infinite;
-}
-
-.ring-1 {
-    width: 100px;
-    height: 100px;
-    animation-delay: 0s;
-}
-
-.ring-2 {
-    width: 120px;
-    height: 120px;
-    animation-delay: -5s;
-    animation-direction: reverse;
-}
-
-.ring-3 {
-    width: 140px;
-    height: 140px;
-    animation-delay: -10s;
-}
-
-@keyframes iconRotate {
-    from { transform: rotateY(0deg); }
-    to { transform: rotateY(360deg); }
-}
-
-@keyframes ringRotate {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-/* Card Content */
-.card-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 25px;
-    color: var(--main-color);
-    position: relative;
-}
-
-.card-title::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: var(--gradient-secondary);
-    border-radius: 2px;
-}
-
-.card-text {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 30px;
-    position: relative;
-    z-index: 2;
-}
-
-/* Card Decoration */
-.card-decoration {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.deco-line {
-    width: 50px;
-    height: 2px;
-    background: var(--gradient-secondary);
-    border-radius: 1px;
-}
-
-.deco-dots {
-    display: flex;
-    gap: 8px;
-}
-
-.deco-dots span {
-    width: 8px;
-    height: 8px;
-    background: var(--main-color);
-    border-radius: 50%;
-    animation: dotPulse 2s ease-in-out infinite;
-}
-
-.deco-dots span:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-.deco-dots span:nth-child(3) {
-    animation-delay: 0.6s;
-}
-
-@keyframes dotPulse {
-    0%, 100% { transform: scale(1); opacity: 0.7; }
-    50% { transform: scale(1.3); opacity: 1; }
-}
-
-/* Card Shadow */
-.card-shadow {
-    position: absolute;
-    bottom: -30px;
-    left: 20px;
-    right: 20px;
-    height: 30px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    filter: blur(20px);
-    transition: all 0.6s ease;
-    z-index: -1;
-}
-
-.card-3d:hover .card-shadow {
-    bottom: -50px;
-    filter: blur(30px);
-    background: rgba(23, 170, 189, 0.2);
-}
-
-/* Interactive Elements */
-.interactive-elements {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.floating-icon {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: var(--main-color);
-    animation: floatIcon 6s ease-in-out infinite;
-}
-
-.floating-icon-1 {
-    top: 20%;
-    left: 15%;
-    animation-delay: 0s;
-}
-
-.floating-icon-2 {
-    top: 70%;
-    right: 20%;
-    animation-delay: -2s;
-}
-
-.floating-icon-3 {
-    bottom: 30%;
-    left: 25%;
-    animation-delay: -4s;
-}
-
-@keyframes floatIcon {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(180deg); }
-}
-
-/* Particle System */
-.particle-system {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--main-color);
-    border-radius: 50%;
-    animation: particleFloat 15s linear infinite;
-}
-
-.particle-1 { top: 10%; left: 10%; animation-delay: 0s; }
-.particle-2 { top: 20%; left: 80%; animation-delay: -2s; }
-.particle-3 { top: 60%; left: 20%; animation-delay: -4s; }
-.particle-4 { top: 80%; left: 70%; animation-delay: -6s; }
-.particle-5 { top: 40%; left: 90%; animation-delay: -8s; }
-.particle-6 { top: 70%; left: 10%; animation-delay: -10s; }
-.particle-7 { top: 30%; left: 60%; animation-delay: -12s; }
-.particle-8 { top: 90%; left: 40%; animation-delay: -14s; }
-
-@keyframes particleFloat {
-    0% { 
-        transform: translateY(0px) translateX(0px); 
-        opacity: 0; 
-    }
-    10% { 
-        opacity: 1; 
-    }
-    90% { 
-        opacity: 1; 
-    }
-    100% { 
-        transform: translateY(-100vh) translateX(50px); 
-        opacity: 0; 
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        max-width: 600px;
-    }
-    
-    .section-title {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .vision-mission-3d {
-        padding: 60px 0;
-    }
-    
-    .section-title {
-        font-size: 2.5rem;
-    }
-    
-    .section-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .card-3d {
-        padding: 40px 30px;
-        border-radius: 20px;
-    }
-    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gradient-primary: linear-gradient(135deg, #428315cc 0%, #0B555E 100%);
+            --gradient-secondary: linear-gradient(100deg, #17aabd, #3fd6dd);
+            --main-color: #17aabd;
+            --secondary-color: #6cce69;
+            --dark-bg: #0a0a0a;
+            --light-text: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: var(--dark-bg);
+            color: var(--light-text);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+    /* Card Shadow */
     .card-title {
-        font-size: 2rem;
-    }
-    
-    .card-text {
-        font-size: 1rem;
-    }
-    
-    .icon-3d {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .icon-sphere {
-        width: 70px;
-        height: 70px;
-        font-size: 1.5rem;
-    }
-    
-    .floating-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
-    }
-}
+            font-size: 30px;
+            margin-bottom: 1rem;
+            color: var(--main-color);
+            text-align: center;
+        }
+        .card-shadow {
+            position: absolute;
+            bottom: -30px;
+            left: 20px;
+            right: 20px;
+            height: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            filter: blur(20px);
+            transition: all 0.6s ease;
+            z-index: -1;
+        }
 
-@media (max-width: 480px) {
-    .cards-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .card-3d {
-        padding: 30px 20px;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .card-title {
-        font-size: 1.8rem;
-    }
-    
-    .floating-icon {
-        display: none;
-    }
-}
+        .card-3d:hover .card-shadow {
+            bottom: -50px;
+            filter: blur(30px);
+            background: rgba(23, 170, 189, 0.2);
+        }
 
-/* Section 4: Timeline */
-.section-4 {
-    background: white;
-}
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            position: relative;
+            /*display: flex;
+    align-items: center;
+    justify-content: center; */
+        }
 
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
+        .vision-icon {
+            background: linear-gradient(135deg, rgba(0, 212, 170, 0.1) 0%, rgba(0, 153, 204, 0.1) 100%);
+            border-radius: 50%;
+        }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background: #3498db;
-    top: 0;
-    bottom: 0;
-    right: 50%;
-    margin-right: -1px;
-}
+        .icon-eye {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 25px;
+        }
 
-.timeline-item {
-    padding: 1rem 2rem;
-    /* position: relative; */
-    background: inherit;
-    width: 50%;
-}
+        .eye-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+        }
 
-.timeline-item:nth-child(odd) {
-    right: 0;
-}
+        .eye-outer {
+            width: 100%;
+            height: 100%;
+            background: var(--secondary-color);
+            border-radius: 50px;
+            position: relative;
+        }
 
-.timeline-item:nth-child(even) {
-    left: 50%;
-}
+        .eye-pupil {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 8px;
+            height: 8px;
+            background: #1a202c;
+            border-radius: 50%;
+            animation: blink 3s ease-in-out infinite;
+        }
 
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: #3498db;
-    border-radius: 50%;
-    top: 15px;
-}
+        .icon-rays {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-.timeline-item:nth-child(odd)::after {
-    left: -10px;
-}
+        .ray {
+            position: absolute;
+            width: 2px;
+            height: 15px;
+            background: var(--secondary-color);
+            border-radius: 1px;
+            opacity: 0.6;
+        }
 
-.timeline-item:nth-child(even)::after {
-    right: -10px;
-}
+        .ray-1 {
+            top: -25px;
+            left: -1px;
+        }
 
-.timeline-date {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #3498db;
-    margin-bottom: 0.5rem;
-}
+        .ray-2 {
+            top: -18px;
+            right: -18px;
+            transform: rotate(45deg);
+        }
 
-.timeline-content {
-    background: #000000;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
+        .ray-3 {
+            right: -25px;
+            top: -1px;
+            transform: rotate(90deg);
+        }
 
-</style>
+        .ray-4 {
+            bottom: -18px;
+            right: -18px;
+            transform: rotate(135deg);
+        }
+
+        @keyframes blink {
+
+            0%,
+            90%,
+            100% {
+                transform: translate(-50%, -50%) scaleY(1);
+            }
+
+            95% {
+                transform: translate(-50%, -50%) scaleY(0.1);
+            }
+        }
+
+        .icon-message {
+            position: absolute;
+            width: 35px;
+            height: 25px;
+        top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .message-body {
+            width: 100%;
+            height: 20px;
+            background: #6cce69;
+            border-radius: 8px;
+        }
+
+        .message-tail {
+            position: absolute;
+            bottom: -5px;
+            right: 8px;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 8px solid #6cce69;
+        }
+
+        .icon-elements {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .element {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .element-1 {
+            top: -8px;
+            left: -10px;
+        }
+
+        .element-2 {
+            top: -8px;
+            left: -2px;
+        }
+
+        .element-3 {
+            top: -8px;
+            left: 6px;
+        }
+
+         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                max-width: 600px;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .vision-mission-3d {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .card-3d {
+                padding: 40px 30px;
+                border-radius: 20px;
+            }
+
+            .card-title {
+                font-size: 2rem;
+            }
+
+            .card-text {
+                font-size: 1rem;
+            }
+
+            .icon-3d {
+                width: 100px;
+                height: 100px;
+            }
+
+            .icon-sphere {
+                width: 70px;
+                height: 70px;
+                font-size: 1.5rem;
+            }
+
+            .floating-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cards-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .card-3d {
+                padding: 30px 20px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .card-title {
+                font-size: 1.8rem;
+            }
+
+            .floating-icon {
+                display: none;
+            }
+        }
+
+        /* Section 4: Timeline */
+        .section-4 {
+            background: white;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: #3498db;
+            top: 0;
+            bottom: 0;
+            right: 50%;
+            margin-right: -1px;
+        }
+
+        .timeline-item {
+            padding: 1rem 2rem;
+            position: relative;
+            background: inherit;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            right: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            right: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #3498db;
+            border-radius: 50%;
+            bottom: 170px;
+        }
+
+        .timeline-item:nth-child(odd)::after {
+            left: -10px;
+        }
+
+        .timeline-item:nth-child(even)::after {
+            right: -10px;
+        }
+
+        .timeline-date {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content {
+            background: #E2E8F0;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+        }
+    </style>
 </head>
+
 <body>
-    <!-- 3D Vision & Mission Section -->
-    <section class="vision-mission-3d">
-        <div class="floating-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
-            <div class="shape shape-5"></div>
-        </div>
-        
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">
-                    <i class="fas fa-eye"></i>
-                    <span>رؤيتنا ورسالتنا</span>
-                </div>
-                <h2 class="section-title">نحو مستقبل رقمي متطور</h2>
-                <p class="section-subtitle">نسعى لتحقيق التميز في عالم التكنولوجيا والابتكار</p>
-            </div>
-            
-            <div class="cards-container">
-                <!-- Mission Card -->
-                <div class="card-3d mission-card">
-                    <div class="card-background">
-                        <div class="bg-gradient"></div>
-                        <div class="bg-pattern"></div>
-                    </div>
-                    
-                    <div class="card-content">
-                        <div class="icon-container">
-                            <div class="icon-3d">
-                                <div class="icon-sphere">
-                                    <i class="fas fa-comments"></i>
-                                </div>
-                                <div class="icon-glow"></div>
-                                <div class="icon-rings">
-                                    <div class="ring ring-1"></div>
-                                    <div class="ring ring-2"></div>
-                                    <div class="ring ring-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <h3 class="card-title">رسالتنا</h3>
-                        
-                        <p class="card-text">
-                            طرح التقنية المعلوماتية بأسهل وأوضح طريقة وأكثرها 
-                            أماناً وملائمة وإتاحة لعملائنا وشركاء النجاح تمهيداً 
-                            لمواكبة التنمية المستدامة محققين بحاجاتهم المطموحة 
-                            على الدوام
-                        </p>
-                        
-                        <div class="card-decoration">
-                            <div class="deco-line"></div>
-                            <div class="deco-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="card-shadow"></div>
-                </div>
-                
-                <!-- Vision Card -->
-                <div class="card-3d vision-card">
-                    <div class="card-background">
-                        <div class="bg-gradient"></div>
-                        <div class="bg-pattern"></div>
-                    </div>
-                    
-                    <div class="card-content">
-                        <div class="icon-container">
-                            <div class="icon-3d">
-                                <div class="icon-sphere">
-                                    <i class="fas fa-eye"></i>
-                                </div>
-                                <div class="icon-glow"></div>
-                                <div class="icon-rings">
-                                    <div class="ring ring-1"></div>
-                                    <div class="ring ring-2"></div>
-                                    <div class="ring ring-3"></div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <h3 class="card-title">رؤيتنا</h3>
-                        
-                        <p class="card-text">
-                            التطوير التقني ليس حكراً لا يستفيد منه كل فرد، وقد 
-                            عقدنا العزم أن نصل لأحدث التطورات التقنية ونبدع معها 
-                            كل من أراد النجاح والرقي لنفسه ولوطننا الحبيب.
-                        </p>
-                        
-                        <div class="card-decoration">
-                            <div class="deco-line"></div>
-                            <div class="deco-dots">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="card-shadow"></div>
-                </div>
-            </div>
-            
-            <!-- Interactive Elements -->
-            <div class="interactive-elements">
-                <div class="floating-icon floating-icon-1">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <div class="floating-icon floating-icon-2">
-                    <i class="fas fa-lightbulb"></i>
-                </div>
-                <div class="floating-icon floating-icon-3">
-                    <i class="fas fa-star"></i>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Particle System -->
-        <div class="particle-system">
-            <div class="particle particle-1"></div>
-            <div class="particle particle-2"></div>
-            <div class="particle particle-3"></div>
-            <div class="particle particle-4"></div>
-            <div class="particle particle-5"></div>
-            <div class="particle particle-6"></div>
-            <div class="particle particle-7"></div>
-            <div class="particle particle-8"></div>
-        </div>
-    </section>
-       <!-- Section 4: Timeline Style -->
+
+    <!-- Section 4: Timeline Style -->
     <section class="section section-4">
         <div class="container">
-            <h2 class="section-title">تاريخنا</h2>
+            <h2 class="section-title"></h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">2020</div>
-                    <div class="timeline-content">
-                        <h3>التأسيس</h3>
-                        <p>تأسست الشركة بفكرة بسيطة: تقديم حلول تقنية مبتكرة</p>
+                  <div class="timeline-content">
+
+                        <div class="card-icon vision-icon">
+                            <div class="icon-eye">
+                                <div class="eye-outer"></div>
+                                <div class="eye-inner"></div>
+                                <div class="eye-pupil"></div>
+                            </div>
+                            <div class="icon-rays">
+                                <div class="ray ray-1"></div>
+                                <div class="ray ray-2"></div>
+                                <div class="ray ray-3"></div>
+                                <div class="ray ray-4"></div>
+                            </div>
+                        </div>
+                        <h6 class="card-title">رؤيتنا</h6>
+                        <p>التطوير التقني ليس حكراً أن ي
+                            ستفيد منه كل فرد، و قد عقدنا العزم أن يصل لأحدث التطورات التقنية و ينجح مع
+                            ها كل من أراد النجاح و الرقي لنفسه و لوطننا الحبيب.
+                        </p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-date">2022</div>
                     <div class="timeline-content">
-                        <h3>التوسع</h3>
-                        <p>توسعنا لنشمل المزيد من الخدمات والتخصصات</p>
+                        <div class="card-icon mission-icon">
+                            <div class="icon-message">
+                                <div class="message-body"></div>
+                                <div class="message-tail"></div>
+                            </div>
+                            <div class="icon-elements">
+                                <div class="element element-1"></div>
+                                <div class="element element-2"></div>
+                                <div class="element element-3"></div>
+                            </div>
+                        </div>
+                        <h6 class="card-title">رسالتنا</h6>
+                        <p>
+                            طرح التقنية المعلوماتية بأسهل و أوضح طريقة وأكثرها إتقان و
+                            ملائمة و إنتاجية لعملائنا و شركاء النجاح تمهيدا لمواكبة التنمية
+                            المستدامة محققين نجاحاتهم الطموحة على الدوام
+                        </p>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2025</div>
-                    <div class="timeline-content">
-                        <h3>الحاضر</h3>
-                        <p>اليوم نحن فريق متخصص يعمل مع عملاء من جميع أنحاء العالم</p>
-                    </div>
+           
                 </div>
             </div>
-        </div>
     </section>
-
-
-    <script>
-      // Initialize 3D Vision & Mission Section
-document.addEventListener('DOMContentLoaded', () => {
-    initializeVisionMission3D();
-    initializeParticleInteraction();
-    initializeCardInteractions();
-    initializeScrollAnimations();
-});
-
-// Initialize 3D Vision & Mission Effects
-function initializeVisionMission3D() {
-    const cards = document.querySelectorAll('.card-3d');
-    
-    cards.forEach(card => {
-        // Add mouse move 3D effect
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = (y - centerY) / 10;
-            const rotateY = (centerX - x) / 10;
-            
-            card.style.transform = `
-                translateY(-20px) 
-                rotateX(${rotateX}deg) 
-                rotateY(${rotateY}deg)
-                scale(1.02)
-            `;
-        });
-        
-        // Reset on mouse leave
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0) rotateX(0deg) rotateY(0deg) scale(1)';
-        });
-        
-        // Add click ripple effect
-        card.addEventListener('click', (e) => {
-            createRippleEffect(e, card);
-        });
-    });
-}
-
-// Create Ripple Effect
-function createRippleEffect(e, element) {
-    const ripple = document.createElement('div');
-    const rect = element.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
-    const x = e.clientX - rect.left - size / 2;
-    const y = e.clientY - rect.top - size / 2;
-    
-    ripple.style.cssText = `
-        position: absolute;
-        width: ${size}px;
-        height: ${size}px;
-        left: ${x}px;
-        top: ${y}px;
-        background: radial-gradient(circle, rgba(23,170,189,0.4) 0%, transparent 70%);
-        border-radius: 50%;
-        transform: scale(0);
-        animation: rippleExpand 0.8s ease-out;
-        pointer-events: none;
-        z-index: 10;
-    `;
-    
-    element.style.position = 'relative';
-    element.style.overflow = 'hidden';
-    element.appendChild(ripple);
-    
-    setTimeout(() => {
-        ripple.remove();
-    }, 800);
-}
-
-// Add ripple animation
-const rippleStyle = document.createElement('style');
-rippleStyle.textContent = `
-    @keyframes rippleExpand {
-        0% {
-            transform: scale(0);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(2);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(rippleStyle);
-
-// Initialize Particle Interaction
-function initializeParticleInteraction() {
-    const particles = document.querySelectorAll('.particle');
-    
-    // Add mouse interaction to particles
-    document.addEventListener('mousemove', (e) => {
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
-        
-        particles.forEach(particle => {
-            const rect = particle.getBoundingClientRect();
-            const particleX = rect.left + rect.width / 2;
-            const particleY = rect.top + rect.height / 2;
-            
-            const distance = Math.sqrt(
-                Math.pow(mouseX - particleX, 2) + Math.pow(mouseY - particleY, 2)
-            );
-            
-            if (distance < 100) {
-                const force = (100 - distance) / 100;
-                const angle = Math.atan2(particleY - mouseY, particleX - mouseX);
-                const moveX = Math.cos(angle) * force * 20;
-                const moveY = Math.sin(angle) * force * 20;
-                
-                particle.style.transform = `translate(${moveX}px, ${moveY}px) scale(${1 + force})`;
-                particle.style.opacity = Math.min(1, 0.5 + force);
-            } else {
-                particle.style.transform = 'translate(0, 0) scale(1)';
-                particle.style.opacity = '0.7';
-            }
-        });
-    });
-}
-
-// Initialize Card Interactions
-function initializeCardInteractions() {
-    const cards = document.querySelectorAll('.card-3d');
-    
-    cards.forEach((card, index) => {
-        // Add entrance animation delay
-        card.style.animationDelay = `${index * 0.2}s`;
-        
-        // Add hover sound effect (visual feedback)
-        card.addEventListener('mouseenter', () => {
-            const iconSphere = card.querySelector('.icon-sphere');
-            if (iconSphere) {
-                iconSphere.style.animation = 'none';
-                iconSphere.offsetHeight; // Trigger reflow
-                iconSphere.style.animation = 'iconPulse 0.6s ease-out';
-            }
-            
-            // Add glow effect to card
-            card.style.boxShadow = `
-                0 50px 100px rgba(23, 170, 189, 0.4),
-                0 20px 40px rgba(0, 0, 0, 0.4),
-                inset 0 0 50px rgba(23, 170, 189, 0.1)
-            `;
-        });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.boxShadow = '';
-        });
-    });
-}
-
-// Add icon pulse animation
-const iconPulseStyle = document.createElement('style');
-iconPulseStyle.textContent = `
-    @keyframes iconPulse {
-        0% { transform: scale(1); }
-        50% { transform: scale(1.2); }
-        100% { transform: scale(1); }
-    }
-`;
-document.head.appendChild(iconPulseStyle);
-
-// Initialize Scroll Animations
-function initializeScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                
-                // Trigger specific animations
-                if (entry.target.classList.contains('vision-mission-3d')) {
-                    setTimeout(() => {
-                        animateFloatingElements();
-                    }, 500);
-                }
-            }
-        });
-    }, observerOptions);
-    
-    // Observe section
-    const section = document.querySelector('.vision-mission-3d');
-    if (section) {
-        observer.observe(section);
-    }
-}
-
-// Animate Floating Elements
-function animateFloatingElements() {
-    const floatingIcons = document.querySelectorAll('.floating-icon');
-    
-    floatingIcons.forEach((icon, index) => {
-        setTimeout(() => {
-            icon.style.animation = `floatIcon 6s ease-in-out infinite`;
-            icon.style.animationDelay = `${index * -2}s`;
-        }, index * 200);
-    });
-}
-
-// Add parallax effect to floating shapes
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const shapes = document.querySelectorAll('.shape');
-    
-    shapes.forEach((shape, index) => {
-        const speed = 0.1 + (index * 0.05);
-        const yPos = -(scrolled * speed);
-        shape.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
-    });
-});
-
-// Add keyboard navigation
-document.addEventListener('keydown', (e) => {
-    const cards = document.querySelectorAll('.card-3d');
-    
-    if (e.key === 'Tab') {
-        // Enhanced tab navigation with visual feedback
-        setTimeout(() => {
-            const focusedElement = document.activeElement;
-            if (focusedElement && focusedElement.classList.contains('card-3d')) {
-                focusedElement.style.outline = '3px solid var(--main-color)';
-                focusedElement.style.outlineOffset = '5px';
-            }
-        }, 10);
-    }
-});
-
-// Remove outline on mouse interaction
-document.addEventListener('mousedown', () => {
-    const cards = document.querySelectorAll('.card-3d');
-    cards.forEach(card => {
-        card.style.outline = 'none';
-    });
-});
-
-// Performance optimization for reduced motion
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-if (reduceMotion.matches) {
-    document.documentElement.style.setProperty('--animation-duration', '0.01s');
-    
-    // Disable complex animations
-    const particles = document.querySelectorAll('.particle');
-    particles.forEach(particle => {
-        particle.style.animation = 'none';
-    });
-}
-
-// Add touch interactions for mobile
-if ('ontouchstart' in window) {
-    const cards = document.querySelectorAll('.card-3d');
-    
-    cards.forEach(card => {
-        card.addEventListener('touchstart', (e) => {
-            card.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-        
-        card.addEventListener('touchend', () => {
-            setTimeout(() => {
-                card.style.transform = 'translateY(0) scale(1)';
-            }, 150);
-        });
-    });
-}
-
-// Initialize intersection observer for performance
-const performanceObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        const animations = entry.target.querySelectorAll('[style*="animation"]');
-        
-        if (entry.isIntersecting) {
-            // Resume animations when in view
-            animations.forEach(el => {
-                el.style.animationPlayState = 'running';
-            });
-        } else {
-            // Pause animations when out of view
-            animations.forEach(el => {
-                el.style.animationPlayState = 'paused';
-            });
-        }
-    });
-}, { threshold: 0 });
-
-// Observe the main section for performance optimization
-const mainSection = document.querySelector('.vision-mission-3d');
-if (mainSection) {
-    performanceObserver.observe(mainSection);
-}
-
-console.log('🚀 3D Vision & Mission Section Initialized Successfully!');
-console.log('✨ All interactive elements are ready!');
-console.log('🎯 Performance optimizations applied!');
-    </script>
 </body>
+
 </html>
