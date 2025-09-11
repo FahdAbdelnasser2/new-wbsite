@@ -22,17 +22,6 @@ backToTop.addEventListener("click", () => {
   });
 });
 
-// Loading Screen
-window.addEventListener("load", () => {
-  const loadingScreen = document.querySelector(".loading-screen");
-  setTimeout(() => {
-    loadingScreen.style.opacity = "0";
-    setTimeout(() => {
-      loadingScreen.style.display = "none";
-    }, 500);
-  }, 1500);
-});
-
 // Mobile Navigation
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
@@ -451,3 +440,140 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Chat Widget Toggle
+const chatToggle = document.querySelector(".chat-toggle");
+const chatWidget = document.querySelector(".chat-widget");
+const chatClose = document.querySelector(".chat-close");
+
+if (chatToggle && chatWidget) {
+  chatToggle.addEventListener("click", () => {
+    chatWidget.classList.add("active");
+    chatToggle.style.display = "none";
+  });
+}
+
+if (chatClose && chatWidget) {
+  chatClose.addEventListener("click", () => {
+    chatWidget.classList.remove("active");
+    if (chatToggle) {
+      chatToggle.style.display = "block";
+    }
+  });
+}
+
+// Chat Functionality
+const chatInput = document.querySelector(".chat-input input");
+const sendBtn = document.querySelector(".send-btn");
+const chatBody = document.querySelector(".chat-body");
+
+function addMessage(message, isUser = false) {
+  if (!chatBody) return;
+
+  const messageDiv = document.createElement("div");
+  messageDiv.className = `chat-message ${
+    isUser ? "user-message" : "bot-message"
+  }`;
+  messageDiv.innerHTML = `<p>${message}</p>`;
+  chatBody.appendChild(messageDiv);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function sendMessage() {
+  if (!chatInput) return;
+
+  const message = chatInput.value.trim();
+  if (message) {
+    addMessage(message, true);
+    chatInput.value = "";
+
+    // Simulate bot response
+    setTimeout(() => {
+      const responses = [
+        "شكراً لتواصلك معنا! سيقوم أحد ممثلينا بالرد عليك قريباً.",
+        "نحن سعداء لخدمتك. كيف يمكننا مساعدتك اليوم؟",
+        "تم استلام رسالتك بنجاح. سنتواصل معك في أقرب وقت ممكن.",
+        "مرحباً بك في رايتو تك! نحن هنا لمساعدتك.",
+      ];
+      const randomResponse =
+        responses[Math.floor(Math.random() * responses.length)];
+      addMessage(randomResponse);
+    }, 1000);
+  }
+}
+
+if (sendBtn) {
+  sendBtn.addEventListener("click", sendMessage);
+}
+
+if (chatInput) {
+  chatInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      sendMessage();
+    }
+  });
+}
+
+// Button hover effects
+document.querySelectorAll(".btn-primary, .btn-secondary").forEach((btn) => {
+  btn.addEventListener("mouseenter", function () {
+    this.style.transform = "translateY(-3px) scale(1.05)";
+  });
+
+  btn.addEventListener("mouseleave", function () {
+    this.style.transform = "translateY(0) scale(1)";
+  });
+});
+
+      // Enhanced Button Ripple Effect
+      document
+        .querySelectorAll(
+          "button, .btn-primary, .btn-secondary, .service-card, .feature-card"
+        )
+        .forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            const ripple = document.createElement("span");
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+
+            ripple.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            left: ${x}px;
+            top: ${y}px;
+            background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: scale(0);
+            animation: rippleEffect 0.6s ease-out;
+            pointer-events: none;
+            z-index: 1;
+        `;
+
+            this.style.position = "relative";
+            this.style.overflow = "hidden";
+            this.appendChild(ripple);
+
+            setTimeout(() => {
+              ripple.remove();
+            }, 600);
+          });
+        });
+
+      // Add ripple animation
+      const rippleStyle = document.createElement("style");
+      rippleStyle.textContent = `
+    @keyframes rippleEffect {
+        0% {
+            transform: scale(0);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 0;
+        }
+    }
+`;
+      document.head.appendChild(rippleStyle);
