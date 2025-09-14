@@ -4332,7 +4332,7 @@
       }
 
       .card-header {
-          background: var(--gradient-2);
+          background: var(--gradient-1);
           padding: 30px;
           text-align: center;
           color: white;
@@ -4349,7 +4349,7 @@
           height: 0;
           border-left: 15px solid transparent;
           border-right: 15px solid transparent;
-          border-top: 10px solid #26bbc9;
+          border-top: 10px solid #2a6d56;
       }
 
       .card-icon {
@@ -4395,7 +4395,8 @@
           content: "✓";
           position: absolute;
           right: 0;
-          color: var(--secondary-color);
+          /* color: var(--secondary-color); */
+          color: #578f49;
           font-weight: bold;
       }
 

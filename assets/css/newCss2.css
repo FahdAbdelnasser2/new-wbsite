@@ -30,7 +30,7 @@
 
       /* Hero Section */
       .hero-section {
-        min-height: 60vh;
+        min-height: 70vh;
         position: relative;
         display: flex;
         align-items: center;
@@ -228,7 +228,7 @@
       .service-icon {
         width: 80px;
         height: 80px;
-        background: var(--gradient-secondary);
+        background: var(--gradient-primary);
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -297,7 +297,7 @@
       }
 
       .feature-item i {
-        color: var(--main-color);
+        color: var(--secondary-color);
         font-size: 20px;
         width: 25px;
       }
@@ -343,7 +343,7 @@
       .play-button {
         width: 80px;
         height: 80px;
-        background: var(--gradient-secondary);
+        background: var(--gradient-primary);
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -387,7 +387,7 @@
       }
 
       .control-item:hover {
-        background: var(--main-color);
+        background: var(--secondary-color);
         transform: scale(1.1);
       }
 
@@ -470,9 +470,9 @@
 
       .control-btn.active,
       .control-btn:hover {
-        background: var(--main-color);
+        background: #3e7c50;
         color: white;
-        border-color: var(--main-color);
+        border-color: #3e7c50;
       }
 
       .dashboard-grid {
@@ -491,14 +491,14 @@
       }
 
       .stat-card:hover {
-        background: rgba(23, 170, 189, 0.1);
-        border-color: var(--main-color);
+        background: rgb(115 206 56 / 5%);
+        border-color: var(--secondary-color);
       }
 
       .stat-icon {
         width: 50px;
         height: 50px;
-        background: var(--gradient-secondary);
+        background: var(--gradient-primary);
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -579,14 +579,14 @@
       }
 
       .feature-box:hover {
-        background: rgba(23, 170, 189, 0.1);
+        background: rgb(115 206 56 / 10%);
         transform: translateX(-10px);
       }
 
       .feature-box i {
         width: 50px;
         height: 50px;
-        background: var(--gradient-secondary);
+        background: var(--gradient-primary);
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -641,15 +641,15 @@
 
       .print-type.active,
       .print-type:hover {
-        border-color: var(--main-color);
-        background: rgba(23, 170, 189, 0.05);
+        border-color: var(--secondary-color);
+        background: rgb(115 206 56 / 5%);
         transform: translateX(10px);
       }
 
       .type-icon {
         width: 60px;
         height: 60px;
-        background: var(--gradient-secondary);
+        background: var(--gradient-primary);
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -714,13 +714,13 @@
         align-items: center;
         margin-bottom: 30px;
         padding-bottom: 15px;
-        border-bottom: 2px solid var(--main-color);
+        border-bottom: 2px solid var(--secondary-color);
       }
 
       .company-logo {
         width: 50px;
         height: 50px;
-        background: var(--gradient-secondary);
+        background: var(--gradient-primary);
         border-radius: 10px;
       }
 
@@ -765,7 +765,7 @@
 
       .invoice-number {
         font-size: 1.2rem;
-        color: var(--main-color);
+        color: var(--secondary-color);
         font-weight: 600;
       }
 
@@ -783,7 +783,7 @@
       }
 
       .table-row.header {
-        background: var(--gradient-secondary);
+        background: var(--gradient-primary);
         color: white;
         font-weight: 700;
       }
@@ -823,11 +823,11 @@
 
       .option-group select:focus {
         outline: none;
-        border-color: var(--main-color);
+        border-color: var(--secondary-color);
       } */
 
       .print-btn {
-        background: var(--gradient-secondary);
+        background: var(--gradient-primary);
         color: white;
         border: none;
         padding: 12px 25px;
@@ -922,7 +922,7 @@
         transform: translate(-50%, -50%);
         width: 120px;
         height: 120px;
-        background: var(--gradient-secondary);
+        background: var(--gradient-primary);
         border-radius: 50%;
         display: flex;
         flex-direction: column;
@@ -930,7 +930,7 @@
         align-items: center;
         color: white;
         font-weight: 700;
-        box-shadow: 0 0 30px rgba(23, 170, 189, 0.5);
+        box-shadow: 0 0 30px rgb(108 208 41 / 5%);
         z-index: 10;
       }
 
@@ -966,7 +966,8 @@
       }
 
       .system-node:hover {
-        background: rgba(23, 170, 189, 0.3);
+        /* background: rgba(23, 170, 189, 0.3); */
+        background: rgb(115 206 56 / 20%);
         transform: scale(1.1);
       }
 
@@ -1009,7 +1010,7 @@
       .node-icon {
         font-size: 20px;
         margin-bottom: 5px;
-        color: var(--main-color);
+        color: var(--secondary-color);
       }
 
       .connection-lines {
@@ -1223,9 +1224,9 @@
 
 
       /* Responsive Design */
-      @media (max-width: 1024px) {
+      @media (max-width: 1440px) {
         .hero-section {
-    min-height: 80vh;
+    min-height: 85vh;
         }
         .hero-title {
           font-size: 3rem;
@@ -1438,12 +1439,12 @@
         box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
           0 4px 6px -4px rgb(0 0 0 / 0.1);
         transform: translateX(-8px);
-        border-color: var(--primary-color);
+        border-color: var(--secondary-color);
       }
 
       .feature-item i {
         font-size: 1.75rem;
-        color: var(--primary-color);
+        color: var(--secondary-color);
         margin-top: 4px;
         flex-shrink: 0;
         width: 40px;
@@ -1451,7 +1452,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: rgba(99, 102, 241, 0.1);
+        background: rgb(239 250 234);
         border-radius: 12px;
       }
 

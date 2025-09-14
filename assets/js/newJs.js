@@ -88,7 +88,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for animation
 document
   .querySelectorAll(
-    ".about-card, .hex-service, .portfolio-item, .team-member, .blog-post"
+    ".about-card, .hex-service, .team-member, .blog-post"
   )
   .forEach((el) => {
     observer.observe(el);
@@ -333,7 +333,7 @@ window.addEventListener("load", () => {
 
 // Add scroll-triggered animations
 const scrollElements = document.querySelectorAll(
-  ".about-card, .hex-service, .portfolio-item, .team-member, .testimonial-card, .blog-post, .contact-item"
+  ".about-card, .hex-service, .team-member, .testimonial-card, .blog-post, .contact-item"
 );
 
 const elementInView = (el, dividend = 1) => {
@@ -367,7 +367,6 @@ const style = document.createElement("style");
 style.textContent = `
     .about-card,
     .hex-service,
-    .portfolio-item,
     .team-member,
     .blog-post,
     .contact-item {
@@ -378,7 +377,6 @@ style.textContent = `
     
     .about-card.scrolled,
     .hex-service.scrolled,
-    .portfolio-item.scrolled,
     .team-member.scrolled,
     .blog-post.scrolled,
     .contact-item.scrolled {
@@ -552,7 +550,7 @@ document.querySelectorAll(".btn-primary, .btn-secondary").forEach((btn) => {
             z-index: 1;
         `;
 
-            this.style.position = "relative";
+            this.style.position = "static";
             this.style.overflow = "hidden";
             this.appendChild(ripple);
 
