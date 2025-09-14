@@ -52,7 +52,7 @@
       }
 
       .hero-title {
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-weight: 800;
         color: white;
         margin-bottom: 20px;
@@ -259,7 +259,6 @@
       /* Video Section */
       .video-section {
         padding: 100px 0;
-        background: linear-gradient(135deg, #000 0%, var(--dark-color) 100%);
         position: relative;
         overflow: hidden;
       }
@@ -272,7 +271,7 @@
       }
 
       .video-text .section-title {
-        color: white;
+        /* color: white; */
         text-align: right;
       }
 
@@ -293,7 +292,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        color: rgba(255, 255, 255, 0.9);
+        /* color: rgba(255, 255, 255, 0.9); */
         font-weight: 500;
       }
 
@@ -1225,6 +1224,9 @@
 
       /* Responsive Design */
       @media (max-width: 1024px) {
+        .hero-section {
+    min-height: 80vh;
+        }
         .hero-title {
           font-size: 3rem;
         }
@@ -1287,7 +1289,6 @@
             display: none;
         }
         .service-card,
-        .custom-card,
         .feature-card {
           padding: 25px;
         }
