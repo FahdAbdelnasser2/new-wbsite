@@ -13,10 +13,7 @@
       content="اكتشف حلول برمجية مبتكرة وأنظمة برمجية متخصصة تلبي احتياجات شركتك مع رايتو. نحن نقدم حلولًا مخصصة لتحسين كفاءة العمليات وزيادة الإنتاجية.
      "
     />
-    <meta
-      name="author"
-      content="مع رايتو أحصل على حلول برمجية وأنظمة برمجية مبتكرة"
-    />
+    <meta name="author" content="مع رايتو أحصل على حلول برمجية وأنظمة برمجية مبتكرة" />
     <meta
       property="og:title"
       content="حلول برمجية مبتكرة وأنظمة برمجية متخصصة - شركة رايتو"
@@ -44,8 +41,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="assets/css/newCss.css" />
-    <link rel="stylesheet" href="assets/css/newCss2.css" />
+    <link rel="stylesheet" href="assets/css/newCss.css">
   </head>
   <body>
     <!-- Loading Screen -->
@@ -65,7 +61,7 @@
           </a>
         </div>
         <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+          <li><a href="index.html" class="nav-link active">الرئيسية</a></li>
           <li><a href="about.html" class="nav-link">من نحن</a></li>
           <!-- التطبيقات (Mega Menu) -->
           <li class="nav-item mega-parent">
@@ -256,76 +252,269 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-      <div class="hero-container">
-        <div class="hero-content">
-          <div class="hero-icon">
-              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
-                    <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
-                    <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
-                    <path d="M10 6h4"></path>
-                    <path d="M10 10h4"></path>
-                    <path d="M10 14h4"></path>
-                    <path d="M10 18h4"></path>
-                </svg>
+    <!-- Section 1: Hero - Futuristic Design -->
+    <section id="hero" class="hero-section section-padding pb-0">
+      <div class="hero-bg">
+        <div class="floating-particles"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="container">
+        <div class="hero-container row align-items-center">
+          <div class="hero-content col-lg-6">
+            <div class="hero-badge">
+              <!-- <span class="badge-dot"></span> -->
+              <span>مرحباً بك في رايتو</span>
             </div>
-          <h1 class="hero-title hero-title2">خدماتنا المتميزة</h1>
-          <p class="hero-subtitle">حلول تقنية شاملة ومتطورة لجميع احتياجاتك</p>
-          <div class="hero-buttons">
-            <button class="btn-primary" data-bs-toggle="modal" data-bs-target="#demo-form">
+            <h1 class="hero-title">
+              <span class="title-word">نظام</span>
+              <span class="title-word highlight">ERP</span>
+              <span class="title-word">شامل</span>
+              <span class="title-word"
+                >تخصيص مرن ، <br>دعم فني مستمر</span
+              >
+            </h1>
+            <p class="hero-subtitle">
+              رايتو ERP يجمع كل ما تحتاجه لإدارة أعمالك في نظام واحد <br> مرونة في التخصيص، أداء سريع، دعم فني دائم، مرونة مطلقة<br> وتقنيات حديثة تضمن كفاءة واستقرار التشغيل.
+            </p>
+            <div class="hero-buttons">
+              <button
+                class="btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#demo-form"
+              >
                 <span>نسخة تجريبية</span>
                 <div class="btn-arrow">→</div>
               </button>
-            <a href="https://wa.me/966538499438" class="btn-secondary text-decoration-none">
-              <i class="fab fa-whatsapp fs-4"> </i>
-              تواصل معنا
-            </a>
+              <a
+                class="btn-secondary text-decoration-none"
+                href="https://wa.me/966538499438"
+              >
+                <i class="fab fa-whatsapp fs-4"> </i>
+                تواصل معنا
+              </a>
+            </div>
+          </div>
+          <div class="hero-visual col-lg-6">
+            <img
+              src="./assets/Asset-system/سلايدر الموقع/مقاس 2 png.png"
+              class="d-block w-100 min-vh-80"
+              alt="slider"
+              loading="lazy"
+            />
+            <!-- Accessories -->
+            <div class="accessory calculator">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div class="accessory gear">
+              <i class="fas fa-cog"></i>
+            </div>
+            <div class="accessory chart">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <div class="accessory gas">
+              <i class="fas fa-gas-pump"></i>
+            </div>
           </div>
         </div>
       </div>
-      <div class="hero-particles"></div>
-      <div class="hero-waves"></div>
     </section>
-
-    <!-- Video Section -->
-    <section id="video" class="video-section-1">
+    <!-- Section 2: Portfolio - Masonry Grid -->
+    <section id="portfolio" class="portfolio-section bg-gray">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">شاهد النظام في العمل</h2>
-          <p class="section-subtitle">عرض توضيحي شامل لجميع إمكانيات النظام</p>
+          <h2 class="section-title">أعمالنا</h2>
+          <p class="section-subtitle">مجموعة من أفضل مشاريعنا المنجزة</p>
         </div>
-        <div class="video-container">
-          <div class="video-placeholder" id="video-placeholder">
-            <div class="play-button" id="play-button">
-              <i class="fas fa-play"></i>
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">الكل</button>
+          <button class="filter-btn" data-filter="web">مواقع</button>
+          <button class="filter-btn" data-filter="mobile">تطبيقات</button>
+          <button class="filter-btn" data-filter="design">تصميم</button>
+        </div>
+        <div class="portfolio-grid">
+          <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="accountingContainer" class="w-100 project-preview">
+                <div>
+                  <h4>المحاسبة</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
             </div>
-              <video
-                id="myVideo"
-                class="w-100 rounded-3 shadow-lg object-fit-cover"
-                preload="metadata"
-                >
-                <!-- poster="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" -->
-                <source
-                  src="https://raitotec.com/public/attachments/aboutUs/1702904407988.mp4"
-                  type="video/mp4"
-                />
-                <track
-                  kind="captions"
-                  src="https://raitotec.com/public/attachments/aboutUs/captions.vtt"
-                  srclang="ar"
-                  label="العربية"
-                  default=""
-                />
-              </video>
           </div>
-          <input type="range" id="seekBar" value="0" min="0" max="100" step="0.1" />
+          <div class="portfolio-item mobile" data-category="mobile">
+            <div class="portfolio-image">
+              <div id="purchesContainer" class="w-100 project-preview">
+                <div>
+                  <h4>المشتريات</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item design" data-category="design">
+            <div class="portfolio-image">
+              <div id="storeContainer" class="w-100 project-preview">
+                <div>
+                  <h4>المخازن</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="personnelAffairsContainer" class="w-100 project-preview">
+                <div>
+                  <h4>شئون الموظفين</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="mintinanceContainer" class="w-100 project-preview">
+                <div>
+                  <h4>الصيانة</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="lawContainer" class="w-100 project-preview">
+                <div>
+                  <h4>المحاماة</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="delegatesContainer" class="w-100 project-preview">
+                <div>
+                  <h4>المناديب</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="schoolsContainer" class="w-100 project-preview">
+                <div>
+                  <h4>المدارس</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="contractorsContainer" class="w-100 project-preview">
+                <div>
+                  <h4>المقاولات</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
         </div>
-
+          <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="supplierManagementContainer" class="w-100 project-preview">
+                <div>
+                  <h4>الموردين</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+        </div>
+          <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="shippingContainer" class="w-100 project-preview">
+                <div>
+                  <h4>الشحن</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="loyaltyContainer" class="w-100 project-preview">
+                <div>
+                  <h4>الولاء</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="productionManufacturingContainer" class="w-100 project-preview">
+                <div>
+                  <h4>الإنتاج والتصنيع</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="pointsOfSaleContainer" class="w-100 project-preview">
+                <div>
+                  <h4>نقاط البيع</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="fixedAssetsContainer" class="w-100 project-preview">
+                <div>
+                  <h4>أصول ثابتة</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="realEstateContainer" class="w-100 project-preview">
+                <div>
+                  <h4>العقارات</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="CRMContainer" class="w-100 project-preview">
+                <div>
+                  <h4>CRM</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="portfolio-item web" data-category="web">
+            <div class="portfolio-image">
+              <div id="fuelContainer" class="w-100 project-preview">
+                <div>
+                  <h4>الوقود</h4>
+                  <p>تطوير متجر إلكتروني متكامل</p>
+                </div>
+              </div>
+            </div>
+        </div>
       </div>
     </section>
-        <!-- Section 3: demo - Minimalist Cards -->
+    <!-- Section 3: demo - Minimalist Cards -->
     <section class="demo-div section-padding">
       <div class="container">
         <div class="row align-items-center mx-0">
@@ -350,7 +539,7 @@
           </div>
           <div class="col-md-6 order-2">
             <img
-              src="./assets/img/man-hand-mobile.png"
+              src="./assets/img/man-hand-mobile.webp"
               alt=""
               class="img-man"
             />
@@ -358,320 +547,317 @@
         </div>
       </div>
     </section>
-    <!-- Customization Section -->
-    <section id="customization" class="customization section-padding bg-gray">
+    <!-- Section 4: sales-system -->
+    <section id="sales-system" class="section-padding">
       <div class="container">
-        <div class="section-content">
-          <div class="content-text order-lg-2 order-2">
-            <h2 class="section-title">التخصيص</h2>
-            <p class="section-subtitle mb-3">
-              نظام قابل للتخصيص بالكامل ليناسب احتياجات عملك
-            </p>
-            <div class="features-list">
-              <div class="feature-item">
-                <i class="fas fa-palette"></i>
-                <div>
-                  <h4>تخصيص الواجهة</h4>
-                  <p>اختر الألوان والتخطيط المناسب لهوية شركتك</p>
-                </div>
-              </div>
-              <div class="feature-item">
-                <i class="fas fa-sliders-h"></i>
-                <div>
-                  <h4>إعدادات مرنة</h4>
-                  <p>تحكم كامل في جميع الإعدادات والخصائص</p>
-                </div>
-              </div>
-              <div class="feature-item">
-                <i class="fas fa-puzzle-piece"></i>
-                <div>
-                  <h4>وحدات إضافية</h4>
-                  <p>أضف وحدات جديدة حسب احتياجات عملك</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="content-image order-lg-2 order-1">
-            <img
-              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="التخصيص"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Reports Section -->
-    <section id="reports" class="reports-section">
-      <div class="container">
-        <div class="reports-content">
-          <div class="reports-dashboard">
-            <div class="dashboard-header">
-              <h3>لوحة التقارير التفاعلية</h3>
-              <div class="dashboard-controls">
-                <button class="control-btn active">اليوم</button>
-                <button class="control-btn">الأسبوع</button>
-                <button class="control-btn">الشهر</button>
-              </div>
-            </div>
-
-            <div class="dashboard-grid">
-              <div class="stat-card">
-                <div class="stat-icon">
-                  <i class="fas fa-users"></i>
-                </div>
-                <div class="stat-info">
-                  <h4>المستخدمون</h4>
-                  <span class="stat-number" data-target="1250">0</span>
-                </div>
-              </div>
-
-              <div class="stat-card">
-                <div class="stat-icon">
-                  <i class="fas fa-chart-line"></i>
-                </div>
-                <div class="stat-info">
-                  <h4>المبيعات</h4>
-                  <span class="stat-number" data-target="85000">0</span>
-                </div>
-              </div>
-
-              <div class="stat-card">
-                <div class="stat-icon">
-                  <i class="fas fa-tasks"></i>
-                </div>
-                <div class="stat-info">
-                  <h4>المشاريع</h4>
-                  <span class="stat-number" data-target="342">0</span>
-                </div>
-              </div>
-
-              <div class="chart-container">
-                <canvas id="reportsChart"></canvas>
+        <div class="row mx-0 align-items-center justify-content-between">
+          <div class="col-lg-5 mb-5 mb-lg-0">
+            <div class="video-container">
+              <div class="video-wrapper">
+                <video
+                  id="myVideo"
+                  class="w-100 rounded shadow-lg object-fit-cover"
+                  poster="./assets/img/Start-amploy.png"
+                  controls
+                  preload="metadata"
+                >
+                  <source
+                    src="https://raitotec.com/public/attachments/aboutUs/1702904407988.mp4"
+                    type="video/mp4"
+                  />
+                  <track
+                    kind="captions"
+                    src="https://raitotec.com/public/attachments/aboutUs/captions.vtt"
+                    srclang="ar"
+                    label="العربية"
+                    default=""
+                  />
+                  <!-- Fallback content -->
+                  <div class="video-placeholder">
+                    <div class="placeholder-content">
+                      <i class="fas fa-play-circle fa-5x mb-3"></i>
+                      <h4>عرض توضيحي لنظام المبيعات</h4>
+                      <p class="text-muted">شاهد كيف يعمل النظام بشكل عملي</p>
+                      <button class="btn btn-primary">
+                        <i class="fas fa-play me-2"></i>
+                        تشغيل العرض التوضيحي
+                      </button>
+                    </div>
+                  </div>
+                </video>
               </div>
             </div>
           </div>
-
-          <div class="reports-text">
-            <h2 class="section-title">تقارير شاملة وتحليلات دقيقة</h2>
-            <p class="section-description">
-              احصل على رؤى عميقة حول أداء عملك من خلال تقاريرنا التفاعلية
-              والتحليلات المتقدمة التي تساعدك في اتخاذ قرارات مدروسة.
-            </p>
-            <div class="reports-features">
-              <div class="feature-box">
-                <i class="fas fa-chart-pie"></i>
-                <div>
-                  <h4>تقارير مرئية</h4>
-                  <p>رسوم بيانية تفاعلية وملونة</p>
+          <div class="col-lg-6">
+            <div class="row mx-0">
+              <div class="col-12">
+                <h2 class="section-title-side">
+                  <i
+                    class="fas fa-shopping-cart mx-1 text-gradient align-middle"
+                  ></i>
+                  نظام المبيعات
+                </h2>
+                <p class="section-subtitle mb-3">
+                 نظام مبيعات متكامل + تطبيق مندوب ذكي = قوة بيع حقيقية 
+                 </p>
+                <p class="hero-description2 mb-3 mb-lg-5">
+               "رايتو مش مجرد نظام -ERP- رايتو بينزل معاك لحد أرض الواقع — من مكانك لآخر نقطة بيع — عن طريق تطبيق المندوب الذكي."
+               </p>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-cash-register"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">تحكم كامل في صلاحيات المستخدمين</h5>
+                    <p class="text-muted"> تقدر تحدد مهام وصلاحيات لكل من المشرف، والمندوب، والعميل حسب احتياجك
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="feature-box">
-                <i class="fas fa-download"></i>
-                <div>
-                  <h4>تصدير متعدد</h4>
-                  <p>PDF, Excel, CSV وأكثر</p>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-barcode"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">تتبع لحظي لموقع المندوبين (Live Location) </h5>
+                    <p class="text-muted">عشان تعرف دايمًا كل مندوب فين</p>
+                  </div>
                 </div>
               </div>
-              <div class="feature-box">
-                <i class="fas fa-clock"></i>
-                <div>
-                  <h4>تقارير آلية</h4>
-                  <p>جدولة وإرسال تلقائي</p>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-receipt"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">بيع أسرع، متابعة أدق، نتائج أوضح</h5>
+                    <p class="text-muted">جرّب النظام الآن
+</p>
+                  </div>
                 </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">تقارير المبيعات</h5>
+                    <p class="text-muted">تحليلات مفصلة لأداء المبيعات</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-4">
+                <a
+                  class="text-gradient fs-5"
+                  target="_blank"
+                  href="Programs-delegates.html"
+                  >قراءة المزيد
+                  <i class="fa-solid fa-arrow-left align-middle"></i
+                ></a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- Printing Section -->
-    <section id="printing" class="printing-section bg-gray">
+    <!-- Section 5: accounting-system -->
+    <section id="accounting-system" class="bg-gray section-padding">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">حلول الطباعة الاحترافية</h2>
+        <div class="row mx-0">
+          <div class="col-lg-6 order-lg-1 order-2">
+            <div class="row mx-0">
+              <div class="col-12">
+                <h2 class="section-title-side">
+                  <i
+                    class="fas fa-calculator mx-1 text-gradient align-middle"
+                  ></i>
+                  نظام الحسابات
+                </h2>
+                <p class="section-subtitle mb-3">
+                  نظام متكامل لإدارة عمليات البيع من البداية حتى النهاية
+                </p>
+              </div>
+              <div class="col-12">
+                <p class="hero-description2 mb-3 mb-lg-5">
+                  أصدر فواتيرك الإلكترونية والضريبية وعروض الأسعار بقوالب جاهزة
+                  قابلة للتخصيص حسب احتياجاتك، وحدد العروض على منتجاتك أو
+                  خدماتك، إلى جانب إمكانية إدارة التأمينات ومدفوعات العملاء مع
+                  خيارات دفع متعددة؛ أدِر عمليات البيع من خلال نقاط البيع أو
+                  واجهة التسوق عبر الإنترنت، بما في ذلك تحديد مبيعاتك المستهدفة
+                  وعمولات ممثلي المبيعات لديك، مع تقارير تفصيلية لمتابعة العملية
+                  بأكملها.
+                </p>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-book"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">دفتر الأستاذ العام</h5>
+                    <p class="text-muted">تسجيل جميع العمليات المالية بدقة</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-balance-scale"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">الميزانية العمومية</h5>
+                    <p class="text-muted">عرض شامل للوضع المالي للشركة</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">قائمة الدخل</h5>
+                    <p class="text-muted">تتبع الإيرادات والمصروفات</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-chart-pie"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">التقارير المالية</h5>
+                    <p class="text-muted">تقارير مفصلة وتحليلات مالية</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-4">
+                <a
+                  class="text-gradient fs-5"
+                  target="_blank"
+                  href="Programs-Accounting.html"
+                  >قراءة المزيد
+                  <i class="fa-solid fa-arrow-left align-middle"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 bg-layer order-lg-2 order-1 mb-5 mb-lg-0">
+            <div class="section-image text-center">
+              <img src="assets/Asset-system/daftara.jpg" class="" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 6: About Us - Card Layout -->
+    <section id="faul-system" class="section-padding">
+      <div class="container">
+        <div class="row mx-0">
+          <div class="col-lg-6 bg-layer order-lg-1 order-1 mb-5 mb-lg-0">
+            <div class="section-image text-center">
+              <img src="assets/Asset-system/faul.jpg" class="" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-2 order-2">
+            <div class="row mx-0">
+              <div class="col-12">
+                <h2 class="section-title-side">
+                  <i class="fas fa-gas-pump mx-1 text-gradient"></i>
+                  نظام تأهيل محطات الوقود
+                </h2>
+                <p class="section-subtitle mb-3">
+                نظام وقود ذكي متكامل لإدارة المبيعات والمخزون والمضخات
+                </p>
+              </div>
+              <div class="col-12">
+                <p class="hero-description2 mb-3 mb-lg-5">
+                  احصل عليه الآن بعرض خاص لفترة محدودة
+ سواء كنت تدير محطة واحدة أو سلسلة محطات،
+ بنظامنا يمنحك رؤية موحدة لكل عملياتك لحظة بلحظة، مما يساعدك في اتخاذ قرارات أسرع وأذكى<br /> دقة × سرعة × تحكم = اوتوميشن</p>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-gas-pump"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">متطلبات وزاره الطاقه</h5>
+                    <p class="text-muted">
+                     نلتزم بمعايير وزارة الطاقة في كل تفصيلة من نظامنا 
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-charging-station"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">تقارير لحظيه</h5>
+                    <p class="text-muted">
+                    قرارات أسرع بفضل بيانات توصلك أول بأول من أرض المحطة إلى مكتبك .    
+                     </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-oil-can"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">تنبيهات بالخطا او النقص</h5>
+                    <p class="text-muted">نقص في الوقود؟ خطأ في البيانات؟ تنبيه لحظي ينقذ الموقف   </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-fire"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">دعم فنى قوى </h5>
+                    <p class="text-muted"> مش بس نظام قوي كمان فريق أقوى وراك بنحل مشكلتك قبل ما تبقى مشكلة</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-4">
+                <a
+                  class="text-gradient fs-5"
+                  target="_blank"
+                  href="Programs-Personnel.html"
+                  >قراءة المزيد
+                  <i class="fa-solid fa-arrow-left align-bottom"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 7: screen-system -->
+    <section
+      id="screen-system"
+      class="bg-gray screen section-padding pb-0 text-center"
+    >
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">منصة واحدة لجميع احتياجاتك التقنية</h2>
           <p class="section-subtitle">
-            طباعة عالية الجودة لجميع احتياجاتك التجارية
+            اكتشف مجموعة شاملة من الحلول الذكية المصممة خصيصاً لتطوير أعمالك
           </p>
         </div>
-
-        <div class="printing-showcase">
-          <div class="printing-types">
-            <div class="print-type active" data-type="documents">
-              <div class="type-icon">
-                <i class="fas fa-file-alt"></i>
-              </div>
-              <h3>المستندات</h3>
-            </div>
-            <div class="print-type" data-type="invoices">
-              <div class="type-icon">
-                <i class="fas fa-receipt"></i>
-              </div>
-              <h3>الفواتير</h3>
-            </div>
-            <div class="print-type" data-type="reports">
-              <div class="type-icon">
-                <i class="fas fa-chart-bar"></i>
-              </div>
-              <h3>التقارير</h3>
-            </div>
-            <div class="print-type" data-type="labels">
-              <div class="type-icon">
-                <i class="fas fa-tags"></i>
-              </div>
-              <h3>الملصقات</h3>
-            </div>
-          </div>
-
-          <div class="printing-preview">
-            <div class="preview-container">
-              <div class="print-sample active" id="documents-sample">
-                <div class="sample-header">
-                  <div class="company-logo"></div>
-                  <div class="document-title">مستند رسمي</div>
-                </div>
-                <div class="sample-content">
-                  <div class="content-line"></div>
-                  <div class="content-line short"></div>
-                  <div class="content-line"></div>
-                  <div class="content-line medium"></div>
-                </div>
-              </div>
-
-              <div class="print-sample" id="invoices-sample">
-                <div class="invoice-header">
-                  <div class="invoice-title">فاتورة</div>
-                  <div class="invoice-number">#12345</div>
-                </div>
-                <div class="invoice-table">
-                  <div class="table-row header">
-                    <span>الصنف</span>
-                    <span>الكمية</span>
-                    <span>السعر</span>
-                  </div>
-                  <div class="table-row">
-                    <span>منتج 1</span>
-                    <span>2</span>
-                    <span>100 ريال</span>
-                  </div>
-                  <div class="table-row">
-                    <span>منتج 2</span>
-                    <span>1</span>
-                    <span>50 ريال</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- <div class="print-options">
-              <div class="option-group">
-                <label>حجم الورق</label>
-                <select>
-                  <option>A4</option>
-                  <option>A3</option>
-                  <option>Letter</option>
-                </select>
-              </div>
-              <div class="option-group">
-                <label>الجودة</label>
-                <select>
-                  <option>عالية</option>
-                  <option>متوسطة</option>
-                  <option>اقتصادية</option>
-                </select>
-              </div>
-              <button class="print-btn">
-                <i class="fas fa-print"></i>
-                طباعة
-              </button>
-            </div> -->
-          </div>
-        </div>
       </div>
-      <div class="printing-pattern"></div>
+      <img src="./assets/img/screen.webp" alt="" class="mw-100" />
     </section>
-
-    <!-- Integration Section -->
-    <section id="integration" class="integration-section">
-      <div class="container">
-        <div class="integration-content">
-          <div class="integration-text">
-            <h2 class="section-title">التكامل مع باقي الأنظمة</h2>
-            <p class="section-description">
-              نوفر تكامل سلس وآمن مع جميع الأنظمة والتطبيقات الموجودة لديك، مما
-              يضمن تدفق البيانات بسهولة وكفاءة عالية.
-            </p>
-            <div class="integration-benefits">
-              <div class="benefit-item">
-                <i class="fas fa-sync"></i>
-                <span>مزامنة تلقائية للبيانات</span>
-              </div>
-              <div class="benefit-item">
-                <i class="fas fa-shield-alt"></i>
-                <span>أمان وحماية متقدمة</span>
-              </div>
-              <div class="benefit-item">
-                <i class="fas fa-bolt"></i>
-                <span>أداء سريع وموثوق</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="integration-diagram">
-            <div class="central-system">
-              <div class="system-icon">
-                <i class="fas fa-server"></i>
-              </div>
-              <span class="text-center">نظامك<br>الأساسي</span>
-            </div>
-
-            <div class="connected-systems">
-              <div class="system-node" style="--angle: 0deg">
-                <div class="node-icon">
-                  <i class="fas fa-database"></i>
-                </div>
-                <span>قاعدة البيانات</span>
-              </div>
-              <div class="system-node" style="--angle: 60deg">
-                <div class="node-icon">
-                  <i class="fas fa-credit-card"></i>
-                </div>
-                <span>نظام الدفع</span>
-              </div>
-              <div class="system-node" style="--angle: 120deg">
-                <div class="node-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <span>البريد الإلكتروني</span>
-              </div>
-              <div class="system-node" style="--angle: 180deg">
-                <div class="node-icon">
-                  <i class="fas fa-chart-line"></i>
-                </div>
-                <span>التحليلات</span>
-              </div>
-              <div class="system-node" style="--angle: 240deg">
-                <div class="node-icon">
-                  <i class="fas fa-cloud"></i>
-                </div>
-                <span>التخزين السحابي</span>
-              </div>
-              <div class="system-node" style="--angle: 300deg">
-                <div class="node-icon">
-                  <i class="fas fa-mobile-alt"></i>
-                </div>
-                <span>التطبيقات</span>
-              </div>
-            </div>
-
-            <div class="connection-lines"></div>
-          </div>
-        </div>
-      </div>
-      <div class="integration-particles"></div>
-    </section>
-
         <!-- Customization Section -->
     <section id="customization" class="customization-section">
         <div class="container">
@@ -833,14 +1019,14 @@
                         ></a>
                     </div>
                     <div class="footer-app">
-                      <a href="https://apps.apple.com/ae/developer/raitotec/id1545363149?l=ar&amp;see-all=i-phonei-pad-apps" class="d-block app-store">
-                        <img src="./assets/img/app_store.png">
+                      <a href="https://apps.apple.com/ae/developer/raitotec/id1545363149?l=ar&see-all=i-phonei-pad-apps" class="d-block app-store">
+                        <img src="./assets/img/app_store.png" >
                       </a>
                       <a href="https://play.google.com/store/apps/developer?id=Raitotec" class="d-block google-play">
-                        <img src="./assets/img/google_play.png">
+                        <img src="./assets/img/google_play.png" >
                       </a>
                      </div>
-                </div>
+                    </div>
                 <div class="footer-section">
                     <h4>عناوين سريعة</h4> 
                     <ul>
@@ -1009,259 +1195,68 @@
     <button class="back-to-top" id="backToTop">
       <i class="fas fa-arrow-up"></i>
     </button>
-    <!--advertisements-->
+
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./assets/js/loade.js"></script>
     <script src="./assets/js/chang-langth.js"></script>
     <script src="./assets/js/newJs.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
     <script>
-            const sections = document.querySelectorAll("section");
-      // Service Cards Click Effect
-      document.querySelectorAll(".service-card").forEach((card) => {
-        card.addEventListener("click", () => {
-          const service = card.getAttribute("data-service");
-          if (service) {
-            const targetSection = document.getElementById(service);
-            if (targetSection) {
-              const offsetTop = targetSection.offsetTop - 80;
-              window.scrollTo({
-                top: offsetTop,
-                behavior: "smooth",
-              });
-            }
-          }
+      function setupLottie(containerId, jsonPath, startSec, endSec) {
+        const animation = lottie.loadAnimation({
+          container: document.getElementById(containerId),
+          renderer: "svg",
+          loop: false,
+          autoplay: false,
+          path: jsonPath,
         });
-      });
 
-      // Printing Types Toggle
-      document.querySelectorAll(".print-type").forEach((type) => {
-        type.addEventListener("click", () => {
-          // Remove active class from all types
-          document
-            .querySelectorAll(".print-type")
-            .forEach((t) => t.classList.remove("active"));
-          document
-            .querySelectorAll(".print-sample")
-            .forEach((s) => s.classList.remove("active"));
+        // 🕒 تحويل ثانية → فريم
+        function secondsToFrames(seconds) {
+          const frameRate = animation.frameRate || 30;
+          return Math.round(seconds * frameRate);
+        }
 
-          // Add active class to clicked type
-          type.classList.add("active");
+        const start = secondsToFrames(startSec);
+        const end   = secondsToFrames(endSec);
 
-          // Show corresponding sample
-          const typeData = type.getAttribute("data-type");
-          const sample = document.getElementById(`${typeData}-sample`);
-          if (sample) {
-            sample.classList.add("active");
-          }
+        const container = document.getElementById(containerId);
+
+        // ▶️ عند دخول الماوس
+        container.addEventListener("mouseenter", () => {
+          animation.setSpeed(1.5); // سرعة طبيعية
+          // animation.stop(); 
+          animation.playSegments([start, end], true);
         });
-      });
 
-
-      // Dashboard Controls
-      document.querySelectorAll(".control-btn").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          document
-            .querySelectorAll(".control-btn")
-            .forEach((b) => b.classList.remove("active"));
-          btn.classList.add("active");
-
-          // Animate stats
-          animateStats();
-        });
-      });
-
-      // Animate Statistics
-      function animateStats() {
-        const statNumbers = document.querySelectorAll(".stat-number");
-
-        statNumbers.forEach((stat) => {
-          const target = parseInt(stat.getAttribute("data-target"));
-          const duration = 2000;
-          const increment = target / (duration / 16);
-          let current = 0;
-
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-              current = target;
-              clearInterval(timer);
-            }
-            stat.textContent = Math.floor(current);
-          }, 16);
+        // ◀️ عند خروج الماوس
+        container.addEventListener("mouseleave", () => {
+          animation.setSpeed(1.5); // أسرع في الرجوع
+          // animation.stop();
+          animation.playSegments([end, secondsToFrames(0)], true);
         });
       }
 
-      // Intersection Observer for Animations
-      const observerOptions2 = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const mainObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-
-            // Animate stats when reports section is visible
-            if (entry.target.id === "reports") {
-              setTimeout(animateStats, 500);
-            }
-          }
-        });
-      }, observerOptions2);
-
-      // Initialize animations on DOM load
-      document.addEventListener("DOMContentLoaded", () => {
-        // Observe all sections
-        sections.forEach((section) => {
-          mainObserver.observe(section);
-        });
-
-        // Observe animated elements
-        const animatedElements = document.querySelectorAll(
-          ".service-card, .custom-card, .feature-card, .stat-card"
-        );
-        animatedElements.forEach((el) => {
-          mainObserver.observe(el);
-        });
-      });
-
-      // Parallax Effect
-      window.addEventListener("scroll", () => {
-        const scrolled = window.pageYOffset;
-        const parallaxElements = document.querySelectorAll(
-          ".hero-particles, .video-bg-effects, .customization-shapes"
-        );
-
-        parallaxElements.forEach((element, index) => {
-          const speed = 0.5 + index * 0.1;
-          if (element) {
-            element.style.transform = `translateY(${scrolled * speed}px)`;
-          }
-        });
-      });
-
-      // Performance optimization
-      const reduceMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-      );
-      if (reduceMotion.matches) {
-        document.documentElement.style.setProperty(
-          "--animation-duration",
-          "0.01s"
-        );
-      }
-
-      // Initialize all animations with stagger effect
-      setTimeout(() => {
-        const allCards = document.querySelectorAll(
-          ".service-card, .custom-card, .feature-card, .stat-card"
-        );
-        allCards.forEach((card, index) => {
-          card.style.animationDelay = `${index * 0.1}s`;
-        });
-      }, 100);
-
-      // Service card interactions
-      document.querySelectorAll(".service-card").forEach((card) => {
-        card.addEventListener("mouseenter", () => {
-          card.style.background = "rgba(23, 170, 189, 0.05)";
-        });
-
-        card.addEventListener("mouseleave", () => {
-          card.style.background = "white";
-        });
-      });
-
-      // Feature card interactions
-      document
-        .querySelectorAll(".feature-card:not(.highlight)")
-        .forEach((card) => {
-          card.addEventListener("mouseenter", () => {
-            card.style.background = "rgba(23, 170, 189, 0.02)";
-          });
-
-          card.addEventListener("mouseleave", () => {
-            card.style.background = "white";
-          });
-        });
-
-      // Integration diagram interactions
-      document.querySelectorAll(".system-node").forEach((node) => {
-        node.addEventListener("click", () => {
-          const nodeName = node.querySelector("span").textContent;
-          showNotification(`تم النقر على: ${nodeName}`, "info");
-        });
-      });
-
-      // Control buttons functionality
-      document.querySelectorAll(".control-item").forEach((control) => {
-        control.addEventListener("click", () => {
-          const icon = control.querySelector("i");
-          if (icon.classList.contains("fa-volume-up")) {
-            showNotification("تم كتم الصوت", "info");
-            icon.classList.replace("fa-volume-up", "fa-volume-mute");
-          } else if (icon.classList.contains("fa-volume-mute")) {
-            showNotification("تم تشغيل الصوت", "info");
-            icon.classList.replace("fa-volume-mute", "fa-volume-up");
-          } else if (icon.classList.contains("fa-expand")) {
-            showNotification("تم التبديل إلى وضع ملء الشاشة", "info");
-          } else if (icon.classList.contains("fa-cog")) {
-            showNotification("تم فتح الإعدادات", "info");
-          }
-        });
-      });
-    </script>
-    <script>
-      const video = document.getElementById("myVideo");
-      const playBtn = document.getElementById("play-button");
-      const seekBar = document.getElementById("seekBar");
-      // زرار التشغيل والإيقاف
-      playBtn.addEventListener("click", () => {
-        if (video.paused) {
-          video.play();
-        } else {
-          video.pause();
-        }
-      });
-
-      // شريط التقدم
-      video.addEventListener("timeupdate", () => {
-        seekBar.value = (video.currentTime / video.duration) * 100;
-      });
-      // تحديث البار أثناء التشغيل
-      video.addEventListener("timeupdate", () => {
-        const value = (video.currentTime / video.duration) * 100;
-        seekBar.value = value;
-
-        // لون الجزء اللي عدى
-        seekBar.style.background = `linear-gradient(to left, #17aabd ${value}%, #ddd ${value}%)`;
-      });
-        // التحكم في الفيديو من البار
-        seekBar.addEventListener("input", () => {
-          const time = (seekBar.value / 100) * video.duration;
-          video.currentTime = time;
-
-          // تحديث اللون مع السحب
-          seekBar.style.background = `linear-gradient(to left, #17aabd ${seekBar.value}%, #ddd ${seekBar.value}%)`;
-        });
-      // أول ما يشتغل الفيديو → خفي الزرار
-      video.addEventListener("play", () => {
-        playBtn.style.display = "none";
-      });
-      // لو ضغط على الفيديو نفسه → إيقاف
-      video.addEventListener("click", () => {
-        if (!video.paused) {
-          video.pause();
-          playBtn.style.display = "flex"; // إظهار الزرار تاني بعد التوقف
-        }
-      });
-      // لما الفيديو يخلص → اظهر الزرار تاني
-      video.addEventListener("ended", () => {
-        playBtn.style.display = "flex";
-      });
-    </script>
+      // ✅ استدعاء للدالة لأكتر من أنيميشن
+      setupLottie("accountingContainer", "assets/data/accounting.json", 3, 5);
+      setupLottie("purchesContainer", "assets/data/purches.json", 0, 3);
+      setupLottie("storeContainer", "assets/data/store.json", 0, 2.4);
+      setupLottie("personnelAffairsContainer", "assets/data/personnel-affairs.json", 0, 3);
+      setupLottie("mintinanceContainer", "assets/data/mintinance.json", 0, 3);
+      setupLottie("lawContainer", "assets/data/law.json", 0, 3);
+      setupLottie("delegatesContainer", "assets/data/delegates.json", 0, 3);
+      setupLottie("schoolsContainer", "assets/data/schools.json", 0, 3);
+      setupLottie("contractorsContainer", "assets/data/contractors.json", 0, 2);
+      setupLottie("supplierManagementContainer", "assets/data/supplierManagement.json", 0, 2.1);
+      setupLottie("shippingContainer", "assets/data/shipping.json", 0, 3);
+      setupLottie("loyaltyContainer", "assets/data/loyalty.json", 0, 4);
+      setupLottie("productionManufacturingContainer", "assets/data/productionManufacturing.json", 0, 4);
+      setupLottie("pointsOfSaleContainer", "assets/data/pointsOfSale.json", 0, 3.6);
+      setupLottie("fixedAssetsContainer", "assets/data/fixedAssets.json", 0, 4);
+      setupLottie("realEstateContainer", "assets/data/realEstate.json", 0, 3);
+      setupLottie("CRMContainer", "assets/data/CRM.json", 0, 4);
+      setupLottie("fuelContainer", "assets/data/fuel.json", 1, 5);
+      </script>
   </body>
 </html>

@@ -4480,6 +4480,7 @@
       .toc_list a {
           display: block;
           padding: 10px 0;
+          font-size: 18px;
           text-decoration: none;
           color: var(--text-color);
           transition: color 0.3s ease;
