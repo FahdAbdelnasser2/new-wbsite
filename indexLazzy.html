@@ -23,6 +23,7 @@
     <meta property="og:image" content="assets/img/LOGO.png" />
     <link href="assets/img/LOGO.png" rel="shortcut icon" />
     <title>أنظمة رايتو المحاسبية - Raito ERP systems</title>
+    <link rel="preload" href="assets/data/labtop.json" as="fetch" type="application/json" crossorigin="anonymous">
     <link
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -41,7 +42,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-        <link rel="preload" href="assets/data/labtop.json" as="fetch" type="application/json" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/newCss.css">
   </head>
   <body>
@@ -296,17 +296,57 @@
             </div>
           </div>
           <div class="hero-visual col-lg-6" style="height: 60vh;">
-            <img
-              src="assets/Asset-system/سلايدر الموقع/home-img.svg"
+            <!-- <img
+              src="assets/Asset-system/سلايدر الموقع/مقاس 2 png.png"
               class="d-block w-100 min-vh-80"
               alt="slider"
               loading="lazy"
-            />
+            /> -->
             <!-- <div id="indexContainer" style="position: relative; width:100%; height:100%;">
               <div id="laptopLayer" style="position:absolute; top:0; left:0;"></div>
               <div id="mobileLayer" style="position:absolute; top:0; left:0;"></div>
             </div> -->
-            <!-- Accessories -->
+            <div class="laptop-wrapper position-relative" style="width:600px; height:400px; margin:auto;">
+              <!-- لابتوب فيه الموبايلات -->
+              <div id="laptopLayer" style="width:100%; height:100%;"></div>
+                <div class="hotspot-wrapper mobile-1">
+                  <div id="hotspot1" class="hotspot w-100 h-100"></div>
+                  <div class="mobile-card card shadow p-2 position-absolute">
+                    <div class="card-body">
+                      <h6 class="card-title">📱 موبايل 1</h6>
+                      <p class="card-text">تفاصيل خاصة بالموبايل 1</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="hotspot-wrapper mobile-2">
+                      <div id="hotspot2" class="hotspot w-100 h-100"></div>
+                      <div class="mobile-card card shadow p-2 position-absolute">
+                        <div class="card-body">
+                          <h6 class="card-title">📱 موبايل 2</h6>
+                          <p class="card-text">تفاصيل خاصة بالموبايل 2</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="hotspot-wrapper mobile-3">
+                      <div id="hotspot3" class="hotspot w-100 h-100"></div>
+                      <div class="mobile-card card shadow p-2 position-absolute">
+                        <div class="card-body">
+                          <h6 class="card-title">📱 موبايل 3</h6>
+                          <p class="card-text">تفاصيل خاصة بالموبايل 3</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="hotspot-wrapper mobile-4">
+                      <div id="hotspot4" class="hotspot w-100 h-100"></div>
+                      <div class="mobile-card card shadow p-2 position-absolute">
+                        <div class="card-body">
+                          <h6 class="card-title">📱 موبايل 4</h6>
+                          <p class="card-text">تفاصيل خاصة بالموبايل 4</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+
             <div class="accessory calculator">
               <i class="fas fa-calculator"></i>
             </div>
@@ -1264,7 +1304,7 @@
       setupLottie("CRMContainer", "assets/data/CRM.json", 0, 4);
       setupLottie("fuelContainer", "assets/data/fuel.json", 1, 5);
       </script>
-      <script>
+      <!-- <script>
         function setupLaptopAuto(containerId, jsonPath, startSec, endSec) {
           const anim = lottie.loadAnimation({
             container: document.getElementById(containerId),
@@ -1282,6 +1322,46 @@
         }
         // ✅ استدعاء
         setupLaptopAuto("laptopLayer", "assets/data/labtop.json", 0, 4);
-      </script>
+      </script> -->
+      <script>
+function setupLaptop(laptopId, laptopJson, startSec, endSec) {
+  const anim = lottie.loadAnimation({
+    container: document.getElementById(laptopId),
+    renderer: "svg",
+    loop: false,
+    autoplay: false,
+    path: laptopJson,
+  });
+
+  anim.addEventListener("DOMLoaded", () => {
+    const frameRate = anim.frameRate || 30;
+    const start = Math.round(startSec * frameRate);
+    const end   = Math.round(endSec * frameRate);
+    anim.playSegments([start, end], true);
+  });
+}
+
+function setupHotspot(hotspotId, cardId) {
+  const hotspot = document.getElementById(hotspotId);
+  const card = document.getElementById(cardId);
+
+  hotspot.addEventListener("mouseenter", () => {
+    card.classList.remove("d-none");
+  });
+
+  hotspot.addEventListener("mouseleave", () => {
+    card.classList.add("d-none");
+  });
+}
+
+// ✅ استدعاء
+setupLaptop("laptopLayer", "assets/data/labtop.json", 0, 6);
+
+setupHotspot("hotspot1", "card1");
+setupHotspot("hotspot2", "card2");
+setupHotspot("hotspot3", "card3");
+setupHotspot("hotspot4", "card4");
+</script>
+
   </body>
 </html>

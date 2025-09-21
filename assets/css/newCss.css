@@ -793,13 +793,6 @@
       }
 
       /* Section 5: Team - Circular Layout */
-      .team-section {
-          padding: 6rem 0;
-          background: var(--dark-color);
-          color: white;
-          position: relative;
-          overflow: hidden;
-      }
 
       .team-bg {
           position: absolute;
@@ -2230,6 +2223,7 @@
 
       .img-man {
           position: absolute;
+          z-index: 1;
           bottom: 0;
           left: 15%;
           height: 460px;
@@ -2277,6 +2271,14 @@
 
       .feature-icon i {
           font-size: 20px;
+      }
+
+      .feature-icon-2 i {
+          /* color: var(--primary-color); */
+              background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
       }
 
       .section-image img {
@@ -3673,12 +3675,6 @@
       }
 
       /* Section 5: Team - Orbital Layout */
-      .team-section {
-          padding: 120px 0;
-          background: radial-gradient(ellipse at center, #0B555E 0%, #000 70%);
-          position: relative;
-          overflow: hidden;
-      }
 
       .orbital-system {
           position: absolute;
@@ -4567,4 +4563,74 @@
 
       .title-card {
           scroll-margin-top: 100px;
+      }
+
+      .hotspot {
+          position: absolute;
+          /* background: rgba(255, 0, 0, 0); */
+          background-color: red;
+          cursor: pointer;
+          z-index: 5;
+          border-radius: 8px;
+      }
+
+      .laptop-wrapper .hotspot-wrapper {
+          position: absolute;
+      }
+
+      .laptop-wrapper .mobile-card {
+          top: -106px;
+          /* الكارد فوق الموبايل */
+          left: 50%;
+          transform: translateX(-50%) translateY(-20px);
+          /* مخفي شوية فوق */
+          opacity: 0;
+          z-index: 10;
+          min-width: 220px;
+          pointer-events: none;
+          /* ممنوع الكليك وهو مخفي */
+          transition: all 0.4s ease;
+      }
+
+      /* عند الهوفر يظهر */
+      .laptop-wrapper .hotspot-wrapper:hover .mobile-card {
+          opacity: 1;
+          transform: translateX(-50%) translateY(0);
+          pointer-events: auto;
+          /* يخلي الكارد قابل للتفاعل */
+      }
+
+      .mobile-1 {
+          bottom: 87px;
+          left: 127px;
+          width: 49px;
+          height: 108px;
+          position: absolute;
+      }
+
+      .mobile-2 {
+          bottom: 83px;
+          left: 181px;
+          width: 53px;
+          height: 119px;
+          position: absolute;
+      }
+
+      .mobile-3 {
+          bottom: 126px;
+          right: 176px;
+          width: 48px;
+          height: 108px;
+          position: absolute;
+      }
+
+      .mobile-4 {
+          bottom: 85px;
+          right: 131px;
+          width: 49px;
+          height: 108px;
+          position: absolute;
+      }
+      @media (max-width:1400px) {
+        
       }
