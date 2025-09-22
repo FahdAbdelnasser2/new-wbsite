@@ -13,8 +13,9 @@
     <meta property="og:image" content="assets/img/LOGO.png" />
     <link href="assets/img/LOGO.png" rel="shortcut icon" />
     <title>أنظمة رايتو المحاسبية - Raito ERP systems</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/css/bootstrap.min.css"></noscript>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
@@ -172,17 +173,17 @@
                         <div class="form-row row">
                             <div class="form-group col-md-6 mb-3">
                                 <label for="name">الاسم بالكامل<span>*</span></label>
-                                <input type="text" id="name" name="name" class="form-control" required placeholder="اكتب اسمك هنا..." aria-label="أدخل اسمك الكامل" />
+                                <input type="text" id="name" name="name" class="form-control" autocomplete="name" required placeholder="اكتب اسمك هنا..." aria-label="أدخل اسمك الكامل" />
                                 <i class="fas fa-user"></i>
                             </div>
                             <div class="form-group col-md-6 mb-3">
                                 <label for="email">البريد الإلكتروني<span>*</span></label>
-                                <input type="email" id="email" name="email" class="form-control" required placeholder="اكتب بريدك الإلكتروني هنا..." aria-label="أدخل بريدك الإلكتروني" />
+                                <input type="email" id="email" name="email" class="form-control" autocomplete="email" required placeholder="اكتب بريدك الإلكتروني هنا..." aria-label="أدخل بريدك الإلكتروني" />
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div class="form-group col-md-6 mb-3">
                                 <label for="phone">الجوال<span>*</span></label>
-                                <input type="tel" id="phone" name="phone" class="form-control" required placeholder="اكتب رقم جوالك هنا..." aria-label="أدخل رقم جوالك" />
+                                <input type="tel" id="phone" name="phone" class="form-control" autocomplete="phone" required placeholder="اكتب رقم جوالك هنا..." aria-label="أدخل رقم جوالك" />
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="form-group col-md-6 mb-3">
@@ -592,10 +593,11 @@
     <button class="back-to-top" aria-label="العودة إلى أعلى الصفحة" id="backToTop" aria-hidden="true">
         <i class="fas fa-arrow-up"></i>
     </button>
-
+    <script src="assets/js/jquery.js" defer></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
     <script src="assets/js/chang-langth.js" defer></script>
-    <script src="assets/js/newJs.js" defer></script>
-        <!-- <script src="assets/js/loade.js" defer></script> -->
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/chat.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
 </body>
 </html>

@@ -13,8 +13,9 @@
     <meta property="og:image" content="assets/img/LOGO.png" />
     <link href="assets/img/LOGO.png" rel="shortcut icon" />
     <title>أسعار أنظمة رايتو المحاسبية - Raito ERP systems</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/css/bootstrap.min.css"></noscript>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
@@ -719,85 +720,12 @@
     <button class="back-to-top" aria-label="العودة إلى أعلى الصفحة" id="backToTop" aria-hidden="true">
         <i class="fas fa-arrow-up"></i>
     </button>
-
+    <script src="assets/js/jquery.js" defer></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
     <script src="assets/js/chang-langth.js" defer></script>
     <script src="assets/js/prices.js" defer></script>
-    <script src="assets/js/newJs.js" defer></script>
-        <!-- <script src="assets/js/loade.js" defer></script> -->
-    <script defer>
-        const appList = document.querySelector('.app-list');
-        let userCount = 1;
-        let selectedApps = [];
-
-        function updateUserCountFromInput() {
-            let inputValue = parseInt(document.getElementById('userCount').value);
-            if (inputValue >= 1) {
-                userCount = inputValue;
-            } else {
-                userCount = 1;
-                document.getElementById('userCount').value = 1;
-            }
-            updateUserCountDisplay();
-            updateTotalPrice();
-        }
-
-        function changeUsers(delta) {
-            userCount = Math.max(1, userCount + delta);
-            document.getElementById('userCount').value = userCount;
-            updateUserCountDisplay();
-            updateTotalPrice();
-        }
-
-        function updateUserCountDisplay() {
-            document.querySelector('.userCount').textContent = userCount;
-        }
-
-        function updateTotalPrice() {
-            let total = 0;
-            if (selectedApps.length > 0) {
-                selectedApps.forEach(app => {
-                    total += parseFloat(app.price) * userCount;
-                });
-            }
-            total += userCount * 10;
-            document.getElementById('totalPrice').textContent = total.toFixed(2);
-        }
-
-        document.querySelectorAll('.app-card').forEach(card => {
-            card.addEventListener('click', function() {
-                let element = this.querySelector(".app-card-name").textContent;
-                let elementPrice = this.querySelector(".app-card-price").textContent;
-                this.classList.toggle('selected');
-
-                if (this.classList.contains("selected")) {
-                    let li = document.createElement("li");
-                    li.className = "app-item";
-                    li.dataset.appName = element;
-                    li.innerHTML = `<span class="app-name">${element}</span>
-                                    <span class="app-price">$${elementPrice} / user</span>`;
-                    appList.appendChild(li);
-                    selectedApps.push({ name: element, price: parseFloat(elementPrice) });
-                } else {
-                    let liToRemove = appList.querySelector(`li[data-app-name="${element}"]`);
-                    if (liToRemove) liToRemove.remove();
-                    selectedApps = selectedApps.filter(app => app.name !== element);
-                }
-                updateTotalPrice();
-            });
-
-            // إضافة دعم لمفتاح Enter/Space لتحديد الكروت
-            card.addEventListener('keydown', function(event) {
-                if (event.key === 'Enter' || event.key === ' ') {
-                    event.preventDefault();
-                    this.click();
-                }
-            });
-        });
-
-        document.getElementById('userCount').addEventListener('input', updateUserCountFromInput);
-        updateUserCountDisplay();
-        updateTotalPrice();
-    </script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/chat.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
 </body>
 </html>

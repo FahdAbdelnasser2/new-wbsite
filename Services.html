@@ -13,8 +13,9 @@
     <meta property="og:image" content="assets/img/LOGO.png" />
     <link href="assets/img/LOGO.png" rel="shortcut icon" />
     <title>أنظمة رايتو المحاسبية - Raito ERP Systems</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/css/bootstrap.min.css"></noscript>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
@@ -769,46 +770,12 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="assets/js/jquery.js" defer></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
-    <!-- <script src="assets/js/loade.js" defer></script> -->
     <script src="assets/js/chang-langth.js" defer></script>
-    <script src="assets/js/newJs.js" defer></script>
-    <script>
-        const video = document.getElementById("myVideo");
-        const playBtn = document.getElementById("play-button");
-        const seekBar = document.getElementById("seekBar");
-        playBtn.addEventListener("click", () => {
-            if (video.paused) {
-                video.play();
-            } else {
-                video.pause();
-            }
-        });
-        video.addEventListener("timeupdate", () => {
-            seekBar.value = (video.currentTime / video.duration) * 100;
-        });
-        video.addEventListener("timeupdate", () => {
-            const value = (video.currentTime / video.duration) * 100;
-            seekBar.value = value;
-            seekBar.style.background = `linear-gradient(to left, #17aabd ${value}%, #ddd ${value}%)`;
-        });
-        seekBar.addEventListener("input", () => {
-            const time = (seekBar.value / 100) * video.duration;
-            video.currentTime = time;
-            seekBar.style.background = `linear-gradient(to left, #17aabd ${seekBar.value}%, #ddd ${seekBar.value}%)`;
-        });
-        video.addEventListener("play", () => {
-            playBtn.style.display = "none";
-        });
-        video.addEventListener("click", () => {
-            if (!video.paused) {
-                video.pause();
-                playBtn.style.display = "flex";
-            }
-        });
-        video.addEventListener("ended", () => {
-            playBtn.style.display = "flex";
-        });
-    </script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/chat.js" defer></script>
+    <script src="assets/js/video.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
 </body>
 </html>

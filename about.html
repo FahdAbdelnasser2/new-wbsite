@@ -29,7 +29,16 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="preload"
+      href="assets/css/bootstrap.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/bootstrap.min.css"
+    /></noscript>
+
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -38,7 +47,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="assets/css/newCss.css" />
     <link rel="stylesheet" href="assets/css/newCss2.css" />
     <style>
@@ -940,7 +952,7 @@
                   <div class="swiper-slide">
                     <div class="single-logo">
                       <img
-                        src="assets/img/brand-logo/google.svg"
+                        src="assets/img/1.webp"
                         class="img-fluid"
                         height="30"
                         alt="شعار جوجل"
@@ -951,7 +963,7 @@
                   <div class="swiper-slide">
                     <div class="single-logo">
                       <img
-                        src="assets/img/brand-logo/facebook.svg"
+                        src="assets/img/1.webp"
                         class="img-fluid"
                         height="30"
                         alt="شعار فيسبوك"
@@ -962,7 +974,7 @@
                   <div class="swiper-slide">
                     <div class="single-logo">
                       <img
-                        src="assets/img/brand-logo/youtube.svg"
+                        src="assets/img/1.webp"
                         class="img-fluid"
                         height="30"
                         alt="شعار يوتيوب"
@@ -973,7 +985,7 @@
                   <div class="swiper-slide">
                     <div class="single-logo">
                       <img
-                        src="assets/img/brand-logo/printerest.svg"
+                        src="assets/img/1.webp"
                         class="img-fluid"
                         height="30"
                         alt="شعار بينترست"
@@ -984,7 +996,7 @@
                   <div class="swiper-slide">
                     <div class="single-logo">
                       <img
-                        src="assets/img/brand-logo/webflow.svg"
+                        src="assets/img/1.webp"
                         class="img-fluid"
                         height="30"
                         alt="شعار ويبفلو"
@@ -995,7 +1007,7 @@
                   <div class="swiper-slide">
                     <div class="single-logo">
                       <img
-                        src="assets/img/brand-logo/company.svg"
+                        src="assets/img/1.webp"
                         class="img-fluid"
                         height="30"
                         alt="شعار الشركة"
@@ -1394,30 +1406,15 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="assets/js/jquery.js" defer></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
     <script src="assets/js/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/swiper.js" defer></script>
     <script src="assets/js/chang-langth.js" defer></script>
-    <script src="assets/js/newJs.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/chat.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
     <!-- <script src="assets/js/loade.js" defer></script> -->
-    <script defer>
-      const swiper = new Swiper(".digi-logo-slider", {
-        loop: true, // يكرر العرض
-        slidesPerView: 4, // عدد اللوجوهات في الشاشة
-        spaceBetween: 30, // مسافة بين العناصر
-        autoplay: {
-          delay: 2000, // يقلب كل ثانيتين
-          disableOnInteraction: false, // يفضل شغال حتى لو المستخدم قلب يدوي
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          320: { slidesPerView: 2, spaceBetween: 10 },
-          768: { slidesPerView: 3, spaceBetween: 20 },
-          1024: { slidesPerView: 5, spaceBetween: 30 },
-        },
-      });
-    </script>
+
   </body>
 </html>
