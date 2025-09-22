@@ -43,119 +43,183 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/css/newCss.css" />
-    <link rel="stylesheet" href="assets/css/newCss2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/mergedCss.css" />
     <style>
       /* Hero Section */
       .hero-section {
         min-height: 50vh;
-            background: url('assets/Asset-system/color-particles.svg') no-repeat center top !important;
+        background: url("assets/Asset-system/color-particles.svg") no-repeat
+          center top !important;
       }
     </style>
   </head>
 
   <body>
-    <!-- Loading Screen -->
-    <!-- <div class="loading-screen">
-    <div class="loader">
-      <div class="loader-circle"></div>
-      <div class="loader-text">جاري التحميل...</div>
-    </div>
-  </div> -->
     <div class="overlay"></div>
     <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-logo">
-          <a class="logo-icon" href="index.html">
-            <img src="./assets/img/logoar.webp" alt="logo" class="mw-100" />
+          <a
+            class="logo-icon"
+            href="index.html"
+            aria-label="الذهاب إلى الصفحة الرئيسية"
+          >
+            <img src="./assets/img/logoar.webp" alt="" class="mw-100" />
           </a>
         </div>
         <ul class="nav-menu">
-          <li><a href="index.html" class="nav-link">الرئيسية</a></li>
-          <li><a href="about.html" class="nav-link active">من نحن</a></li>
+          <li>
+            <a
+              href="index.html"
+              class="nav-link"
+              aria-label="الذهاب إلى الصفحة الرئيسية"
+              >الرئيسية</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="nav-link active"
+              aria-label="الذهاب إلى صفحة من نحن"
+              >من نحن</a
+            >
+          </li>
           <!-- التطبيقات (Mega Menu) -->
           <li class="nav-item mega-parent">
-            <a href="#" class="nav-link text-center">قطاعات اعمالنا ▾</a>
+            <a
+              href="#"
+              class="nav-link text-center"
+              aria-label="فتح قائمة قطاعات أعمالنا"
+              >قطاعات اعمالنا ▾</a
+            >
             <div class="mega-menu">
               <div class="container">
                 <div class="mega-row">
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
                   >
-                    <a href="#">المستودعات</a>
-                    <a href="#">التصنيع</a>
-                    <a href="#">المشتريات</a>
-                    <a href="#">الصيانة</a>
-                    <a href="#">الجودة</a>
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة المستودعات"
+                      >المستودعات</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة التصنيع"
+                      >التصنيع</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة المشتريات"
+                      >المشتريات</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة الصيانة"
+                      >الصيانة</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة الجودة"
+                      >الجودة</a
+                    >
                   </div>
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
                   >
-                    <h6>المواقع الإلكترونية</h6>
-                    <a href="#">أداة بناء المواقع</a>
-                    <a href="#">متاجر إلكترونية</a>
-                    <a href="#">مدونة</a>
-                    <a href="#">منتدى</a>
+                    <h3>المواقع الإلكترونية</h3>
+                    <a href="#" aria-label="الذهاب إلى أداة بناء المواقع"
+                      >أداة بناء المواقع</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام المتاجر الإلكترونية"
+                      >متاجر إلكترونية</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام المدونة">مدونة</a>
+                    <a href="#" aria-label="الذهاب إلى نظام المنتدى">منتدى</a>
                   </div>
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
                   >
-                    <h6>المبيعات</h6>
-                    <a href="#">إدارة علاقات العملاء</a>
-                    <a href="#">المبيعات</a>
-                    <a href="#">نقطة البيع</a>
-                    <a href="#">الاشتراكات</a>
+                    <h3>المبيعات</h3>
+                    <a
+                      href="#"
+                      aria-label="الذهاب إلى نظام إدارة علاقات العملاء"
+                      >إدارة علاقات العملاء</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة المبيعات"
+                      >المبيعات</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام نقطة البيع"
+                      >نقطة البيع</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام الاشتراكات"
+                      >الاشتراكات</a
+                    >
                   </div>
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
                   >
-                    <h6>الخدمات</h6>
-                    <a href="#">المشاريع</a>
-                    <a href="#">الجدول الزمني</a>
-                    <a href="#">الخدمة الميدانية</a>
-                    <a href="#">التخطيط</a>
+                    <h3>الخدمات</h3>
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة المشاريع"
+                      >المشاريع</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام الجدول الزمني"
+                      >الجدول الزمني</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام الخدمة الميدانية"
+                      >الخدمة الميدانية</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام التخطيط">التخطيط</a>
                   </div>
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
                   >
-                    <h6>المالية</h6>
-                    <a href="#">المحاسبة</a>
-                    <a href="#">الفواتير</a>
-                    <a href="#">النفقات</a>
-                    <a href="#">المستندات</a>
+                    <h3>المالية</h3>
+                    <a href="#" aria-label="الذهاب إلى نظام المحاسبة"
+                      >المحاسبة</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام الفواتير"
+                      >الفواتير</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام النفقات">النفقات</a>
+                    <a href="#" aria-label="الذهاب إلى نظام المستندات"
+                      >المستندات</a
+                    >
                   </div>
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
                   >
-                    <h6>الموارد البشرية</h6>
-                    <a href="#">الموظفون</a>
-                    <a href="#">التوظيف</a>
-                    <a href="#">إجازات</a>
-                    <a href="#">التقييمات</a>
+                    <h3>الموارد البشرية</h3>
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة الموظفين"
+                      >الموظفون</a
+                    >
+                    <a href="#" aria-label="الذهاب إلى نظام التوظيف">التوظيف</a>
+                    <a href="#" aria-label="الذهاب إلى نظام الإجازات">إجازات</a>
+                    <a href="#" aria-label="الذهاب إلى نظام التقييمات"
+                      >التقييمات</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </li>
           <li class="nav-item mega-parent">
-            <a href="#" class="nav-link text-center">الخدمات ▾</a>
+            <a
+              href="#"
+              class="nav-link text-center"
+              aria-label="فتح قائمة الخدمات"
+              >الخدمات ▾</a
+            >
             <div class="mega-menu">
               <div class="container">
                 <div class="mega-row">
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
                   >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة المحاسبة"
                       ><i class="fa-solid fa-calculator icon"></i>نظام إدارة
                       المحاسبة</a
                     >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة المشتريات"
                       ><i class="fa-solid fa-cart-shopping icon"></i>نظام إدارة
                       المشتريات</a
                     >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة نقاط البيع"
                       ><i class="fa-solid fa-bag-shopping icon"></i>نظام إدارة
                       نقاط البيع</a
                     >
@@ -163,15 +227,15 @@
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
                   >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة الموردين"
                       ><i class="fa-solid fa-people-group icon"></i>نظام إدارة
                       الموردين</a
                     >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة الصيانة"
                       ><i class="fa-solid fa-screwdriver-wrench icon"></i>نظام
                       إدارة الصيانة</a
                     >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة محطات الوقود"
                       ><i class="fa-solid fa-gas-pump icon"></i>نظام إدارة محطات
                       الوقود</a
                     >
@@ -179,15 +243,19 @@
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
                   >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة الأصول"
                       ><i class="fa-solid fa-database icon"></i>نظام إدارة
                       الأصول</a
                     >
-                    <a href="#"
+                    <a
+                      href="#"
+                      aria-label="الذهاب إلى نظام إدارة الإنتاج والتصنيع"
                       ><i class="fa-solid fa-industry icon"></i>نظام إدارة
                       الإنتاج والتصنيع</a
                     >
-                    <a href="#"
+                    <a
+                      href="#"
+                      aria-label="الذهاب إلى نظام إدارة الشحن والتوصيل"
                       ><i class="fa-solid fa-box icon"></i>نظام إدارة الشحن
                       والتوصيل</a
                     >
@@ -195,29 +263,33 @@
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
                   >
-                    <a href="#"
+                    <a
+                      href="#"
+                      aria-label="الذهاب إلى نظام إدارة الموارد البشرية"
                       ><i class="fa-solid fa-user-tie icon"></i>نظام إدارة
                       الموارد البشرية</a
                     >
-                    <a href="#"
+                    <a
+                      href="#"
+                      aria-label="الذهاب إلى نظام إدارة علاقات العملاء"
                       ><i class="fa-solid fa-handshake icon"></i>CRM</a
                     >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام الولاء"
                       ><i class="fa-solid fa-gift icon"></i>نظام الولاء</a
                     >
                   </div>
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
                   >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة المحاماة"
                       ><i class="fa-solid fa-scale-balanced icon"></i>نظام إدارة
                       المحاماة</a
                     >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة المدارس"
                       ><i class="fa-solid fa-graduation-cap icon"></i>نظام إدارة
                       المدارس</a
                     >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة المناديب"
                       ><i class="fa-solid fa-truck icon"></i>نظام إدارة
                       المناديب</a
                     >
@@ -225,15 +297,17 @@
                   <div
                     class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
                   >
-                    <a href="#"
+                    <a
+                      href="#"
+                      aria-label="الذهاب إلى نظام إدارة العقارات والعقود"
                       ><i class="fa-solid fa-house icon"></i>نظام إدارة العقارات
                       والعقود</a
                     >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة المخزون"
                       ><i class="fa-solid fa-boxes-stacked icon"></i>نظام إدارة
                       المخزون</a
                     >
-                    <a href="#"
+                    <a href="#" aria-label="الذهاب إلى نظام إدارة المقاولات"
                       ><i class="fa-solid fa-building icon"></i>نظام إدارة
                       المقاولات</a
                     >
@@ -242,19 +316,41 @@
               </div>
             </div>
           </li>
-          <li><a href="prices.html" class="nav-link">أسعارنا</a></li>
-          <li><a href="Blog.html" class="nav-link">المدونة</a></li>
-          <li><a href="contact.html" class="nav-link">تواصل معنا</a></li>
+          <li>
+            <a
+              href="prices.html"
+              class="nav-link"
+              aria-label="الذهاب إلى صفحة الأسعار"
+              >أسعارنا</a
+            >
+          </li>
+          <li>
+            <a
+              href="Blog.html"
+              class="nav-link"
+              aria-label="الذهاب إلى صفحة المدونة"
+              >المدونة</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="nav-link"
+              aria-label="الذهاب إلى صفحة تواصل معنا"
+              >تواصل معنا</a
+            >
+          </li>
           <li class="lang-item">
             <div class="language-switcher">
               <button
+                aria-label="التحويل إلى اللغة العربية"
+                title="التحويل إلى اللغة العربية"
                 class="lang-btn btn border-0"
                 id="arabic-btn"
-                title="Switch to Arabic"
               >
                 <img
                   src="./assets/Asset-system/icon/Flag-Saudi-Arabia.webp"
-                  alt="Arabic"
+                  alt="العربية"
                   width="24"
                   class="me-2 align-middle"
                 />
@@ -263,11 +359,12 @@
               <button
                 class="lang-btn btn border-0"
                 id="english-btn"
-                title="Switch to english"
+                aria-label="التحويل إلى اللغة الإنجليزية"
+                title="التحويل إلى اللغة الإنجليزية"
               >
                 <img
                   src="./assets/Asset-system/icon/united-kingdom.png"
-                  alt="English"
+                  alt="الإنجليزية"
                   width="24"
                   class="ms-2 align-bottom"
                 />
@@ -298,20 +395,12 @@
       <div class="floating-shape shape-6"></div>
       <div class="floating-shape shape-7"></div>
       <div class="floating-shape shape-8"></div>
-      <!-- <div class="floating-shape shape-9"></div>
-      <div class="floating-shape shape-10"></div>
-      <div class="floating-shape shape-11"></div>
-      <div class="floating-shape shape-12"></div>
-      <div class="floating-shape shape-13"></div>
-      <div class="floating-shape shape-14"></div>
-      <div class="floating-shape shape-15"></div>
-      <div class="floating-shape shape-16"></div> -->
       <div class="gradient-shape"></div>
       <div class="gradient-shape2"></div>
       <div class="container">
         <div class="row justify-content-center text-center">
           <div class="col-12 p-0">
-            <h1 class="title text-dark">Separate the signal from the noise</h1>
+            <h1 class="title text-dark">فصل الإشارة عن الضوضاء</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
               eaque est animi molestiae. Optio quaerat nam inventore sequi
@@ -319,6 +408,7 @@
             </p>
             <div class="hero-buttons">
               <button
+                aria-label="طلب نسخة تجريبية"
                 class="btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#demo-form"
@@ -331,6 +421,7 @@
                 href="https://wa.me/966538499438"
                 class="btn-secondary text-dark text-decoration-none"
                 style="transform: translateY(0px) scale(1)"
+                aria-label="التواصل عبر واتساب"
               >
                 <i class="fab fa-whatsapp fs-4"> </i>
                 تواصل معنا
@@ -358,19 +449,19 @@
                   >
                     <div class="rounded-circle"></div>
                   </div>
-                  <h4 class="h5 fw-semibold mb-3">Origin</h4>
+                  <h3 class="h5 fw-semibold mb-3">الأصل</h3>
                   <div class="d-flex flex-column gap-2">
                     <div class="d-flex align-items-center gap-2">
                       <div class="rounded-circle"></div>
-                      <span class="small">Task Management</span>
+                      <span class="small">إدارة المهام</span>
                     </div>
                     <div class="d-flex align-items-center gap-2">
                       <div class="rounded-circle"></div>
-                      <span class="small">Team Collaboration</span>
+                      <span class="small">التعاون الجماعي</span>
                     </div>
                     <div class="d-flex align-items-center gap-2">
                       <div class="rounded-circle"></div>
-                      <span class="small">Progress Tracking</span>
+                      <span class="small">تتبع التقدم</span>
                     </div>
                   </div>
                 </div>
@@ -380,14 +471,13 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <!-- <p
-              class="text-uppercase fw-semibold mb-3"
-              style="color: #17aabd; font-size: 14px; letter-spacing: 1px"
-            >
-              من نحن
-            </p> -->
-            <img src="assets/Asset-system/quotes-left.svg" alt="testimonial quote" width="65" class="img-fluid mb-5">
-            <h3 class="section-title2">نبذة عن الشركة</h3>
+            <img
+              src="assets/Asset-system/quotes-left.svg"
+              alt="اقتباس"
+              width="65"
+              class="img-fluid mb-5"
+            />
+            <h2 class="section-title2">نبذة عن الشركة</h2>
             <p class="section-description2">
               شركة رايتو للبرمجيات هي شركة تقنية رائدة تقدم منتجات وخدمات عالية
               الجودة لعملائها في جميع أنحاء العالم، تلتزم الشركة بالابتكار
@@ -398,6 +488,7 @@
               والمستقبلية.
             </p>
             <button
+              aria-label="طلب نسخة تجريبية"
               class="btn-primary"
               data-bs-toggle="modal"
               data-bs-target="#demo-form"
@@ -425,6 +516,7 @@
                 سجل حسابك مع رايتو الآن بسهولة دون الحاجة إلى بطاقة ائتمان
               </p>
               <button
+                aria-label="ابدأ الاستخدام مجانًا"
                 class="btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#demo-form"
@@ -437,7 +529,7 @@
           <div class="col-md-6 order-2">
             <img
               src="./assets/img/man-hand-mobile.png"
-              alt="man-hand-mobile"
+              alt="رجل يحمل هاتفًا"
               loading="lazy"
               class="img-man"
             />
@@ -462,8 +554,10 @@
                 <div
                   class="d-flex justify-content-between align-items-center mb-4"
                 >
-                  <h5 class="fw-bold mb-0">Project Management</h5>
-                  <button class="control-btn active">View All</button>
+                  <h3 class="fw-bold mb-0">إدارة المشاريع</h3>
+                  <button class="control-btn active" aria-label="عرض الكل">
+                    عرض الكل
+                  </button>
                 </div>
                 <div class="row g-3 mb-4">
                   <div class="col-6">
@@ -473,7 +567,7 @@
                           class="d-flex justify-content-between align-items-start"
                         >
                           <div>
-                            <p class="small mb-1 opacity-75">Active Projects</p>
+                            <p class="small mb-1 opacity-75">المشاريع النشطة</p>
                             <h4 class="fw-bold mb-0">24</h4>
                           </div>
                           <div
@@ -484,6 +578,7 @@
                               height="16"
                               fill="currentColor"
                               viewBox="0 0 16 16"
+                              aria-hidden="true"
                             >
                               <path
                                 d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
@@ -504,7 +599,7 @@
                           class="d-flex justify-content-between align-items-start"
                         >
                           <div>
-                            <p class="small mb-1 opacity-75">Team Members</p>
+                            <p class="small mb-1 opacity-75">أعضاء الفريق</p>
                             <h4 class="fw-bold mb-0">156</h4>
                           </div>
                           <div
@@ -515,6 +610,7 @@
                               height="16"
                               fill="currentColor"
                               viewBox="0 0 16 16"
+                              aria-hidden="true"
                             >
                               <path
                                 d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002A.274.274 0 0 1 15 13H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
@@ -527,43 +623,43 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <h6 class="fw-semibold mb-3">Recent Activity</h6>
+                  <h4 class="fw-semibold mb-3">النشاط الأخير</h4>
                   <div class="d-flex flex-column gap-2">
                     <div
                       class="d-flex align-items-center gap-3 p-2 bg-light rounded"
                     >
                       <div class="rounded-circle"></div>
                       <div class="flex-grow-1">
-                        <div class="small fw-medium">Design System Update</div>
+                        <div class="small fw-medium">تحديث نظام التصميم</div>
                         <div class="text-muted" style="font-size: 12px">
-                          2 hours ago
+                          منذ ساعتين
                         </div>
                       </div>
-                      <div class="badge bg-success">Completed</div>
+                      <div class="badge bg-success">مكتمل</div>
                     </div>
                     <div
                       class="d-flex align-items-center gap-3 p-2 bg-light rounded"
                     >
                       <div class="rounded-circle"></div>
                       <div class="flex-grow-1">
-                        <div class="small fw-medium">API Integration</div>
+                        <div class="small fw-medium">تكامل الـ API</div>
                         <div class="text-muted" style="font-size: 12px">
-                          5 hours ago
+                          منذ 5 ساعات
                         </div>
                       </div>
-                      <div class="badge bg-warning">In Progress</div>
+                      <div class="badge bg-warning">قيد التنفيذ</div>
                     </div>
                     <div
                       class="d-flex align-items-center gap-3 p-2 bg-light rounded"
                     >
                       <div class="rounded-circle"></div>
                       <div class="flex-grow-1">
-                        <div class="small fw-medium">User Testing</div>
+                        <div class="small fw-medium">اختبار المستخدم</div>
                         <div class="text-muted" style="font-size: 12px">
-                          1 day ago
+                          منذ يوم
                         </div>
                       </div>
-                      <div class="badge bg-secondary">Pending</div>
+                      <div class="badge bg-secondary">معلق</div>
                     </div>
                   </div>
                 </div>
@@ -571,13 +667,14 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <h3 class="section-title2">Project Management Dashboard</h3>
+            <h2 class="section-title2">لوحة إدارة المشاريع</h2>
             <p class="section-description2">
-              Monitor all your projects in real-time with our comprehensive
-              dashboard. Get insights, track progress, and manage your team
-              efficiently from one central location.
+              راقب جميع مشاريعك في الوقت الفعلي مع لوحة التحكم الشاملة لدينا.
+              احصل على رؤى، تتبع التقدم، وأدر فريقك بكفاءة من مكان واحد مركزي.
             </p>
-            <button class="btn btn-primary">View Dashboard</button>
+            <button class="btn btn-primary" aria-label="عرض لوحة التحكم">
+              عرض لوحة التحكم
+            </button>
           </div>
         </div>
       </div>
@@ -594,22 +691,23 @@
       <div class="container">
         <div class="row align-items-center g-5">
           <div class="col-lg-6 order-lg-1 order-2">
-            <h3 class="section-title2">Find Anything</h3>
+            <h2 class="section-title2">ابحث عن أي شيء</h2>
             <p class="section-description2">
-              Search across all of your connected tools to find the information
-              you need. Our AI-powered search understands context and finds
-              exactly what you're looking for.
+              ابحث عبر جميع أدواتك المتصلة للعثور على المعلومات التي تحتاجها.
+              بحثنا المدعوم بالذكاء الاصطناعي يفهم السياق ويجد بالضبط ما تبحث
+              عنه.
             </p>
-            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-primary" aria-label="ابدأ الآن">
+              ابدأ الآن
+            </button>
           </div>
           <div class="col-lg-6 order-lg-2 order-1 position-relative">
             <div class="card bg-white shadow-lg border-0 rounded-4">
               <div class="card-body p-4">
-                <h4 class="h3 fw-bold text-dark mb-4">It just works</h4>
+                <h3 class="h3 fw-bold text-dark mb-4">يعمل بسهولة</h3>
                 <p class="text-muted mb-4 lh-lg">
-                  Don't change the way your work. We integrate into your
-                  existing workflow and automatically collect and update
-                  information for you. No manual data entry required.
+                  لا تغير طريقة عملك. نحن نتكامل مع سير العمل الحالي لديك ونجمع
+                  ونحدث المعلومات تلقائيًا. لا حاجة لإدخال البيانات يدويًا.
                 </p>
                 <div class="d-flex flex-column gap-3">
                   <div
@@ -621,11 +719,9 @@
                       <span class="text-white small fw-bold">G</span>
                     </div>
                     <div class="flex-grow-1">
-                      <div class="small fw-medium text-dark">
-                        Gmail Integration
-                      </div>
+                      <div class="small fw-medium text-dark">تكامل Gmail</div>
                       <div style="font-size: 12px" class="text-muted">
-                        Automatic email processing
+                        معالجة البريد الإلكتروني تلقائيًا
                       </div>
                     </div>
                   </div>
@@ -638,9 +734,9 @@
                       <span class="text-white small fw-bold">A</span>
                     </div>
                     <div class="flex-grow-1">
-                      <div class="small fw-medium text-dark">Asana Sync</div>
+                      <div class="small fw-medium text-dark">مزامنة Asana</div>
                       <div style="font-size: 12px" class="text-muted">
-                        Real-time task updates
+                        تحديثات المهام في الوقت الفعلي
                       </div>
                     </div>
                   </div>
@@ -655,7 +751,7 @@
                     <div class="flex-grow-1">
                       <div class="small fw-medium text-dark">GitHub</div>
                       <div style="font-size: 12px" class="text-muted">
-                        Code repository tracking
+                        تتبع مستودع الأكواد
                       </div>
                     </div>
                   </div>
@@ -666,117 +762,107 @@
         </div>
       </div>
     </section>
-        <!--team section start-->
-        <section id="our-team" class="team-section section-padding">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 col-md-12">
-                        <div class="section-heading text-center">
-                            <h2 class="section-title2">The People Behind Quiety</h2>
-                            <p class="section-description2 mb-5">Intrinsicly strategize cutting-edge before interoperable applications incubate extensive
-                                expertise through integrated intellectual capital. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="team-single-wrap mb-5">
-                            <div class="team-img rounded-4">
-                                <img src="assets/Asset-system/team-1.jpg" alt="team" class="img-fluid position-relative" loading="lazy">
-                                <ul class="list-unstyled team-social-list d-flex flex-column mb-0">
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-github"></i></a></li>
-                                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                </ul>
-                            </div>
-                            <div class="team-info mt-4 text-center">
-                                <h5 class="fw-bold mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="team-single-wrap mb-5">
-                            <div class="team-img rounded-4">
-                                <img src="assets/Asset-system/team-1.jpg" alt="team" class="img-fluid position-relative" loading="lazy">
-                            </div>
-                            <div class="team-info mt-4 text-center">
-                                <h5 class="fw-bold mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="team-single-wrap mb-5">
-                            <div class="team-img rounded-4">
-                                <img src="assets/Asset-system/team-1.jpg" alt="team" class="img-fluid position-relative" loading="lazy">
-                            </div>
-                            <div class="team-info mt-4 text-center">
-                                <h5 class="fw-bold mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="team-single-wrap mb-5">
-                            <div class="team-img rounded-4">
-                                <img src="assets/Asset-system/team-1.jpg" alt="team" class="img-fluid position-relative" loading="lazy">
-                            </div>
-                            <div class="team-info mt-4 text-center">
-                                <h5 class="fw-bold mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="team-single-wrap mb-5">
-                            <div class="team-img rounded-4">
-                                <img src="assets/Asset-system/team-1.jpg" alt="team" class="img-fluid position-relative" loading="lazy">
-                            </div>
-                            <div class="team-info mt-4 text-center">
-                                <h5 class="fw-bold mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="team-single-wrap mb-5">
-                            <div class="team-img rounded-4">
-                                <img src="assets/Asset-system/team-1.jpg" alt="team" class="img-fluid position-relative" loading="lazy">
-                            </div>
-                            <div class="team-info mt-4 text-center">
-                                <h5 class="fw-bold mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="team-single-wrap mb-5">
-                            <div class="team-img rounded-4">
-                                <img src="assets/Asset-system/team-1.jpg" alt="team" class="img-fluid position-relative" loading="lazy">
-                            </div>
-                            <div class="team-info mt-4 text-center">
-                                <h5 class="fw-bold mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="team-single-wrap mb-5">
-                            <div class="team-img rounded-4">
-                                <img src="assets/Asset-system/team-1.jpg" alt="team" class="img-fluid position-relative" loading="lazy">
-                            </div>
-                            <div class="team-info mt-4 text-center">
-                                <h5 class="fw-bold mb-1">John Sullivan</h5>
-                                <p class="text-muted small mb-0">Front End Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!--team section start-->
+    <section id="our-team" class="team-section section-padding">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-12">
+            <div class="section-heading text-center">
+              <h2 class="section-title2">الأشخاص وراء رايتو</h2>
+              <p class="section-description2 mb-5">
+                نحن نتبنى استراتيجيات متطورة باستمرار قبل تطبيقات قابلة للتكامل
+                مع الخبرة الواسعة من خلال رأس المال الفكري المتكامل.
+              </p>
             </div>
-        </section>
-        <!--team section end-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="team-single-wrap mb-5">
+              <div class="team-img rounded-4">
+                <img
+                  src="assets/Asset-system/team-1.jpg"
+                  alt="عضو فريق"
+                  class="img-fluid position-relative"
+                  loading="lazy"
+                />
+                <ul
+                  class="list-unstyled team-social-list d-flex flex-column mb-0"
+                >
+                  <li class="list-inline-item">
+                    <a href="#" aria-label="زيارة ملف لينكدإن لجون سوليفان"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" aria-label="زيارة ملف تويتر لجون سوليفان"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" aria-label="زيارة ملف جيت هاب لجون سوليفان"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" aria-label="زيارة ملف فيسبوك لجون سوليفان"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-info mt-4 text-center">
+                <h3 class="fw-bold mb-1">جون سوليفان</h3>
+                <p class="text-muted small mb-0">مطور واجهات أمامية</p>
+              </div>
+            </div>
+          </div>
+          <!-- Repeated team member blocks with same changes -->
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="team-single-wrap mb-5">
+              <div class="team-img rounded-4">
+                <img
+                  src="assets/Asset-system/team-1.jpg"
+                  alt="عضو فريق"
+                  class="img-fluid position-relative"
+                  loading="lazy"
+                />
+                <ul
+                  class="list-unstyled team-social-list d-flex flex-column mb-0"
+                >
+                  <li class="list-inline-item">
+                    <a href="#" aria-label="زيارة ملف لينكدإن لجون سوليفان"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" aria-label="زيارة ملف تويتر لجون سوليفان"
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" aria-label="زيارة ملف جيت هاب لجون سوليفان"
+                      ><i class="fab fa-github"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#" aria-label="زيارة ملف فيسبوك لجون سوليفان"
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="team-info mt-4 text-center">
+                <h3 class="fw-bold mb-1">جون سوليفان</h3>
+                <p class="text-muted small mb-0">مطور واجهات أمامية</p>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat for other team members similarly -->
+        </div>
+      </div>
+    </section>
+    <!--team section end-->
 
     <!-- Customization Section -->
     <section
@@ -845,61 +931,101 @@
       </div>
       <div class="customization-shapes"></div>
     </section>
-        <!-- Logo Start -->
-        <section class="digtal-marketing-logo section-padding pt-0">
-            <div class="container">
-                <div class="bg-light-subtle">
-                    <div class="row justify-content-center">
-                        <div class="col-auto">
-                            <h3 class="mb-5 fw-semibold">اهم عملائنا فى هذا القطاع</h3>
-                        </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="swiper digi-logo-slider">
-                          <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                              <div class="single-logo">
-                                <img src="assets/img/brand-logo/google.svg" class="img-fluid" height="30" alt="Google" loading="lazy" />
-                              </div>
-                            </div>
-                            <div class="swiper-slide">
-                              <div class="single-logo">
-                                <img src="assets/img/brand-logo/facebook.svg" class="img-fluid" height="30" alt="Facebook" loading="lazy" />
-                              </div>
-                            </div>
-                            <div class="swiper-slide">
-                              <div class="single-logo">
-                                <img src="assets/img/brand-logo/youtube.svg" class="img-fluid" height="30" alt="YouTube" loading="lazy" />
-                              </div>
-                            </div>
-                            <div class="swiper-slide">
-                              <div class="single-logo">
-                                <img src="assets/img/brand-logo/printerest.svg" class="img-fluid" height="30" alt="Pinterest" loading="lazy" />
-                              </div>
-                            </div>
-                            <div class="swiper-slide">
-                              <div class="single-logo">
-                                <img src="assets/img/brand-logo/webflow.svg" class="img-fluid" height="30" alt="Webflow" loading="lazy" />
-                              </div>
-                            </div>
-                            <div class="swiper-slide">
-                              <div class="single-logo">
-                                <img src="assets/img/brand-logo/company.svg" class="img-fluid" height="30" alt="Company" loading="lazy" />
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- أزرار التحكم -->
-                          <div class="swiper-button-prev"></div>
-                          <div class="swiper-button-next"></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+    <!-- Logo Start -->
+    <section class="digtal-marketing-logo section-padding pt-0">
+      <div class="container">
+        <div class="bg-light-subtle">
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              <h2 class="mb-5 fw-semibold">أهم عملائنا في هذا القطاع</h2>
             </div>
-        </section>
-        <!-- Logo End -->
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="swiper digi-logo-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/brand-logo/google.svg"
+                        class="img-fluid"
+                        height="30"
+                        alt="شعار جوجل"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/brand-logo/facebook.svg"
+                        class="img-fluid"
+                        height="30"
+                        alt="شعار فيسبوك"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/brand-logo/youtube.svg"
+                        class="img-fluid"
+                        height="30"
+                        alt="شعار يوتيوب"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/brand-logo/printerest.svg"
+                        class="img-fluid"
+                        height="30"
+                        alt="شعار بينترست"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/brand-logo/webflow.svg"
+                        class="img-fluid"
+                        height="30"
+                        alt="شعار ويبفلو"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/brand-logo/company.svg"
+                        class="img-fluid"
+                        height="30"
+                        alt="شعار الشركة"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="swiper-button-prev"
+                  aria-label="الانتقال إلى الشعار السابق"
+                ></div>
+                <div
+                  class="swiper-button-next"
+                  aria-label="الانتقال إلى الشعار التالي"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Logo End -->
     <!-- Footer -->
     <footer class="footer">
       <div class="footer-bg">
@@ -909,8 +1035,17 @@
         <div class="footer-content">
           <div class="footer-section">
             <div class="footer-logo">
-              <a class="logo-icon" href="index.html">
-                <img src="./assets/img/logoar.webp" alt="logo" class="mw-100" loading="lazy" />
+              <a
+                class="logo-icon"
+                href="index.html"
+                aria-label="الذهاب إلى الصفحة الرئيسية"
+              >
+                <img
+                  src="./assets/img/logoar.webp"
+                  alt=""
+                  class="mw-100"
+                  loading="lazy"
+                />
               </a>
             </div>
             <p>
@@ -918,26 +1053,40 @@
               مبتكرة ومخصصة للشركات لتلبية احتياجاتها الفريدة
             </p>
             <div class="footer-social">
-              <a href="https://www.facebook.com/Raitotec" target="_blank"
+              <a
+                href="https://www.facebook.com/Raitotec"
+                target="_blank"
+                aria-label="زيارة صفحتنا على فيسبوك"
                 ><i class="fab fa-facebook"></i
               ></a>
-              <a href="https://twitter.com/raitotec" target="_blank"
+              <a
+                href="https://twitter.com/raitotec"
+                target="_blank"
+                aria-label="زيارة صفحتنا على تويتر"
                 ><i class="fa-brands fa-x-twitter"></i
               ></a>
-              <a href="https://www.instagram.com/raitotec1/" target="_blank"
+              <a
+                href="https://www.instagram.com/raitotec1/"
+                target="_blank"
+                aria-label="زيارة صفحتنا على إنستغرام"
                 ><i class="fab fa-instagram"></i
               ></a>
               <a
                 href="https://www.linkedin.com/in/raito-erp-software-830920234/"
                 target="_blank"
+                aria-label="زيارة صفحتنا على لينكدإن"
                 ><i class="fab fa-linkedin"></i
               ></a>
-              <a href="https://www.youtube.com/@Raitotec" target="_blank"
+              <a
+                href="https://www.youtube.com/@Raitotec"
+                target="_blank"
+                aria-label="زيارة قناتنا على يوتيوب"
                 ><i class="fab fa-youtube"></i
               ></a>
               <a
                 href="https://wa.me/+966539387625?text=I'm%20interested%20in%20your%20website"
                 target="_blank"
+                aria-label="التواصل عبر واتساب"
                 ><i class="fab fa-whatsapp"></i
               ></a>
             </div>
@@ -945,56 +1094,121 @@
               <a
                 href="https://apps.apple.com/ae/developer/raitotec/id1545363149?l=ar&see-all=i-phonei-pad-apps"
                 class="d-block app-store"
+                aria-label="تنزيل التطبيق من متجر أبل"
               >
-                <img src="./assets/img/app_store.png" loading="lazy" />
+                <img
+                  src="./assets/img/app_store.png"
+                  alt="متجر أبل"
+                  loading="lazy"
+                />
               </a>
               <a
                 href="https://play.google.com/store/apps/developer?id=Raitotec"
                 class="d-block google-play"
+                aria-label="تنزيل التطبيق من جوجل بلاي"
               >
-                <img src="./assets/img/google_play.png" loading="lazy" />
+                <img
+                  src="./assets/img/google_play.png"
+                  alt="جوجل بلاي"
+                  loading="lazy"
+                />
               </a>
             </div>
           </div>
           <div class="footer-section">
-            <h4>عناوين سريعة</h4>
+            <h3>عناوين سريعة</h3>
             <ul>
-              <li><a href="#">الرئيسية</a></li>
-              <li><a href="#">من نحن</a></li>
-              <li><a href="#">خدمات</a></li>
-              <li><a href="#">الأسعار</a></li>
-              <li><a href="#">المدونة</a></li>
-              <li><a href="#">تواصل معنا</a></li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى الصفحة الرئيسية">الرئيسية</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة من نحن">من نحن</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة الخدمات">خدمات</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة الأسعار">الأسعار</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة المدونة">المدونة</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة تواصل معنا"
+                  >تواصل معنا</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-section">
-            <h4>خدماتنا</h4>
+            <h3>خدماتنا</h3>
             <ul>
-              <li><a href="#">برنامج إدارة المبيعات والحسابات</a></li>
-              <li><a href="#">برنامج إدارة المخزون</a></li>
-              <li><a href="#">برنامج الصيانة</a></li>
-              <li><a href="#">برنامج المحاماة</a></li>
-              <li><a href="#">برنامج إدارة محطات الوقود</a></li>
-              <li><a href="#">برنامج العقارات</a></li>
-              <li><a href="#">برنامج إدارة شؤون الموظفين</a></li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="الذهاب إلى برنامج إدارة المبيعات والحسابات"
+                  >برنامج إدارة المبيعات والحسابات</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى برنامج إدارة المخزون"
+                  >برنامج إدارة المخزون</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى برنامج الصيانة"
+                  >برنامج الصيانة</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى برنامج المحاماة"
+                  >برنامج المحاماة</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى برنامج إدارة محطات الوقود"
+                  >برنامج إدارة محطات الوقود</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى برنامج العقارات"
+                  >برنامج العقارات</a
+                >
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى برنامج إدارة شؤون الموظفين"
+                  >برنامج إدارة شؤون الموظفين</a
+                >
+              </li>
             </ul>
           </div>
           <div class="footer-section">
-            <h4>تواصل معنا</h4>
+            <h3>تواصل معنا</h3>
             <div class="contact-info">
               <p>
                 <i class="fas fa-map-marker-alt"></i
-                ><a href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9">
+                ><a
+                  href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9"
+                  aria-label="عرض موقعنا في الرياض على الخريطة"
+                >
                   الرياض، المملكة العربية السعودية، 4000 طريق دائري 12993، 2
                 </a>
               </p>
               <p>
                 <i class="fas fa-phone"></i
-                ><a href="tel:+966538499438">+966538499438</a>
+                ><a
+                  href="tel:+966538499438"
+                  aria-label="الاتصال بنا على رقم الهاتف"
+                  >+966538499438</a
+                >
               </p>
               <p>
                 <i class="fas fa-envelope"></i
-                ><a href="mailto:info@raitotec.com">info@raitotec.com</a>
+                ><a
+                  href="mailto:info@raitotec.com"
+                  aria-label="إرسال بريد إلكتروني إلينا"
+                  >info@raitotec.com</a
+                >
               </p>
             </div>
           </div>
@@ -1004,114 +1218,74 @@
             <p>&copy; 2025 جميع الحقوق محفوظة لدى شركة Raito للبرمجيات.</p>
           </div>
           <div class="footer-links">
-            <a href="#">سياسة الخصوصية</a>
-            <a href="#">شروط الاستخدام</a>
-            <a href="#">ملفات الارتباط</a>
+            <a href="#" aria-label="الذهاب إلى صفحة سياسة الخصوصية"
+              >سياسة الخصوصية</a
+            >
+            <a href="#" aria-label="الذهاب إلى صفحة شروط الاستخدام"
+              >شروط الاستخدام</a
+            >
+            <a href="#" aria-label="الذهاب إلى صفحة ملفات الارتباط"
+              >ملفات الارتباط</a
+            >
           </div>
         </div>
       </div>
     </footer>
 
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="demo-form"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="demo-formLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="demo-formLabel">
-              اشترك الآن مع رايتو
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            >
-              <i class="fas fa-xmark"></i>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form class="contact-form" id="contactForm">
-              <div class="form-row row">
-                <div class="form-group col-12 mb-3">
-                  <label for="name">الاسم بالكامل<span>*</span></label>
-                  <input
-                    type="text"
-                    id="name"
-                    class="form-control"
-                    name="name"
-                    required
-                    placeholder="اكتب اسمك هنا..."
-                  />
-                  <i class="fas fa-user"></i>
+    <div class="modal fade" id="demo-form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="demo-formLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="demo-formLabel">اشترك الآن مع رايتو</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق النافذة المنبثقة">
+                        <i class="fas fa-xmark"></i>
+                    </button>
                 </div>
-                <div class="form-group col-12 mb-3">
-                  <label for="email">البريد الإلكتروني<span>*</span></label>
-                  <input
-                    type="email"
-                    id="email"
-                    class="form-control"
-                    name="email"
-                    required
-                    placeholder="اكتب بريدك الإلكتروني هنا..."
-                  />
-                  <i class="fas fa-envelope"></i>
+                <div class="modal-body">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row row">
+                            <div class="form-group col-12 mb-3">
+                                <label for="name">الاسم بالكامل<span>*</span></label>
+                                <input type="text" id="name" class="form-control" name="name" autocomplete="name" required placeholder="اكتب اسمك هنا..." aria-label="أدخل الاسم بالكامل" />
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="form-group col-12 mb-3">
+                                <label for="email">البريد الإلكتروني<span>*</span></label>
+                                <input type="email" id="email" class="form-control" name="email" autocomplete="email" required placeholder="اكتب بريدك الإلكتروني هنا..." aria-label="أدخل البريد الإلكتروني" />
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="form-group col-12 mb-3">
+                                <label for="phone">الجوال<span>*</span></label>
+                                <input type="tel" id="phone" class="form-control" name="phone" autocomplete="phone" required placeholder="اكتب رقم جوالك هنا..." aria-label="أدخل رقم الجوال" />
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="form-group col-12 mb-3">
+                                <label for="subject">نوع المشروع<span>*</span></label>
+                                <select id="subject" class="form-control" name="subject" required aria-label="اختر نوع المشروع">
+                                    <option value="" disabled selected>اختر نوع المشروع</option>
+                                    <option value="1">مشروع محاسبة</option>
+                                    <option value="2">مشروع إدارة المخزون</option>
+                                    <option value="3">مشروع خدمات</option>
+                                </select>
+                                <i class="fas fa-list"></i>
+                            </div>
+                            <div class="form-group col-12 mb-3">
+                                <label for="message">وصف المشروع<span>*</span></label>
+                                <textarea id="message" name="message" rows="5" required placeholder="اكتب رسالتك هنا..." aria-label="أدخل وصف المشروع"></textarea>
+                                <i class="fas fa-comment"></i>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-full" aria-label="إرسال نموذج التسجيل">
+                                <i class="fas fa-paper-plane"></i>
+                                سجل الآن
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-group col-12 mb-3">
-                  <label for="phone">الجوال<span>*</span></label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    class="form-control"
-                    name="phone"
-                    required
-                    placeholder="اكتب رقم جوالك هنا..."
-                  />
-                  <i class="fas fa-phone"></i>
-                </div>
-                <div class="form-group col-12 mb-3">
-                  <label for="subject">نوع المشروع<span>*</span></label>
-                  <select
-                    id="subject"
-                    class="form-control"
-                    name="subject"
-                    required
-                  >
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </select>
-                  <i class="fas fa-list"></i>
-                </div>
-                <div class="form-group col-12 mb-3">
-                  <label for="message">وصف المشروع<span>*</span></label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    required
-                    placeholder="اكتب رسالتك هنا..."
-                  ></textarea>
-                  <i class="fas fa-comment"></i>
-                </div>
-              </div>
-              <div class="form-actions">
-                <button type="submit" class="btn btn-primary btn-full">
-                  <i class="fas fa-paper-plane"></i> سجل الآن
-                </button>
-              </div>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Chat Widget -->
@@ -1120,26 +1294,26 @@
         <div class="chat-avatar">
           <img
             src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=50&h=50"
-            alt="مساعد"
+            alt="صورة مساعد العملاء"
             loading="lazy"
           />
         </div>
         <div class="chat-info">
-          <h4>مساعد العملاء</h4>
+          <h3>مساعد العملاء</h3>
           <p>متاح الآن للمساعدة</p>
         </div>
-        <button class="chat-close">
+        <button class="chat-close" aria-label="إغلاق نافذة الدردشة">
           <i class="fas fa-times"></i>
         </button>
       </div>
-      <div class="chat-body">
+      <div class="chat-body" aria-live="polite">
         <div class="chat-message bot-message">
           <p>مرحباً! كيف يمكنني مساعدتك اليوم؟</p>
         </div>
       </div>
       <div class="chat-input">
-        <input type="text" placeholder="اكتب رسالتك هنا..." />
-        <button class="send-btn">
+        <input type="text" placeholder="اكتب رسالتك هنا..." id="AI-Massage" name="AI-Massage" aria-label="أدخل رسالة المحادثة" />
+        <button class="send-btn" aria-label="إرسال رسالة الدردشة">
           <i class="fas fa-paper-plane"></i>
         </button>
       </div>
@@ -1148,24 +1322,45 @@
     <!-- Chat Toggle -->
     <div class="chat-toggle">
       <div class="chat-bubble">
-        <i class="fas fa-comments"></i>
+        <i class="fas fa-comments" aria-label="فتح نافذة الدردشة"></i>
       </div>
       <div class="chat-notification">1</div>
     </div>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
+    <button
+      class="back-to-top"
+      aria-label="العودة إلى أعلى الصفحة"
+      id="backToTop"
+    >
       <i class="fas fa-arrow-up"></i>
     </button>
 
     <script src="./assets/js/bootstrap.bundle.min.js" defer></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="./assets/js/swiper-bundle.min.js" defer></script>
-    <!-- <script src="./assets/js/loade.js" defer></script> -->
     <script src="./assets/js/chang-langth.js" defer></script>
     <script src="./assets/js/newJs.js" defer></script>
-    <script>
-
-</script>
+    <!-- <script src="./assets/js/loade.js" defer></script> -->
+    <script defer>
+      const swiper = new Swiper(".digi-logo-slider", {
+        loop: true, // يكرر العرض
+        slidesPerView: 4, // عدد اللوجوهات في الشاشة
+        spaceBetween: 30, // مسافة بين العناصر
+        autoplay: {
+          delay: 2000, // يقلب كل ثانيتين
+          disableOnInteraction: false, // يفضل شغال حتى لو المستخدم قلب يدوي
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          320: { slidesPerView: 2, spaceBetween: 10 },
+          768: { slidesPerView: 3, spaceBetween: 20 },
+          1024: { slidesPerView: 5, spaceBetween: 30 },
+        },
+      });
+    </script>
   </body>
 </html>
