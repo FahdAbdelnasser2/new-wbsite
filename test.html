@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Fuel pump base
+const baseGeometry = new THREE.BoxGeometry(1, 0.5, 1);
+const baseMaterial = new THREE.MeshStandardMaterial({color: 0x555555});
+const base = new THREE.Mesh(baseGeometry, baseMaterial);
+scene.add(base);
+// Fuel pump body
+const bodyGeometry = new THREE.BoxGeometry(0.5, 1.5, 0.5);
+const bodyMaterial = new THREE.MeshStandardMaterial({color: 0xff0000});
+const body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+body.position.y = 1;
+scene.add(body);
+// Fuel pump nozzle (simple cylinder)
+const nozzleGeometry = new THREE.CylinderGeometry(0.05, 0.05, 0.5);
+const nozzleMaterial = new THREE.MeshStandardMaterial({color: 0x000000});
+const nozzle = new THREE.Mesh(nozzleGeometry, nozzleMaterial);
+nozzle.position.set(0.3, 0.75, 0);
+nozzle.rotation.z = Math.PI / 2;
+scene.add(nozzle);
+// Lighting
+const light = new THREE.DirectionalLight(0xffffff, 1);
+light.position.set(5, 10, 7);
+scene.add(light);
+camera.position.z = 5;
+function animate() {
+  requestAnimationFrame(animate);
+  renderer.render(scene, camera);
+}
+animate();
+    </script>
+</body>
+</html>
