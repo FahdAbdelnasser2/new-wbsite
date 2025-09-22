@@ -458,9 +458,11 @@
 
       .section-title {
           font-size: 2.5rem;
-          font-weight: 700;
-          color: var(--dark-color);
+          font-weight: 800;
+          color: var(--text-color);
           margin-bottom: 1rem;
+          line-height: 1.1;
+          letter-spacing: -0.02em;
       }
 
       .section-subtitle {
@@ -2013,7 +2015,9 @@
           }
 
           .hero-title {
-              font-size: 2.5rem;
+              /* width: 80%;
+              margin: 0 auto 1.5rem auto; */
+              font-size: 3rem;
           }
 
           .hero-buttons {
@@ -2136,14 +2140,14 @@
       }
 
       .calculator {
-          top: 0;
+          top: -12%;
           right: 43%;
           animation-delay: 0s;
       }
 
       .gas {
-          top: 15%;
-          right: 20%;
+          top: 0%;
+          right: 14%;
           animation-delay: 0s;
       }
 
@@ -2275,10 +2279,10 @@
 
       .feature-icon-2 i {
           /* color: var(--primary-color); */
-              background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+          background: var(--gradient-1);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
       }
 
       .section-image img {
@@ -2596,9 +2600,12 @@
 
       .section-title-side {
           font-size: 32px;
-          font-weight: 500;
-          color: var(--dark-color);
+          font-weight: 700;
           margin-bottom: 1rem;
+          /* font-weight: 800; */
+          color: var(--text-color);
+          line-height: 1.1;
+          letter-spacing: -0.02em;
       }
 
       .contact-form {
@@ -3625,7 +3632,7 @@
               transform: scale(0.8);
           }
 
-          .gear {
+          /* .gear {
               top: 30%;
               left: -3%;
           }
@@ -3642,7 +3649,7 @@
           .gas {
               top: 15%;
               right: 10%;
-          }
+          } */
       }
 
       /* Additional Hover Effects */
@@ -3992,7 +3999,7 @@
       .vision-mission-grid .card-title {
           font-size: 1.8rem;
           font-weight: 700;
-          color: var(--text-dark);
+          color: var(--text-color);
           text-align: center;
           margin-bottom: 1.5rem;
       }
@@ -4310,6 +4317,10 @@
       @media (max-width: 992px) {
           .customization-grid {
               grid-template-columns: repeat(2, 1fr);
+          }
+
+          .accessory {
+              display: none;
           }
       }
 
@@ -4631,6 +4642,115 @@
           height: 108px;
           position: absolute;
       }
-      @media (max-width:1400px) {
-        
+
+      /* @media (max-width:1400px) {} */
+
+      #pointContainer {
+          position: absolute;
+          top: 110px;
+          right: -36px;
+      }
+
+      @media (min-width:1200px) and (max-width:1440px) {
+          #pointContainer {
+              top: 90px;
+              right: -40px;
+          }
+      }
+
+      @media (min-width:1024px) and (max-width:1200px) {
+          #pointContainer {
+              top: 72px;
+              right: -43px;
+          }
+      }
+
+      @media (max-width:1024px) {
+          #pointContainer {
+              top: 72px;
+              right: -43px;
+          }
+      }
+
+      @media (max-width:991px) {
+          #pointContainer {
+              top: 120px;
+              right: -35px;
+          }
+      }
+
+      /* @media (max-width:768px) {
+          #pointContainer {
+              top: 82px;
+              right: -41px;
+          }
+      } */
+
+      @media (max-width:768px) {
+          #pointContainer {
+              top: 122px;
+              right: -34px;
+          }
+      }
+
+      @media (max-width:520px) {
+          #pointContainer {
+              top: 58px;
+              right: -45px;
+          }
+      }
+
+      @media (min-width:500px) and (max-width:520px) {
+          #pointContainer {
+              top: 75px;
+              right: -42px;
+          }
+      }
+
+      @media (min-width:450px) and (max-width:500px) {
+          #pointContainer {
+              top: 70px;
+              right: -44px;
+          }
+      }
+
+      @media (min-width:425px) and (max-width:450px) {
+          #pointContainer {
+              top: 60px;
+              right: -45px;
+          }
+      }
+
+      @media (max-width:425px) {
+          #pointContainer {
+              top: 58px;
+              right: -45px;
+          }
+      }
+
+      @media (max-width:400px) {
+          #pointContainer {
+              top: 49px;
+              right: -47px;
+          }
+      }
+
+      .blog-search {
+          position: relative;
+          max-width: 500px;
+          margin: 0 auto;
+          margin-bottom: 50PX;
+      }
+
+      #blogSearch {
+          height: 55px;
+          border-radius: 50px;
+          border: 2px solid #eee;
+          background: rgba(255, 255, 255, 0.2);
+          box-shadow: 0 0 10px #CCC;
+          color: var(--gradient-primary);
+          font-size: 1.1rem;
+          padding-right: 50px;
+          backdrop-filter: blur(20px);
+          transition: all 0.3s ease;
       }

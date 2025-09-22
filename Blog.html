@@ -45,12 +45,12 @@
   </head>
   <body>
     <!-- Loading Screen -->
-    <div class="loading-screen">
+    <!-- <div class="loading-screen">
       <div class="loader">
         <div class="loader-circle"></div>
         <div class="loader-text">جاري التحميل...</div>
       </div>
-    </div>
+    </div> -->
     <div class="overlay"></div>
     <!-- Navigation -->
     <nav class="navbar">
@@ -255,12 +255,18 @@
     <!-- Section 7: Blog - Magazine Layout -->
     <section id="blog" class="blog-section">
       <div class="container">
-        <div class="section-header mt-5">
+        <div class="section-header my-5">
           <h2 class="section-title">المدونة</h2>
           <p class="section-subtitle">آخر المقالات والأخبار التقنية</p>
         </div>
+
+        <!-- حقل البحث الجديد -->
+        <div class="blog-search mb-5">
+          <input type="text" id="blogSearch" class="form-control" placeholder="ابحث في المدونة بالعنوان أو المحتوى...">
+        </div>
+
         <div class="blog-grid row justify-content-center mx-0 gap-5">
-          <article class="blog-post col-lg-6 p-0 featured">
+          <article class="blog-post col-xl-7 col-lg-6 p-0 featured">
             <div class="post-image">
               <div class="post-category">تقنية</div>
               <div class="featured-preview st-post-thumb st-link-hover-wrap st-zoom">
@@ -282,7 +288,7 @@
               <a href="blog-defintion.html" class="read-more">اقرأ المزيد</a>
             </div>
           </article>
-          <article class="blog-post col-lg-5 p-0">
+          <article class="blog-post col-xl-4 col-lg-5 p-0">
             <div class="post-image">
               <div class="post-category">أمان</div>
               <div class="featured-preview st-post-thumb st-link-hover-wrap st-zoom">
@@ -301,7 +307,7 @@
               <a href="blog-defintion.html" class="read-more">اقرأ المزيد</a>
             </div>
           </article>
-          <article class="blog-post col-lg-5 p-0">
+          <article class="blog-post col-xl-4 col-lg-5 p-0">
             <div class="post-image">
               <div class="post-category">برمجة</div>
               <div class="featured-preview st-post-thumb st-link-hover-wrap st-zoom">
@@ -320,7 +326,7 @@
               <a href="blog-defintion.html" class="read-more">اقرأ المزيد</a>
             </div>
           </article>
-          <article class="blog-post col-lg-6 p-0 featured">
+          <article class="blog-post col-xl-7 col-lg-6 p-0 featured">
             <div class="post-image">
               <div class="post-category">أمان</div>
               <div class="featured-preview st-post-thumb st-link-hover-wrap st-zoom">
@@ -713,8 +719,25 @@
     </button>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./assets/js/loade.js"></script>
+    <!-- <script src="./assets/js/loade.js"></script> -->
     <script src="./assets/js/chang-langth.js"></script>
     <script src="./assets/js/newJs.js"></script>
+
+    <!-- سكريبت البحث الجديد -->
+    <script>
+      document.getElementById('blogSearch').addEventListener('input', function() {
+        let filter = this.value.toLowerCase();
+        let posts = document.querySelectorAll('.blog-post');
+        posts.forEach(post => {
+          let title = post.querySelector('h3, h4').textContent.toLowerCase();
+          let content = post.querySelector('p').textContent.toLowerCase();
+          if (title.includes(filter) || content.includes(filter)) {
+            post.style.display = '';
+          } else {
+            post.style.display = 'none';
+          }
+        });
+      });
+    </script>
   </body>
 </html>
