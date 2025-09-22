@@ -29,12 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -43,10 +38,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/newCss.css" />
     <link rel="stylesheet" href="assets/css/newCss2.css" />
     <style>
@@ -70,7 +62,7 @@
             href="index.html"
             aria-label="الذهاب إلى الصفحة الرئيسية"
           >
-            <img src="./assets/img/logoar.webp" alt="" class="mw-100" />
+            <img src="assets/img/logoar.webp" alt="" class="mw-100" />
           </a>
         </div>
         <ul class="nav-menu">
@@ -350,7 +342,7 @@
                 id="arabic-btn"
               >
                 <img
-                  src="./assets/Asset-system/icon/Flag-Saudi-Arabia.png"
+                  src="assets/Asset-system/icon/Flag-Saudi-Arabia.png"
                   alt="العربية"
                   width="24"
                   class="me-2 align-middle"
@@ -364,7 +356,7 @@
                 title="التحويل إلى اللغة الإنجليزية"
               >
                 <img
-                  src="./assets/Asset-system/icon/united-kingdom.png"
+                  src="assets/Asset-system/icon/united-kingdom.png"
                   alt="الإنجليزية"
                   width="24"
                   class="ms-2 align-bottom"
@@ -529,7 +521,7 @@
           </div>
           <div class="col-md-6 order-2">
             <img
-              src="./assets/img/man-hand-mobile.png"
+              src="assets/img/man-hand-mobile.png"
               alt="رجل يحمل هاتفًا"
               loading="lazy"
               class="img-man"
@@ -1042,7 +1034,7 @@
                 aria-label="الذهاب إلى الصفحة الرئيسية"
               >
                 <img
-                  src="./assets/img/logoar.webp"
+                  src="assets/img/logoar.webp"
                   alt=""
                   class="mw-100"
                   loading="lazy"
@@ -1098,7 +1090,7 @@
                 aria-label="تنزيل التطبيق من متجر أبل"
               >
                 <img
-                  src="./assets/img/app_store.png"
+                  src="assets/img/app_store.png"
                   alt="متجر أبل"
                   loading="lazy"
                 />
@@ -1109,7 +1101,7 @@
                 aria-label="تنزيل التطبيق من جوجل بلاي"
               >
                 <img
-                  src="./assets/img/google_play.png"
+                  src="assets/img/google_play.png"
                   alt="جوجل بلاي"
                   loading="lazy"
                 />
@@ -1234,59 +1226,118 @@
     </footer>
 
     <!-- Modal -->
-    <div class="modal fade" id="demo-form" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="demo-formLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="demo-formLabel">اشترك الآن مع رايتو</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق النافذة المنبثقة">
-                        <i class="fas fa-xmark"></i>
-                    </button>
+    <div
+      class="modal fade"
+      id="demo-form"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="demo-formLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="demo-formLabel">
+              اشترك الآن مع رايتو
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="إغلاق النافذة المنبثقة"
+            >
+              <i class="fas fa-xmark"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="contact-form" id="contactForm">
+              <div class="form-row row">
+                <div class="form-group col-12 mb-3">
+                  <label for="name">الاسم بالكامل<span>*</span></label>
+                  <input
+                    type="text"
+                    id="name"
+                    class="form-control"
+                    name="name"
+                    autocomplete="name"
+                    required
+                    placeholder="اكتب اسمك هنا..."
+                    aria-label="أدخل الاسم بالكامل"
+                  />
+                  <i class="fas fa-user"></i>
                 </div>
-                <div class="modal-body">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-row row">
-                            <div class="form-group col-12 mb-3">
-                                <label for="name">الاسم بالكامل<span>*</span></label>
-                                <input type="text" id="name" class="form-control" name="name" autocomplete="name" required placeholder="اكتب اسمك هنا..." aria-label="أدخل الاسم بالكامل" />
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div class="form-group col-12 mb-3">
-                                <label for="email">البريد الإلكتروني<span>*</span></label>
-                                <input type="email" id="email" class="form-control" name="email" autocomplete="email" required placeholder="اكتب بريدك الإلكتروني هنا..." aria-label="أدخل البريد الإلكتروني" />
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="form-group col-12 mb-3">
-                                <label for="phone">الجوال<span>*</span></label>
-                                <input type="tel" id="phone" class="form-control" name="phone" autocomplete="phone" required placeholder="اكتب رقم جوالك هنا..." aria-label="أدخل رقم الجوال" />
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="form-group col-12 mb-3">
-                                <label for="subject">نوع المشروع<span>*</span></label>
-                                <select id="subject" class="form-control" name="subject" required aria-label="اختر نوع المشروع">
-                                    <option value="" disabled selected>اختر نوع المشروع</option>
-                                    <option value="1">مشروع محاسبة</option>
-                                    <option value="2">مشروع إدارة المخزون</option>
-                                    <option value="3">مشروع خدمات</option>
-                                </select>
-                                <i class="fas fa-list"></i>
-                            </div>
-                            <div class="form-group col-12 mb-3">
-                                <label for="message">وصف المشروع<span>*</span></label>
-                                <textarea id="message" name="message" rows="5" required placeholder="اكتب رسالتك هنا..." aria-label="أدخل وصف المشروع"></textarea>
-                                <i class="fas fa-comment"></i>
-                            </div>
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" class="btn btn-primary btn-full" aria-label="إرسال نموذج التسجيل">
-                                <i class="fas fa-paper-plane"></i>
-                                سجل الآن
-                            </button>
-                        </div>
-                    </form>
+                <div class="form-group col-12 mb-3">
+                  <label for="email">البريد الإلكتروني<span>*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    placeholder="اكتب بريدك الإلكتروني هنا..."
+                    aria-label="أدخل البريد الإلكتروني"
+                  />
+                  <i class="fas fa-envelope"></i>
                 </div>
-            </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="phone">الجوال<span>*</span></label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    class="form-control"
+                    name="phone"
+                    autocomplete="phone"
+                    required
+                    placeholder="اكتب رقم جوالك هنا..."
+                    aria-label="أدخل رقم الجوال"
+                  />
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="subject">نوع المشروع<span>*</span></label>
+                  <select
+                    id="subject"
+                    class="form-control"
+                    name="subject"
+                    required
+                    aria-label="اختر نوع المشروع"
+                  >
+                    <option value="" disabled selected>اختر نوع المشروع</option>
+                    <option value="1">مشروع محاسبة</option>
+                    <option value="2">مشروع إدارة المخزون</option>
+                    <option value="3">مشروع خدمات</option>
+                  </select>
+                  <i class="fas fa-list"></i>
+                </div>
+                <div class="form-group col-12 mb-3">
+                  <label for="message">وصف المشروع<span>*</span></label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder="اكتب رسالتك هنا..."
+                    aria-label="أدخل وصف المشروع"
+                  ></textarea>
+                  <i class="fas fa-comment"></i>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-full"
+                  aria-label="إرسال نموذج التسجيل"
+                >
+                  <i class="fas fa-paper-plane"></i>
+                  سجل الآن
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </div>
 
     <!-- Chat Widget -->
@@ -1313,7 +1364,13 @@
         </div>
       </div>
       <div class="chat-input">
-        <input type="text" placeholder="اكتب رسالتك هنا..." id="AI-Massage" name="AI-Massage" aria-label="أدخل رسالة المحادثة" />
+        <input
+          type="text"
+          placeholder="اكتب رسالتك هنا..."
+          id="AI-Massage"
+          name="AI-Massage"
+          aria-label="أدخل رسالة المحادثة"
+        />
         <button class="send-btn" aria-label="إرسال رسالة الدردشة">
           <i class="fas fa-paper-plane"></i>
         </button>
@@ -1337,12 +1394,11 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script src="./assets/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
-    <script src="./assets/js/swiper-bundle.min.js" defer></script>
-    <script src="./assets/js/chang-langth.js" defer></script>
-    <script src="./assets/js/newJs.js" defer></script>
-    <!-- <script src="./assets/js/loade.js" defer></script> -->
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/chang-langth.js" defer></script>
+    <script src="assets/js/newJs.js" defer></script>
+    <!-- <script src="assets/js/loade.js" defer></script> -->
     <script defer>
       const swiper = new Swiper(".digi-logo-slider", {
         loop: true, // يكرر العرض
