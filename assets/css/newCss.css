@@ -164,7 +164,7 @@ body {
 .hero-section {
     align-items: center;
     display: flex;
-    min-height: 100vh;
+    min-height: 70vh;
     overflow: hidden;
     position: relative
 }
