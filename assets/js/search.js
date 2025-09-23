@@ -1,13 +1,1 @@
-      document.getElementById('blogSearch').addEventListener('input', function() {
-        let filter = this.value.toLowerCase();
-        let posts = document.querySelectorAll('.blog-post');
-        posts.forEach(post => {
-          let title = post.querySelector('h3').textContent.toLowerCase();
-          let content = post.querySelector('p').textContent.toLowerCase();
-          if (title.includes(filter) || content.includes(filter)) {
-            post.style.display = '';
-          } else {
-            post.style.display = 'none';
-          }
-        });
-      });
+document.getElementById("blogSearch").addEventListener("input",function(){let a=this.value.toLowerCase(),b=document.querySelectorAll(".blog-post");b.forEach(b=>{let c=b.querySelector("h3").textContent.toLowerCase(),d=b.querySelector("p").textContent.toLowerCase();b.style.display=c.includes(a)||d.includes(a)?"":"none"})});

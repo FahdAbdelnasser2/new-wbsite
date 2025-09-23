@@ -424,8 +424,11 @@
             <div class="row mx-0 align-items-center justify-content-between">
                 <div class="col-lg-5 mb-5 mb-lg-0">
                     <div class="video-container">
-                        <div class="video-wrapper">
-                            <video id="myVideo" class="w-100 rounded shadow-lg object-fit-cover" poster="assets/img/Start-amploy.png" controls preload="metadata">
+                        <div class="video-wrapper" style="aspect-ratio: 16 / 9;">
+                            <video id="myVideo" class="w-100 rounded shadow-lg object-fit-cover"
+                                poster="assets/img/Start-amploy.png"
+                                width="800" height="450"
+                                controls preload="metadata">
                                 <!-- <source src="https://raitotec.com/public/attachments/aboutUs/1702904407988.mp4" type="video/mp4" />
                                 <track kind="captions" src="https://raitotec.com/public/attachments/aboutUs/captions.vtt" srclang="ar" label="العربية" default />
                                 <div class="video-placeholder">
@@ -966,91 +969,117 @@
     <button class="back-to-top" aria-label="العودة إلى الأعلى" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </button>
-    <script src="assets/js/jquery.js" defer></script>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
     <script src="assets/js/chang-langth.js" defer></script>
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/portfolio.js" defer></script>
     <script src="assets/js/chat.js" defer></script>
-    <script src="assets/js/lottie.min.js"></script>
     <script src="assets/js/animations.js" defer></script>
-    <script defer>
-        function setupLottie(containerId, jsonPath, startSec, endSec) {
-            const animation = lottie.loadAnimation({
-                container: document.getElementById(containerId),
-                renderer: "svg",
-                loop: false,
-                autoplay: false,
-                path: jsonPath,
-            });
+<!-- شيل التحميل المباشر -->
+<!-- <script src="assets/js/lottie.min.js" data-pages="index"></script> -->
 
-            function secondsToFrames(seconds) {
-                const frameRate = animation.frameRate || 30;
-                return Math.round(seconds * frameRate);
-            }
+<script defer>
+  // دالة لتحميل ملف JS خارجي Lazy
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.onload = resolve;
+      script.onerror = reject;
+      document.body.appendChild(script);
+    });
+  }
 
-            const start = secondsToFrames(startSec);
-            const end = secondsToFrames(endSec);
+  // دالة لتهيئة أنيميشن لوتي
+  function setupLottie(containerId, jsonPath, startSec, endSec) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
 
-            const container = document.getElementById(containerId);
+    const animation = lottie.loadAnimation({
+      container: container,
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      path: jsonPath,
+    });
 
-            container.addEventListener("mouseenter", () => {
-                animation.setSpeed(1.5);
-                animation.playSegments([start, end], true);
-            });
+    function secondsToFrames(seconds) {
+      const frameRate = animation.frameRate || 30;
+      return Math.round(seconds * frameRate);
+    }
 
-            container.addEventListener("mouseleave", () => {
-                animation.setSpeed(1.5);
-                animation.playSegments([end, secondsToFrames(0)], true);
-            });
+    const start = secondsToFrames(startSec);
+    const end = secondsToFrames(endSec);
+
+    container.addEventListener("mouseenter", () => {
+      animation.setSpeed(1.5);
+      animation.playSegments([start, end], true);
+    });
+
+    container.addEventListener("mouseleave", () => {
+      animation.setSpeed(1.5);
+      animation.playSegments([end, secondsToFrames(0)], true);
+    });
+  }
+
+  // كل الـ containers اللي فيها لوتي
+  const lottieContainers = [
+    ["accountingContainer", "assets/data/accounting.json", 3, 5],
+    ["purchesContainer", "assets/data/purches.json", 0, 3],
+    ["storeContainer", "assets/data/store.json", 0, 2.4],
+    ["personnelAffairsContainer", "assets/data/personnel-affairs.json", 0, 3],
+    ["mintinanceContainer", "assets/data/mintinance.json", 0, 3],
+    ["lawContainer", "assets/data/law.json", 0, 3],
+    ["delegatesContainer", "assets/data/delegates.json", 0, 3],
+    ["schoolsContainer", "assets/data/schools.json", 0, 3],
+    ["contractorsContainer", "assets/data/contractors.json", 0, 2],
+    ["supplierManagementContainer", "assets/data/supplierManagement.json", 0, 2.1],
+    ["shippingContainer", "assets/data/shipping.json", 0, 3],
+    ["loyaltyContainer", "assets/data/loyalty.json", 0, 4],
+    ["productionManufacturingContainer", "assets/data/productionManufacturing.json", 0, 4],
+    ["pointsOfSaleContainer", "assets/data/pointsOfSale.json", 0, 3.6],
+    ["fixedAssetsContainer", "assets/data/fixedAssets.json", 0, 4],
+    ["realEstateContainer", "assets/data/realEstate.json", 0, 3],
+    ["CRMContainer", "assets/data/CRM.json", 0, 4],
+    ["fuelContainer", "assets/data/fuel.json", 1, 5],
+    ["pointContainer", "assets/data/point.json", 0, 0] // الخاص بالـ loop
+  ];
+
+  // مراقبة العناصر بالـ IntersectionObserver
+  const observer2 = new IntersectionObserver((entries, obs) => {
+    entries.forEach(async entry => {
+      if (entry.isIntersecting) {
+        // أول مرة يدخل للشاشة → حمّل لوتي
+        if (!window.lottie) {
+          await loadScript("https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js");
         }
 
-        setupLottie("accountingContainer", "assets/data/accounting.json", 3, 5);
-        setupLottie("purchesContainer", "assets/data/purches.json", 0, 3);
-        setupLottie("storeContainer", "assets/data/store.json", 0, 2.4);
-        setupLottie("personnelAffairsContainer", "assets/data/personnel-affairs.json", 0, 3);
-        setupLottie("mintinanceContainer", "assets/data/mintinance.json", 0, 3);
-        setupLottie("lawContainer", "assets/data/law.json", 0, 3);
-        setupLottie("delegatesContainer", "assets/data/delegates.json", 0, 3);
-        setupLottie("schoolsContainer", "assets/data/schools.json", 0, 3);
-        setupLottie("contractorsContainer", "assets/data/contractors.json", 0, 2);
-        setupLottie("supplierManagementContainer", "assets/data/supplierManagement.json", 0, 2.1);
-        setupLottie("shippingContainer", "assets/data/shipping.json", 0, 3);
-        setupLottie("loyaltyContainer", "assets/data/loyalty.json", 0, 4);
-        setupLottie("productionManufacturingContainer", "assets/data/productionManufacturing.json", 0, 4);
-        setupLottie("pointsOfSaleContainer", "assets/data/pointsOfSale.json", 0, 3.6);
-        setupLottie("fixedAssetsContainer", "assets/data/fixedAssets.json", 0, 4);
-        setupLottie("realEstateContainer", "assets/data/realEstate.json", 0, 3);
-        setupLottie("CRMContainer", "assets/data/CRM.json", 0, 4);
-        setupLottie("fuelContainer", "assets/data/fuel.json", 1, 5);
-    </script>
-    <script defer>
-        function setupLaptopAuto(containerId, jsonPath, startSec, endSec) {
-            const anim = lottie.loadAnimation({
-                container: document.getElementById(containerId),
-                renderer: "svg",
-                loop: true,
-                autoplay: false,
-                path: jsonPath,
-            });
-            anim.addEventListener("DOMLoaded", () => {
-                const frameRate = anim.frameRate || 30;
-                const start = Math.round(startSec * frameRate);
-                const end = Math.round(endSec * frameRate);
-                anim.playSegments([start, end], true);
-            });
-        }
-        setupLaptopAuto("laptopLayer", "assets/data/labtop.json", 0, 4);
-    </script>
-    <script defer>
-        var animation = lottie.loadAnimation({
+        // شغل الأنيميشن
+        const [id, path, start, end] = lottieContainers.find(c => c[0] === entry.target.id);
+        if (id === "pointContainer") {
+          const anim = lottie.loadAnimation({
             container: document.getElementById("pointContainer"),
             renderer: "svg",
             loop: true,
             autoplay: true,
-            path: "assets/data/point.json",
-        });
-        animation.setSpeed(0.3);
-    </script>
+            path: path,
+          });
+          anim.setSpeed(0.3);
+        } else {
+          setupLottie(id, path, start, end);
+        }
+
+        obs.unobserve(entry.target); // بطل تراقبه بعد ما يتشغل
+      }
+    });
+  }, { threshold: 0.1 });
+
+  // فعل المراقبة
+  lottieContainers.forEach(([id]) => {
+    const el = document.getElementById(id);
+    if (el) observer2.observe(el);
+  });
+</script>
+
 </body>
 </html>

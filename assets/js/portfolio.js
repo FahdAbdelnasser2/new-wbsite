@@ -1,18 +1,1 @@
-// Portfolio filter
-const filterButtons = document.querySelectorAll(".filter-btn");
-const portfolioItems = document.querySelectorAll(".portfolio-item");
-
-filterButtons.forEach((button) =>
-  button.addEventListener("click", () => {
-    filterButtons.forEach((btn) => btn.classList.remove("active"));
-    button.classList.add("active");
-
-    const filterValue = button.getAttribute("data-filter");
-    portfolioItems.forEach((item) => {
-      item.style.display =
-        filterValue === "all" || item.classList.contains(filterValue)
-          ? "block"
-          : "none";
-    });
-  })
-);
+const filterButtons=document.querySelectorAll(".filter-btn"),portfolioItems=document.querySelectorAll(".portfolio-item");filterButtons.forEach(a=>a.addEventListener("click",()=>{filterButtons.forEach(a=>a.classList.remove("active")),a.classList.add("active");const b=a.getAttribute("data-filter");portfolioItems.forEach(a=>{a.style.display="all"===b||a.classList.contains(b)?"block":"none"})}));
