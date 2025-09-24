@@ -50,18 +50,30 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="assets/css/newCss.css" />
+
+    <!-- ✅ Fix CLS -->
     <style>
-      .register-wrap {
-        min-height: 500px; /* أو حسب التصميم */
+      /* ثبّت الشعار */
+      .logo {
+        width: 160px;
+        height: 70px;
+        aspect-ratio: 160 / 70;
+        max-width: 100%;
       }
-      .register-form .input-group {
-        min-height: 70px; /* عشان حتى لو ظهر Error ما يزقش العناصر */
-      }
-      .register-form .btn {
+
+      /* ثبّت ارتفاع موحّد للأزرار والـ input */
+      .form-control {
         min-height: 48px;
       }
-      .register-form .form-control {
-        min-height: 48px;  /* ارتفاع ثابت */
+
+      .btn {
+        min-height: 48px;
+      }
+
+      /* ثبّت أيقونة جوجل */
+      .google-btn img {
+        width: 24px;
+        height: 24px;
       }
     </style>
   </head>
