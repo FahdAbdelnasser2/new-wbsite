@@ -43,6 +43,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="assets/css/newCss.css" />
   </head>
   <body>
@@ -626,26 +630,24 @@
       </div>
     </nav>
     <section id="hero" class="hero-section section-padding">
-      <div class="hero-bg">
-        <div class="floating-particles"></div>
-        <div class="grid-overlay"></div>
-      </div>
       <div class="container">
         <div class="hero-container row align-items-center mt-4 mt-lg-5">
           <div class="hero-content col-lg-6">
-            <!-- <div class="hero-badge">
-              <span>مرحباً بك في رايتو</span>
-            </div> -->
+            <div class="hero-badge">
+              <span>استعد السيطرة الكاملة على مشروعك</span>
+            </div>
             <h1 class="hero-title">
               <span class="title-word">نظام</span>
               <span class="title-word highlight">ERP</span>
-              <span class="title-word">شامل</span>
-              <span class="title-word">تخصيص مرن،<br />دعم فني مستمر</span>
+              <span class="title-word">واحد ..</span>
+              <span class="title-word mt-1"
+                >يُفصل خصيصاً ليتطابق مع حمضك النووي التجاري</span
+              >
             </h1>
             <p class="hero-subtitle">
-              رايتو ERP يجمع كل ما تحتاجه لإدارة أعمالك في نظام واحد <br />
-              مرونة في التخصيص، أداء سريع، دعم فني دائم، مرونة مطلقة<br />
-              وتقنيات حديثة تضمن كفاءة واستقرار التشغيل.
+              مهما كان قطاعك (تجاري، خدمي، صناعي)، لا تجبر شركتك على التأقلم مع
+              أنظمة جامدة. امتلك نظاماً سحابياً يمنحك السيطرة الكاملة، يدعم
+              الفوترة الإلكترونية، وينمو مع توسع أعمالك.
             </p>
             <div class="hero-buttons">
               <button
@@ -654,16 +656,17 @@
                 data-bs-target="#demo-form"
                 aria-label="فتح نموذج النسخة التجريبية"
               >
-                <span>نسخة تجريبية</span>
+                <span>صمم نسختك الخاصة</span>
                 <div class="btn-arrow">→</div>
               </button>
               <a
-                class="btn-secondary text-decoration-none"
-                href="https://wa.me/966538499438"
-                aria-label="التواصل عبر واتساب"
+                class="btn-secondary text-decoration-none watch-system-btn"
+                href="#"
+                aria-label="شاهد النظام يعمل"
+                id="watchSystemBtn"
               >
-                <i class="fab fa-whatsapp fs-4"></i>
-                تواصل معنا
+                <i class="fas fa-play-circle fs-4 me-2"></i>
+                شاهد النظام يعمل
               </a>
             </div>
           </div>
@@ -695,8 +698,90 @@
         </div>
       </div>
     </section>
+    <!-- Section: Business Chaos or Management? -->
+    <section class="chaos-management-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">هل تدير أعمالك أم أن الفوضى هي من تديرك؟</h2>
+          <p class="section-subtitle">
+            بغض النظر عن مجالك، نمو شركتك يتوقف عندما تواجه هذه العقبات:
+          </p>
+        </div>
 
-    <section id="portfolio" class="portfolio-section bg-gray">
+        <div class="chaos-cards-grid">
+          <!-- Card 1: Lack of Vision -->
+          <div class="chaos-card chaos-card-1">
+            <div class="card-icon-Business-wrapper">
+              <div class="icon-bg icon-bg-purple"></div>
+              <i class="fas fa-eye-slash card-icon-Business"></i>
+            </div>
+            <h3 class="card-title">غياب الرؤية</h3>
+            <p class="card-description">
+              هل يمكنك معرفة أرباحك ومخزونك الحقيقي الآن في هذه اللحظة؟ القرارات الصحيحة تحتاج لبيانات لحظية.
+            </p>
+          </div>
+
+          <!-- Card 2: Fraud & Waste -->
+          <div class="chaos-card chaos-card-2">
+            <div class="card-icon-Business-wrapper">
+              <div class="icon-bg icon-bg-orange"></div>
+              <i class="fas fa-sack-dollar card-icon-Business"></i>
+            </div>
+            <h3 class="card-title">ثغرات التلاعب والهدر</h3>
+            <p class="card-description">
+              هل تثق بمدخلات الموظفين 100%؟ أم أنك تخسر أرباحاً يومية بسبب التلاعب في الخصومات أو فروقات المخزون؟
+            </p>
+          </div>
+
+          <!-- Card 3: Rigid Systems -->
+          <div class="chaos-card chaos-card-3">
+            <div class="card-icon-Business-wrapper">
+              <div class="icon-bg icon-bg-red"></div>
+              <i class="fas fa-lock card-icon-Business"></i>
+            </div>
+            <h3 class="card-title">أنظمة لا تقبل التعديل</h3>
+            <p class="card-description">
+              هل تعاني من برامج عبارة عن قوالب ثابتة تفرض عليك تغيير طريقة عملك، وتطلب مبالغ طائلة لأي تعديل؟
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Video Popup Modal -->
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="videoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content video-modal-content">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="إغلاق"
+          >
+            <i class="fas fa-xmark"></i>
+          </button>
+          <div class="modal-body p-0">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="systemDemoVideo"
+                src="https://www.youtube.com/embed/1Q8fG0TtVAY"
+                title="شاهد النظام يعمل"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                style="border-radius: 16px"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="portfolio" class="portfolio-section section-padding bg-gray">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">أعمالنا</h2>
@@ -711,13 +796,6 @@
             الكل
           </button>
           <button
-            aria-label="عرض مشاريع المواقع"
-            class="filter-btn"
-            data-filter="web"
-          >
-            مواقع
-          </button>
-          <button
             aria-label="عرض مشاريع التطبيقات"
             class="filter-btn"
             data-filter="mobile"
@@ -725,15 +803,15 @@
             تطبيقات
           </button>
           <button
-            aria-label="عرض مشاريع التصميم"
+            aria-label="عرض مشاريع المواقع"
             class="filter-btn"
-            data-filter="design"
+            data-filter="web"
           >
-            تصميم
+            مواقع
           </button>
         </div>
         <div class="portfolio-grid">
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="accountingContainer" class="w-100 project-preview">
                 <div>
@@ -743,7 +821,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item mobile" data-category="mobile">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="purchesContainer" class="w-100 project-preview">
                 <div>
@@ -753,7 +831,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item design" data-category="design">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="storeContainer" class="w-100 project-preview">
                 <div>
@@ -763,7 +841,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="personnelAffairsContainer" class="w-100 project-preview">
                 <div>
@@ -773,7 +851,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="mintinanceContainer" class="w-100 project-preview">
                 <div>
@@ -783,7 +861,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="lawContainer" class="w-100 project-preview">
                 <div>
@@ -793,7 +871,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="delegatesContainer" class="w-100 project-preview">
                 <div>
@@ -803,7 +881,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="schoolsContainer" class="w-100 project-preview">
                 <div>
@@ -813,7 +891,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="contractorsContainer" class="w-100 project-preview">
                 <div>
@@ -823,7 +901,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div
                 id="supplierManagementContainer"
@@ -836,7 +914,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="shippingContainer" class="w-100 project-preview">
                 <div>
@@ -846,7 +924,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="loyaltyContainer" class="w-100 project-preview">
                 <div>
@@ -856,7 +934,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div
                 id="productionManufacturingContainer"
@@ -869,7 +947,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="pointsOfSaleContainer" class="w-100 project-preview">
                 <div>
@@ -879,7 +957,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="fixedAssetsContainer" class="w-100 project-preview">
                 <div>
@@ -889,7 +967,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="realEstateContainer" class="w-100 project-preview">
                 <div>
@@ -899,7 +977,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="CRMContainer" class="w-100 project-preview">
                 <div>
@@ -909,7 +987,7 @@
               </div>
             </div>
           </div>
-          <div class="portfolio-item web" data-category="web">
+          <div class="portfolio-item" data-category="all">
             <div class="portfolio-image">
               <div id="fuelContainer" class="w-100 project-preview">
                 <div>
@@ -926,14 +1004,12 @@
     <section class="demo-div section-padding">
       <div class="container">
         <div class="row align-items-center mx-0">
-          <div class="col-md-6 order-1">
+          <div class="col-md-7 order-1">
             <div class="banner">
               <h2 class="section-title">
-                نظام متكامل قابل للتخصيص<br />ليناسب أكثر من 50 مجالًا مختلفًا
+                رايتو يجمع كل أعمالك في منصة واحدة موثوقة.
               </h2>
-              <p class="my-4">
-                سجل حسابك مع رايتو الآن بسهولة دون الحاجة إلى بطاقة ائتمان
-              </p>
+              <h5 class="my-4">أوقف الهدر المالي والتلاعب الآن!</h5>
               <button
                 class="btn-primary"
                 data-bs-toggle="modal"
@@ -945,7 +1021,7 @@
               </button>
             </div>
           </div>
-          <div class="col-md-6 order-2">
+          <div class="col-md-5 order-2">
             <img
               src="assets/img/man-hand-mobile.webp"
               alt="صورة توضيحية للهاتف المحمول"
@@ -957,10 +1033,203 @@
       </div>
     </section>
 
-    <section id="sales-system" class="section-padding">
+    <section id="faul-system" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">حلول متخصصة تتحدث لغة قطاعك</h2>
+          <p class="section-subtitle">
+            نحن لا نقدم قوالب عامة، بل حلولاً تفهم تفاصيل عملك اليومية
+          </p>
+        </div>
+        <div class="row mx-0">
+          <div class="col-lg-6 bg-layer mb-5 mb-lg-0">
+            <div class="section-image text-center">
+              <img
+                src="assets/Asset-system/faul.jpg"
+                alt="صورة توضيحية لنظام تأهيل محطات الوقود"
+                class=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row mx-0">
+              <div class="col-12">
+                <h2 class="section-title-side">
+                  <i class="fas fa-gas-pump mx-1 text-gradient"></i>
+                  قطاع الطاقة ومحطات الوقود
+                </h2>
+                <p class="section-subtitle mb-3">
+                  ربط كامل مع وزارة الطاقة والمضخات، إدارة المخزون في الخزانات،
+                  ومتابعة الورديات بدقة متناهية.
+                </p>
+              </div>
+              <!-- <div class="col-12">
+                <p class="hero-description2 mb-3 mb-lg-5">
+                  احصل عليه الآن بعرض خاص لفترة محدودة سواء كنت تدير محطة واحدة
+                  أو سلسلة محطات، بنظامنا يمنحك رؤية موحدة لكل عملياتك لحظة
+                  بلحظة، مما يساعدك في اتخاذ قرارات أسرع وأذكى<br />دقة × سرعة ×
+                  تحكم = أتمتة
+                </p>
+              </div> -->
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-gas-pump"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">متطلبات وزارة الطاقة</h5>
+                    <p class="text-muted">
+                      نلتزم بمعايير وزارة الطاقة في كل تفصيلة من نظامنا
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-charging-station"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">قراءة آلية للعدادات</h5>
+                    <p class="text-muted">
+                      قرارات أسرع بفضل بيانات تأتيك مباشرة من أرض المحطة إلى
+                      مكتبك
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-oil-can"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">تنبيهات بالخطأ أو النقص</h5>
+                    <p class="text-muted">
+                      نقص في الوقود؟ خطأ في البيانات؟ <br />
+                      تنبيه لحظي ينقذ الموقف
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-fire"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">دعم فني قوي</h5>
+                    <p class="text-muted">
+                      ليس مجرد نظام قوى نحن دائما نسعى لحل مشكلتك قبل ان تصبح
+                      مشكلة حقيقية
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-4">
+                <a
+                  class="text-gradient fs-5"
+                  target="_blank"
+                  href="Programs-Personnel.html"
+                  aria-label="قراءة المزيد عن نظام تأهيل محطات الوقود"
+                >
+                  قراءة المزيد
+                  <i class="fa-solid fa-arrow-left align-bottom"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sales-system">
       <div class="container">
         <div class="row mx-0 align-items-center justify-content-between">
-          <div class="col-lg-5 mb-5 mb-lg-0">
+          <div class="col-lg-6 order-lg-1 order-2">
+            <div class="row mx-0">
+              <div class="col-12">
+                <h2 class="section-title-side">
+                  <i
+                    class="fas fa-shopping-cart mx-1 text-gradient align-middle"
+                  ></i>
+                  قطاع التجزئة والتوزيع
+                </h2>
+                <p class="section-subtitle mb-3">
+                  إدارة خطوط الإنتاج وحساب التكاليف للمصانع. إدارة مناديب، خطوط
+                  سير، ورقابة مخزون صارمة للتجزئة.
+                </p>
+                <!-- <p class="hero-description2 mb-3 mb-lg-5">
+                  "رايتو مش مجرد نظام -ERP- رايتو بينزل معاك لحد أرض الواقع — من
+                  مكانك لآخر نقطة بيع — عن طريق تطبيق المندوب الذكي."
+                </p> -->
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-cash-register"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">تحكم كامل في صلاحيات المستخدمين</h5>
+                    <p class="text-muted">
+                      تقدر تحدد مهام وصلاحيات لكل من المشرف، والمندوب، والعميل
+                      حسب احتياجك
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-barcode"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">تتبع لحظي لموقع المناديب</h5>
+                    <p class="text-muted">
+                      تتبع لحظي لموقع المناديب والمستخدمين والعملاء والمشرفين
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-receipt"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">نقاط بيع ذكية</h5>
+                    <p class="text-muted">بيع أسرع، متابعة أدق، نتائج أوضح</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="feature-item-2 mb-2">
+                  <div class="feature-icon-2">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5 class="mb-1">تكاليف تصنيع دقيقة</h5>
+                    <p class="text-muted">
+                      حساب التكاليف للمصانع والمناديب كل يوم
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mt-4">
+                <a
+                  class="text-gradient fs-5"
+                  target="_blank"
+                  href="Programs-delegates.html"
+                  aria-label="قراءة المزيد عن نظام المبيعات"
+                >
+                  قراءة المزيد
+                  <i class="fa-solid fa-arrow-left align-middle"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 mb-5 mb-lg-0 order-lg-2 order-1">
             <div class="video-container">
               <div class="video-wrapper">
                 <video
@@ -989,91 +1258,24 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="row mx-0">
-              <div class="col-12">
-                <h2 class="section-title-side">
-                  <i
-                    class="fas fa-shopping-cart mx-1 text-gradient align-middle"
-                  ></i>
-                  نظام المبيعات
-                </h2>
-                <p class="section-subtitle mb-3">
-                  نظام مبيعات متكامل + تطبيق مندوب ذكي = قوة بيع حقيقية
-                </p>
-                <p class="hero-description2 mb-3 mb-lg-5">
-                  "رايتو مش مجرد نظام -ERP- رايتو بينزل معاك لحد أرض الواقع — من
-                  مكانك لآخر نقطة بيع — عن طريق تطبيق المندوب الذكي."
-                </p>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-item-2 mb-2">
-                  <div class="feature-icon-2">
-                    <i class="fas fa-cash-register"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h3 class="mb-1">تحكم كامل في صلاحيات المستخدمين</h3>
-                    <p class="text-muted">
-                      تقدر تحدد مهام وصلاحيات لكل من المشرف، والمندوب، والعميل
-                      حسب احتياجك
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-item-2 mb-2">
-                  <div class="feature-icon-2">
-                    <i class="fas fa-barcode"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h3 class="mb-1">تتبع لحظي لموقع المناديب</h3>
-                    <p class="text-muted">عشان تعرف دايمًا كل مندوب فين</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-item-2 mb-2">
-                  <div class="feature-icon-2">
-                    <i class="fas fa-receipt"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h3 class="mb-1">بيع أسرع، متابعة أدق، نتائج أوضح</h3>
-                    <p class="text-muted">جرّب النظام الآن</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-item-2 mb-2">
-                  <div class="feature-icon-2">
-                    <i class="fas fa-chart-line"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h3 class="mb-1">تقارير المبيعات</h3>
-                    <p class="text-muted">تحليلات مفصلة لأداء المبيعات</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 mt-4">
-                <a
-                  class="text-gradient fs-5"
-                  target="_blank"
-                  href="Programs-delegates.html"
-                  aria-label="قراءة المزيد عن نظام المبيعات"
-                >
-                  قراءة المزيد
-                  <i class="fa-solid fa-arrow-left align-middle"></i>
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section id="accounting-system" class="bg-gray section-padding">
+    <section id="accounting-system" class="section-padding">
       <div class="container">
         <div class="row mx-0">
-          <div class="col-lg-6 order-lg-1 order-2">
+          <div class="col-lg-6 bg-layer mb-5 mb-lg-0">
+            <div class="section-image text-center">
+              <img
+                src="assets/Asset-system/daftara.jpg"
+                alt="صورة توضيحية لنظام الحسابات"
+                class=""
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
             <div class="row mx-0">
               <div class="col-12">
                 <h2 class="section-title-side">
@@ -1154,117 +1356,43 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6 bg-layer order-lg-2 order-1 mb-5 mb-lg-0">
-            <div class="section-image text-center">
-              <img
-                src="assets/Asset-system/daftara.jpg"
-                alt="صورة توضيحية لنظام الحسابات"
-                class=""
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faul-system" class="section-padding">
-      <div class="container">
-        <div class="row mx-0">
-          <div class="col-lg-6 bg-layer order-lg-1 order-1 mb-5 mb-lg-0">
-            <div class="section-image text-center">
-              <img
-                src="assets/Asset-system/faul.jpg"
-                alt="صورة توضيحية لنظام تأهيل محطات الوقود"
-                class=""
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-2 order-2">
-            <div class="row mx-0">
-              <div class="col-12">
-                <h2 class="section-title-side">
-                  <i class="fas fa-gas-pump mx-1 text-gradient"></i>
-                  نظام تأهيل محطات الوقود
-                </h2>
-                <p class="section-subtitle mb-3">
-                  نظام وقود ذكي متكامل لإدارة المبيعات والمخزون والمضخات
-                </p>
-              </div>
-              <div class="col-12">
-                <p class="hero-description2 mb-3 mb-lg-5">
-                  احصل عليه الآن بعرض خاص لفترة محدودة سواء كنت تدير محطة واحدة
-                  أو سلسلة محطات، بنظامنا يمنحك رؤية موحدة لكل عملياتك لحظة
-                  بلحظة، مما يساعدك في اتخاذ قرارات أسرع وأذكى<br />دقة × سرعة ×
-                  تحكم = أتمتة
-                </p>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-item-2 mb-2">
-                  <div class="feature-icon-2">
-                    <i class="fas fa-gas-pump"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h3 class="mb-1">متطلبات وزارة الطاقة</h3>
-                    <p class="text-muted">
-                      نلتزم بمعايير وزارة الطاقة في كل تفصيلة من نظامنا
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-item-2 mb-2">
-                  <div class="feature-icon-2">
-                    <i class="fas fa-charging-station"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h3 class="mb-1">تقارير لحظية</h3>
-                    <p class="text-muted">
-                      قرارات أسرع بفضل بيانات توصلك أول بأول من أرض المحطة إلى
-                      مكتبك
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-item-2 mb-2">
-                  <div class="feature-icon-2">
-                    <i class="fas fa-oil-can"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h3 class="mb-1">تنبيهات بالخطأ أو النقص</h3>
-                    <p class="text-muted">
-                      نقص في الوقود؟ خطأ في البيانات؟ تنبيه لحظي ينقذ الموقف
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="feature-item-2 mb-2">
-                  <div class="feature-icon-2">
-                    <i class="fas fa-fire"></i>
-                  </div>
-                  <div class="feature-content">
-                    <h3 class="mb-1">دعم فني قوي</h3>
-                    <p class="text-muted">
-                      مش بس نظام قوي كمان فريق أقوى وراك بنحل مشكلتك قبل ما تبقى
-                      مشكلة
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 mt-4">
-                <a
-                  class="text-gradient fs-5"
-                  target="_blank"
-                  href="Programs-Personnel.html"
-                  aria-label="قراءة المزيد عن نظام تأهيل محطات الوقود"
+          <div class="col-12 pt-5">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <div
+                  class="d-flex align-items-center justify-content-center"
+                  style="
+                    width: 56px;
+                    height: 56px;
+                    background: #f3f4f6;
+                    border-radius: 50%;
+                  "
                 >
-                  قراءة المزيد
-                  <i class="fa-solid fa-arrow-left align-bottom"></i>
-                </a>
+                  <i
+                    class="fa-solid fa-layer-group"
+                    style="font-size: 2rem; color: #374151"
+                  ></i>
+                </div>
+                <div>
+                  <h3
+                    class="fw-bold mb-1"
+                    style="color: #181c2a; font-size: 1.25rem"
+                  >
+                    قطاعات أخرى
+                  </h3>
+                  <p class="mb-0" style="color: #6b7280; font-size: 1.08rem">
+                    ندعم المدارس، إدارة العقارات، النقليات، والخدمات اللوجستية
+                    بحلول مخصصة.
+                  </p>
+                </div>
               </div>
+              <a
+                href="business-sector.html"
+                class="btn-primary text-decoration-none"
+              >
+                <span>تصفح كافة حلول القطاعات</span>
+                <div class="btn-arrow">→</div>
+              </a>
             </div>
           </div>
         </div>
@@ -1294,10 +1422,12 @@
     <section id="customization" class="customization-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">لماذا تعتمد على رايتو</h2>
-          <p class="section-subtitle">
+          <h2 class="section-title">
+            لماذا تختار رايتو شريكاً لرحلتك الرقمية؟
+          </h2>
+          <!-- <p class="section-subtitle">
             نصمم الحلول خصيصاً لتناسب احتياجاتك الفريدة
-          </p>
+          </p> -->
         </div>
         <div class="customization-grid">
           <div class="custom-card">
@@ -1305,10 +1435,13 @@
               <div class="card-icon">
                 <i class="fas fa-coins"></i>
               </div>
-              <h3>سعر مناسب لك</h3>
+              <h3>تخصيص حقيقي يناسبك</h3>
             </div>
             <div class="card-content">
-              <p>يتمكن عملاؤنا من تقليل التكاليف التشغيلية</p>
+              <p>
+                بخلاف البرامج الجاهزة التى تفرض عليك طريقتها، فريقنا الهندسي
+                جاهز لتعديل النظام ليناسب طريقة عملك الخاصة.
+              </p>
               <ul>
                 <li>تعديل النظام مجاناً حتى يناسبك</li>
                 <li>متوافق مع المعايير الحكومية</li>
@@ -1321,10 +1454,13 @@
               <div class="card-icon">
                 <i class="fas fa-code"></i>
               </div>
-              <h3>تخصيص الوظائف</h3>
+              <h3>دعم محلي احترافي</h3>
             </div>
             <div class="card-content">
-              <p>تطوير وظائف مخصصة تلبي متطلباتك التشغيلية الخاصة</p>
+              <p>
+                لا داعي لفتح تذاكر وانتظار أيام. فريق دعم فني احترافي معك خطوة
+                بخطوة حتى يستقر نظامك.
+              </p>
               <ul>
                 <li>وحدات مخصصة</li>
                 <li>تدفقات عمل فريدة</li>
@@ -1337,10 +1473,29 @@
               <div class="card-icon">
                 <i class="fas fa-database"></i>
               </div>
-              <h3>تخصيص البيانات</h3>
+              <h3>سرعة في التنفيذ</h3>
             </div>
             <div class="card-content">
-              <p>هياكل بيانات مرنة تتكيف مع طبيعة عملك</p>
+              <p>
+                ابدأ العمل الفعلي على نظامك خلال أسبوع واحد، دون مشاريع تنفيذ
+                تمتد لشهور.
+              </p>
+              <ul>
+                <li>قواعد بيانات مرنة</li>
+                <li>حقول مخصصة</li>
+                <li>تصنيفات فريدة</li>
+              </ul>
+            </div>
+          </div>
+          <div class="custom-card">
+            <div class="card-header">
+              <div class="card-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3>شريك حقيقي</h3>
+            </div>
+            <div class="card-content">
+              <p>رايتو يساعدك في قرارات التوسع وبيع الامتياز التجاري بسهوله.</p>
               <ul>
                 <li>قواعد بيانات مرنة</li>
                 <li>حقول مخصصة</li>
@@ -1352,7 +1507,448 @@
       </div>
       <div class="customization-shapes"></div>
     </section>
+    <!-- Logo Start -->
+    <section class="digtal-marketing-logo section-padding pt-0">
+      <div class="container">
+            <div class="section-header">
+              <h2 class="section-title">شركات رائدة وضعت ثقتها في رايتو</h2>
+            </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="swiper digi-logo-slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/hader01.webp"
+                        class="img-fluid"
+                        height="30"
+                        alt="image 1"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/hader02.webp"
+                        class="img-fluid"
+                        height="30"
+                        alt="image 2"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/hader03.webp"
+                        class="img-fluid"
+                        height="30"
+                        alt="image 3"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/hader04.webp"
+                        class="img-fluid"
+                        height="30"
+                        alt="image 4"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/hader05.webp"
+                        class="img-fluid"
+                        height="30"
+                        alt="image 5"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/hader06.webp"
+                        class="img-fluid"
+                        height="30"
+                        alt="image 6"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/hader07.webp"
+                        class="img-fluid"
+                        height="30"
+                        alt="image 7"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/hader08.webp"
+                        class="img-fluid"
+                        height="30"
+                        alt="image 8"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/hader09.webp"
+                        class="img-fluid"
+                        height="30"
+                        alt="image 9"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="single-logo">
+                      <img
+                        src="assets/img/hader10.webp"
+                        class="img-fluid"
+                        height="30"
+                        alt="image 10"
+                        loading="lazy"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="swiper-button-prev"
+                  aria-label="الانتقال إلى الشعار السابق"
+                ></div>
+                <div
+                  class="swiper-button-next"
+                  aria-label="الانتقال إلى الشعار التالي"
+                ></div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <!-- Logo End -->
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <!-- <span class="section-badge">آراء عملائنا</span> -->
+          <h2 class="section-title">ماذا يقول عملاؤنا عنا</h2>
+          <p class="section-subtitle">
+            نفخر بثقة عملائنا وتجاربهم الناجحة مع حلولنا البرمجية المتقدمة
+          </p>
+        </div>
 
+        <div class="row mx-0 justify-content-between align-items-center">
+          <!-- Content Section -->
+          <div class="col-lg-6 testimonial-content-section">
+            <img
+              src="assets/img/quotes-left.svg"
+              alt="testimonial quote"
+              width="65"
+              class="img-fluid mb-4"
+            />
+            <!-- Testimonial Content 1 -->
+            <div class="testimonial-tab-content active" data-tab="1">
+              <div
+                class="testimonial-title"
+                data-video="https://www.youtube.com/embed/1Q8fG0TtVAY"
+              >
+                Best Template for SAAS Company
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <p class="testimonial-text">
+                رايتو غيّر طريقة إدارتنا للمحطة بالكامل. النظام سهل، الدعم
+                ممتاز، والربط مع وزارة الطاقة تلقائي. وفرنا ساعات من العمل
+                اليدوي والأخطاء انتهت تماماً. Competently repurpose cost
+                effective strategic theme areas and customer directed
+                meta-services.
+              </p>
+
+              <div class="testimonial-author">
+                <div>
+                  <h3 class="author-name">Hanry Luice</h3>
+                  <p class="author-position">App Developer</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Content 2 -->
+            <div class="testimonial-tab-content" data-tab="2">
+              <div
+                class="testimonial-title"
+                data-video="https://www.youtube.com/embed/1Q8fG0TtVAY"
+              >
+                أفضل نظام محاسبي تعاملت معه
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <p class="testimonial-text">
+                قبل رايتو كنا نعاني من عدم دقة المخزون وتأخر التقارير. الآن كل
+                شيء مرتب، المناديب يشتغلون بكفاءة، والتقارير تطلع لحظياً.
+                استثمار يستحق كل ريال ودفعناه في النظام.
+              </p>
+
+              <div class="testimonial-author">
+                <div>
+                  <h3 class="author-name">Ami Nijai</h3>
+                  <p class="author-position">Customer Support</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Content 3 -->
+            <div class="testimonial-tab-content" data-tab="3">
+              <div
+                class="testimonial-title"
+                data-video="https://www.youtube.com/embed/3fumBcKC6RE"
+              >
+                مرونة وتخصيص استثنائي
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <p class="testimonial-text">
+                التخصيص في رايتو شيء رائع. عدّلوا النظام ليناسب طريقة عملنا
+                بالضبط. الدعم الفني سريع ومحترف، وما احتجنا نغير عملياتنا عشان
+                نتأقلم مع البرنامج. النظام تأقلم معنا نحن!
+              </p>
+
+              <div class="testimonial-author">
+                <div>
+                  <h3 class="author-name">Jon Doe</h3>
+                  <p class="author-position">Software Engineer</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Content 4 -->
+            <div class="testimonial-tab-content" data-tab="4">
+              <div
+                class="testimonial-title"
+                data-video="https://www.youtube.com/embed/4qT7Udx0i6E"
+              >
+                حل متكامل لجميع الأقسام
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <p class="testimonial-text">
+                نظام شامل ومتكامل. من المحاسبة للمخازن للمبيعات، كل شيء في منصة
+                واحدة. سهّل علينا الرقابة على الفروع، وقلل التلاعب بشكل كبير.
+                أنصح به بشدة لأي شركة تريد التطور.
+              </p>
+
+              <div class="testimonial-author">
+                <div>
+                  <h3 class="author-name">Rupan Oberoi</h3>
+                  <p class="author-position">Web Designer</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial Content 5 -->
+            <div class="testimonial-tab-content" data-tab="5">
+              <div
+                class="testimonial-title"
+                data-video="https://www.youtube.com/embed/5qap5aO4i9A"
+              >
+                تحول رقمي حقيقي
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+
+              <p class="testimonial-text">
+                رايتو ساعدنا نحقق التحول الرقمي الكامل لشركتنا. التقارير
+                التفصيلية والتحليلات الذكية خلتنا ناخذ قرارات مبنية على بيانات
+                حقيقية. شكراً لفريق رايتو على الدعم المستمر!
+              </p>
+
+              <div class="testimonial-author">
+                <div>
+                  <h3 class="author-name">Joe Richard</h3>
+                  <p class="author-position">Visual Designer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Video Section -->
+          <div class="col-lg-5 testimonial-video-section">
+            <div class="video-testimonial-wrapper">
+              <img
+                src="assets/img/1.webp"
+                alt="شهادة فيديو"
+                class="video-thumbnail"
+                loading="lazy"
+              />
+              <div class="video-overlay">
+                <!-- <div class="play-button">
+                  <i class="fas fa-play"></i>
+                </div> -->
+              </div>
+              <div
+                class="watch-video-text"
+                data-bs-toggle="modal"
+                data-bs-target="#testimonialVideo"
+                id="testimonialVideoTrigger"
+              >
+                <i class="fas fa-play-circle"></i>
+                <span>Watch Video</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Tabs -->
+        <div class="testimonial-tabs">
+          <div class="testimonial-tab active" data-tab="1">
+            <div class="tab-avatar">
+              <img
+                src="assets/img/hader01.webp"
+                alt="Hanry Luice"
+                loading="lazy"
+              />
+            </div>
+            <div class="tab-info">
+              <h4>Hanry Luice</h4>
+              <p>App Developer</p>
+            </div>
+          </div>
+
+          <div class="testimonial-tab" data-tab="2">
+            <div class="tab-avatar">
+              <img
+                src="assets/img/hader02.webp"
+                alt="Ami Nijai"
+                loading="lazy"
+              />
+            </div>
+            <div class="tab-info">
+              <h4>Ami Nijai</h4>
+              <p>Customer Support</p>
+            </div>
+          </div>
+
+          <div class="testimonial-tab" data-tab="3">
+            <div class="tab-avatar">
+              <img
+                src="assets/img/hader03.webp"
+                alt="Jon Doe"
+                loading="lazy"
+              />
+            </div>
+            <div class="tab-info">
+              <h4>Jon Doe</h4>
+              <p>Software Engineer</p>
+            </div>
+          </div>
+
+          <div class="testimonial-tab" data-tab="4">
+            <div class="tab-avatar">
+              <img
+                src="assets/img/hader04.webp"
+                alt="Rupan Oberoi"
+                loading="lazy"
+              />
+            </div>
+            <div class="tab-info">
+              <h4>Rupan Oberoi</h4>
+              <p>Web Designer</p>
+            </div>
+          </div>
+
+          <div class="testimonial-tab" data-tab="5">
+            <div class="tab-avatar">
+              <img
+                src="assets/img/hader05.webp"
+                alt="Joe Richard"
+                loading="lazy"
+              />
+            </div>
+            <div class="tab-info">
+              <h4>Joe Richard</h4>
+              <p>Visual Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div
+      class="modal fade"
+      id="testimonialVideo"
+      tabindex="-1"
+      aria-labelledby="testimonialVideoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content video-modal-content">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="إغلاق"
+          >
+            <i class="fas fa-xmark"></i>
+          </button>
+          <div class="modal-body p-0">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="testimonialVideoFrame"
+                src=""
+                title="شهادة عميل"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                style="border-radius: 16px"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- <section id="newsletter" class="section newsletter-section">
         <div class="newsletter-bg">
             <div class="cyber-grid"></div>
@@ -1409,6 +2005,72 @@
             </div>
         </div>
     </section> -->
+
+    <!-- Latest Articles Section -->
+    <section class="latest-articles-section">
+      <div class="container">
+        <div class="articles-header">
+          <h2 class="articles-title">كن سابقاً بخطوة في عالم الأعمال المتغير</h2>
+          <p class="articles-subtitle">
+            رؤى دورية حول أنظمة الفوترة، تحديثات وزارة الطاقة، وتقنيات الأتمتة التي تضعك في المقدمة أمام منافسيك.
+          </p>
+        </div>
+
+        <div class="articles-content">
+          <div class="articles-placeholder">
+            <div class="articles-placeholder-icon">
+              <i class="fas fa-newspaper"></i>
+            </div>
+            <p>أحدث المقالات والرؤى حول تطوير أعمالك</p>
+          </div>
+        </div>
+
+        <div class="articles-cta">
+          <a 
+            href="Blog.html"
+            class="btn-primary articles-btn"
+            aria-label="اقرأ أحدث المقالات"
+          >
+            <span>اقرأ أحدث المقالات</span>
+            <div class="btn-arrow">→</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section - Free Demo -->
+    <section class="cta-demo-section">
+      <div class="container">
+        <div class="cta-demo-content">
+          <h2 class="cta-demo-title">لا تدفع ريالاً واحداً قبل أن تتأكد</h2>
+          <p class="cta-demo-subtitle">
+            دعنا نثبت لك عملياً كيف نحل مشاكلك في جلسة تجريبية خاصة بشركتك
+          </p>
+          
+          <div class="cta-demo-buttons">
+            <button 
+              class="btn-primary cta-demo-primary"
+              data-bs-toggle="modal" 
+              data-bs-target="#demo-form"
+              aria-label="احجز ديمو مجاني"
+            >
+              <span>احجز ديمو مجاني لإثبات التجربة</span>
+              <div class="btn-arrow">→</div>
+            </button>
+            <a 
+              href="https://wa.me/966538499438?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%A8%D8%AD%D8%AB%20%D8%B9%D9%86%20%D9%86%D8%B8%D8%A7%D9%85%20ERP%20%D9%85%D8%B9%20%D9%81%D8%B1%D9%8A%D9%82%20%D8%AF%D8%B9%D9%85%20%D9%81%D9%86%D9%8A%20%D8%AD%D9%82%D9%8A%D9%82%D9%8A%20%D9%88%D8%B3%D8%B1%D9%8A%D8%B9%D8%8C%20%D9%84%D8%A7%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A3%D9%86%20%D9%8A%D8%AA%D8%B9%D8%B7%D9%84%20%D8%B9%D9%85%D9%84%D9%8A.%20%D9%83%D9%8A%D9%81%20%D8%AA%D8%B6%D9%85%D9%86%D9%88%D9%86%20%D8%B0%D9%84%D9%83%D8%9F" 
+              class="btn-whatsapp-cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="تواصل معنا عبر واتساب"
+            >
+              <i class="fab fa-whatsapp"></i>
+              <span>تواصل معنا عبر واتساب</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div class="footer-bg">
@@ -1777,6 +2439,8 @@
       <i class="fas fa-arrow-up"></i>
     </button>
     <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+        <script src="assets/js/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/swiper.js" defer></script>
     <script src="assets/js/chang-langth.js" defer></script>
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/portfolio.js" defer></script>
