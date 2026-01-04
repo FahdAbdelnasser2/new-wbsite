@@ -3,7 +3,7 @@ const swiper = new Swiper(".digi-logo-slider", {
   slidesPerView: 4,
   spaceBetween: 30,
   autoplay: {
-    delay: 3500,
+    delay: 2500,
     disableOnInteraction: false,
     pauseOnMouseEnter: true
   },
@@ -13,16 +13,20 @@ const swiper = new Swiper(".digi-logo-slider", {
   },
   breakpoints: {
     320: {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 10
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 20
     },
     1024: {
       slidesPerView: 5,
       spaceBetween: 30
+    },
+    1400: {
+      slidesPerView: 7,
+      spaceBetween: 24
     }
   }
 });
