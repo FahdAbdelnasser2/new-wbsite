@@ -10,7 +10,7 @@
     --main-color: #17aabd;
     --secondary-color: #6cce69;
     --dark-color: #1a202c;
-    --light-color: #f8fafc;
+    --light-color: white;
     --text-color: #2d3748;
     --border-color: #e2e8f0;
     --glass-bg: hsla(0, 0%, 100%, .1);
@@ -1130,9 +1130,9 @@ body {
 
 .feature-icon {
     align-items: center;
-    background: var(--gradient-secondary);
+    background: var(--secondary-color);
     border-radius: 50%;
-    box-shadow: 0 10px 25px rgba(23, 170, 189, .3);
+    box-shadow: 0 10px 25px rgba(23, 189, 31, 0.3);
     color: #fff;
     display: flex;
     font-size: 28px;
@@ -2670,20 +2670,8 @@ body {
     overflow: hidden;
 }
 
-.problem-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: var(--gradient-primary);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
 .problem-card:hover {
-    border-color: var(--main-color);
+    border-color: var(--secondary-color);
     box-shadow: 0 10px 30px rgba(23, 170, 189, 0.15);
     transform: translateY(-5px);
 }
@@ -2694,7 +2682,7 @@ body {
 
 .card-icon {
     font-size: 2.5rem;
-    color: var(--main-color);
+    color: var(--secondary-color);
     margin-bottom: 1rem;
 }
 
@@ -2718,10 +2706,6 @@ body {
 }
 
 /* Section 3: Solutions */
-.solutions-section {
-    background: var(--light-color);
-}
-
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -2744,7 +2728,8 @@ body {
 
 .feature-icon {
     font-size: 3rem;
-    color: var(--main-color);
+    color: white;
+    /* color: var(--secondary-color); */
     margin-bottom: 1.5rem;
 }
 
@@ -2790,18 +2775,6 @@ body {
     align-items: center;
 }
 
-.customization-text h2 {
-    font-size: 2.2rem;
-    color: var(--dark-color);
-    margin-bottom: 1rem;
-    font-weight: 800;
-}
-
-.customization-text .section-subtitle {
-    color: var(--main-color);
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-}
 
 .description-text {
     color: var(--text-light);
@@ -2989,7 +2962,7 @@ body {
 }
 
 .bg-light {
-    background: var(--light-color);
+    background: var(--white) !important;
 }
 
 /* Responsive */

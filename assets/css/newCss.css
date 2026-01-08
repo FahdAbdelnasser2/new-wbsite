@@ -120,7 +120,7 @@ body {
 }
 
 .text-color {
-    color: var(--text-color);
+    color: var(--text-color) !important;
 }
 
 .loading-screen {
@@ -347,7 +347,7 @@ body[dir="rtl"] .form-select {
     color: #000;
     font-size: 4rem;
     font-weight: 900;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 2.5rem;
     /* min-height: 190px; */
 }
@@ -362,11 +362,14 @@ body[dir="rtl"] .form-select {
     display: inline-block
 }
 
-.feature-icon-2 i, .highlight, .text-gradient {
+.feature-icon-2 i, .highlight, .text-gradient, .highlight-2 {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text
+    background-clip: text;
+}
+ .highlight-2 {
+    height: 84px;
 }
 
 .hero-subtitle {
@@ -1378,7 +1381,7 @@ a {
 
 .footer-bottom {
     align-items: center;
-    border-top: 1px solid #334155;
+    border-top: 1px solid #ccc;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -1403,7 +1406,7 @@ a {
     align-items: center;
     display: flex;
     gap: 12px;
-    margin-top: 24px
+    margin: 24px 0;
 }
 
 .footer-section .footer-app .app-store, .footer-section .footer-app .google-play {
@@ -1745,10 +1748,17 @@ a {
     }
 }
 
+@media (min-width:480px) and (max-width:1200px) {
+    .highlight-2 {
+        height: 64px;
+    }
+}
+
 @media (min-width:991px) and (max-width:1200px) {
     .title-word {
         font-size: 50px
     }
+
 }
 
 @media (max-width:991px) {
@@ -1878,6 +1888,10 @@ a {
         font-size: 1.2rem;
         height: 50px;
         width: 50px
+    }
+
+    .highlight-2 {
+        height: 42px;
     }
 }
 
@@ -4225,7 +4239,12 @@ select {
         right: -45px;
         top: 58px
     }
-
+.footer-logos {
+    width: 100% !important;
+            /* grid-template-columns: 0.5fr !important; */
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) !important;
+                    gap: 15px !important;
+}
     .banner h5,
     .banner .section-title {
         text-align: center !important;
@@ -10173,12 +10192,15 @@ select {
 .btn-whatsapp-cta i {
     font-size: 1.4rem;
 }
+
 a {
     color: inherit;
 }
+
 a:hover {
     color: var(--secondary-color);
 }
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .cta-demo-title {
@@ -10937,6 +10959,13 @@ a:hover {
     line-height: 1.7;
     font-size: 0.95rem;
 }
+
 .Industry-icon {
     width: 200px;
+}
+.footer-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    width: 70%;
 }
