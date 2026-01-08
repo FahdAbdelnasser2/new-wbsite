@@ -2558,9 +2558,9 @@ body {
     transform: translateY(-2px)
 }
 
-a {
+/* a {
     color: var(--main-color)
-}
+} */
 
 .swiper-navigation-icon {
     font-size: 13px
@@ -2962,58 +2962,6 @@ a {
 .booking-image {
     display: flex;
     justify-content: center;
-}
-
-/* Section 7: FAQ */
-.faq-section {
-    background: var(--light-color);
-}
-
-.faq-container {
-    max-width: 800px;
-    margin: 3rem auto 0;
-}
-
-.faq-item {
-    margin-bottom: 1.5rem;
-}
-
-.faq-header {
-    width: 100%;
-    background: #fff;
-    border: 2px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: right;
-    font-weight: 600;
-    color: var(--dark-color);
-}
-
-.faq-header:hover {
-    border-color: var(--main-color);
-    background: #f8fafb;
-}
-
-.faq-header i {
-    transition: transform 0.3s ease;
-    color: var(--main-color);
-}
-
-.faq-header[aria-expanded="true"] i {
-    transform: rotate(180deg);
-}
-
-.faq-body {
-    background: #fff;
-    padding: 1.5rem;
-    color: var(--text-light);
-    line-height: 1.7;
-    font-size: 0.95rem;
 }
 
 /* Section Padding */

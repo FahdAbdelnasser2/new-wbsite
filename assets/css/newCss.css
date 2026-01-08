@@ -400,7 +400,7 @@ body[dir="rtl"] .form-select {
 
 .btn-primary {
     background: var(--gradient-primary);
-    color: var(--light-color)
+    color: var(--light-color) !important;
 }
 
 .btn-primary:hover {
@@ -1299,7 +1299,7 @@ img.logo {
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    margin-bottom: 3rem
+    margin-bottom: 2rem
 }
 
 .footer-section h4 {
@@ -10173,7 +10173,12 @@ select {
 .btn-whatsapp-cta i {
     font-size: 1.4rem;
 }
-
+a {
+    color: inherit;
+}
+a:hover {
+    color: var(--secondary-color);
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .cta-demo-title {
@@ -10879,4 +10884,59 @@ select {
     .card-description {
         font-size: 0.95rem;
     }
+}
+
+/* Section 7: FAQ */
+.faq-section {
+    background: var(--light-color);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+}
+
+.faq-header {
+    width: 100%;
+    background: #fff;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: right;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.faq-header:hover {
+    border-color: var(--secondary-color);
+    background: #f8fafb;
+}
+
+.faq-header i {
+    transition: transform 0.3s ease;
+    color: var(--secondary-color);
+}
+
+.faq-header[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+.faq-body {
+    background: #fff;
+    padding: 1.5rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+.Industry-icon {
+    width: 200px;
 }
