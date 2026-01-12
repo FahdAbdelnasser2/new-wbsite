@@ -11002,7 +11002,7 @@ a:hover {
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: right;
@@ -11263,11 +11263,6 @@ a:hover {
         font-size: 1.5rem;
     }
 }
-    background: #f8fafb;
-    cursor: pointer;
-    font-weight: 500;
-    min-width: 100px;
-}
 
 .phone-input input {
     flex: 1;
@@ -11337,10 +11332,9 @@ a:hover {
         font-size: 1.5rem;
     }
 }
-}
 
 .Industry-icon {
-    width: 200px;
+    width: 150px;
 }
 .footer-logos {
     display: grid;
