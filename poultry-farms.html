@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="نظام رايتو لمزارع الدواجن، ERP الدواجن، إدارة الدورات، حساب تكلفة الدجاج"
+    />
+    <meta
+      name="description"
+      content="رايتو: نظام ERP متخصص لمزارع الدواجن. احسب تكلفة الدجاجة بدقة، أغلق الدورات جزئياً، وتابع النافق آلياً. مع دعم الفاتورة الإلكترونية."
+    />
+    <meta name="author" content="رايتو - نظام إدارة مزارع الدواجن" />
+    <meta
+      property="og:title"
+      content="رايتو: نظام إدارة مزارع الدواجن - حساب التكاليف والدورات"
+    />
+    <meta property="og:type" content="Website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="assets/img/LOGO.png" />
+    <link href="assets/img/LOGO.png" rel="shortcut icon" />
+    <title>نظام رايتو لمزارع الدواجن - Raito ERP Poultry Farms</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      href="assets/css/bootstrap.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/bootstrap.min.css"
+    /></noscript>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/newCss2.css" />
+    <link rel="stylesheet" href="assets/css/newCss.css" />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a
+            class="logo-icon"
+            href="index.html"
+            aria-label="الذهاب إلى الصفحة الرئيسية"
+          >
+            <img src="assets/img/logoar.webp" alt="" class="mw-100" />
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li>
+            <a
+              href="index.html"
+              class="nav-link"
+              aria-label="الذهاب إلى الصفحة الرئيسية"
+              >الرئيسية</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="nav-link"
+              aria-label="الذهاب إلى صفحة من نحن"
+              >من نحن</a
+            >
+          </li>
+          <li class="nav-item mega-parent">
+            <a
+              href="business-sector.html"
+              class="nav-link text-center active"
+              aria-label="عرض قطاعات الأعمال"
+              >قطاعات اعمالنا ▾</a
+            >
+          </li>
+          <li class="nav-item mega-parent">
+            <a
+              href="services.html"
+              class="nav-link text-center"
+              aria-label="عرض التطبيقات"
+              >التطبيقات ▾</a
+            >
+          </li>
+          <li class="nav-item mega-parent">
+            <a
+              href="services.html"
+              class="nav-link text-center"
+              aria-label="عرض مجتمعنا"
+              >مجتمعنا ▾</a
+            >
+          </li>
+          <li>
+            <a
+              href="prices.html"
+              class="nav-link"
+              aria-label="الذهاب إلى صفحة الأسعار"
+              >اسعارنا</a
+            >
+          </li>
+          <li>
+            <a
+              href="Blog.html"
+              class="nav-link"
+              aria-label="الذهاب إلى صفحة المدونة"
+              >المدونة</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="nav-link"
+              aria-label="الذهاب إلى صفحة تواصل معنا"
+              >تواصل معنا</a
+            >
+          </li>
+          <li class="lang-item">
+            <div class="language-switcher">
+              <button
+                class="lang-btn btn border-0"
+                id="arabic-btn"
+                aria-label="التحويل إلى اللغة العربية"
+                title="التحويل إلى اللغة العربية"
+              >
+                <img
+                  src="assets/Asset-system/icon/Flag-Saudi-Arabia.png"
+                  alt="علم السعودية"
+                  width="24"
+                  class="me-2 align-middle"
+                />
+                العربية
+              </button>
+              <button
+                class="lang-btn btn border-0"
+                id="english-btn"
+                aria-label="التحويل إلى اللغة الإنجليزية"
+                title="التحويل إلى اللغة الإنجليزية"
+              >
+                <img
+                  src="assets/Asset-system/icon/united-kingdom.png"
+                  alt="علم المملكة المتحدة"
+                  width="24"
+                  class="ms-2 align-bottom"
+                />
+                English
+              </button>
+            </div>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Section 1: Hero Section -->
+    <section id="hero" class="hero-section section-padding bg-light">
+      <div class="container">
+        <div
+          class="hero-container row align-items-center justify-content-center mt-4 mt-lg-5"
+        >
+          <div class="hero-content text-center col-lg-10 col-xl-9">
+            <h1 class="hero-title text-dark">
+              رايتو لإدارة <span class="highlight">مزارع الدواجن</span><br>
+              احسب تكلفة "الطير الواحد" بدقة وتتبع الدورة من الصوص إلى البيع
+            </h1>
+            <p class="hero-subtitle text-color">
+              لا تدع الهدر في العلف أو "النافق" يأكل أرباحك. احصل على نظام يدير "دورة القطيع" بالكامل، يوزع الإيجارات والرواتب آلياً على كل دورة، ويدعم "الإغلاق الجزئي" للبيع المرحلي بدقة مالية متناهية.
+            </p>
+            <div class="hero-buttons justify-content-center align-items-start">
+              <div>
+                <a
+                  href="contact.html"
+                  class="btn-primary"
+                  aria-label="صمّم نسختك لإدارة المزارع"
+                >
+                  <span>صمّم نسختك لإدارة المزارع</span>
+                  <div class="btn-arrow">→</div>
+                </a>
+              </div>
+
+              <button
+                class="btn-secondary text-decoration-none watch-system-btn"
+                aria-label="شاهد ديمو إدارة الدورات"
+                id="watchSystemBtn"
+              >
+                <i class="fas fa-play-circle fs-4 me-2"></i>
+                شاهد ديمو إدارة الدورات
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Problems Grid -->
+    <section class="problems-grid-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">
+            هل تذوب أرباح المزرعة في تفاصيل "العلف والنافق"؟
+          </h2>
+          <p class="section-subtitle">
+            التحديات الحقيقية التي تواجه مزارع الدواجن وتؤثر على الربحية والإنتاجية
+          </p>
+        </div>
+        <div class="problems-grid">
+          <div class="problem-card">
+            <div class="card-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3>التكلفة الغامضة</h3>
+            <p class="card-question">
+              هل تعرف التكلفة الحقيقية للدجاجة أو طبق البيض اليوم؟
+            </p>
+            <p class="card-description">
+              صعوبة حساب نصيب الطير الواحد من (الكهرباء، الإيجار، أدوية التحصين) يجعلك تبيع بسعر قد يكون أقل من التكلفة الحقيقية دون أن تدري.
+            </p>
+            <a
+              href="contact.html"
+              class="text-gradient fs-5"
+              aria-label="اعرف أين تذهب أموال العلف"
+              >
+              اعرف أين تذهب أموال العلف
+              <i class="fa-solid fa-arrow-left align-middle"></i
+            ></a>
+          </div>
+
+          <div class="problem-card">
+            <div class="card-icon">
+              <i class="fas fa-boxes-stacked"></i>
+            </div>
+            <h3>الإغلاق والبيع المرحلي</h3>
+            <p class="card-question">
+              هل تواجه فوضى محاسبية عند بيع القطيع على مراحل؟
+            </p>
+            <p class="card-description">
+              الأنظمة العادية لا تدعم "الإغلاق الجزئي للدورة"؛ مما يجعلك عاجزاً عن فصل تكلفة ما تم بيعه عما لا يزال يستهلك علفاً في العنبر.
+            </p>
+            <a
+              href="contact.html"
+              class="text-gradient fs-5"
+              aria-label="بع إنتاجك بمراحل دون تعقيد"
+              >
+              بع إنتاجك بمراحل دون تعقيد
+              <i class="fa-solid fa-arrow-left align-middle"></i
+            ></a>
+          </div>
+
+          <div class="problem-card">
+            <div class="card-icon">
+              <i class="fas fa-triangle-exclamation"></i>
+            </div>
+            <h3>مخاطر البيئة والنفوق</h3>
+            <p class="card-question">
+              هل تتفاجأ بارتفاع "نسبة النافق" أو نفاد العلف فجأة؟
+            </p>
+            <p class="card-description">
+              غياب التنبيهات المبكرة عن نقص المخزون أو تغير حرارة العنبر قد يؤدي لكارثة نفوق جماعي وخسارة الدورة كاملة.
+            </p>
+            <a
+              href="contact.html"
+              class="text-gradient fs-5"
+              aria-label="احمِ مزرعتك من الخسائر الخفية"
+              >
+              احمِ مزرعتك من الخسائر الخفية
+              <i class="fa-solid fa-arrow-left align-middle"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Technical Solutions -->
+    <section class="solutions-section section-padding bg-gray">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">حلول بيطرية ومالية لحماية "رأس المال الحي"</h2>
+          <p class="section-subtitle">
+            ثلاث ميزات حصرية تقنية تحمي استثمارك وتضمن دقة الحسابات المالية
+          </p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-circle-notch"></i>
+            </div>
+            <h3>إدارة دورة القطيع الكاملة<br />(Batch Cycle)</h3>
+            <p>
+              تتبع دقيق يبدأ من شراء الصيصان وتسكينها، مروراً بصرف الأعلاف والتطعيمات يومياً، وصولاً للبيع. النظام يحسب "نسبة النافق" (Mortality Rate) ويخصمها من الأصول آلياً.
+            </p>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-check-circle"></i> تتبع القطيع يوماً بيوم
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> حساب نسبة النافق تلقائياً
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> صرف الأعلاف والأدوية على الدورة
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> تقارير إنتاجية يومية وشاملة
+              </li>
+            </ul>
+            <a
+              href="contact.html"
+              class="text-gradient fs-5"
+              aria-label="تتبع القطيع يوماً بيوم"
+              >تتبع القطيع يوماً بيوم
+              <i class="fa-solid fa-arrow-left align-middle"></i
+            ></a>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-money-bill-trend-up"></i>
+            </div>
+            <h3>التوزيع الآلي للتكاليف غير المباشرة<br />(Overheads Distribution)</h3>
+            <p>
+              لا حاجة للحسابات اليدوية المعقدة؛ النظام يقوم بتوزيع (رواتب العمال، فواتير الكهرباء، إيجار الأرض) آلياً على الدورة القائمة، ليخرج لك صافي الربح الحقيقي بدقة.
+            </p>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-check-circle"></i> توزيع الرواتب والإيجار آلياً
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> توزيع فواتير الكهرباء والمياه
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> حساب صافي الربح بدقة
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> تقارير تحليلية للتكاليف
+              </li>
+            </ul>
+            <a
+              href="contact.html"
+              class="text-gradient fs-5"
+              aria-label="وزّع الرواتب والإيجار آلياً"
+              >وزّع الرواتب والإيجار آلياً
+              <i class="fa-solid fa-arrow-left align-middle"></i
+            ></a>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-door-open"></i>
+            </div>
+            <h3>الإغلاق الجزئي للدورة<br />(Partial Batch Closure)</h3>
+            <p>
+              ميزة فريدة تتيح لك إخراج الناتج (بيع الدجاج) على مراحل وأيام مختلفة، مع احتساب تكلفة مختلفة لكل مرحلة بناءً على ما استهلكته من علف ووقت، دون إقفال الدورة كاملة.
+            </p>
+            <ul class="features-list">
+              <li>
+                <i class="fas fa-check-circle"></i> بيع متدرج للقطيع
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> حساب تكلفة كل مرحلة على حدة
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> استمرار الدورة للبقية
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> فواتير منفصلة لكل مرحلة
+              </li>
+            </ul>
+            <a
+              href="contact.html"
+              class="text-gradient fs-5"
+              aria-label="بع على مراحل بدقة"
+              >بع على مراحل بدقة
+              <i class="fa-solid fa-arrow-left align-middle"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section - Success Story -->
+    <section class="cta-demo-section">
+      <div class="container">
+        <div class="cta-demo-content">
+          <div class="cta-demo-header">
+            <h2 class="cta-demo-title">سواء كنت "لاحم" أو "بياض"، النظام يفهم دورتك</h2>
+            <p class="cta-demo-subtitle">
+              ندرك الاختلاف الكبير بين مزارع التسمين (اللاحم) ومزارع إنتاج البيض. فريق رايتو يخصص النظام ليحسب لك تكلفة "الكيلو" في التسمين، أو تكلفة "الطبق/الكرتونة" في البياض، مع تقارير إنتاجية مخصصة لكل نوع.
+            </p>
+          </div>
+
+          <!-- Success Story Card -->
+          <div class="success-story-card">
+            <div class="success-story-header">
+              <div class="success-story-icon">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <div>
+                <h3 class="success-story-title">نجاح التخصيص: مزارع الدواجن</h3>
+                <span class="success-story-badge">✓ نجاح مثبت في الميدان</span>
+              </div>
+            </div>
+            
+            <div class="success-story-content">
+              يمكننا ربط تكلفة "الطبق البلاستيك" و"الكرتون" بمصاريف التعبئة والتغليف في مزارع البيض، لتظهر ضمن تكلفة المنتج النهائي وليست كمصروف عام. نظام رايتو يتكيّف مع أي نوع دواجن تختص فيه.
+            </div>
+
+            <div class="success-story-metrics">
+              <div class="metric-item">
+                <span class="metric-value">حساب دقيق</span>
+                <span class="metric-label">لتكلفة الطير الواحد</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">إغلاق جزئي</span>
+                <span class="metric-label">للبيع المرحلي</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value">فواتير إلكترونية</span>
+                <span class="metric-label">معتمدة من ZATCA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-demo-buttons">
+            <a
+              href="contact.html"
+              class="btn-whatsapp-cta"
+              rel="noopener noreferrer"
+              aria-label="تواصل واتساب للاستفسار"
+            >
+            <span>تواصل واتساب للاستفسار</span>
+            <div class="btn-arrow">→</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Hardware & Software Integration -->
+    <section class="integration-section section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title">تكنولوجيا تحمي القطيع (IoT & Integration)</h2>
+          <p class="section-subtitle">
+            إمكانية الربط مع حساسات (IoT) لمراقبة درجات الحرارة والرطوبة، وتنبيهات آلية عند نقص العلف، مع فواتير ضريبية معتمدة.
+          </p>
+        </div>
+        <div class="integration-grid">
+          <div class="integration-item">
+            <div class="integration-icon">
+              <i class="fas fa-thermometer-half"></i>
+            </div>
+            <h3>حساسات درجة الحرارة (IoT)</h3>
+            <p>
+              مراقبة فورية لدرجات الحرارة والرطوبة في الحظائر مع تنبيهات آلية.
+            </p>
+          </div>
+          <div class="integration-item">
+            <div class="integration-icon">
+              <i class="fas fa-scale-balanced"></i>
+            </div>
+            <h3>موازين إلكترونية ذكية</h3>
+            <p>
+              قياس دقيق لأوزان القطيع وتتبع معدل النمو يومياً.
+            </p>
+          </div>
+          <div class="integration-item">
+            <div class="integration-icon">
+              <i class="fas fa-receipt"></i>
+            </div>
+            <h3>الفاتورة الإلكترونية ZATCA</h3>
+            <p>
+              فواتير ضريبية معتمدة للعملاء (مسالخ، تجار جملة).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="demo-div section-padding">
+      <div class="container">
+        <div class="row align-items-center mx-0">
+          <div class="col-md-7 col-lg-8 order-1">
+            <div class="banner">
+              <h2 class="section-title">
+                رايتو يجمع كل أعمالك في منصة واحدة موثوقة.
+              </h2>
+              <h5 class="my-4 mx-1">أوقف ارتفاع نسبة النافق و اعرف ارباح مزرعتك لحظياً الآن!</h5>
+              <a
+                href="contact.html"
+                class="btn-primary"
+                aria-label="راقب حرارة العنابر آلياً"
+              >
+                <i class="fas fa-rocket"></i>
+                <span>راقب حرارة العنابر آلياً</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-md-5 order-2">
+            <img
+              src="assets/img/man-hand-mobile.webp"
+              alt="صورة توضيحية للهاتف المحمول"
+              class="img-man"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section 6: Demo Booking -->
+    <section class="demo-booking-section-new section-padding">
+      <div class="container">
+        <div class="booking-content">
+          <div class="booking-text">
+            <h2 class="section-title text-end">الإدارة الصحيحة تسبق الربح</h2>
+            <p class="booking-subtitle">
+              دعنا نريك كيف يضبط رايتو تكاليف العلف والأدوية، ويمنحك السيطرة الكاملة على دورات الإنتاج.
+            </p>
+            <div class="booking-points">
+              <div class="point-item">
+                <i class="fas fa-check"></i>
+                <p>حساب دقيق لتكلفة الدجاجة الواحدة</p>
+              </div>
+              <div class="point-item">
+                <i class="fas fa-check"></i>
+                <p>إغلاق جزئي للدورات والبيع المرحلي</p>
+              </div>
+              <div class="point-item">
+                <i class="fas fa-check"></i>
+                <p>تنبيهات آلية لحماية القطيع</p>
+              </div>
+            </div>
+            <a
+              href="contact.html"
+              class="btn-primary"
+              aria-label="احجز ديمو نظام المزارع"
+            >
+              <span>احجز ديمو نظام المزارع</span>
+              <div class="btn-arrow">→</div>
+            </a>
+          </div>
+          <div class="booking-image">
+            <div class="image-placeholder">
+              <i class="fas fa-dove"></i>
+              <p>نظام إدارة دواجن متطور</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: FAQ -->
+    <section class="faq-section-new section-padding">
+      <div class="container">
+        <div class="faq-wrapper">
+          <div class="faq-left">
+            <div class="faq-container">
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                  aria-expanded="false"
+                >
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-circle-notch"></i>
+                    </div>
+                    <span>هل يتتبع النظام "دورة حياة" القطيع من البداية للنهاية؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq1" class="collapse">
+                  <div class="faq-body">
+                    <p>نعم، النظام يدير "دورة القطيع" (Batch Cycle) بالكامل: بدءاً من شراء الصيصان وتسكينها في الحظيرة، مروراً بتسجيل المصاريف اليومية (علف/أدوية)، وحتى البيع وإغلاق الدورة.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                  aria-expanded="false"
+                >
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-calculator"></i>
+                    </div>
+                    <span>هل يستطيع النظام حساب تكلفة "الدجاجة الواحدة" بدقة؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq2" class="collapse">
+                  <div class="faq-body">
+                    <p>نعم، يقوم النظام بجمع كافة المصاريف المباشرة (علف، صوص) وغير المباشرة (كهرباء، عمالة) وقسمتها على عدد الطيور المنتجة (بعد خصم النافق) ليعطيك التكلفة الدقيقة للطير.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3"
+                  aria-expanded="false"
+                >
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-door-open"></i>
+                    </div>
+                    <span>ما هي ميزة "الإغلاق الجزئي" للدورة؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq3" class="collapse">
+                  <div class="faq-body">
+                    <p>هذه ميزة حيوية تتيح لك بيع جزء من القطيع اليوم، وإبقاء الجزء الآخر لأيام قادمة. النظام يحسب تكلفة المباع اليوم، ويستمر في حساب تكلفة المتبقي بشكل منفصل حتى يتم بيعه.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq4"
+                  aria-expanded="false"
+                >
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-skull"></i>
+                    </div>
+                    <span>كيف يتم التعامل مع "النافق" (Mortality) في النظام؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq4" class="collapse">
+                  <div class="faq-body">
+                    <p>يتم تسجيل عدد النافق يومياً، ويقوم النظام بخصمه من "رأس المال الحي" (المخزون) وتوزيعه كخسارة أو تكلفة على باقي القطيع الحي، لضمان دقة حساب التكلفة.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq5"
+                  aria-expanded="false"
+                >
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-money-bill-trend-up"></i>
+                    </div>
+                    <span>هل يقوم النظام بتوزيع الرواتب والإيجارات على الدورة آلياً؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq5" class="collapse">
+                  <div class="faq-body">
+                    <p>نعم، يتميز رايتو بالقدرة على التوزيع الآلي للمصاريف العمومية (Overheads) على الدورات النشطة، فلا تحتاج لحساب نصيب الدورة من الإيجار يدوياً.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq6"
+                  aria-expanded="false"
+                >
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-bell"></i>
+                    </div>
+                    <span>هل يوجد تنبيهات لنقص العلف أو المشاكل البيئية؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq6" class="collapse">
+                  <div class="faq-body">
+                    <p>نعم، يعطي النظام تنبيهات عند وصول مخزون العلف لحد الخطر. كما يمكن ربطه بحساسات (IoT) لمراقبة حرارة ورطوبة العنابر لتفادي الكوارث البيئية.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq7"
+                  aria-expanded="false"
+                >
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-dove"></i>
+                    </div>
+                    <span>هل يناسب النظام مزارع "البياض" و"التسمين"؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq7" class="collapse">
+                  <div class="faq-body">
+                    <p>نعم، النظام مرن. في "التسمين" نركز على الوزن والتحويل العلفي، وفي "البياض" نركز على إنتاجية البيض اليومية وتكلفة الطبق، وندعم كلا النموذجين.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq8"
+                  aria-expanded="false"
+                >
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-receipt"></i>
+                    </div>
+                    <span>هل يدعم النظام الفاتورة الإلكترونية لبيع الجملة (للمسالخ)؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq8" class="collapse">
+                  <div class="faq-body">
+                    <p>نعم، يصدر النظام فواتير ضريبية إلكترونية متوافقة مع هيئة الزكاة والضريبة والجمارك (ZATCA)، سواء كنت تبيع لعملاء أفراد أو شركات ومسالخ.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq9"
+                  aria-expanded="false"
+                >
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-pills"></i>
+                    </div>
+                    <span>هل يمكن تتبع استهلاك الأدوية والتحصينات؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq9" class="collapse">
+                  <div class="faq-body">
+                    <p>بالتأكيد. يتم صرف الأدوية من المخزن على "رقم الدورة" (Batch Number)، مما يتيح لك معرفة تكلفة التحصين لكل طير بدقة ومراقبة المخزون الدوائي.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq10"
+                  aria-expanded="false"
+                >
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-chart-line"></i>
+                    </div>
+                    <span>كيف يساعد النظام في معرفة ربحية الدورة؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq10" class="collapse">
+                  <div class="faq-body">
+                    <p>يوفر النظام تقرير "تحليل ربحية الدورة" فور إغلاقها، يوضح: إجمالي المبيعات - (تكلفة الصوص + العلف + الأدوية + المصاريف الموزعة) = صافي الربح الفعلي.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="faq-right">
+            <div class="faq-contact-box">
+                <h2 class="faq-title">الأسئلة الشائعة</h2>
+                <div class="content-description">
+                  إجابات شاملة على أكثر الأسئلة التي يطرحها مزارعو الدواجن
+                </div>
+                <br>
+                <p class="faq-description">
+                  نظام رايتو ERP مصمم خصيصاً لقطاع مزارع الدواجن بأحدث التقنيات والتكامل الكامل مع إدارة الدورات والتكاليف. يوفر النظام حلاً متكاملاً يجمع بين حساب التكاليف الدقيق والإغلاق الجزئي للدورات، مع دعم كامل للفاتورة الإلكترونية والتنبيهات الآلية.
+                  <br><br>
+                  من خلال الأتمتة الذكية والحساب الدقيق للتكاليف، يمكنك الوصول إلى صافي ربح فعلي وضبط كامل على عمليات المزرعة بنسبة تصل إلى 35% زيادة في الربحية.
+                </p>
+
+              <h3 class="contact-title">هل لديك سؤال آخر؟</h3>
+              <p class="contact-description">
+                فريق رايتو المتخصص في قطاع مزارع الدواجن جاهز للإجابة على جميع
+                استفساراتك وتقديم الدعم الكامل
+              </p>
+              <form id="faqQuestionForm" onsubmit="handleFaqSubmit(event)">
+              <div class="contact-form">
+                <div class="form-group">
+                  <textarea id="faqQuestion" placeholder="اكتب سؤالك هنا..." aria-label="السؤال" rows="5" required></textarea>
+                </div>
+              </div>
+              <button type="submit" class="submit-contact-btn" aria-label="إرسال">
+                إرسال
+              </button>
+              </form>
+              <p class="support-text">
+                <i class="fas fa-check-circle"></i>
+                نرد على جميع الاستفسارات خلال 24 ساعة
+              </p>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Video Popup Modal -->
+    <div
+      class="modal fade"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="videoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content video-modal-content">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="إغلاق"
+          >
+            <i class="fas fa-xmark"></i>
+          </button>
+          <div class="modal-body p-0">
+            <div class="ratio ratio-16x9">
+              <iframe
+                id="systemDemoVideo"
+                src="https://www.youtube.com/embed/1Q8fG0TtVAY"
+                title="شاهد النظام يعمل"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+                style="border-radius: 16px"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray">
+      <div class="footer-bg">
+        <div class="footer-pattern"></div>
+      </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-logo">
+              <a
+                class="logo-icon"
+                href="index.html"
+                aria-label="الذهاب إلى الصفحة الرئيسية"
+              >
+                <img
+                  src="assets/img/logoar.webp"
+                  alt=""
+                  class="mw-100"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+            <div class="footer-logos">
+              <a
+                class="Industry-icon"
+                href="https://www.mim.gov.sa/ar"
+                aria-label="زيارة موقع وزارة الصناعة والثروة المعدنية"
+              >
+                <img
+                  src="assets/img/industry.png"
+                  alt="شعار وزارة الصناعة والثروة المعدنية"
+                  class="mw-100"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                class="Industry-icon"
+                href="https://www.moenergy.gov.sa/ar"
+                aria-label="زيارة موقع وزارة الطاقة"
+              >
+                <img
+                  src="assets/img/taqa.png"
+                  alt="شعار وزارة الطاقة"
+                  class="mw-100"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                class="Industry-icon"
+                href="https://zatca.gov.sa/ar/Pages/default.aspx"
+                aria-label="زيارة موقع هيئة الزكاة والضريبة والجمارك"
+              >
+                <img
+                  src="assets/img/zakat.png"
+                  alt="شعار هيئة الزكاة والضريبة والجمارك"
+                  class="mw-100"
+                  loading="lazy"
+                />
+              </a>
+              <a
+                class="Industry-icon"
+                href="https://www.geidea.net/egy/ar"
+                aria-label="زيارة موقع جيديا"
+              >
+                <img
+                  src="assets/img/geidea.png"
+                  alt="شعار جيديا"
+                  class="mw-100"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h3>عناوين سريعة</h3>
+            <ul>
+              <li>
+                <a href="#" aria-label="الذهاب إلى الصفحة الرئيسية">الرئيسية</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة من نحن">من نحن</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة التطبيقات">تطبيقات</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة الأسعار">الأسعار</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة المدونة">المدونة</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة تواصل معنا"
+                  >تواصل معنا</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>خدماتنا</h3>
+            <ul>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة نظام إدارة مزارع الدواجن">نظام إدارة مزارع الدواجن</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة نظام إدارة المخزون">نظام إدارة المخزون</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة نظام المبيعات">نظام المبيعات والحسابات</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة نظام الشحن">نظام الشحن والمناديب</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة نظام محطات الوقود">نظام محطات الوقود</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة نظام العقارات">نظام العقارات</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>تواصل معنا</h3>
+            <div class="contact-info">
+              <p>
+                <i class="fas fa-map-marker-alt"></i
+                ><a
+                  href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9"
+                  aria-label="زيارة موقعنا على الخريطة"
+                  >الرياض، المملكة العربية السعودية</a
+                >
+              </p>
+              <p>
+                <i class="fas fa-phone"></i
+                ><a href="tel:+966538499438" aria-label="الاتصال بنا"
+                  >+966538499438</a
+                >
+              </p>
+              <p>
+                <i class="fas fa-envelope"></i
+                ><a
+                  href="mailto:info@raitotec.com"
+                  aria-label="إرسال بريد إلكتروني"
+                  >info@raitotec.com</a
+                >
+              </p>
+            </div>
+            <div class="footer-social">
+              <a
+                href="https://www.facebook.com/Raitotec"
+                target="_blank"
+                aria-label="زيارة صفحة فيسبوك"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a
+                href="https://twitter.com/raitotec"
+                target="_blank"
+                aria-label="زيارة صفحة تويتر"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/raitotec1/"
+                target="_blank"
+                aria-label="زيارة صفحة إنستغرام"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/raito-erp-software-830920234/"
+                target="_blank"
+                aria-label="زيارة صفحة لينكدإن"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/@Raitotec"
+                target="_blank"
+                aria-label="زيارة قناة يوتيوب"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                href="https://wa.me/+966539387625?text=I'm%20interested%20in%20your%20website"
+                target="_blank"
+                aria-label="التواصل عبر واتساب"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="copyright">
+            <p>&copy; 2025 جميع الحقوق محفوظة لدى شركة رايتو للبرمجيات.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#" aria-label="الذهاب إلى صفحة سياسة الخصوصية"
+              >سياسة الخصوصية</a
+            >
+            <a href="#" aria-label="الذهاب إلى صفحة شروط الاستخدام"
+              >شروط الاستخدام</a
+            >
+            <a href="#" aria-label="الذهاب إلى صفحة ملفات الارتباط"
+              >ملفات الارتباط</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+      <div class="chat-header">
+        <div class="chat-avatar">
+          <img src="assets/img/logo.png" alt="مساعد العملاء" loading="lazy" />
+        </div>
+        <div class="chat-info">
+          <h3>مساعد العملاء</h3>
+          <p>متاح الآن للمساعدة</p>
+        </div>
+        <button class="chat-close" aria-label="إغلاق نافذة المحادثة">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="chat-body">
+        <div class="chat-message bot-message">
+          <p>مرحباً! كيف يمكنني مساعدتك في نظام إدارة مزارع الدواجن؟</p>
+        </div>
+      </div>
+      <div class="chat-input">
+        <input
+          type="text"
+          placeholder="اكتب رسالتك هنا..."
+          id="AI-Massage"
+          name="AI-Massage"
+          aria-label="أدخل رسالة المحادثة"
+        />
+        <button class="send-btn" aria-label="إرسال الرسالة">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="chat-toggle">
+      <div class="chat-bubble">
+        <i class="fas fa-comments"></i>
+      </div>
+      <div class="chat-notification">1</div>
+    </div>
+
+    <button class="back-to-top" aria-label="العودة إلى الأعلى" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/swiper.js" defer></script>
+    <script src="assets/js/chang-langth.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/chat.js" defer></script>
+    <script src="assets/js/animations.js" defer></script>
+  </body>
+</html>

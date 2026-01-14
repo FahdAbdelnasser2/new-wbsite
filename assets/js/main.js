@@ -97,6 +97,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+      function handleFaqSubmit(event) {
+        event.preventDefault();
+        const question = document.getElementById('faqQuestion').value;
+        if (!question.trim()) {
+          alert('يرجى كتابة السؤال');
+          return;
+        }
+        const phoneNumber = '966538499438';
+        const message = question;
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+        document.getElementById('faqQuestionForm').reset();
+      }
 const backToTop=document.getElementById("backToTop");window.addEventListener("scroll",()=>{backToTop.classList.toggle("visible",500<window.scrollY)}),backToTop?.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));const hamburger=document.querySelector(".hamburger"),navMenu=document.querySelector(".nav-menu");hamburger?.addEventListener("click",()=>{hamburger.classList.toggle("active"),navMenu.classList.toggle("active")}),document.querySelectorAll(".nav-link").forEach(a=>a.addEventListener("click",()=>{hamburger.classList.remove("active"),navMenu.classList.remove("active")})),window.addEventListener("scroll",()=>{const a=document.querySelector(".navbar");a&&a.classList.toggle("scrolled",100<window.scrollY)});const heroTitle=document.querySelector(".hero-title2");if(heroTitle){const a=heroTitle.textContent;setTimeout(()=>{typeWriter(heroTitle,a,150)},1e3)}document.addEventListener("DOMContentLoaded",function(){const a=document.querySelectorAll(".mega-parent > a"),b=document.querySelector(".overlay"),c=document.querySelector(".nav-menu");a.forEach(a=>{const d=a.nextElementSibling;a.addEventListener("click",function(a){991>=window.innerWidth&&c.classList.add("active"),a.preventDefault(),a.stopPropagation();const e=d.classList.contains("open");document.querySelectorAll(".mega-menu.open").forEach(a=>a.classList.remove("open")),b.classList.remove("show"),e||(d.classList.add("open"),b.classList.add("show"))})}),b.addEventListener("click",function(){document.querySelectorAll(".mega-menu.open").forEach(a=>a.classList.remove("open")),b.classList.remove("show")}),document.addEventListener("click",function(a){a.target.closest(".mega-parent")||(document.querySelectorAll(".mega-menu.open").forEach(a=>a.classList.remove("open")),b.classList.remove("show"))}),addScrollIndicator()});function addScrollIndicator(){const a=document.createElement("div");a.style.cssText=`
         position: fixed;
         top: 0;
