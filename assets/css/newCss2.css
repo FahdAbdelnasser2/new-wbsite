@@ -2650,7 +2650,7 @@ body {
 
 /* Section 2: Problems Grid */
 .problems-grid-section {
-    background: #fff;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
 }
 
 .problems-grid {
@@ -3540,7 +3540,7 @@ body {
 }
 
 .stat-card:hover {
-    transform: translateY(-8px) scale(1.02) !important;
+    /* transform: translateY(-8px) scale(1.02) !important; */
     box-shadow: 0 20px 40px rgba(99, 241, 175, 0.15) !important;
     border-color: var(--secondary-color) !important;
 }
