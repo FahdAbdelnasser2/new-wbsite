@@ -450,6 +450,9 @@ body[dir="rtl"] .form-select {
   text-align: center;
   border-radius: 53px 54px 10px 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transform-origin: top center;
+  animation: swing 10s infinite alternate ease-in-out;
+
 }
 
 .ribbon::after {
@@ -484,20 +487,19 @@ body[dir="rtl"] .form-select {
 }
 
 .ribbon-container {
-  animation: swing 10s infinite alternate ease-in-out;
   position: absolute;
   top: 20%;
   left: 10%;
 }
 @keyframes swing {
   0% {
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
   }
   50% {
-    transform: rotate(15deg);
+    transform: rotate(10deg);
   }
   100% {
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
   }
 }
 .hero-badge::before {
