@@ -2500,10 +2500,10 @@ body {
     background-color: #fafafa
 }
 
-.text-danger {
+/* .text-danger {
     --bs-text-opacity: 1;
     color: #ff6b35 !important
-}
+} */
 
 .form-control {
     -webkit-appearance: none;
