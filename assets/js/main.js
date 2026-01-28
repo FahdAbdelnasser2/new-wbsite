@@ -120,3 +120,29 @@ const backToTop=document.getElementById("backToTop");window.addEventListener("sc
         transition: width 0.3s ease;
         width: 0%;
     `,document.body.appendChild(a),window.addEventListener("scroll",()=>{const b=100*(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight));a.style.width=Math.min(b,100)+"%"})}function initScrollAnimations(){}
+
+/* New Modern Testimonial Script */
+document.addEventListener("DOMContentLoaded", function () {
+    const modernDots = document.querySelectorAll(".testi-dot");
+    const modernContents = document.querySelectorAll(".modern-testi-item");
+
+    if (modernDots.length > 0) {
+        modernDots.forEach((dot) => {
+            dot.addEventListener("click", function() {
+                const tabNumber = this.getAttribute("data-tab");
+                
+                // Update Dots
+                modernDots.forEach((d) => d.classList.remove("active"));
+                this.classList.add("active");
+
+                // Update Content
+                modernContents.forEach((c) => c.classList.remove("active"));
+                // Target specific active item
+                const activeItem = document.querySelector(`.modern-testi-item[data-tab="${tabNumber}"]`);
+                if(activeItem) {
+                    activeItem.classList.add("active");
+                }
+            });
+        });
+    }
+});
