@@ -1,116 +1,191 @@
-      // ============================================
-      // Testimonials Tab Switcher + Video Handler
-      // ============================================
-      document.addEventListener("DOMContentLoaded", function () {
-        const tabs = document.querySelectorAll(".testimonial-tab");
-        const contents = document.querySelectorAll(".testimonial-tab-content");
-        let currentTab = 1;
-        let currentVideoUrl = "https://www.youtube.com/embed/1Q8fG0TtVAY";
+// ============================================
+// Testimonials Tab Switcher + Video Handler
+// ============================================
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".testimonial-tab");
+  const contents = document.querySelectorAll(".testimonial-tab-content");
+  let currentTab = 1;
+  let currentVideoUrl = "https://www.youtube.com/embed/1Q8fG0TtVAY";
 
-        tabs.forEach((tab) => {
-          tab.addEventListener("click", function () {
-            const tabNumber = this.getAttribute("data-tab");
-            currentTab = tabNumber;
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", function () {
+      const tabNumber = this.getAttribute("data-tab");
+      currentTab = tabNumber;
 
-            tabs.forEach((t) => t.classList.remove("active"));
-            this.classList.add("active");
+      tabs.forEach((t) => t.classList.remove("active"));
+      this.classList.add("active");
 
-            // Hide all content
-            contents.forEach((content) => {
-              content.classList.remove("active");
-            });
-
-            // Show selected content
-            const activeContent = document.querySelector(
-              `.testimonial-tab-content[data-tab="${tabNumber}"]`
-            );
-            if (activeContent) {
-              activeContent.classList.add("active");
-              // Get video url from data attribute
-              const videoUrl = activeContent
-                .querySelector(".testimonial-title")
-                .getAttribute("data-video");
-              currentVideoUrl = videoUrl;
-            }
-          });
-        });
-
-        // Video modal logic
-        const testimonialVideoModal =
-          document.getElementById("testimonialVideo");
-        const videoFrame = document.getElementById("testimonialVideoFrame");
-        const videoTrigger = document.getElementById("testimonialVideoTrigger");
-        if (testimonialVideoModal && videoFrame && videoTrigger) {
-          videoTrigger.addEventListener("click", function () {
-            // Set video src for the current tab
-            const activeContent = document.querySelector(
-              `.testimonial-tab-content[data-tab="${currentTab}"]`
-            );
-            let videoUrl = currentVideoUrl;
-            if (activeContent) {
-              const title = activeContent.querySelector(".testimonial-title");
-              if (title && title.getAttribute("data-video")) {
-                videoUrl = title.getAttribute("data-video");
-              }
-            }
-            videoFrame.src = videoUrl + "?autoplay=1";
-          });
-          testimonialVideoModal.addEventListener("hide.bs.modal", function () {
-            videoFrame.src = "";
-          });
-        }
+      // Hide all content
+      contents.forEach((content) => {
+        content.classList.remove("active");
       });
 
-      // ============================================
-      // Video Modal Handler
-      // ============================================
-      const testimonialVideoModal = document.getElementById("testimonialVideo");
-      if (testimonialVideoModal) {
-        testimonialVideoModal.addEventListener("show.bs.modal", function () {
-          // ضع رابط الفيديو هنا
-          const videoFrame = document.getElementById("testimonialVideoFrame");
-          videoFrame.src =
-            "https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1";
-        });
-
-        testimonialVideoModal.addEventListener("hide.bs.modal", function () {
-          const videoFrame = document.getElementById("testimonialVideoFrame");
-          videoFrame.src = "";
-        });
+      // Show selected content
+      const activeContent = document.querySelector(
+        `.testimonial-tab-content[data-tab="${tabNumber}"]`,
+      );
+      if (activeContent) {
+        activeContent.classList.add("active");
+        // Get video url from data attribute
+        const videoUrl = activeContent
+          .querySelector(".testimonial-title")
+          .getAttribute("data-video");
+        currentVideoUrl = videoUrl;
       }
+    });
+  });
+
+  // Video modal logic
+  const testimonialVideoModal = document.getElementById("testimonialVideo");
+  const videoFrame = document.getElementById("testimonialVideoFrame");
+  const videoTrigger = document.getElementById("testimonialVideoTrigger");
+  if (testimonialVideoModal && videoFrame && videoTrigger) {
+    videoTrigger.addEventListener("click", function () {
+      // Set video src for the current tab
+      const activeContent = document.querySelector(
+        `.testimonial-tab-content[data-tab="${currentTab}"]`,
+      );
+      let videoUrl = currentVideoUrl;
+      if (activeContent) {
+        const title = activeContent.querySelector(".testimonial-title");
+        if (title && title.getAttribute("data-video")) {
+          videoUrl = title.getAttribute("data-video");
+        }
+      }
+      videoFrame.src = videoUrl + "?autoplay=1";
+    });
+    testimonialVideoModal.addEventListener("hide.bs.modal", function () {
+      videoFrame.src = "";
+    });
+  }
+});
+
+// ============================================
+// Video Modal Handler
+// ============================================
+const testimonialVideoModal = document.getElementById("testimonialVideo");
+if (testimonialVideoModal) {
+  testimonialVideoModal.addEventListener("show.bs.modal", function () {
+    // ضع رابط الفيديو هنا
+    const videoFrame = document.getElementById("testimonialVideoFrame");
+    videoFrame.src = "https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1";
+  });
+
+  testimonialVideoModal.addEventListener("hide.bs.modal", function () {
+    const videoFrame = document.getElementById("testimonialVideoFrame");
+    videoFrame.src = "";
+  });
+}
 // Video Popup: Watch System Button
 document.addEventListener("DOMContentLoaded", function () {
-    var watchBtn = document.getElementById("watchSystemBtn");
-    var videoModal = document.getElementById("videoModal");
-    var videoIframe = document.getElementById("systemDemoVideo");
-    var videoSrc = videoIframe ? videoIframe.src : null;
-    if (watchBtn && videoModal && videoIframe) {
-        watchBtn.addEventListener("click", function (e) {
-            e.preventDefault();
-            var modal = new bootstrap.Modal(videoModal);
-            modal.show();
-        });
-        videoModal.addEventListener("hidden.bs.modal", function () {
-            // Stop video playback by resetting src
-            videoIframe.src = "";
-            setTimeout(function () { videoIframe.src = videoSrc; }, 200);
-        });
-    }
+  var watchBtn = document.getElementById("watchSystemBtn");
+  var videoModal = document.getElementById("videoModal");
+  var videoIframe = document.getElementById("systemDemoVideo");
+  var videoSrc = videoIframe ? videoIframe.src : null;
+  if (watchBtn && videoModal && videoIframe) {
+    watchBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var modal = new bootstrap.Modal(videoModal);
+      modal.show();
+    });
+    videoModal.addEventListener("hidden.bs.modal", function () {
+      // Stop video playback by resetting src
+      videoIframe.src = "";
+      setTimeout(function () {
+        videoIframe.src = videoSrc;
+      }, 200);
+    });
+  }
 });
-      function handleFaqSubmit(event) {
-        event.preventDefault();
-        const question = document.getElementById('faqQuestion').value;
-        if (!question.trim()) {
-          alert('يرجى كتابة السؤال');
-          return;
-        }
-        const phoneNumber = '966538499438';
-        const message = question;
-        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, '_blank');
-        document.getElementById('faqQuestionForm').reset();
-      }
-const backToTop=document.getElementById("backToTop");window.addEventListener("scroll",()=>{backToTop.classList.toggle("visible",500<window.scrollY)}),backToTop?.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));const hamburger=document.querySelector(".hamburger"),navMenu=document.querySelector(".nav-menu");hamburger?.addEventListener("click",()=>{hamburger.classList.toggle("active"),navMenu.classList.toggle("active")}),document.querySelectorAll(".nav-link").forEach(a=>a.addEventListener("click",()=>{hamburger.classList.remove("active"),navMenu.classList.remove("active")})),window.addEventListener("scroll",()=>{const a=document.querySelector(".navbar");a&&a.classList.toggle("scrolled",100<window.scrollY)});const heroTitle=document.querySelector(".hero-title2");if(heroTitle){const a=heroTitle.textContent;setTimeout(()=>{typeWriter(heroTitle,a,150)},1e3)}document.addEventListener("DOMContentLoaded",function(){const a=document.querySelectorAll(".mega-parent > a"),b=document.querySelector(".overlay"),c=document.querySelector(".nav-menu");a.forEach(a=>{const d=a.nextElementSibling;a.addEventListener("click",function(a){991>=window.innerWidth&&c.classList.add("active"),a.preventDefault(),a.stopPropagation();const e=d.classList.contains("open");document.querySelectorAll(".mega-menu.open").forEach(a=>a.classList.remove("open")),b.classList.remove("show"),e||(d.classList.add("open"),b.classList.add("show"))})}),b.addEventListener("click",function(){document.querySelectorAll(".mega-menu.open").forEach(a=>a.classList.remove("open")),b.classList.remove("show")}),document.addEventListener("click",function(a){a.target.closest(".mega-parent")||(document.querySelectorAll(".mega-menu.open").forEach(a=>a.classList.remove("open")),b.classList.remove("show"))}),addScrollIndicator()});function addScrollIndicator(){const a=document.createElement("div");a.style.cssText=`
+function handleFaqSubmit(event) {
+  event.preventDefault();
+  const question = document.getElementById("faqQuestion").value;
+  if (!question.trim()) {
+    alert("يرجى كتابة السؤال");
+    return;
+  }
+  const phoneNumber = "966538499438";
+  const message = question;
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, "_blank");
+  document.getElementById("faqQuestionForm").reset();
+}
+const backToTop = document.getElementById("backToTop");
+(window.addEventListener("scroll", () => {
+  backToTop.classList.toggle("visible", 500 < window.scrollY);
+}),
+  backToTop?.addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" }),
+  ));
+const hamburger = document.querySelector(".hamburger"),
+  navMenu = document.querySelector(".nav-menu"),
+  overlay = document.querySelector(".overlay");
+  
+(hamburger?.addEventListener("click", () => {
+  (hamburger.classList.toggle("active"), navMenu.classList.toggle("active"),   overlay?.classList.toggle(
+    "nav-overlay",
+    navMenu.classList.contains("active")
+  ));
+}),
+  document.querySelectorAll(".nav-link").forEach((a) =>
+    a.addEventListener("click", () => {
+      // Don't close if it's a mega menu toggle
+      if (a.parentElement.classList.contains('mega-parent')) return;
+      
+      (hamburger.classList.remove("active"),
+        navMenu.classList.remove("active")),
+            overlay?.classList.remove("nav-overlay");
+            
+    }),
+  ),
+  window.addEventListener("scroll", () => {
+    const a = document.querySelector(".navbar");
+    a && a.classList.toggle("scrolled", 100 < window.scrollY);
+  }));
+const heroTitle = document.querySelector(".hero-title2");
+if (heroTitle) {
+  const a = heroTitle.textContent;
+  setTimeout(() => {
+    typeWriter(heroTitle, a, 150);
+  }, 1e3);
+}
+document.addEventListener("DOMContentLoaded", function () {
+  const a = document.querySelectorAll(".mega-parent > a"),
+    b = document.querySelector(".overlay"),
+    c = document.querySelector(".nav-menu");
+  (a.forEach((a) => {
+    const d = a.nextElementSibling;
+    a.addEventListener("click", function (a) {
+      (991 >= window.innerWidth && c.classList.add("active"),
+        a.preventDefault(),
+        a.stopPropagation());
+      const e = d.classList.contains("open");
+      (document
+        .querySelectorAll(".mega-menu.open")
+        .forEach((a) => a.classList.remove("open")),
+        b.classList.remove("show"),
+        e || (d.classList.add("open"), b.classList.add("show")));
+    });
+  }),
+    b.addEventListener("click", function () {
+      document.querySelectorAll(".mega-menu.open").forEach((a) => a.classList.remove("open"));
+      b.classList.remove("show");
+      c.classList.remove("active");
+      b.classList.remove("nav-overlay");
+      document.querySelector(".hamburger")?.classList.remove("active");
+    }),
+    document.addEventListener("click", function (a) {
+      a.target.closest(".mega-parent") ||
+        (document
+          .querySelectorAll(".mega-menu.open")
+          .forEach((a) => a.classList.remove("open")),
+        b.classList.remove("show"));
+    }),
+    addScrollIndicator());
+});
+function addScrollIndicator() {
+  const a = document.createElement("div");
+  ((a.style.cssText = `
         position: fixed;
         top: 0;
         right: 0;
@@ -119,30 +194,95 @@ const backToTop=document.getElementById("backToTop");window.addEventListener("sc
         z-index: 1000;
         transition: width 0.3s ease;
         width: 0%;
-    `,document.body.appendChild(a),window.addEventListener("scroll",()=>{const b=100*(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight));a.style.width=Math.min(b,100)+"%"})}function initScrollAnimations(){}
+    `),
+    document.body.appendChild(a),
+    window.addEventListener("scroll", () => {
+      const b =
+        100 *
+        (window.scrollY /
+          (document.documentElement.scrollHeight - window.innerHeight));
+      a.style.width = Math.min(b, 100) + "%";
+    }));
+}
+function initScrollAnimations() {}
 
 /* New Modern Testimonial Script */
 document.addEventListener("DOMContentLoaded", function () {
-    const modernDots = document.querySelectorAll(".testi-dot");
-    const modernContents = document.querySelectorAll(".modern-testi-item");
+  const modernDots = document.querySelectorAll(".testi-dot");
+  const modernContents = document.querySelectorAll(".modern-testi-item");
+  const mainImage = document.querySelector(".main-customer-img");
+  let currentIndex = 0;
+  let intervalId;
 
-    if (modernDots.length > 0) {
-        modernDots.forEach((dot) => {
-            dot.addEventListener("click", function() {
-                const tabNumber = this.getAttribute("data-tab");
-                
-                // Update Dots
-                modernDots.forEach((d) => d.classList.remove("active"));
-                this.classList.add("active");
+  function activateTestimonial(index) {
+    if (modernDots.length === 0) return;
 
-                // Update Content
-                modernContents.forEach((c) => c.classList.remove("active"));
-                // Target specific active item
-                const activeItem = document.querySelector(`.modern-testi-item[data-tab="${tabNumber}"]`);
-                if(activeItem) {
-                    activeItem.classList.add("active");
-                }
-            });
-        });
+    // Wrap index
+    if (index >= modernDots.length) index = 0;
+    if (index < 0) index = modernDots.length - 1;
+
+    currentIndex = index;
+
+    // Get tab number from the dot at this index
+    const tabNumber = modernDots[index].getAttribute("data-tab");
+
+    // Update Dots
+    modernDots.forEach((d) => d.classList.remove("active"));
+    modernDots[index].classList.add("active");
+
+    // Update Content
+    modernContents.forEach((c) => c.classList.remove("active"));
+
+    // Find the matching content item
+    // We look for the one with the matching data-tab.
+    // Note: data-tab values should correspond to the dots.
+    const activeItem = document.querySelector(
+      `.modern-testi-item[data-tab="${tabNumber}"]`,
+    );
+
+    if (activeItem) {
+      activeItem.classList.add("active");
+
+      // Update Image if data attribute exists
+      const companyImg = activeItem.getAttribute("data-company-img");
+      if (companyImg && mainImage) {
+        // Fade effect
+        mainImage.style.opacity = 0;
+        setTimeout(() => {
+          mainImage.src = companyImg;
+          mainImage.style.opacity = 1;
+        }, 200);
+      }
     }
+  }
+
+  if (modernDots.length > 0) {
+    // Initialize click handlers
+    modernDots.forEach((dot, index) => {
+      dot.addEventListener("click", function () {
+        clearInterval(intervalId); // Stop auto-rotation on user interaction
+        activateTestimonial(index);
+        startAutoRotation(); // Restart
+      });
+    });
+
+    // Auto Rotation
+    function startAutoRotation() {
+      if (intervalId) clearInterval(intervalId);
+      intervalId = setInterval(() => {
+        activateTestimonial(currentIndex + 1);
+      }, 3000); // Rotate every 3 seconds
+    }
+
+    // Start initially
+    startAutoRotation();
+
+    // Ensure image has transition in CSS (or set it here)
+    if (mainImage) {
+      mainImage.style.transition = "opacity 0.3s ease";
+
+      // Set initial image if not set or ensure it matches first item
+      // (Optional, assuming HTML is valid)
+    }
+  }
 });
