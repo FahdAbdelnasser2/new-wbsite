@@ -1,0 +1,1679 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="نظام إدارة محطات الوقود، تحكم آلي بالمضخات، نظام محاسبي متخصص" />
+        <meta
+            name="description"
+            content="نظام رايتو المتخصص في إدارة محطات الوقود. تحكم كامل بالمضخات، امتثال حكومي، تقارير ذكية، وتكامل كامل مع أجهزة العتاد الحديثة." />
+        <meta name="author" content="Raitotec" />
+        <meta
+            property="og:title"
+            content="نظام إدارة محطات الوقود - رايتو" />
+        <meta property="og:type" content="Website" />
+        <meta property="og:url" content />
+        <meta property="og:image" content="assets/img/LOGO.png" />
+        <link href="assets/img/LOGO.png" rel="shortcut icon" />
+        <title>نظام إدارة محطات الوقود - Raito Gas Station Management</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
+            rel="stylesheet" />
+        <link
+            rel="preload"
+            href="assets/css/bootstrap.min.css"
+            as="style"
+            onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      " />
+        <noscript><link rel="stylesheet"
+                href="assets/css/bootstrap.min.css" /></noscript>
+        <!-- Font Awesome CDN -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="assets/css/newCss.css" />
+        <link rel="stylesheet" href="assets/css/newCss2.css" />
+    </head>
+    <body>
+        <div class="overlay"></div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a
+                        class="logo-icon"
+                        href="index.html"
+                        aria-label="الذهاب إلى الصفحة الرئيسية">
+                        <img src="assets/img/logoar.webp" alt class="mw-100" />
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li>
+                        <a
+                            href="index.html"
+                            class="nav-link active"
+                            aria-label="الذهاب إلى الصفحة الرئيسية">الرئيسية</a>
+                    </li>
+                    <li>
+                        <a
+                            href="about.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة من نحن">من نحن</a>
+                    </li>
+                    <li class="nav-item mega-parent">
+                        <a
+                            href="business-sector.html"
+                            class="nav-link text-center"
+                            aria-label="عرض قطاعات الأعمال">قطاعات اعمالنا ▾</a>
+                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="mega-row">
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
+                                        <h6>سلسلة التوريد</h6>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة إدارة المستودعات">المستودعات</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة إدارة التصنيع">التصنيع</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة إدارة المشتريات">المشتريات</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة إدارة الصيانة">الصيانة</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة إدارة الجودة">الجودة</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
+                                        <h6>المواقع الإلكترونية</h6>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة أداة بناء المواقع">أداة
+                                            بناء المواقع</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة المتاجر الإلكترونية">متاجر
+                                            إلكترونية</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة المدونة">مدونة</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة المنتدى">منتدى</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
+                                        <h6>المبيعات</h6>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة إدارة علاقات العملاء">إدارة
+                                            علاقات العملاء</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة إدارة المبيعات">المبيعات</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة نقطة البيع">نقطة
+                                            البيع</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة الاشتراكات">الاشتراكات</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
+                                        <h6>الخدمات</h6>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة إدارة المشاريع">المشاريع</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة الجدول الزمني">الجدول
+                                            الزمني</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة الخدمة الميدانية">الخدمة
+                                            الميدانية</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة التخطيط">التخطيط</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
+                                        <h6>المالية</h6>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة المحاسبة">المحاسبة</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة الفواتير">الفواتير</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة النفقات">النفقات</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة المستندات">المستندات</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
+                                        <h6>الموارد البشرية</h6>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة إدارة الموظفين">الموظفون</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة التوظيف">التوظيف</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة الإجازات">إجازات</a>
+                                        <a
+                                            href="business-sector.html"
+                                            aria-label="الذهاب إلى صفحة التقييمات">التقييمات</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mega-parent">
+                        <a
+                            href="services.html"
+                            class="nav-link text-center"
+                            aria-label="عرض الخدمات">الخدمات ▾</a>
+                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="mega-row">
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة المحاسبة"><i
+                                                class="fa-solid fa-calculator icon"
+                                                style="color: #2563eb"></i>نظام
+                                            إدارة المحاسبة</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة المشتريات"><i
+                                                class="fa-solid fa-cart-shopping icon"
+                                                style="color: #16a34a"></i>نظام
+                                            إدارة المشتريات</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة نقاط البيع"><i
+                                                class="fa-solid fa-bag-shopping icon"
+                                                style="color: #db2777"></i>نظام
+                                            إدارة نقاط البيع</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة الموردين"><i
+                                                class="fa-solid fa-people-group icon"
+                                                style="color: #9333ea"></i>نظام
+                                            إدارة الموردين</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة الصيانة"><i
+                                                class="fa-solid fa-screwdriver-wrench icon"
+                                                style="color: #4b5563"></i>نظام
+                                            إدارة الصيانة</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة محطات الوقود"><i
+                                                class="fa-solid fa-gas-pump icon"
+                                                style="color: #dc2626"></i>نظام
+                                            إدارة محطات الوقود</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة الأصول"><i
+                                                class="fa-solid fa-database icon"
+                                                style="color: #4f46e5"></i>نظام
+                                            إدارة الأصول</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة الإنتاج والتصنيع"><i
+                                                class="fa-solid fa-industry icon"
+                                                style="color: #0d9488"></i>نظام
+                                            إدارة الإنتاج والتصنيع</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة الشحن والتوصيل"><i
+                                                class="fa-solid fa-box icon"
+                                                style="color: #0284c7"></i>نظام
+                                            إدارة الشحن والتوصيل</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة الموارد البشرية"><i
+                                                class="fa-solid fa-user-tie icon"
+                                                style="color: #ec4899"></i>نظام
+                                            إدارة الموارد البشرية</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام CRM"><i
+                                                class="fa-solid fa-handshake icon"
+                                                style="color: #be123c"></i>CRM</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام الولاء"><i
+                                                class="fa-solid fa-gift icon"
+                                                style="color: #dc2626"></i>نظام
+                                            الولاء</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة المحاماة"><i
+                                                class="fa-solid fa-scale-balanced icon"
+                                                style="color: #d97706"></i>نظام
+                                            إدارة المحاماة</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة المدارس"><i
+                                                class="fa-solid fa-graduation-cap icon"
+                                                style="color: #1d4ed8"></i>نظام
+                                            إدارة المدارس</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة المناديب"><i
+                                                class="fa-solid fa-truck icon"
+                                                style="color: #06b6d4"></i>نظام
+                                            إدارة المناديب</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة العقارات والعقود"><i
+                                                class="fa-solid fa-house icon"
+                                                style="color: #ec4899"></i>نظام
+                                            إدارة العقارات والعقود</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة المخزون"><i
+                                                class="fa-solid fa-boxes-stacked icon"
+                                                style="color: #f97316"></i>نظام
+                                            إدارة المخزون</a>
+                                        <a
+                                            href="services.html"
+                                            aria-label="الذهاب إلى صفحة نظام إدارة المقاولات"><i
+                                                class="fa-solid fa-building icon"
+                                                style="color: #ca8a04"></i>نظام
+                                            إدارة المقاولات</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mega-parent">
+                        <a
+                            href="services.html"
+                            class="nav-link text-center"
+                            aria-label="عرض مجتمعنا">مجتمعنا ▾</a>
+                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="mega-row">
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
+                                        <a
+                                            href="forum.html"
+                                            aria-label="الذهاب إلى صفحة المنتدى والمناقشات"><i
+                                                class="fas fa-comments icon"
+                                                style="color: #2563eb"></i>
+                                            المنتدى والمناقشات</a>
+                                        <a
+                                            href="knowledge.html"
+                                            aria-label="الذهاب إلى صفحة مكتبة المعرفة"><i
+                                                class="fas fa-book icon"
+                                                style="color: #16a34a"></i>مكتبة
+                                            المعرفة</a>
+                                        <a
+                                            href="updates.html"
+                                            aria-label="الذهاب إلى صفحة الإعلانات والتحديثات"><i
+                                                class="fas fa-bullhorn icon"
+                                                style="color: #db2777"></i>الإعلانات
+                                            والتحديثات</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
+                                        <a
+                                            href="education.html"
+                                            aria-label="الذهاب إلى صفحة المحتوى التعليمي"><i
+                                                class="fa-solid fa-graduation-cap icon"
+                                                style="color: #9333ea"></i>المحتوى
+                                            التعليمي</a>
+                                        <a
+                                            href="gamification.html"
+                                            aria-label="الذهاب إلى صفحة النقاط والشارات"><i
+                                                class="fa-solid fa-trophy icon"
+                                                style="color: #4b5563"></i>النقاط
+                                            والشارات</a>
+                                        <a
+                                            href="support.html"
+                                            aria-label="الذهاب إلى صفحة الدعم الفني"><i
+                                                class="fa-solid fa-headset icon"
+                                                style="color: #dc2626"></i>الدعم
+                                            الفني</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
+                                        <a
+                                            href="ideas.html"
+                                            aria-label="الذهاب إلى صفحة مشاركة الأفكار"><i
+                                                class="fa-solid fa-lightbulb icon"
+                                                style="color: #4f46e5"></i>مشاركة
+                                            الأفكار</a>
+                                        <a
+                                            href="networking.html"
+                                            aria-label="الذهاب إلى صفحة التواصل بين الأعضاء"><i
+                                                class="fa-solid fa-users icon"
+                                                style="color: #0d9488"></i>التواصل
+                                            بين الأعضاء</a>
+                                        <a
+                                            href="search.html"
+                                            aria-label="الذهاب إلى صفحة البحث المتقدم"><i
+                                                class="fa-solid fa-search icon"
+                                                style="color: #0284c7"></i>البحث
+                                            المتقدم</a>
+                                    </div>
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
+                                        <a
+                                            href="integration.html"
+                                            aria-label="الذهاب إلى صفحة التكامل مع السوشيال و CRM"><i
+                                                class="fa-solid fa-plug icon"
+                                                style="color: #ec4899"></i>التكامل
+                                            مع السوشيال و CRM</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a
+                            href="prices.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة الأسعار">اسعارنا</a>
+                    </li>
+                    <li>
+                        <a
+                            href="Blog.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة المدونة">المدونة</a>
+                    </li>
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة تواصل معنا">تواصل
+                            معنا</a>
+                    </li>
+                    <li class="lang-item">
+                        <div class="language-switcher">
+                            <button
+                                class="lang-btn btn border-0"
+                                id="arabic-btn"
+                                aria-label="التحويل إلى اللغة العربية"
+                                title="التحويل إلى اللغة العربية">
+                                <img
+                                    src="assets/Asset-system/icon/Flag-Saudi-Arabia.png"
+                                    alt="علم السعودية"
+                                    width="24"
+                                    class="me-2 align-middle" />
+                                العربية
+                            </button>
+                            <button
+                                class="lang-btn btn border-0"
+                                id="english-btn"
+                                aria-label="التحويل إلى اللغة الإنجليزية"
+                                title="التحويل إلى اللغة الإنجليزية">
+                                <img
+                                    src="assets/Asset-system/icon/united-kingdom.png"
+                                    alt="علم المملكة المتحدة"
+                                    width="24"
+                                    class="ms-2 align-bottom" />
+                                English
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Section 1: Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-icon">
+                        <i class="fas fa-gas-pump"></i>
+                    </div>
+                    <h1 class="hero-title">
+                        نظام إدارة محطات الوقود.. احصل على <span
+                            class="color-green">"تأهيل" وزارة الطاقة</span>
+                        وسيطر على كل لتر.
+                    </h1>
+                    <p class="hero-subtitle">
+                        لا ترهق ميزانيتك بأجهزة "Console" باهظة. رايتو هو النظام
+                        الوحيد الذي يمنحك تحكماً كاملاً بالمضخات عبر التطبيق، مع
+                        ضمان التأهيل الفوري لاشتراطات وزارة الطاقة وهيئة الزكاة
+                        (الفاتورة الإلكترونية).
+                    </p>
+                    <div class="hero-buttons">
+                        <a
+                            href="contact.html"
+                            class="btn-primary"
+                            aria-label="طلب استشارة مجانية">
+                            <span>اطلب عرض سعر مخصص - استشارة مجانية</span>
+                            <div class="btn-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-particles"></div>
+            <div class="hero-waves"></div>
+        </section>
+        <section id="video" class="video-section-1">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-label">
+                        <i class="fas fa-play-circle"></i>
+                        <span>عرض توضيحي للنظام</span>
+                    </div>
+                    <h2 class="section-title">شاهد كيف نتحكم بالمضخة عبر
+                        الجوال</h2>
+                    <p class="section-subtitle">عرض توضيحي شامل لجميع إمكانيات
+                        النظام</p>
+                </div>
+                <div class="video-container">
+                    <div class="video-placeholder" id="video-placeholder">
+                        <img
+                            src="assets/img/LOGO.png"
+                            alt="بوستر الفيديو التعريفي"
+                            loading="lazy" />
+                        <button
+                            type="button"
+                            class="play-button"
+                            id="play-button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#videoModal"
+                            aria-label="تشغيل الفيديو التعريفي للنظام">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <!-- <video id="myVideo" class="w-100 rounded-3 shadow-lg object-fit-cover" preload="metadata" poster="assets/img/logoar.webp">
+                        <source src="https://raitotec.com/public/attachments/aboutUs/1702904407988.mp4" type="video/mp4" />
+                        <track kind="captions" src="https://raitotec.com/public/attachments/aboutUs/captions.vtt" srclang="ar" label="العربية" default />
+                    </video> -->
+                    </div>
+                    <!-- <input type="range" id="seekBar" value="0" min="0" max="100" step="0.1" aria-label="شريط التحكم بتقدم الفيديو" /> -->
+                </div>
+            </div>
+        </section>
+        <!-- Section 2: Trust Bar / Partners -->
+        <!-- Logo Start -->
+        <section
+            class="digtal-marketing-logo testimonials-section section-padding bg-gray">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-label">
+                        <i class="fas fa-users"></i>
+                        <span>عملائنا</span>
+                    </div>
+                    <h2 class="section-title">شركاء النجاح والاعتمادات
+                        الحكومية</h2>
+                </div>
+                <!-- Swiper Container -->
+                <div class="swiper logosCarousel">
+                    <div class="swiper-wrapper">
+                        <!-- سيتم إضافة اللوجوهات ديناميكيًا باستخدام JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Logo End -->
+
+        <!-- Section 3: Pain Points -->
+        <section class="problems-grid-section section-padding"
+            style="background: white;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-label">
+                        <i class="fas fa-gas-pump"></i>
+                        <span>تحديات محطات الوقود</span>
+                    </div>
+                    <h2 class="section-title">هل تواجه هذه العقبات في إدارة
+                        محطاتك؟</h2>
+                    <p class="section-subtitle">
+                        مشاكل تشغيل المحطات التي تؤثر مباشرة على أرباحك وامتثالك
+                        الحكومي
+                    </p>
+                </div>
+                <div class="problems-grid">
+                    <div class="problem-card shadow-sm">
+                        <div class="card-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3>هل تخشى سحب التراخيص أو الغرامات؟</h3>
+                        <p class="card-description">
+                            اشتراطات "تأهيل" المحطات تتغير باستمرار. الأنظمة
+                            التقليدية تتطلب شهوراً للتحديث، بينما عملاء رايتو
+                            يحصلون على التحديثات (مثل الدفع الذاتي ونظام
+                            النظافة) فوراً ومجاناً.
+                        </p>
+                    </div>
+
+                    <div class="problem-card shadow-sm">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>هل تخطط للاستحواذ على محطات جديدة؟</h3>
+                        <p class="card-description">
+                            معظم الأنظمة في السوق تفشل عند إدارة عدد كبير من
+                            الفروع. رايتو صمم خصيصاً ليدير عدداً غير محدود من
+                            المحطات بنفس الكفاءة، مما يجعل توسعك سلساً وبلا
+                            تعقيد.
+                        </p>
+                    </div>
+
+                    <div class="problem-card shadow-sm">
+                        <div class="card-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <h3>هل مازلت تعتمد على "الإكسل" والورقة والقلم؟</h3>
+                        <p class="card-description">
+                            القراءة اليدوية للعدادات تعني السرقة والأخطاء. رايتو
+                            يلغي التدخل البشري؛ الفاتورة ترحل للهيئة وتخصم من
+                            المخزون آلياً بمجرد رفع المسدس.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Cost of Inaction / Comparison Table -->
+        <section class="cta-demo-section">
+            <div class="container">
+                <div class="cta-demo-content">
+                    <div class="cta-demo-header">
+                        <div class="section-label">
+                            <i class="fas fa-calculator"></i>
+                            <span>قارن بنفسك</span>
+                        </div>
+                        <h2 class="cta-demo-title">كم تكلفك الحلول "الرخيصة"
+                            والعمل اليدوي فعلياً؟</h2>
+                    </div>
+
+                    <table
+                        class="comparison-table table table-hover text-end rounded-4 overflow-hidden raito-responsive-table">
+                        <thead>
+                            <tr>
+                                <th style="width:22%;color:#b6c2ca;">وجه
+                                    المقارنة</th>
+                                <th style="width:39%;color:#e76a6a;">أنظمة
+                                    التجميع (الصينية/الأفراد)</th>
+                                <th style="width:39%;color:#6cce69;">نظام رايتو
+                                    (Raito Ecosystem)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="وجه المقارنة:"><strong>تكلفة
+                                        التأسيس (Hardware)</strong></td>
+                                <td data-label="أنظمة التجميع:"
+                                    style="color:#b6c2ca;">
+                                    <span
+                                        style="color:#e76a6a;font-size:1.2rem;">❌
+                                        عالية ومخفية:</span> يجبرك على شراء
+                                    أجهزة Console وقوارئ كروت باهظة الثمن.
+                                </td>
+                                <td data-label="مع رايتو:"
+                                    style="color: white;">
+                                    <span
+                                        style="color:#6cce69;font-size:1.2rem;">✓
+                                        توفير ذكي:</span> استبدلنا الـ Console
+                                    وقارئ الكروت بتقنية برمجية خاصة (App) توفر
+                                    عليك آلاف الريالات.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="وجه المقارنة:"><strong>استمرارية
+                                        العمل</strong></td>
+                                <td data-label="أنظمة التجميع:"
+                                    style="color:#b6c2ca;">
+                                    <span
+                                        style="color:#e76a6a;font-size:1.2rem;">❌
+                                        توقف متكرر:</span> انقطاع الإنترنت يعني
+                                    توقف المحطة وشلل المبيعات.
+                                </td>
+                                <td data-label="مع رايتو:"
+                                    style="color: white;">
+                                    <span
+                                        style="color:#6cce69;font-size:1.2rem;">✓
+                                        عمل دائم:</span> نظام (Hybrid) يعمل
+                                    Online & Offline. البيانات تحفظ وترحل
+                                    تلقائياً عند عودة الإنترنت.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td data-label="وجه المقارنة:"><strong>مخاطر
+                                        الامتثال</strong></td>
+                                <td data-label="أنظمة التجميع:"
+                                    style="color:#b6c2ca;">
+                                    <span
+                                        style="color:#e76a6a;font-size:1.2rem;">❌
+                                        كارثية:</span> المبرمج العادي لن يتابع
+                                    تحديثات الوزارة، مما يعرضك للغرامات.
+                                </td>
+                                <td data-label="مع رايتو:"
+                                    style="color: white;">
+                                    <span
+                                        style="color:#6cce69;font-size:1.2rem;">✓
+                                        صفر مخاطر:</span> تحديثات وزارة الطاقة
+                                    وهيئة الزكاة تصلك مجاناً وتلقائياً مدى
+                                    الحياة.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Core Features -->
+        <section class="integration-section section-padding">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="section-label">
+                        <i class="fas fa-star"></i>
+                        <span>الميزات الحصرية</span>
+                    </div>
+                    <h2 class="section-title">تقنيات حصرية لن تجدها إلا في
+                        رايتو</h2>
+                    <p class="section-subtitle">حلول مبتكرة مصممة خصيصاً لقطاع
+                        محطات الوقود</p>
+                </div>
+                <div class="integration-grid why-raito-grid">
+                    <div class="integration-item">
+                        <div class="integration-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>بديل الكونسول (Smart Pump Control)</h3>
+                        <p>
+                            وفر تكلفة أجهزة الـ Console. تحكم بفتح وإغلاق
+                            المضخات وتغيير الأسعار مباشرة عبر تطبيق رايتو.
+                        </p>
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>الأتمتة الضريبية الكاملة</h3>
+                        <p>
+                            لا تدخل بشري مطلقاً. الفاتورة تصدر من المضخة وتذهب
+                            لهيئة الزكاة والدخل فوراً (Phase 2 Ready).
+                        </p>
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>تقارير Pivot Table الذكية</h3>
+                        <p>
+                            ودع التقارير الجامدة. صمم تقاريرك بنفسك، حلل مبيعات
+                            كل عامل، وراقب الخزانات لحظة بلحظة.
+                        </p>
+                    </div>
+                    <div class="integration-item">
+                        <div class="integration-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>الذكاء الاصطناعي (AI Integration)</h3>
+                        <p>
+                            تنبؤات ذكية بمستوى المخزون وتنبيهات آلية قبل وصول
+                            الخزان للحد الأدنى لضمان عدم توقف العمل.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Ecosystem & Hardware -->
+        <section id="integration" class="integration-section bg-gray">
+            <div class="container">
+                <div class="integration-content">
+                    <div class="integration-text">
+                        <div class="section-label">
+                            <i class="fas fa-cogs"></i>
+                            <span>المنظومة المتكاملة</span>
+                        </div>
+                        <h2 class="section-title">عتاد قوي يتحمل حرارة
+                            الميدان</h2>
+                        <p class="section-description">
+                            أفضل الأجهزة العالمية لضمان دقة 100%
+                        </p>
+                        <div class="integration-benefits">
+                            <div class="benefit-item">
+                                <i class="fas fa-microchip"></i>
+                                <!-- <h6>أفضل المستشعرات</h6> -->
+                                <span>نستخدم حساسات Sensors Falcon الدقيقة لضمان
+                                    قراءة مخزون 100% دقيقة.</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-robot"></i>
+                                <!-- <h6>وحدات التحكم</h6> -->
+                                <span>أجهزة PTS 2 المتطورة لضمان استقرار الربط
+                                    مع المضخات.</span>
+                            </div>
+                            <div class="benefit-item">
+                                <i class="fas fa-tags"></i>
+                                <!-- <h6>ضمان حقيقي</h6> -->
+                                <span>ضمان شامل لمدة سنتين على الأجهزة مع صيانة
+                                    مستمرة.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="integration-diagram">
+                        <div class="central-system">
+                            <div class="system-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <span class="text-center">نظامك<br />الأساسي</span>
+                        </div>
+                        <div class="connected-systems">
+                            <div class="system-node" style="--angle: 60deg">
+                                <div class="node-icon">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <span>أفضل المستشعرات</span>
+                            </div>
+                            <div class="system-node" style="--angle: 120deg">
+                                <div class="node-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <span>وحدات التحكم</span>
+                            </div>
+                            <div class="system-node" style="--angle: 180deg">
+                                <div class="node-icon">
+                                    <i class="fas fa-tags"></i>
+                                </div>
+                                <span>ضمان حقيقي</span>
+                            </div>
+                            <!-- <div class="system-node" style="--angle: 180deg">
+                <div class="node-icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <span>التقارير الذكية</span>
+              </div>
+              <div class="system-node" style="--angle: 240deg">
+                <div class="node-icon">
+                  <i class="fas fa-cloud"></i>
+                </div>
+                <span>التخزين السحابي</span>
+              </div>
+              <div class="system-node" style="--angle: 300deg">
+                <div class="node-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <span>التطبيقات</span>
+              </div> -->
+                        </div>
+                        <div class="connection-lines"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="integration-particles"></div>
+        </section>
+
+        <!-- Section 7: Success Stories -->
+        <section class="cta-demo-section">
+            <div class="container">
+                <div class="cta-demo-content">
+                    <div class="cta-demo-header">
+                        <div class="section-label">
+                            <i class="fas fa-rocket"></i>
+                            <span>قصص نجاح حقيقية</span>
+                        </div>
+                        <h2 class="cta-demo-title">قصص نجاح عملاءنا</h2>
+                        <p class="cta-demo-subtitle">
+                            شركات رائدة وضعت ثقتها في رايتو وحققت نتائج
+                            استثنائية في إدارة محطاتها
+                        </p>
+                    </div>
+
+                    <!-- Success Story Card -->
+                    <div class="success-story-card">
+                        <div class="success-story-header">
+                            <div class="success-story-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div style="flex: 1; text-align: right;">
+                                <h3 class="success-story-title">شركة فلل
+                                    للوقود</h3>
+                                <span class="success-story-badge">✓ نجاح مثبت في
+                                    الميدان</span>
+                            </div>
+                        </div>
+
+                        <div class="success-story-content">
+                            ساعدنا شركة فلل للوقود في الحصول على "تأهيل" وزارة
+                            الطاقة والتوسع في فروع جديدة بكفاءة عالية. تم بناء
+                            دورة عمل مخصصة لضمان الامتثال الكامل لكافة متطلبات
+                            الوزارة وهيئة الزكاة والدخل. النظام يدير عمليات
+                            المضخات والمخزون والفواتير الإلكترونية بكفاءة
+                            استثنائية.
+                        </div>
+
+                        <div class="success-story-metrics">
+                            <div class="metric-item">
+                                <span class="metric-value">تأهيل فوري</span>
+                                <span class="metric-label">للحصول على موافقة
+                                    الوزارة</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">إدارة سلسة</span>
+                                <span class="metric-label">لجميع الفروع من لوحة
+                                    واحدة</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-value">توفير 40%</span>
+                                <span class="metric-label">من تكاليف التشغيل
+                                    اليدوي</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: The Safe Investment Guarantee -->
+        <section class="safe-investment-section section-padding">
+            <div class="container">
+                <div class="section-header text-center mb-5">
+                    <div class="section-label">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>الاستثمار الآمن</span>
+                    </div>
+                    <h2 class="section-title">لماذا يندم من يختار "الأرخص" ويعود
+                        لرايتو؟</h2>
+                    <p class="section-subtitle">لا تقع في فخ "التركيب فقط"
+                        وتجميع الأجهزة</p>
+                </div>
+
+                <div class="investment-cards-grid">
+                    <!-- Card 1 -->
+                    <div class="investment-card">
+                        <div class="card-inner">
+                            <!-- Problem Side -->
+                            <div class="problem-side">
+                                <div
+                                    class="card-icon-wrapper problem-icon-wrapper">
+                                    <div class="icon-bg problem-bg"></div>
+                                    <i class="fas fa-warning"></i>
+                                </div>
+                                <h3 class="card-title">مشكلة الأنظمة
+                                    المجمعة</h3>
+                                <p class="problem-text">
+                                    الشركات الصغيرة تشتري أجهزة صينية رديئة
+                                    وتركب عليها برنامجاً غير مخصص. النتيجة؟
+                                    أعطال مستمرة ولا أحد يتحمل المسؤولية.
+                                </p>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="card-divider"></div>
+
+                            <!-- Solution Side -->
+                            <div class="solution-side">
+                                <div class="solution-badge">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>الحل في رايتو</span>
+                                </div>
+                                <p class="solution-text">
+                                    نحن شركة برمجيات وهاردوير تحت مظلة واحدة.
+                                    النظام مصمم ليعمل مع أجهزتنا بتناغم تام.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-shadow"></div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="investment-card">
+                        <div class="card-inner">
+                            <!-- Problem Side -->
+                            <div class="problem-side">
+                                <div
+                                    class="card-icon-wrapper problem-icon-wrapper">
+                                    <div class="icon-bg problem-bg"></div>
+                                    <i class="fas fa-user-slash"></i>
+                                </div>
+                                <h3 class="card-title">خطر "المبرمج الفرد"</h3>
+                                <p class="problem-text">
+                                    ماذا لو اختفى الشخص الذي ركب لك النظام؟ تكون
+                                    عالقاً بلا دعم ولا صيانة.
+                                </p>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="card-divider"></div>
+
+                            <!-- Solution Side -->
+                            <div class="solution-side">
+                                <div class="solution-badge">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>الحل في رايتو</span>
+                                </div>
+                                <p class="solution-text">
+                                    مؤسسة قائمة، فريق دعم فني يعمل طوال اليوم
+                                    وضمان صيانة وعقود مستوى خدمة (SLA).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-shadow"></div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="investment-card">
+                        <div class="card-inner">
+                            <!-- Problem Side -->
+                            <div class="problem-side">
+                                <div
+                                    class="card-icon-wrapper problem-icon-wrapper">
+                                    <div class="icon-bg problem-bg"></div>
+                                    <i class="fas fa-money-bill-wave"></i>
+                                </div>
+                                <h3 class="card-title">وهم التوفير</h3>
+                                <p class="problem-text">
+                                    السعر الأولي الرخيص يتحول لكابوس من تكاليف
+                                    الصيانة والغرامات والتوقفات.
+                                </p>
+                            </div>
+
+                            <!-- Divider -->
+                            <div class="card-divider"></div>
+
+                            <!-- Solution Side -->
+                            <div class="solution-side">
+                                <div class="solution-badge">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>الحل في رايتو</span>
+                                </div>
+                                <p class="solution-text">
+                                    استثمار مرة واحدة، راحة بال لسنوات. (Buy
+                                    Nice or Buy Twice).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="card-shadow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: FAQ -->
+        <section class="faq-section-new section-padding">
+            <div class="container">
+                <div class="faq-wrapper">
+                    <div class="faq-left">
+                        <div class="faq-container" id="faqAccordion">
+                            <div class="faq-item">
+                                <button
+                                    class="faq-header"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq1"
+                                    aria-expanded="false">
+                                    <div class="faq-header-wrapper">
+                                        <div class="faq-icon">
+                                            <i class="fas fa-piggy-bank"></i>
+                                        </div>
+                                        <span>كيف يوفر رايتو في تكاليف تأسيس المحطة مقارنة بالمنافسين؟</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down chevron"></i>
+                                </button>
+                                <div id="faq1" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="faq-body">
+                                        <p>تقنيتنا البرمجية تغنيك عن شراء أجهزة "الكونسول" (Console) باهظة الثمن وقوارئ الكروت التقليدية، حيث يتم التحكم كاملاً عبر التطبيق.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button
+                                    class="faq-header"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq2"
+                                    aria-expanded="false">
+                                    <div class="faq-header-wrapper">
+                                        <div class="faq-icon">
+                                            <i class="fas fa-sync-alt"></i>
+                                        </div>
+                                        <span>هل التحديثات الخاصة بوزارة الطاقة مدفوعة؟</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down chevron"></i>
+                                </button>
+                                <div id="faq2" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="faq-body">
+                                        <p>لا، أي تحديث تفرضه وزارة الطاقة (مثل الدفع الذاتي أو أنظمة النظافة) يتم إضافته للنظام مجاناً لجميع عملائنا.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button
+                                    class="faq-header"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq3"
+                                    aria-expanded="false">
+                                    <div class="faq-header-wrapper">
+                                        <div class="faq-icon">
+                                            <i class="fas fa-wifi"></i>
+                                        </div>
+                                        <span>هل يعمل النظام إذا انقطع الإنترنت في المحطة؟</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down chevron"></i>
+                                </button>
+                                <div id="faq3" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="faq-body">
+                                        <p>نعم، النظام يعمل بكفاءة تامة (Offline). يتم تخزين الفواتير محلياً وترحيلها لهيئة الزكاة تلقائياً فور عودة الاتصال.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button
+                                    class="faq-header"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq4"
+                                    aria-expanded="false">
+                                    <div class="faq-header-wrapper">
+                                        <div class="faq-icon">
+                                            <i class="fas fa-receipt"></i>
+                                        </div>
+                                        <span>هل النظام معتمد للفاتورة الإلكترونية؟</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down chevron"></i>
+                                </button>
+                                <div id="faq4" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="faq-body">
+                                        <p>نعم، رايتو معتمد من هيئة الزكاة والضريبة والجمارك (ZATCA) ويدعم الربط المباشر للمرحلة الثانية.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button
+                                    class="faq-header"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq5"
+                                    aria-expanded="false">
+                                    <div class="faq-header-wrapper">
+                                        <div class="faq-icon">
+                                            <i class="fas fa-sitemap"></i>
+                                        </div>
+                                        <span>لدي سلسلة محطات وأرغب في التوسع، هل يستوعب النظام ذلك؟</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down chevron"></i>
+                                </button>
+                                <div id="faq5" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="faq-body">
+                                        <p>بالتأكيد. نظامنا مصمم للشركات الكبرى (Enterprise Grade)، ويدير عدداً غير محدود من الفروع والمضخات من لوحة تحكم مركزية.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button
+                                    class="faq-header"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq6"
+                                    aria-expanded="false">
+                                    <div class="faq-header-wrapper">
+                                        <div class="faq-icon">
+                                            <i class="fas fa-microchip"></i>
+                                        </div>
+                                        <span>ما نوع الأجهزة التي تستخدمونها؟ وهل عليها ضمان؟</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down chevron"></i>
+                                </button>
+                                <div id="faq6" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="faq-body">
+                                        <p>نستخدم أفضل الأجهزة عالمياً (PTS 2 & Sensors Falcon) ونقدم ضماناً لمدة سنتين على الهاردوير.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button
+                                    class="faq-header"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq7"
+                                    aria-expanded="false">
+                                    <div class="faq-header-wrapper">
+                                        <div class="faq-icon">
+                                            <i class="fas fa-chart-bar"></i>
+                                        </div>
+                                        <span>هل يمكنني تخصيص التقارير لتناسب طريقتي في الإدارة؟</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down chevron"></i>
+                                </button>
+                                <div id="faq7" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="faq-body">
+                                        <p>نعم، نوفر خاصية التخصيص المجاني للتقارير، ونستخدم تقنية Pivot Table لعرض البيانات بالطريقة التي تفضلها.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button
+                                    class="faq-header"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq8"
+                                    aria-expanded="false">
+                                    <div class="faq-header-wrapper">
+                                        <div class="faq-icon">
+                                            <i class="fas fa-headset"></i>
+                                        </div>
+                                        <span>هل يوجد دعم فني بعد البيع؟</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down chevron"></i>
+                                </button>
+                                <div id="faq8" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="faq-body">
+                                        <p>نعم، لدينا فريق دعم فني متخصص متاح 12 ساعة يومياً، والدعم مجاني بالكامل في السنة الأولى.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button
+                                    class="faq-header"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq9"
+                                    aria-expanded="false">
+                                    <div class="faq-header-wrapper">
+                                        <div class="faq-icon">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                        <span>هل يدعم النظام الدفع الذاتي؟</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down chevron"></i>
+                                </button>
+                                <div id="faq9" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="faq-body">
+                                        <p>نعم، وتعد هذه الميزة مجانية في نظامنا، حيث يرتبط النظام بأجهزة الدفع (مثل مدى/جيديا) لتمكين العميل من خدمة نفسه.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="faq-item">
+                                <button
+                                    class="faq-header"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#faq10"
+                                    aria-expanded="false">
+                                    <div class="faq-header-wrapper">
+                                        <div class="faq-icon">
+                                            <i class="fas fa-tags"></i>
+                                        </div>
+                                        <span>كيف يتم التحكم في تغيير الأسعار؟</span>
+                                    </div>
+                                    <i class="fas fa-chevron-down chevron"></i>
+                                </button>
+                                <div id="faq10" class="collapse" data-bs-parent="#faqAccordion">
+                                    <div class="faq-body">
+                                        <p>يمكنك تغيير أسعار الوقود في جميع محطاتك وفروعك بضغطة زر واحدة عن بُعد، وبشكل لحظي.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq-right">
+                        <div class="faq-contact-box">
+                            <div class="section-label">
+                                <i class="fas fa-question-circle"></i>
+                                <span>هل لديك استفسار؟ نحن هنا للمساعدة!</span>
+                            </div>
+                            <h2 class="faq-title">الأسئلة الشائعة</h2>
+                            <div class="content-description">
+                                إجابات شاملة على أكثر الأسئلة التي يطرحها مصنعو
+                                المياه
+                            </div>
+                            <br>
+                            <p class="faq-description">
+نظام رايتو ERP هو الحل الشامل لإدارة محطات الوقود في السعودية، يجمع بين الأتمتة الذكية وربط المضخات والمخزون، ويدعم الفوترة الإلكترونية (ZATCA) والتكامل مع أجهزة نقاط البيع مثل Geidea. يضمن لك الامتثال الكامل لاشتراطات وزارة الطاقة، ويمنحك تقارير لحظية وتحكم مركزي في جميع عمليات المحطة، مع دعم فني هندسي وتحديثات مجانية مدى الحياة.
+
+
+                            </p>
+
+                            <h3 class="contact-title">هل لديك سؤال آخر؟</h3>
+                            <p class="contact-description">
+                                فريق رايتو المتخصص في قطاع مصانع وتوزيع المياه
+                                جاهز للإجابة على جميع
+                                استفساراتك وتقديم الدعم الكامل
+                            </p>
+                            <form id="faqQuestionForm"
+                                onsubmit="handleFaqSubmit(event)">
+                                <div class="contact-form">
+                                    <div class="form-group">
+                                        <textarea id="faqQuestion"
+                                            placeholder="اكتب سؤالك هنا..."
+                                            aria-label="السؤال" rows="5"
+                                            required></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="submit-contact-btn"
+                                    aria-label="إرسال">
+                                    إرسال
+                                </button>
+                            </form>
+                            <p class="support-text">
+                                <i class="fas fa-check-circle"></i>
+                                نرد على جميع الاستفسارات خلال 24 ساعة
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 10: Final CTA -->
+    <section class="cta-demo-section">
+      <div class="container">
+        <div class="cta-demo-content">
+          <h2 class="cta-demo-title">ابدأ رحلة الامتثال والتوسع <span
+              class="highlight-white">الآن</span></h2>
+          <p class="cta-demo-subtitle">
+            انضم لقادة القطاع مثل "شركة فلل" وحول محطاتك لنموذج ذكي ومربح
+          </p>
+
+          <div class="cta-demo-buttons">
+            <a
+              href="contact.html"
+              class="cta-demo-primary text-decoration-none"
+              aria-label="الذهاب إلى صفحة التواصل">
+              <span>احجز ديمو واعرف كيف نوفر تكاليفك</span>
+              <div class="btn-arrow">→</div>
+            </a>
+            <a
+              href="https://wa.me/966538499438"
+              class="btn-whatsapp-cta"
+              rel="noopener noreferrer"
+              aria-label="تواصل مع خبير الانظمة على واتساب">
+              <i class="fab fa-whatsapp"></i>
+              <span>تواصل مع خبير الانظمة على واتساب</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+            <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-bg-overlay"></div>
+      <div class="container">
+        <div class="footer-main-content">
+          <!-- Right Column: Logo and Social -->
+          <div class="footer-column footer-brand-col">
+            <div class="footer-logos-wrapper">
+              <div class="footer-main-logo">
+                <a href="index.html" aria-label="الذهاب إلى الصفحة الرئيسية">
+                  <img src="assets/img/logoar.webp"
+                    alt="شعار رايتو للحلول التقنية" loading="lazy" />
+                </a>
+              </div>
+              <p class="footer-description">تقنية معلومات رايتو تحقق حلول
+                للمستقبل</p>
+            </div>
+            <div class="footer-social-media">
+              <a href="https://www.facebook.com/Raitotec" target="_blank"
+                aria-label="زيارة صفحة فيسبوك"><i
+                  class="fab fa-facebook"></i></a>
+              <a href="https://twitter.com/raitotec" target="_blank"
+                aria-label="زيارة صفحة تويتر"><i
+                  class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.instagram.com/raitotec1/" target="_blank"
+                aria-label="زيارة صفحة إنستغرام"><i
+                  class="fab fa-instagram"></i></a>
+              <a
+                href="https://www.linkedin.com/in/raito-erp-software-830920234/"
+                target="_blank" aria-label="زيارة صفحة لينكدإن"><i
+                  class="fab fa-linkedin"></i></a>
+              <a href="https://www.youtube.com/@Raitotec" target="_blank"
+                aria-label="زيارة قناة يوتيوب"><i
+                  class="fab fa-youtube"></i></a>
+              <a
+                href="https://wa.me/+966539387625?text=I'm%20interested%20in%20your%20website"
+                target="_blank" aria-label="التواصل عبر واتساب"><i
+                  class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-logos">
+              <a class="Industry-icon" href="https://www.mim.gov.sa/ar"
+                aria-label="زيارة موقع وزارة الصناعة والثروة المعدنية">
+                <img src="assets/img/industry.png"
+                  alt="شعار وزارة الصناعة والثروة المعدنية" class="mw-100"
+                  loading="lazy">
+              </a>
+              <a class="Industry-icon" href="https://www.moenergy.gov.sa/ar"
+                aria-label="زيارة موقع وزارة الطاقة">
+                <img src="assets/img/taqa.png" alt="شعار وزارة الطاقة"
+                  class="mw-100" loading="lazy">
+              </a>
+              <a class="Industry-icon"
+                href="https://zatca.gov.sa/ar/Pages/default.aspx"
+                aria-label="زيارة موقع هيئة الزكاة والضريبة والجمارك">
+                <img src="assets/img/zakat.png"
+                  alt="شعار هيئة الزكاة والضريبة والجمارك" class="mw-100"
+                  loading="lazy">
+              </a>
+              <a class="Industry-icon" href="https://www.geidea.net/egy/ar"
+                aria-label="زيارة موقع جيديا">
+                <img src="assets/img/geidea.png" alt="شعار جيديا" class="mw-100"
+                  loading="lazy">
+              </a>
+            </div>
+          </div>
+
+          <!-- Center Column: Quick Links -->
+          <div class="footer-column footer-links-col">
+            <h3 class="footer-column-title">روابط سريعة</h3>
+            <ul class="footer-links-list">
+              <li><a href="index.html">الصفحة الرئيسية</a></li>
+              <li><a href="about.html">من نحن</a></li>
+              <li><a href="pricing.html">اسعارنا</a></li>
+              <li><a href="blog.html">المدونة</a></li>
+              <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column footer-brand-col">
+            <h3 class="footer-column-title">خدماتنا</h3>
+            <ul class="footer-links-list">
+              <li>
+                <a href="#"
+                  aria-label="الذهاب إلى صفحة برنامج إدارة المبيعات والحسابات">برنامج
+                  إدارة المبيعات والحسابات</a>
+              </li>
+              <li>
+                <a href="#"
+                  aria-label="الذهاب إلى صفحة برنامج إدارة المخزون">برنامج إدارة
+                  المخزون</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة برنامج الصيانة">برنامج
+                  الصيانة</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة برنامج المحاماة">برنامج
+                  المحاماة</a>
+              </li>
+              <li>
+                <a href="#"
+                  aria-label="الذهاب إلى صفحة برنامج إدارة محطات الوقود">برنامج
+                  إدارة محطات الوقود</a>
+              </li>
+              <li>
+                <a href="#" aria-label="الذهاب إلى صفحة برنامج العقارات">برنامج
+                  العقارات</a>
+              </li>
+              <li>
+                <a href="#"
+                  aria-label="الذهاب إلى صفحة برنامج إدارة شؤون الموظفين">برنامج
+                  إدارة شؤون الموظفين</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Left Column: Contact Info -->
+          <div class="footer-column footer-contact-col">
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4>اتصل بنا</h4>
+                <a href="tel:+966538499438">+966 5-0560 5643</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>استشرنا</h4>
+                <a href="mailto:example@gmail.com">example@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>موقعنا</h4>
+                <!-- <p>الرياض، المملكة العربية السعودية، شارع<br>44 دائري، شارع الدائري الشرقي، 8600<br>الرياض مكتب 23</p> -->
+                <!-- <a href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9" aria-label="زيارة موقعنا على الخريطة">الرياض، المملكة العربية السعودية، 4000 طريق دائري 12993، 2</a> -->
+                <a href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9"
+                  aria-label="زيارة موقعنا على الخريطة">الرياض، المملكة العربية
+                  السعودية،<br> 4000 طريق دائري 12993، 2</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <p>© 2025 جميع الحقوق محفوظة لدى شركة رايتو للبرمجيات.</p>
+        </div>
+      </div>
+    </footer>
+            <!-- Video Popup Modal -->
+            <div
+                class="modal fade"
+                id="videoModal"
+                tabindex="-1"
+                aria-labelledby="videoModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content video-modal-content">
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="إغلاق">
+                            <i class="fas fa-xmark"></i>
+                        </button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe
+                                    id="systemDemoVideo"
+                                    src="https://www.youtube.com/embed/1Q8fG0TtVAY"
+                                    title="شاهد النظام يعمل"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen
+                                    style="border-radius: 16px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Chat Widget -->
+            <div class="chat-widget">
+                <div class="chat-header">
+                    <div class="chat-avatar">
+                        <img
+                            src="assets/img/logoar.webp"
+                            alt="مساعد العملاء"
+                            loading="lazy" />
+                    </div>
+                    <div class="chat-info">
+                        <h3>مساعد العملاء</h3>
+                        <p>متاح الآن للمساعدة</p>
+                    </div>
+                    <button class="chat-close"
+                        aria-label="إغلاق نافذة المحادثة">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="chat-body">
+                    <div class="chat-message bot-message">
+                        <p>مرحباً! كيف يمكنني مساعدتك اليوم؟</p>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input
+                        type="text"
+                        placeholder="اكتب رسالتك هنا..."
+                        id="AI-Massage"
+                        name="AI-Massage"
+                        aria-label="أدخل رسالة المحادثة" />
+                    <button class="send-btn" aria-label="إرسال الرسالة">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chat-toggle">
+                <div class="chat-bubble">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="chat-notification">1</div>
+            </div>
+
+            <button class="back-to-top" aria-label="العودة إلى الأعلى"
+                id="backToTop">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+            <!-- Swiper JS -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+            <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+            <script src="assets/js/swiper-bundle.min.js" defer></script>
+            <script src="assets/js/swiper.js" defer></script>
+            <script src="assets/js/chang-langth.js" defer></script>
+            <script src="assets/js/main.js" defer></script>
+            <script src="assets/js/chat.js" defer></script>
+            <script src="assets/js/animations.js" defer></script>
+            <script>
+      // FAQ Functionality
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', function() {
+          const faqItem = this.parentElement;
+          const isOpen = faqItem.classList.contains('active');
+          
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+          });
+          
+          if (!isOpen) {
+            faqItem.classList.add('active');
+          }
+        });
+      });
+    </script>
+            <script>
+        // بيانات اللوجوهات
+        const companyLogos = [
+            {
+                name: "taqa",
+                img: "assets/img/taqa.png"
+            },
+            {
+                name: "zakat",
+                img: "assets/img/zakat.png"
+            },
+            {
+                name: "geidea",
+                img: "assets/img/geidea.png"
+            },
+            {
+                name: "madfu",
+                img: "assets/img/madfu.png"
+            },
+            {
+                name: "مدفوعاتي",
+                img: "assets/img/madfu.png"
+            }
+        ];
+
+        // إنشاء عناصر اللوجوهات في Swiper
+        const swiperWrapper = document.querySelector('.swiper-wrapper');
+        
+        // نكرر اللوجوهات عدة مرات لضمان استمرارية الحركة
+        for (let i = 0; i < 3; i++) {
+            companyLogos.forEach(logo => {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                
+                slide.innerHTML = `
+                    <div class="company-logo">
+                        <img src="${logo.img}" alt="${logo.name}" class="logo-img">
+                    </div>
+                `;
+                
+                swiperWrapper.appendChild(slide);
+            });
+        }
+
+        // تهيئة Swiper
+        const swiper = new Swiper('.logosCarousel', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+            speed: 5000,
+            grabCursor: true,
+            rtl: true,
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4,
+                },
+                1200: {
+                    slidesPerView: 5,
+                },
+            },
+        });
+
+        // إضافة تأثير عند التمرير بالماوس
+        swiper.el.addEventListener('mouseenter', () => {
+            swiper.autoplay.stop();
+        });
+
+        swiper.el.addEventListener('mouseleave', () => {
+            swiper.autoplay.start();
+        });
+    </script>
+        </body>
+    </html>
