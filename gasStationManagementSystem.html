@@ -20,8 +20,14 @@
         <link href="assets/img/LOGO.png" rel="shortcut icon" />
         <title>نظام إدارة محطات الوقود - Raito Gas Station Management</title>
         <link
+            rel="preload"
             href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
-            rel="stylesheet" />
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" /></noscript>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
         <link
             rel="preload"
             href="assets/css/bootstrap.min.css"
@@ -32,18 +38,53 @@
       " />
         <noscript><link rel="stylesheet"
                 href="assets/css/bootstrap.min.css" /></noscript>
-        <!-- Font Awesome CDN -->
         <link
-            rel="stylesheet"
+            rel="preload"
+            href="assets/css/newCss.css"
+            as="style"
+            onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      " />
+        <noscript><link rel="stylesheet"
+                href="assets/css/newCss.css" /></noscript>
+        <link
+            rel="preload"
+            href="assets/css/newCss2.css"
+            as="style"
+            onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      " />
+        <noscript><link rel="stylesheet"
+                href="assets/css/newCss2.css" /></noscript>
+        <!-- Font Awesome CDN - Async Loading -->
+        <link
+            rel="preload"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
             integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
             crossorigin="anonymous"
             referrerpolicy="no-referrer" />
+        <noscript>
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+                integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer" />
+        </noscript>
         <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="assets/css/newCss.css" />
-        <link rel="stylesheet" href="assets/css/newCss2.css" />
+            rel="preload"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript>
+            <link rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        </noscript>
+
     </head>
     <body>
         <div class="overlay"></div>
@@ -54,7 +95,7 @@
                         class="logo-icon"
                         href="index.html"
                         aria-label="الذهاب إلى الصفحة الرئيسية">
-                        <img src="assets/img/logoar.webp" alt class="mw-100" />
+                        <img src="assets/img/logoar.webp" alt="شعار رايتو" class="mw-100" width="120" height="50" />
                     </a>
                 </div>
                 <ul class="nav-menu">
@@ -450,6 +491,7 @@
                                     src="assets/Asset-system/icon/united-kingdom.png"
                                     alt="علم المملكة المتحدة"
                                     width="24"
+                                    height="24"
                                     class="ms-2 align-bottom" />
                                 English
                             </button>
@@ -464,6 +506,7 @@
             </div>
         </nav>
 
+        <main id="main-content">
         <!-- Section 1: Hero Section -->
         <section id="home" class="hero-section">
             <div class="hero-container">
@@ -510,10 +553,17 @@
                 </div>
                 <div class="video-container">
                     <div class="video-placeholder" id="video-placeholder">
-                        <img
-                            src="assets/img/LOGO.png"
-                            alt="بوستر الفيديو التعريفي"
-                            loading="lazy" />
+                        <picture>
+                            <source srcset="assets/img/LOGO.png" type="image/png" />
+                            <img
+                                src="assets/img/LOGO.png"
+                                alt="بوستر الفيديو التعريفي"
+                                loading="eager"
+                                width="810"
+                                height="405"
+                                fetchpriority="high"
+                                decoding="sync" />
+                        </picture>
                         <button
                             type="button"
                             class="play-button"
@@ -1328,6 +1378,7 @@
         </div>
       </div>
     </section>
+        </main>
 
             <!-- Footer -->
     <footer class="footer">
@@ -1340,7 +1391,10 @@
               <div class="footer-main-logo">
                 <a href="index.html" aria-label="الذهاب إلى الصفحة الرئيسية">
                   <img src="assets/img/logoar.webp"
-                    alt="شعار رايتو للحلول التقنية" loading="lazy" />
+                    alt="شعار رايتو للحلول التقنية"
+                    loading="lazy"
+                    width="150"
+                    height="60" />
                 </a>
               </div>
               <p class="footer-description">تقنية معلومات رايتو تحقق حلول
@@ -1373,24 +1427,24 @@
                 aria-label="زيارة موقع وزارة الصناعة والثروة المعدنية">
                 <img src="assets/img/industry.png"
                   alt="شعار وزارة الصناعة والثروة المعدنية" class="mw-100"
-                  loading="lazy">
+                  loading="lazy" width="100" height="100" />
               </a>
               <a class="Industry-icon" href="https://www.moenergy.gov.sa/ar"
                 aria-label="زيارة موقع وزارة الطاقة">
                 <img src="assets/img/taqa.png" alt="شعار وزارة الطاقة"
-                  class="mw-100" loading="lazy">
+                  class="mw-100" loading="lazy" width="100" height="100" />
               </a>
               <a class="Industry-icon"
                 href="https://zatca.gov.sa/ar/Pages/default.aspx"
                 aria-label="زيارة موقع هيئة الزكاة والضريبة والجمارك">
                 <img src="assets/img/zakat.png"
                   alt="شعار هيئة الزكاة والضريبة والجمارك" class="mw-100"
-                  loading="lazy">
+                  loading="lazy" width="100" height="100" />
               </a>
               <a class="Industry-icon" href="https://www.geidea.net/egy/ar"
                 aria-label="زيارة موقع جيديا">
                 <img src="assets/img/geidea.png" alt="شعار جيديا" class="mw-100"
-                  loading="lazy">
+                  loading="lazy" width="100" height="100" />
               </a>
             </div>
           </div>
@@ -1569,9 +1623,8 @@
 
             <!-- Swiper JS -->
             <script
-                src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+                src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
             <script src="assets/js/bootstrap.bundle.min.js" defer></script>
-            <script src="assets/js/swiper-bundle.min.js" defer></script>
             <script src="assets/js/swiper.js" defer></script>
             <script src="assets/js/chang-langth.js" defer></script>
             <script src="assets/js/main.js" defer></script>
@@ -1595,84 +1648,107 @@
       });
     </script>
             <script>
-        // بيانات اللوجوهات
-        const companyLogos = [
-            {
-                name: "taqa",
-                img: "assets/img/taqa.png"
-            },
-            {
-                name: "zakat",
-                img: "assets/img/zakat.png"
-            },
-            {
-                name: "geidea",
-                img: "assets/img/geidea.png"
-            },
-            {
-                name: "madfu",
-                img: "assets/img/madfu.png"
-            },
-            {
-                name: "مدفوعاتي",
-                img: "assets/img/madfu.png"
+        // Initialize Swiper after all scripts are loaded
+        window.addEventListener('load', function() {
+            // بيانات اللوجوهات
+            const companyLogos = [
+                {
+                    name: "taqa",
+                    png: "assets/img/taqa.png",
+                    webp: "assets/img/taqa.png",
+                    width: 90,
+                    height: 24
+                },
+                {
+                    name: "zakat",
+                    png: "assets/img/zakat.png",
+                    webp: "assets/img/zakat.png",
+                    width: 90,
+                    height: 24
+                },
+                {
+                    name: "geidea",
+                    png: "assets/img/geidea.png",
+                    webp: "assets/img/geidea.png",
+                    width: 90,
+                    height: 32
+                },
+                {
+                    name: "madfu",
+                    png: "assets/img/madfu.png",
+                    webp: "assets/img/madfu.png",
+                    width: 90,
+                    height: 54
+                },
+                {
+                    name: "مدفوعاتي",
+                    png: "assets/img/madfu.png",
+                    webp: "assets/img/madfu.png",
+                    width: 90,
+                    height: 54
+                }
+            ];
+
+            // إنشاء عناصر اللوجوهات في Swiper
+            const swiperWrapper = document.querySelector('.swiper-wrapper');
+            
+            // نكرر اللوجوهات عدة مرات لضمان استمرارية الحركة
+            for (let i = 0; i < 3; i++) {
+                companyLogos.forEach(logo => {
+                    const slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    
+                    slide.innerHTML = `
+                        <div class="company-logo">
+                            <picture>
+                                <source srcset="${logo.webp}" type="image/webp">
+                                <img src="${logo.png}" alt="${logo.name}" class="logo-img-cursolr"  loading="lazy" decoding="async">
+                            </picture>
+                        </div>
+                    `;
+                    
+                    swiperWrapper.appendChild(slide);
+                });
             }
-        ];
 
-        // إنشاء عناصر اللوجوهات في Swiper
-        const swiperWrapper = document.querySelector('.swiper-wrapper');
-        
-        // نكرر اللوجوهات عدة مرات لضمان استمرارية الحركة
-        for (let i = 0; i < 3; i++) {
-            companyLogos.forEach(logo => {
-                const slide = document.createElement('div');
-                slide.className = 'swiper-slide';
-                
-                slide.innerHTML = `
-                    <div class="company-logo">
-                        <img src="${logo.img}" alt="${logo.name}" class="logo-img">
-                    </div>
-                `;
-                
-                swiperWrapper.appendChild(slide);
-            });
-        }
+            // تهيئة Swiper - only after it's loaded
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.logosCarousel', {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    loop: true,
+                    autoplay: {
+                        delay: 0,
+                        disableOnInteraction: false,
+                    },
+                    speed: 5000,
+                    grabCursor: true,
+                    rtl: true,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                        },
+                        1200: {
+                            slidesPerView: 5,
+                        },
+                    },
+                });
 
-        // تهيئة Swiper
-        const swiper = new Swiper('.logosCarousel', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: {
-                delay: 0,
-                disableOnInteraction: false,
-            },
-            speed: 5000,
-            grabCursor: true,
-            rtl: true,
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                },
-                768: {
-                    slidesPerView: 3,
-                },
-                1024: {
-                    slidesPerView: 4,
-                },
-                1200: {
-                    slidesPerView: 5,
-                },
-            },
-        });
+                // إضافة تأثير عند التمرير بالماوس
+                swiper.el.addEventListener('mouseenter', () => {
+                    swiper.autoplay.stop();
+                });
 
-        // إضافة تأثير عند التمرير بالماوس
-        swiper.el.addEventListener('mouseenter', () => {
-            swiper.autoplay.stop();
-        });
-
-        swiper.el.addEventListener('mouseleave', () => {
-            swiper.autoplay.start();
+                swiper.el.addEventListener('mouseleave', () => {
+                    swiper.autoplay.start();
+                });
+            }
         });
     </script>
         </body>

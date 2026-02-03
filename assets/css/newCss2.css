@@ -246,13 +246,6 @@ body {
   text-align: center;
 }
 
-.section-subtitle {
-  color: #64748b;
-  font-size: 1.2rem;
-  margin: 0 auto;
-  max-width: 600px;
-}
-
 .services-overview {
   background: var(--light-color);
   padding: 100px 0;
@@ -3036,8 +3029,9 @@ body {
 }
 
 .integration-item p {
-  color: var(--text-light);
-  font-size: 0.95rem;
+  color: #374151;
+    font-size: 16px;
+  font-weight: 500;
 }
 
 /* Section 6: Demo Booking */
@@ -3107,10 +3101,9 @@ body {
 }
 
 .section-subtitle {
-  font-size: 1rem;
-  color: var(--text-light);
-  max-width: 600px;
+  font-size: 1.2rem;
   margin: 0 auto;
+  max-width: 600px;
 }
 
 .bg-light {
