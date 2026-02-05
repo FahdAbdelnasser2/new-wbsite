@@ -16714,6 +16714,7 @@ a {
 }
 
 .highlight-white {
+  font-size: larger;
   color: var(--secondary-color);
 }
 

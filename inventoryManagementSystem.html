@@ -1,0 +1,1413 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="نظام إدارة المخزون، إدارة المستودع، تتبع الصلاحية، الجرد الإلكتروني، باركود" />
+        <meta
+            name="description"
+            content="نظام رايتو لإدارة المخزون والمستودعات. تتبع آني للبضاعة، إنذارات تلقائية لتواريخ الصلاحية، حماية من السرقة والهالك، وربط فوري بالحسابات المالية." />
+        <meta name="author" content="Raitotec" />
+        <meta
+            property="og:title"
+            content="نظام إدارة المخزون - رايتو" />
+        <meta property="og:type" content="Website" />
+        <meta property="og:url" content />
+        <meta property="og:image" content="assets/img/LOGO.png" />
+        <link href="assets/img/LOGO.png" rel="shortcut icon" />
+        <title>نظام إدارة المخزون - Raito Inventory Management System</title>
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript><link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" /></noscript>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        <link
+            rel="preload"
+            href="assets/css/bootstrap.min.css"
+            as="style"
+            onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      " />
+        <noscript><link rel="stylesheet"
+                href="assets/css/bootstrap.min.css" /></noscript>
+        <link
+            rel="preload"
+            href="assets/css/newCss.css"
+            as="style"
+            onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      " />
+        <noscript><link rel="stylesheet"
+                href="assets/css/newCss.css" /></noscript>
+        <link
+            rel="preload"
+            href="assets/css/newCss2.css"
+            as="style"
+            onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      " />
+        <noscript><link rel="stylesheet"
+                href="assets/css/newCss2.css" /></noscript>
+        <!-- Font Awesome CDN - Async Loading -->
+        <link
+            rel="preload"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <noscript>
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+                integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer" />
+        </noscript>
+        <link
+            rel="preload"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript>
+            <link rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        </noscript>
+
+    </head>
+    <body>
+        <div class="overlay"></div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a
+                        class="logo-icon"
+                        href="index.html"
+                        aria-label="الذهاب إلى الصفحة الرئيسية">
+                        <img src="assets/img/logoar.webp" alt="شعار رايتو"
+                            class="mw-100" width="120" height="50" />
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li>
+                        <a
+                            href="index.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى الصفحة الرئيسية">الرئيسية</a>
+                    </li>
+                    <li>
+                        <a
+                            href="about.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة من نحن">من نحن</a>
+                    </li>
+                    <li class="nav-item mega-parent">
+                        <a
+                            href="business-sector.html"
+                            class="nav-link text-center"
+                            aria-label="عرض قطاعات الأعمال">قطاعات اعمالنا ▾</a>
+                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="mega-row">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mega-parent">
+                        <a
+                            href="services.html"
+                            class="nav-link text-center"
+                            aria-label="عرض الخدمات">الخدمات ▾</a>
+                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="mega-row">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item mega-parent">
+                        <a
+                            href="services.html"
+                            class="nav-link text-center"
+                            aria-label="عرض مجتمعنا">مجتمعنا ▾</a>
+                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="mega-row">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a
+                            href="prices.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة الأسعار">اسعارنا</a>
+                    </li>
+                    <li>
+                        <a
+                            href="Blog.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة المدونة">المدونة</a>
+                    </li>
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة تواصل معنا">تواصل
+                            معنا</a>
+                    </li>
+                    <li class="lang-item">
+                        <div class="language-switcher">
+                            <button
+                                class="lang-btn btn border-0"
+                                id="arabic-btn"
+                                aria-label="التحويل إلى اللغة العربية"
+                                title="التحويل إلى اللغة العربية">
+                                <img
+                                    src="assets/Asset-system/icon/Flag-Saudi-Arabia.png"
+                                    alt="علم السعودية"
+                                    width="24"
+                                    class="me-2 align-middle" />
+                                العربية
+                            </button>
+                            <button
+                                class="lang-btn btn border-0"
+                                id="english-btn"
+                                aria-label="التحويل إلى اللغة الإنجليزية"
+                                title="التحويل إلى اللغة الإنجليزية">
+                                <img
+                                    src="assets/Asset-system/icon/united-kingdom.png"
+                                    alt="علم المملكة المتحدة"
+                                    width="24"
+                                    height="24"
+                                    class="ms-2 align-bottom" />
+                                English
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main id="main-content">
+            <!-- Section 1: Hero Section -->
+            <section id="home" class="hero-section">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h1 class="hero-title">
+                            نظام إدارة المخزون..<br>أوقف نزيف <span
+                                class="color-green">"الهالك"</span> واحمِ بضاعتك من
+                            السرقة والانتهاء.
+                        </h1>
+                        <p class="hero-subtitle">
+                            لا تدع مخزونك يأكل أرباحك. رايتو هو النظام السحابي
+                            الوحيد الذي ينبهك قبل انتهاء صلاحية المنتجات، يدير
+                            تكاليف الشحن بدقة، ويمنحك تخصيصاً مجانياً يناسب
+                            طبيعة مستودعك.
+                        </p>
+                        <div class="hero-buttons">
+                            <a
+                                href="contact.html"
+                                class="btn-primary"
+                                aria-label="طلب ديمو تجريبي">
+                                <span>اطلب ديمو وشاهد "الجرد اللحظي"</span>
+                                <div class="btn-arrow">→</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-particles"></div>
+                <div class="hero-waves"></div>
+            </section>
+            <section id="video" class="video-section-1">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="section-label">
+                            <i class="fas fa-play-circle"></i>
+                            <span>عرض توضيحي للنظام</span>
+                        </div>
+                        <h2 class="section-title">شاهد سرعة الجرد وكشف العجز
+                            بالباركود</h2>
+                        <p class="section-subtitle">فيديو دقيقة واحدة توضح قوة
+                            النظام</p>
+                    </div>
+                    <div class="video-container">
+                        <div class="video-placeholder" id="video-placeholder">
+                            <picture>
+                                <source srcset="assets/img/LOGO.png"
+                                    type="image/png" />
+                                <img
+                                    src="assets/img/LOGO.png"
+                                    alt="بوستر الفيديو التعريفي"
+                                    loading="eager"
+                                    width="810"
+                                    height="405"
+                                    fetchpriority="high"
+                                    decoding="sync" />
+                            </picture>
+                            <button
+                                type="button"
+                                class="play-button"
+                                id="play-button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#videoModal"
+                                aria-label="تشغيل الفيديو التعريفي للنظام">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Section 2: Trust Bar / Partners -->
+            <section
+                class="digtal-marketing-logo testimonials-section section-padding bg-gray">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <div class="section-label">
+                            <i class="fas fa-link"></i>
+                            <span>الأمان والامتثال</span>
+                        </div>
+                        <h2 class="section-title">نظام آمن، سحابي، ومتوافق مع</h2>
+                    </div>
+                    <!-- Swiper Container -->
+                    <div class="swiper logosCarousel">
+                        <div class="swiper-wrapper">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Pain Points -->
+            <section class="problems-grid-section section-padding"
+                style="background: white;">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <div class="section-label">
+                            <i class="fas fa-warehouse"></i>
+                            <span>تحديات إدارة المستودع</span>
+                        </div>
+                        <h2 class="section-title">هل مخزونك "يحرق" أموالك دون أن
+                            تدري؟</h2>
+                        <p class="section-subtitle">
+                            مشاكل المستودع والمخزون التي تقتل أرباحك وتهدر
+                            رأس مالك
+                        </p>
+                    </div>
+                    <div class="problems-grid">
+                        <div class="problem-card shadow-sm">
+                            <div class="card-icon">
+                                <i class="fas fa-hourglass-end"></i>
+                            </div>
+                            <h3>هل تتفاجأ بانتهاء صلاحية البضاعة؟</h3>
+                            <p class="card-description">
+                                في قطاع الأغذية، يوم واحد تأخير يعني خسارة كاملة.
+                                الأنظمة القديمة لا تنبهك، لكن رايتو يرسل لك
+                                إنذاراً مبكراً لتبيع البضاعة أو تعمل عليها عروضاً
+                                قبل فوات الأوان.
+                            </p>
+                        </div>
+
+                        <div class="problem-card shadow-sm">
+                            <div class="card-icon">
+                                <i class="fas fa-mask"></i>
+                            </div>
+                            <h3>هل الرصيد في النظام يختلف عن الواقع؟</h3>
+                            <p class="card-description">
+                                السرقة والاختلاسات تحدث في غياب الرقابة الدقيقة.
+                                نظامنا يكشف "العجز" لحظة بلحظة، ويمنع التلاعب في
+                                أذونات الصرف والإضافة.
+                            </p>
+                        </div>
+
+                        <div class="problem-card shadow-sm">
+                            <div class="card-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3>هل تحسب تكلفة منتجك خطأ؟</h3>
+                            <p class="card-description">
+                                إذا لم تضف مصاريف الشحن، الجمارك، والإكراميات على
+                                تكلفة القطعة، فأنت تخدع نفسك في الأرباح. رايتو
+                                يحسب "التكلفة الواصلة" بدقة متناهية.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Cost of Inaction / Comparison Table -->
+            <section class="cta-demo-section">
+                <div class="container">
+                    <div class="cta-demo-content">
+                        <div class="cta-demo-header">
+                            <div class="section-label">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>قارن بنفسك</span>
+                            </div>
+                            <h2 class="cta-demo-title">لماذا تعتبر الأنظمة المحلية
+                                "الرخيصة" مكلفة جداً؟</h2>
+                        </div>
+
+                        <table
+                            class="comparison-table table table-hover text-end rounded-4 overflow-hidden raito-responsive-table">
+                            <thead>
+                                <tr>
+                                    <th style="width:22%;color:#b6c2ca;">وجه
+                                        المقارنة</th>
+                                    <th
+                                        style="width:39%;color:#e76a6a;">الأنظمة
+                                        المحلية (Desktop/Local)</th>
+                                    <th style="width:39%;color:#6cce69;">نظام
+                                        إدارة المخزون من رايتو (Cloud)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="وجه المقارنة:"><strong>حماية
+                                            البيانات</strong></td>
+                                    <td data-label="الأنظمة المحلية:"
+                                        style="color:#b6c2ca;">
+                                        <span
+                                            style="color: #e76a6a; font-weight: 600;">خطر:</span>
+                                        تعطل الجهاز يعني ضياع كل بياناتك ومخزونك
+                                        للأبد.
+                                    </td>
+                                    <td data-label="مع رايتو:"
+                                        style="color: white;">
+                                        <span
+                                            style="color: #6cce69; font-weight: 600;">أمان تام:</span>
+                                        بياناتك على سيرفرات سحابية عالمية
+                                        (Cloud)، محمية ومتاحة لك من أي مكان.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td
+                                        data-label="وجه المقارنة:"><strong>سرعة
+                                            الجرد</strong></td>
+                                    <td data-label="الأنظمة المحلية:"
+                                        style="color:#b6c2ca;">
+                                        <span
+                                            style="color: #e76a6a; font-weight: 600;">بطيء
+                                            ومعقد:</span> يحتاج لإيقاف العمل
+                                        لأيام وتدخل يدوي مرهق.
+                                    </td>
+                                    <td data-label="مع رايتو:"
+                                        style="color: white;">
+                                        <span
+                                            style="color: #6cce69; font-weight: 600;">جرد
+                                            لحظي:</span> باستخدام الباركود،
+                                        يمكنك جرد المستودع واكتشاف الفروقات في
+                                        دقائق دون وقف البيع.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="وجه المقارنة:"><strong>التطوير
+                                            والمرونة</strong></td>
+                                    <td data-label="الأنظمة المحلية:"
+                                        style="color:#b6c2ca;">
+                                        <span
+                                            style="color: #e76a6a; font-weight: 600;">قوالب
+                                            ثابتة:</span> تدفع مقابل كل
+                                        تعديل، أو تضطر لتغيير طريقة عملك.
+                                    </td>
+                                    <td data-label="مع رايتو:"
+                                        style="color: white;">
+                                        <span
+                                            style="color: #6cce69; font-weight: 600;">تخصيص
+                                            مجاني:</span> نكيف النظام ليناسب
+                                        تقسيمات مستودعك  (رفوف، ثلاجات) وتقاريرك مجاناً.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Core Features -->
+            <section class="integration-section section-padding">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <div class="section-label">
+                            <i class="fas fa-star"></i>
+                            <span>الميزات الحصرية</span>
+                        </div>
+                        <h2 class="section-title">تقنيات ذكية صممت لمدير المستودع
+                            المحترف</h2>
+                        <p class="section-subtitle">تقنيات حصرية لن تجدها إلا في
+                            رايتو لإدارة المخزون</p>
+                    </div>
+                    <div class="integration-grid why-raito-grid">
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <i class="fas fa-bell"></i>
+                            </div>
+                            <h3>الإنذار المبكر</h3>
+                            <p>
+                                النظام يراقب تواريخ الصلاحية بدلاً منك، ويرسل
+                                تنبيهات ذكية للأصناف التي أوشكت على الانتهاء
+                                لتتخلص منها بذكاء (عروض وتصفيات).
+                            </p>
+                        </div>
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <i class="fas fa-map"></i>
+                            </div>
+                            <h3>خريطة المستودع</h3>
+                            <p>
+                                قسم مخزنك افتراضياً (ممرات، رفوف، ثلاجات
+                                تجميد). ستعرف بالضبط أين تقع "الكرتونة" حتى لو
+                                كانت في درجة حرارة تحت الصفر.
+                            </p>
+                        </div>
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <h3>إدارة التكاليف الإضافية</h3>
+                            <p>
+                                أضف تكاليف الشحن، النقل، وحتى "الإكراميات" على
+                                فاتورة الشراء، وسيقوم النظام بتوزيعها على تكلفة
+                                الصنف تلقائياً.
+                            </p>
+                        </div>
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <h3>تعدد الوحدات</h3>
+                            <p>
+                                بع بالقطعة، بالكرتونة، أو بالطبقة. النظام يدير
+                                التحويلات بين الوحدات بمرونة تامة ويخصم الكميات
+                                بدقة.
+                            </p>
+                        </div>
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <i class="fas fa-arrow-right-arrow-left"></i>
+                            </div>
+                            <h3>مبدأ FIFO</h3>
+                            <p>
+                                النظام يطبق آلياً مبدأ "ما يرد أولاً يصرف أولاً"،
+                                ليضمن خروج البضاعة القديمة قبل الجديدة وتقليل
+                                الهالك.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Ecosystem & Integration -->
+            <section id="integration" class="integration-section bg-gray">
+                <div class="container">
+                    <div class="integration-content">
+                        <div class="integration-text">
+                            <div class="section-label">
+                                <i class="fas fa-cogs"></i>
+                                <span>المنظومة المتكاملة</span>
+                            </div>
+                            <h2 class="section-title">قلب العمليات اللوجستية
+                                والمالية</h2>
+                            <p class="section-description">
+                                ربط فوري بين المستودع والنظام المالي
+                            </p>
+                            <div class="integration-benefits">
+                                <div class="benefit-item">
+                                    <i class="fas fa-barcode"></i>
+                                    <span>ربط الباركود: يدعم أجهزة قارئ الباركود
+                                        (Barcode Scanners) لتسريع عمليات الاستلام
+                                        والصرف والجرد.</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-link"></i>
+                                    <span>الربط مع الـ ERP: أي حركة مخزنية
+                                        (صرف / إضافة) تُنشئ قيداً محاسبياً تلقائياً
+                                        في نظام الحسابات ، مما ينهي الخلاف بين "أمين المستودع" و"المحاسب".</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-receipt"></i>
+                                    <span>الامتثال للزكاة: تقارير مخزون دقيقة
+                                        جاهزة للفحص الضريبي في أي وقت.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="integration-diagram">
+                            <div class="central-system">
+                                <div class="system-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <span
+                                    class="text-center">لوحة<br />التحكم</span>
+                            </div>
+                            <div class="connected-systems">
+                                <div class="system-node" style="--angle: 60deg">
+                                    <div class="node-icon">
+                                        <i class="fas fa-barcode"></i>
+                                    </div>
+                                    <span>قارئ الباركود</span>
+                                </div>
+                                <div class="system-node"
+                                    style="--angle: 120deg">
+                                    <div class="node-icon">
+                                        <i class="fas fa-warehouse"></i>
+                                    </div>
+                                    <span>المستودع</span>
+                                </div>
+                                <div class="system-node"
+                                    style="--angle: 180deg">
+                                    <div class="node-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <span>الحسابات المالية</span>
+                                </div>
+                            </div>
+                            <div class="connection-lines"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="integration-particles"></div>
+            </section>
+
+            <!-- Section 7: The Safe Investment Guarantee -->
+            <section class="safe-investment-section section-padding">
+                <div class="container">
+                    <div class="section-header text-center mb-5">
+                        <div class="section-label">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>الاستثمار الآمن</span>
+                        </div>
+                        <h2 class="section-title">لا تشتري "برنامجاً".. اشتري
+                            راحة بالك</h2>
+                        <p class="section-subtitle">الرد على: "السعر غالي مقارنة
+                            بالأنظمة المحلية"</p>
+                    </div>
+
+                    <div class="investment-cards-grid">
+                        <!-- Card 1 -->
+                        <div class="investment-card">
+                            <div class="card-inner">
+                                <div class="problem-side">
+                                    <div
+                                        class="card-icon-wrapper problem-icon-wrapper">
+                                        <div class="icon-bg problem-bg"></div>
+                                        <i class="fas fa-percent"></i>
+                                    </div>
+                                    <h3 class="card-title">قيمة مقابل سعر</h3>
+                                    <p class="problem-text">
+                                        الأنظمة المحلية تبيعك "أرشيفاً" فقط. نحن
+                                        نبيعك نظاماً "ينبهك" ويحميك من الخسارة.
+                                        توفيرك لثمن "طبلية" بضاعة واحدة تالفة
+                                        يغطي تكلفة النظام.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="investment-card">
+                            <div class="card-inner">
+                                <div class="problem-side">
+                                    <div
+                                        class="card-icon-wrapper problem-icon-wrapper">
+                                        <div class="icon-bg problem-bg"></div>
+                                        <i class="fas fa-wrench"></i>
+                                    </div>
+                                    <h3 class="card-title">تخصيص مجاني</h3>
+                                    <p class="problem-text">
+                                        ميزتنا الكبرى. لا نجبرك على شكل فواتير
+                                        أو تقارير محددة. فريقنا يبرمج لك ما
+                                        تحتاجه مجاناً لتشعر أن النظام صُنع خصيصاً
+                                        لك.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="investment-card">
+                            <div class="card-inner">
+                                <div class="problem-side">
+                                    <div
+                                        class="card-icon-wrapper problem-icon-wrapper">
+                                        <div class="icon-bg problem-bg"></div>
+                                        <i class="fas fa-headset"></i>
+                                    </div>
+                                    <h3 class="card-title">دعم فني "صاروخي"</h3>
+                                    <p class="problem-text">
+                                        لأن مشاكل المستودع لا تنتظر، فريقنا
+                                        متاح للرد وحل المشكلات فوراً، مع تحديثات
+                                        أمنية مستمرة لا توفرها الأنظمة القديمة.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 8: FAQ -->
+            <section class="faq-section-new section-padding">
+                <div class="container">
+                    <div class="faq-wrapper">
+                        <div class="faq-left">
+                            <div class="faq-container" id="faqAccordion">
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq1"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i
+                                                    class="fas fa-calendar"></i>
+                                            </div>
+                                            <span>هل يدعم النظام تواريخ انتهاء الصلاحية للمواد الغذائية؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq1" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نعم، وبقوة. يمكنك تتبع تواريخ الصلاحية
+                                                لكل دفعة شراء، والنظام يطبق مبدأ
+                                                FIFO (ما يرد أولاً يصرف أولاً)
+                                                ويحذرك قبل الانتهاء.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq2"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-cube"></i>
+                                            </div>
+                                            <span>هل يمكنني تقسيم المستودع إلى رفوف وثلاجات داخل النظام؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq2" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نعم، يمكنك تعريف مواقع التخزين
+                                                (Location Management) سواء كانت
+                                                رفوفاً جافة أو ثلاجات تجميد،
+                                                لتحديد مكان الصنف بدقة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq3"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i
+                                                    class="fas fa-ban"></i>
+                                            </div>
+                                            <span>كيف يتعامل النظام مع الأصناف التالفة؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq3" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>يمكنك إنشاء "مستودع تالف" افتراضي.
+                                                لا يتم تحويل أي بضاعة إليه إلا
+                                                بموافقة المدير وصلاحيات خاصة،
+                                                مما يضبط الرقابة على الهالك.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq4"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-cloud"></i>
+                                            </div>
+                                            <span>هل النظام يعمل بدون إنترنت (Offline)؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq4" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نظام رايتو سحابي (Cloud) لضمان
+                                                أمان البيانات والربط اللحظي بين
+                                                الفروع والإدارة، لذا يتطلب
+                                                اتصالاً بالإنترنت.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq5"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i
+                                                    class="fas fa-chart-bar"></i>
+                                            </div>
+                                            <span>هل يمكنني تعديل شكل تقرير المخزون؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq5" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نعم، نقدم خدمة "التخصيص المجاني".
+                                                يمكنك طلب تعديل التقارير أو
+                                                استخدام خاصية Pivot Table
+                                                لتصميم تقاريرك بنفسك.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq6"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </div>
+                                            <span>كيف يحسب النظام تكلفة البضاعة المستوردة؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq6" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>يتيح النظام إضافة كافة المصاريف
+                                                (جمارك، شحن، نقل) على فاتورة
+                                                الشراء وتوزيعها على الأصناف،
+                                                لتظهر لك "التكلفة الحقيقية"
+                                                للصنف.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq7"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-boxes"></i>
+                                            </div>
+                                            <span>هل يدعم النظام تعدد الوحدات (حبة/كرتون)؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq7" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نعم، يمكنك تعريف الصنف بوحدات
+                                                متعددة (مثلاً: قطعة، علبة،
+                                                كرتونة) وتحديد معامل التحويل
+                                                بينهم، والنظام يضبط المخزون
+                                                تلقائياً.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq8"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-percent"></i>
+                                            </div>
+                                            <span>هل يمكن عمل عروض وتخفيضات من داخل النظام؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq8" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نعم، يمكنك تجهيز "قوائم عروض"
+                                                للأصناف التي قربت صلاحيتها على
+                                                الانتهاء، وتفعيلها بضغطة زر
+                                                لتصريف المخزون بسرعة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq9"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-lock"></i>
+                                            </div>
+                                            <span>هل بياناتي آمنة من الضياع؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq9" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>بالتأكيد. نستخدم أفضل السيرفرات
+                                                العالمية المشفرة. وداعاً لخوف
+                                                "تعطل الهارد ديسك" الذي يصيب
+                                                الأنظمة المحلية.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq10"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-shopping-cart"></i>
+                                            </div>
+                                            <span>هل يمكن ربط النظام مع المتجر الإلكتروني أو الكاشير؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq10" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نعم، كجزء من منظومة Raito ERP،
+                                                يرتبط المخزون بنقاط البيع
+                                                والحسابات لتحديث الكميات لحظياً
+                                                عند كل عملية بيع.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-right">
+                            <div class="faq-contact-box">
+                                <div class="section-label">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>هل لديك استفسار؟ نحن هنا
+                                        للمساعدة!</span>
+                                </div>
+                                <h2 class="faq-title">الأسئلة الشائعة</h2>
+                                <div class="content-description">
+                                    إجابات شاملة على أكثر الأسئلة التي يطرحها
+                                    مديرو المستودعات والعاملون في الإدارة
+                                    اللوجستية
+                                </div>
+                                <br>
+                                <p class="faq-description">
+                                    نظام رايتو لإدارة المخزون هو الحل الشامل
+                                    لإدارة المستودعات والمخزون في السعودية، يجمع
+                                    بين تتبع تواريخ الصلاحية الآني، الإنذارات
+                                    الذكية للأصناف القريبة من الانتهاء، الجرد
+                                    السريع بالباركود، حماية من السرقة والهالك،
+                                    وحساب التكاليف الحقيقية للمنتجات. يدعم تعدد
+                                    الوحدات والمواقع التخزينية (رفوف، ثلاجات)،
+                                    يطبق مبدأ FIFO تلقائياً، ويرتبط بالنظام
+                                    المالي لضمان توافق البيانات، مع دعم فني عربي
+                                    وتخصيص مجاني.
+                                </p>
+
+                                <h3 class="contact-title">هل لديك سؤال آخر؟</h3>
+                                <p class="contact-description">
+                                    فريق رايتو المتخصص في إدارة المخزون
+                                    والعمليات اللوجستية جاهز للإجابة على جميع
+                                    استفساراتك وتقديم الدعم الكامل
+                                </p>
+                                <form id="faqQuestionForm"
+                                    onsubmit="handleFaqSubmit(event)">
+                                    <div class="contact-form">
+                                        <div class="form-group">
+                                            <textarea id="faqQuestion"
+                                                placeholder="اكتب سؤالك هنا..."
+                                                aria-label="السؤال" rows="5"
+                                                required></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit"
+                                        class="submit-contact-btn"
+                                        aria-label="إرسال">
+                                        إرسال
+                                    </button>
+                                </form>
+                                <p class="support-text">
+                                    <i class="fas fa-check-circle"></i>
+                                    نرد على جميع الاستفسارات خلال 24 ساعة
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 9: Final CTA -->
+                <section class="cta-demo-section">
+                    <div class="container">
+                        <div class="cta-demo-content">
+                            <h2 class="cta-demo-title">مخزونك هو رأس مالك.. <span
+                                    class="highlight-white">لا
+                                    تهمله</span></h2>
+                            <p class="cta-demo-subtitle">
+                                انضم للشركات التي خفضت الهالك بنسبة 90% مع رايتو
+                            </p>
+
+                            <div class="cta-demo-buttons">
+                                <a
+                                    href="contact.html"
+                                    class="cta-demo-primary text-decoration-none"
+                                    aria-label="الذهاب إلى صفحة التواصل">
+                                    <span>احجز جلسة استشارية مجانية</span>
+                                    <div class="btn-arrow">→</div>
+                                </a>
+                                <a
+                                    href="https://wa.me/966538499438"
+                                    class="btn-whatsapp-cta"
+                                    rel="noopener noreferrer"
+                                    aria-label="تواصل مع خبير الانظمة على واتساب">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>تواصل معنا على واتساب</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-bg-overlay"></div>
+                <div class="container">
+                    <div class="footer-main-content">
+                        <!-- Right Column: Logo and Social -->
+                        <div class="footer-column footer-brand-col">
+                            <div class="footer-logos-wrapper">
+                                <div class="footer-main-logo">
+                                    <a href="index.html"
+                                        aria-label="الذهاب إلى الصفحة الرئيسية">
+                                        <img
+                                            src="assets/img/logoar.webp"
+                                            alt="شعار رايتو"
+                                            width="120"
+                                            height="50"
+                                            loading="lazy"
+                                            decoding="async" />
+                                    </a>
+                                </div>
+                                <p class="footer-description">تقنية معلومات
+                                    رايتو تحقق حلول
+                                    للمستقبل</p>
+                            </div>
+                            <div class="footer-social-media">
+                                <a href="https://www.facebook.com/Raitotec"
+                                    target="_blank"
+                                    aria-label="زيارة صفحة فيسبوك"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a href="https://twitter.com/raitotec"
+                                    target="_blank"
+                                    aria-label="زيارة صفحة تويتر"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://www.instagram.com/raitotec1/"
+                                    target="_blank"
+                                    aria-label="زيارة صفحة إنستغرام"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a
+                                    href="https://www.linkedin.com/in/raito-erp-software-830920234/"
+                                    target="_blank"
+                                    aria-label="زيارة صفحة لينكدإن"><i
+                                        class="fab fa-linkedin"></i></a>
+                                <a href="https://www.youtube.com/@Raitotec"
+                                    target="_blank"
+                                    aria-label="زيارة قناة يوتيوب"><i
+                                        class="fab fa-youtube"></i></a>
+                                <a
+                                    href="https://wa.me/+966539387625?text=I'm%20interested%20in%20your%20website"
+                                    target="_blank"
+                                    aria-label="التواصل عبر واتساب"><i
+                                        class="fab fa-whatsapp"></i></a>
+                            </div>
+                            <div class="footer-logos">
+                                <a class="Industry-icon"
+                                    href="https://www.mim.gov.sa/ar"
+                                    aria-label="زيارة موقع وزارة الصناعة والثروة المعدنية">
+                                    <img src="assets/img/industry.png"
+                                        alt="شعار وزارة الصناعة والثروة المعدنية"
+                                        class="mw-100"
+                                        loading="lazy">
+                                </a>
+                                <a class="Industry-icon"
+                                    href="https://www.moenergy.gov.sa/ar"
+                                    aria-label="زيارة موقع وزارة الطاقة">
+                                    <img src="assets/img/taqa.png"
+                                        alt="شعار وزارة الطاقة"
+                                        class="mw-100" loading="lazy">
+                                </a>
+                                <a class="Industry-icon"
+                                    href="https://zatca.gov.sa/ar/Pages/default.aspx"
+                                    aria-label="زيارة موقع هيئة الزكاة والضريبة والجمارك">
+                                    <img src="assets/img/zakat.png"
+                                        alt="شعار هيئة الزكاة والضريبة والجمارك"
+                                        class="mw-100"
+                                        loading="lazy">
+                                </a>
+                                <a class="Industry-icon"
+                                    href="https://www.geidea.net/egy/ar"
+                                    aria-label="زيارة موقع جيديا">
+                                    <img src="assets/img/geidea.png"
+                                        alt="شعار جيديا" class="mw-100"
+                                        loading="lazy">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Center Column: Quick Links -->
+                        <div class="footer-column footer-links-col">
+                            <h3 class="footer-column-title">روابط سريعة</h3>
+                            <ul class="footer-links-list">
+                                <li><a href="index.html">الصفحة
+                                        الرئيسية</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="pricing.html">اسعارنا</a></li>
+                                <li><a href="blog.html">المدونة</a></li>
+                                <li><a href="contact.html">تواصل معنا</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column footer-brand-col">
+                            <h3 class="footer-column-title">خدماتنا</h3>
+                            <ul class="footer-links-list">
+                                <li>
+                                    <a href="#"
+                                        aria-label="عرض خدمة استشارات الأعمال">استشارات
+                                        الأعمال</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        aria-label="عرض خدمة تطوير البرمجيات">تطوير
+                                        البرمجيات</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        aria-label="عرض خدمة الدعم الفني">الدعم
+                                        الفني</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        aria-label="عرض خدمة التدريب">التدريب</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        aria-label="عرض خدمة التكامل">التكامل مع
+                                        الأنظمة</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        aria-label="عرض خدمة الصيانة">الصيانة
+                                        المستمرة</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Left Column: Contact Info -->
+                        <div class="footer-column footer-contact-col">
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>اتصل بنا</h4>
+                                    <a href="tel:+966538499438">+966 5-0560
+                                        0000</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>استشرنا</h4>
+                                    <a
+                                        href="mailto:info@raitotec.com">info@raitotec.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>موقعنا</h4>
+                                    <a
+                                        href="https://maps.google.com/?q=Raito+Riyadh"
+                                        target="_blank"
+                                        aria-label="عرض موقعنا على الخريطة">الرياض،
+                                        المملكة العربية السعودية</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Copyright -->
+                    <div class="footer-bottom">
+                        <p>© 2025 جميع الحقوق محفوظة لدى شركة رايتو
+                            للبرمجيات.</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- Video Popup Modal -->
+            <div
+                class="modal fade"
+                id="videoModal"
+                tabindex="-1"
+                aria-labelledby="videoModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content video-modal-content">
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="إغلاق">
+                            <i class="fas fa-xmark"></i>
+                        </button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe
+                                    id="systemDemoVideo"
+                                    src="https://www.youtube.com/embed/1Q8fG0TtVAY"
+                                    title="شاهد النظام يعمل"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen
+                                    style="border-radius: 16px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Chat Widget -->
+            <div class="chat-widget">
+                <div class="chat-header">
+                    <div class="chat-avatar">
+                        <img
+                            src="assets/img/logoar.webp"
+                            alt="مساعد العملاء"
+                            loading="lazy" />
+                    </div>
+                    <div class="chat-info">
+                        <h3>مساعد العملاء</h3>
+                        <p>متاح الآن للمساعدة</p>
+                    </div>
+                    <button class="chat-close"
+                        aria-label="إغلاق نافذة المحادثة">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="chat-body">
+                    <div class="chat-message bot-message">
+                        <p>مرحباً! كيف يمكنني مساعدتك اليوم؟</p>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input
+                        type="text"
+                        placeholder="اكتب رسالتك هنا..."
+                        id="AI-Massage"
+                        name="AI-Massage"
+                        aria-label="أدخل رسالة المحادثة" />
+                    <button class="send-btn" aria-label="إرسال الرسالة">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chat-toggle">
+                <div class="chat-bubble">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="chat-notification">1</div>
+            </div>
+
+            <button class="back-to-top" aria-label="العودة إلى الأعلى"
+                id="backToTop">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+            <!-- Swiper JS -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+                defer></script>
+            <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+            <script src="assets/js/swiper.js" defer></script>
+            <script src="assets/js/chang-langth.js" defer></script>
+            <script src="assets/js/main.js" defer></script>
+            <script src="assets/js/chat.js" defer></script>
+            <script src="assets/js/animations.js" defer></script>
+            <script>
+        // Initialize Swiper after all scripts are loaded
+        window.addEventListener('load', function() {
+            // بيانات اللوجوهات للتكامل والربط
+            const integrationsLogos = [
+                {
+                    name: "ZATCA",
+                    png: "assets/img/zakat.png",
+                    webp: "assets/img/zakat.png",
+                    width: 90,
+                    height: 24
+                },
+                {
+                    name: "Cloud Security",
+                    png: "assets/img/cloud-security.png",
+                    webp: "assets/img/cloud-security.png",
+                    width: 90,
+                    height: 32
+                },
+                {
+                    name: "Barcode Scanner",
+                    png: "assets/img/barcode.png",
+                    webp: "assets/img/barcode.png",
+                    width: 90,
+                    height: 24
+                },
+                {
+                    name: "Food Safety",
+                    png: "assets/img/foodsafety.png",
+                    webp: "assets/img/sfda.webp",
+                    width: 90,
+                    height: 24
+                }
+            ];
+
+            // إنشاء عناصر اللوجوهات في Swiper
+            const swiperWrapper = document.querySelector('.swiper-wrapper');
+            
+            // نكرر اللوجوهات عدة مرات لضمان استمرارية الحركة
+            for (let i = 0; i < 3; i++) {
+                integrationsLogos.forEach(logo => {
+                    const slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    
+                    slide.innerHTML = `
+                        <div class="company-logo">
+                            <picture>
+                                <source srcset="${logo.webp}" type="image/webp">
+                                <img src="${logo.png}" alt="${logo.name}" class="logo-img-cursolr"  loading="lazy" decoding="async">
+                            </picture>
+                        </div>
+                    `;
+                    
+                    swiperWrapper.appendChild(slide);
+                });
+            }
+
+            // تهيئة Swiper
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.logosCarousel', {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    loop: true,
+                    autoplay: {
+                        delay: 0,
+                        disableOnInteraction: false,
+                    },
+                    speed: 5000,
+                    grabCursor: true,
+                    rtl: true,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                        },
+                        1200: {
+                            slidesPerView: 4,
+                        },
+                    },
+                });
+
+                // إضافة تأثير عند التمرير بالماوس
+                swiper.el.addEventListener('mouseenter', () => {
+                    swiper.autoplay.stop();
+                });
+
+                swiper.el.addEventListener('mouseleave', () => {
+                    swiper.autoplay.start();
+                });
+            }
+        });
+    </script>
+        </body>
+    </html>
