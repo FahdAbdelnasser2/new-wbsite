@@ -761,6 +761,18 @@ body[dir="rtl"] .form-select {
   width: 8px;
 }
 
+.hero-badges {
+  margin-top: 20px;
+}
+
+.badge-item .badge-img {
+  transition: all 0.3s ease;
+
+}
+      .badge-item:hover .badge-img {
+        transform: scale(1.1);
+      }
+
 .hero-title {
   color: #1a1a1a;
   font-size: 4rem;
@@ -17430,7 +17442,7 @@ textarea.form-control {
   font-size: 3rem;
   font-weight: 900;
   color: var(--secondary-color);
-  opacity: 0.1;
+  /* opacity: 0.1; */
 }
 
 .step-icon {

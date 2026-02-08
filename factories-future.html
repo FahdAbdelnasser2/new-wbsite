@@ -49,93 +49,13 @@
     />
     <link rel="stylesheet" href="assets/css/newCss.css" />
     <!-- <link rel="stylesheet" href="assets/css/newCss2.css" /> -->
-    <!-- Custom CSS for this page -->
-    <style>
-      /* Features Grid */
-      .features-grid {
+     <style>
+      .features-grid{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin: 2rem 0;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
       }
-
-      .feature-card {
-        background: white;
-        padding: 2rem;
-        border-radius: 1rem;
-        text-align: center;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 32px rgba(23, 170, 189, 0.2);
-      }
-
-      .feature-icon-wrapper {
-        position: relative;
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 1.5rem;
-      }
-
-      .feature-icon-bg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #428315cc, #0b555e);
-        border-radius: 50%;
-        opacity: 0.1;
-      }
-
-      .feature-icon {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        color: var(--secondary-color);
-      }
-
-      .feature-title {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: var(--text-color);
-        margin-bottom: 1rem;
-      }
-
-      .feature-description {
-        color: var(--text-light);
-        line-height: 1.7;
-      }
-      /* Hero Badges */
-      .hero-badges {
-        padding-top: 2rem;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-      }
-
-      .badge-item {
-        text-align: center;
-      }
-
-      .badge-img {
-        transition: transform 0.3s;
-      }
-
-      .badge-item:hover .badge-img {
-        transform: scale(1.1);
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .features-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
+     </style>
   </head>
   <body>
     <div class="overlay"></div>
@@ -752,31 +672,27 @@
 
             <!-- Badges Section -->
             <div
-              class="hero-badges d-flex justify-content-center align-items-center gap-4 flex-wrap"
-            >
+              class="hero-badges d-flex justify-content-center align-items-center gap-4 flex-wrap">
               <div class="badge-item">
                 <img
                   src="assets/img/logoar.webp"
                   alt="شعار رايتو"
                   class="badge-img"
-                  style="max-width: 100px"
-                />
+                  style="max-width: 100px" />
               </div>
               <div class="badge-item">
                 <img
-                  src="assets/img/Logo.avif"
-                  alt="شعار رؤية 2030"
+                  src="assets/img/taqa.png"
+                  alt="شعار وزارة الطاقة"
                   class="badge-img"
-                  style="max-width: 100px"
-                />
+                  style="max-width: 100px" />
               </div>
               <div class="badge-item">
                 <img
                   src="assets/img/Saudi-Vision-2030.png"
                   alt="شعار رؤية 2030"
                   class="badge-img"
-                  style="max-width: 100px"
-                />
+                  style="max-width: 100px" />
               </div>
             </div>
           </div>
@@ -949,13 +865,16 @@
       </div>
     </section>
 
-    <!-- Section 4: Success Partners & Testimonials -->
+    <!-- Logo Start -->
     <section
-      class="digtal-marketing-logo testimonials-section section-padding"
-    >
+      class="digtal-marketing-logo testimonials-section section-padding bg-gray">
       <div class="container">
-        <div class="section-header text-center mb-5">
-          <h2 class="section-title">شركاء نجاح وثقوا في رايتو</h2>
+        <div class="section-header text-center">
+          <div class="section-label">
+            <i class="fas fa-users"></i>
+            <span>عملائنا</span>
+          </div>
+          <h2 class="section-title">شركات رائدة وضعت ثقتها في رايتو</h2>
         </div>
 
         <div class="logos-carousel-wrapper">
@@ -968,8 +887,7 @@
                       src="assets/img/hader01.webp"
                       class="logo-img"
                       alt="image 1"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -980,8 +898,7 @@
                       src="assets/img/hader02.webp"
                       class="logo-img"
                       alt="image 2"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -992,8 +909,7 @@
                       src="assets/img/hader03.webp"
                       class="logo-img"
                       alt="image 3"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1004,8 +920,7 @@
                       src="assets/img/hader04.webp"
                       class="logo-img"
                       alt="image 4"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1016,8 +931,7 @@
                       src="assets/img/hader05.webp"
                       class="logo-img"
                       alt="image 5"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1028,8 +942,7 @@
                       src="assets/img/hader06.webp"
                       class="logo-img"
                       alt="image 6"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1040,8 +953,7 @@
                       src="assets/img/hader07.webp"
                       class="logo-img"
                       alt="image 7"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1052,8 +964,7 @@
                       src="assets/img/hader08.webp"
                       class="logo-img"
                       alt="image 8"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1064,8 +975,7 @@
                       src="assets/img/hader09.webp"
                       class="logo-img"
                       alt="image 9"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1076,8 +986,7 @@
                       src="assets/img/hader10.webp"
                       class="logo-img"
                       alt="image 10"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1088,8 +997,7 @@
                       src="assets/img/hader11.webp"
                       class="logo-img"
                       alt="image 11"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1100,8 +1008,7 @@
                       src="assets/img/hader12.webp"
                       class="logo-img"
                       alt="image 12"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1112,8 +1019,7 @@
                       src="assets/img/hader13.webp"
                       class="logo-img"
                       alt="image 13"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1124,8 +1030,7 @@
                       src="assets/img/hader13.webp"
                       class="logo-img"
                       alt="image 13"
-                      loading="lazy"
-                    />
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1147,239 +1052,130 @@
             </div> -->
           </div>
         </div>
-
-        <div class="testimonials-wrapper mt-5">
-          <!-- Content Section -->
-          <div class="testimonial-content-section">
-            <div class="quote-icon-wrapper">
-              <i class="fas fa-quote-left"></i>
-            </div>
-
-            <!-- Testimonial Content 1 -->
-            <div class="testimonial-tab-content active" data-tab="1">
-              <div class="testimonial-header">
-                <div class="testimonial-title">
-                  Best Template for SAAS Company
+      </div>
+    </section>
+    <!-- Logo End -->
+    <!-- customer vote Start -->
+    <section
+      class="digtal-marketing-logo testimonials-section section-padding"
+      style="background-color: white;">
+      <div class="container">
+        <div class="testimonials-modern-wrapper">
+          <div class="row align-items-center">
+            <!-- Content Side (Right) -->
+            <div class="col-lg-7">
+              <div class="modern-testi-content">
+                <div class="section-label">
+                  <i class="fas fa-comment-dots"></i>
+                  <span>اراء عملائنا</span>
                 </div>
-                <div class="testimonial-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                <h2 class="testi-main-heading">استمع إلى ما يقوله عملاؤنا<br>
+                  العالميون</h2>
+
+                <!-- Testimonial Content Area -->
+                <div class="testimonial-slider-area">
+                  <!-- Item 1 -->
+                  <div class="modern-testi-item active" data-tab="1"
+                    data-company-img="assets/img/hero-team.jpg">
+                    <div class="testi-rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testi-desc">
+                      أشكر شركة رايتو على ما قدمته من حل متكامل لأتمتة محطات
+                      الوقود. حيث ساهم النظام بشكل فعّال في تنظيم سير العمل ورفع
+                      كفاءة العمليات التشغيلية، وساعدنا على ضبط عمليات البيع
+                      ومراقبة المخزون، وتحسين دقة التقارير.
+                    </p>
+                    <div class="testi-user-info">
+                      <img src="assets/img/Eng_Abdalla.jpg" alt="User"
+                        class="user-avatar">
+                      <div class="user-details">
+                        <h4>م. عبدالله</h4>
+                        <p>مدير تشغيل شركة لتر بوينت</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 2 -->
+                  <div class="modern-testi-item" data-tab="2"
+                    data-company-img="assets/img/partners.jpg">
+                    <div class="testi-rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testi-desc">
+                      نظام رايتو لم يكن مجرد أداة تقنية، بل شريكًا حقيقيًا في
+                      تحسين جودة العمل. وفر لنا حلولًا متكاملة لإدارة المبيعات
+                      ومتابعة المخزون بشكل دقيق وموثوق.
+                    </p>
+                    <div class="testi-user-info">
+                      <img src="assets/img/Eng-Abdall.jpg" alt="User"
+                        class="user-avatar">
+                      <div class="user-details">
+                        <h4>م. عبدالله</h4>
+                        <p>اخصائي تشغيل محطات وقود</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Item 3 -->
+                  <div class="modern-testi-item" data-tab="3"
+                    data-company-img="assets/img/hero-team.jpg">
+                    <div class="testi-rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testi-desc">
+                      التخصيص في رايتو شيء وتجربة استثنائية. عدّلوا النظام
+                      ليناسب طريقة عملنا بالضبط دون الحاجة لتغيير عملياتنا
+                      الداخلية.
+                    </p>
+                    <div class="testi-user-info">
+                      <img src="assets/img/hader03.webp" alt="User"
+                        class="user-avatar">
+                      <div class="user-details">
+                        <h4>Jon Doe</h4>
+                        <p>Software Engineer</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
 
-              <p class="testimonial-text">
-                رايتو غيّر طريقة إدارتنا للمحطة بالكامل. النظام سهل، الدعم
-                ممتاز، والربط مع وزارة الطاقة تلقائي. وفرنا ساعات من العمل
-                اليدوي والأخطاء انتهت تماماً.
-              </p>
-
-              <div class="testimonial-author">
-                <h3 class="author-name">Hanry Luice</h3>
-                <p class="author-position">App Developer</p>
-              </div>
-            </div>
-
-            <!-- Testimonial Content 2 -->
-            <div class="testimonial-tab-content" data-tab="2">
-              <div class="testimonial-header">
-                <div class="testimonial-title">أفضل نظام محاسبي تعاملت معه</div>
-                <div class="testimonial-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <p class="testimonial-text">
-                قبل رايتو كنا نعاني من عدم دقة المخزون وتأخر التقارير. الآن كل
-                شيء مرتب، المناديب يشتغلون بكفاءة، والتقارير تطلع لحظياً.
-                استثمار يستحق كل ريال ودفعناه في النظام.
-              </p>
-
-              <div class="testimonial-author">
-                <h3 class="author-name">Ami Nijai</h3>
-                <p class="author-position">Customer Support</p>
-              </div>
-            </div>
-
-            <!-- Testimonial Content 3 -->
-            <div class="testimonial-tab-content" data-tab="3">
-              <div class="testimonial-header">
-                <div class="testimonial-title">مرونة وتخصيص استثنائي</div>
-                <div class="testimonial-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <p class="testimonial-text">
-                التخصيص في رايتو شيء رائع. عدّلوا النظام ليناسب طريقة عملنا
-                بالضبط. الدعم الفني سريع ومحترف، وما احتجنا نغير عملياتنا عشان
-                نتأقلم مع البرنامج. النظام تأقلم معنا نحن!
-              </p>
-
-              <div class="testimonial-author">
-                <h3 class="author-name">Jon Doe</h3>
-                <p class="author-position">Software Engineer</p>
-              </div>
-            </div>
-
-            <!-- Testimonial Content 4 -->
-            <div class="testimonial-tab-content" data-tab="4">
-              <div class="testimonial-header">
-                <div class="testimonial-title">حل متكامل لجميع الأقسام</div>
-                <div class="testimonial-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-              </div>
-
-              <p class="testimonial-text">
-                نظام شامل ومتكامل. من المحاسبة للمخازن للمبيعات، كل شيء في منصة
-                واحدة. سهّل علينا الرقابة على الفروع، وقلل التلاعب بشكل كبير.
-                أنصح به بشدة لأي شركة تريد التطور.
-              </p>
-
-              <div class="testimonial-author">
-                <h3 class="author-name">Rupan Oberoi</h3>
-                <p class="author-position">Web Designer</p>
-              </div>
-            </div>
-
-            <!-- Testimonial Content 5 -->
-            <div class="testimonial-tab-content" data-tab="5">
-              <div class="testimonial-header">
-                <div class="testimonial-title">تحول رقمي حقيقي</div>
-                <div class="testimonial-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                <!-- Custom Dots Navigation -->
+                <div class="testimonial-tabs-dots">
+                  <div class="testi-dot active" data-tab="1"></div>
+                  <div class="testi-dot" data-tab="2"></div>
+                  <div class="testi-dot" data-tab="3"></div>
                 </div>
               </div>
-
-              <p class="testimonial-text">
-                رايتو ساعدنا نحقق التحول الرقمي الكامل لشركتنا. التقارير
-                التفصيلية والتحليلات الذكية خلتنا ناخذ قرارات مبنية على بيانات
-                حقيقية. شكراً لفريق رايتو على الدعم المستمر!
-              </p>
-
-              <div class="testimonial-author">
-                <h3 class="author-name">Joe Richard</h3>
-                <p class="author-position">Visual Designer</p>
-              </div>
             </div>
-          </div>
-          <!-- Video Section -->
-          <!-- <div class="col-lg-5 testimonial-video-section">
-            <div class="video-testimonial-wrapper">
-              <img
-                src="assets/img/1.webp"
-                alt="شهادة فيديو"
-                class="video-thumbnail"
-                loading="lazy"
-              />
-              <div class="video-overlay">
-                <div class="play-button">
-                  <i class="fas fa-play"></i>
+
+            <!-- Image Side (Left) -->
+            <div class="col-lg-5">
+              <div class="modern-testi-image-wrapper">
+                <div class="map-bg-decoration"></div>
+                <div class="hero-image-container">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359-7013119ac635?w=500&q=80"
+                    alt="Customer Success" class="main-customer-img">
                 </div>
               </div>
-              <div
-                class="watch-video-text"
-                data-bs-toggle="modal"
-                data-bs-target="#testimonialVideo"
-                id="testimonialVideoTrigger"
-              >
-                <i class="fas fa-play-circle"></i>
-                <span>Watch Video</span>
-              </div>
-            </div>
-          </div> -->
-        </div>
-
-        <!-- Testimonial Tabs -->
-        <div class="testimonial-tabs">
-          <div class="testimonial-tab active" data-tab="1">
-            <div class="tab-avatar">
-              <img
-                src="assets/img/hader01.webp"
-                alt="Hanry Luice"
-                loading="lazy"
-              />
-            </div>
-            <div class="tab-info">
-              <h4>Hanry Luice</h4>
-              <p>App Developer</p>
-            </div>
-          </div>
-
-          <div class="testimonial-tab" data-tab="2">
-            <div class="tab-avatar">
-              <img
-                src="assets/img/hader02.webp"
-                alt="Ami Nijai"
-                loading="lazy"
-              />
-            </div>
-            <div class="tab-info">
-              <h4>Ami Nijai</h4>
-              <p>Customer Support</p>
-            </div>
-          </div>
-
-          <div class="testimonial-tab" data-tab="3">
-            <div class="tab-avatar">
-              <img src="assets/img/hader03.webp" alt="Jon Doe" loading="lazy" />
-            </div>
-            <div class="tab-info">
-              <h4>Jon Doe</h4>
-              <p>Software Engineer</p>
-            </div>
-          </div>
-
-          <div class="testimonial-tab" data-tab="4">
-            <div class="tab-avatar">
-              <img
-                src="assets/img/hader04.webp"
-                alt="Rupan Oberoi"
-                loading="lazy"
-              />
-            </div>
-            <div class="tab-info">
-              <h4>Rupan Oberoi</h4>
-              <p>Web Designer</p>
-            </div>
-          </div>
-
-          <div class="testimonial-tab" data-tab="5">
-            <div class="tab-avatar">
-              <img
-                src="assets/img/hader05.webp"
-                alt="Joe Richard"
-                loading="lazy"
-              />
-            </div>
-            <div class="tab-info">
-              <h4>Joe Richard</h4>
-              <p>Visual Designer</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- CTA Section - Free Demo -->
+    <!-- customer vote End -->
     <!-- CTA Section - Success Story -->
     <section class="cta-demo-section">
       <div class="container">
@@ -1449,116 +1245,180 @@
       </div>
     </section>
 
-    <!-- Section 6: FAQ -->
-    <section class="faq-section section-padding">
+    <!-- Section 7: FAQ -->
+    <section class="faq-section-new section-padding bg-light">
       <div class="container">
-        <div class="section-header text-center">
-          <h2 class="section-title">الأسئلة الشائعة</h2>
-        </div>
+        <div class="faq-wrapper">
+          <div class="faq-left">
+            <div class="faq-container">
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                  aria-expanded="false">
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-cogs"></i>
+                    </div>
+                    <span>ما هي متطلبات مبادرة مصانع المستقبل؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq1" class="collapse">
+                  <div class="faq-body">
+                    <p>
+                      المبادرة تتطلب من المصانع تطبيق معايير تقنية محددة تشمل رقمنة
+                      العمليات، أتمتة الإنتاج، وإدارة البيانات بكفاءة. نظام رايتو
+                      يدعم كل هذه المتطلبات بشكل كامل.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-        <div class="faq-container">
-          
-          <div class="faq-item">
-            <button
-              class="faq-header"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq1"
-              aria-expanded="false"
-            >
-              <span>ما هي متطلبات مبادرة مصانع المستقبل؟</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div id="faq1" class="collapse">
-              <div class="faq-body">
-                <p>
-                  المبادرة تتطلب من المصانع تطبيق معايير تقنية محددة تشمل رقمنة
-                  العمليات، أتمتة الإنتاج، وإدارة البيانات بكفاءة. نظام رايتو
-                  يدعم كل هذه المتطلبات بشكل كامل.
-                </p>
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                  aria-expanded="false">
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-clock"></i>
+                    </div>
+                    <span>كم يستغرق تطبيق النظام في مصنعي؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq2" class="collapse">
+                  <div class="faq-body">
+                    <p>
+                      المدة تختلف حسب حجم المصنع وتعقيد العمليات. عادة ما يستغرق
+                      التطبيق من 4-8 أسابيع. سيقوم فريقنا بدراسة احتياجاتك وتقديم
+                      جدول زمني دقيق.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3"
+                  aria-expanded="false">
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-link"></i>
+                    </div>
+                    <span>هل النظام يدعم الربط مع الجهات الحكومية؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq3" class="collapse">
+                  <div class="faq-body">
+                    <p>
+                      نعم، نظام رايتو مبني بمرونة عالية وقابل للربط مع جميع الأنظمة
+                      الحكومية. نحن نعمل على استكمال الاعتماد الرسمي من وزارة
+                      الصناعة.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq4"
+                  aria-expanded="false">
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-money-bill"></i>
+                    </div>
+                    <span>ما التكلفة المتوقعة للتطبيق؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq4" class="collapse">
+                  <div class="faq-body">
+                    <p>
+                      التكلفة تختلف حسب حجم مصنعك والوحدات المطلوبة. نقدم خيارات
+                      تسعير مرنة وحزم تدريب وتطبيق شاملة. تواصل معنا للحصول على عرض
+                      سعر مفصل.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="faq-item">
+                <button
+                  class="faq-header"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq5"
+                  aria-expanded="false">
+                  <div class="faq-header-wrapper">
+                    <div class="faq-icon">
+                      <i class="fas fa-headset"></i>
+                    </div>
+                    <span>هل ستوفرون دعماً وتدريباً للموظفين؟</span>
+                  </div>
+                  <i class="fas fa-chevron-down chevron"></i>
+                </button>
+                <div id="faq5" class="collapse">
+                  <div class="faq-body">
+                    <p>
+                      بالتأكيد، نقدم تدريباً شاملاً للموظفين وفريق الدعم الفني
+                      المخصص. سيكون لديك دعم 24/7 خلال فترة التطبيق والتشغيل.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="faq-item">
-            <button
-              class="faq-header"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq2"
-              aria-expanded="false"
-            >
-              <span>كم يستغرق تطبيق النظام في مصنعي؟</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div id="faq2" class="collapse">
-              <div class="faq-body">
-                <p>
-                  المدة تختلف حسب حجم المصنع وتعقيد العمليات. عادة ما يستغرق
-                  التطبيق من 4-8 أسابيع. سيقوم فريقنا بدراسة احتياجاتك وتقديم
-                  جدول زمني دقيق.
-                </p>
+          <div class="faq-right">
+            <div class="faq-contact-box">
+              <div class="section-label">
+                <i class="fas fa-question-circle"></i>
+                <span>هل لديك سؤال؟</span>
               </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button
-              class="faq-header"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq3"
-              aria-expanded="false"
-            >
-              <span>هل النظام يدعم الربط مع الجهات الحكومية؟</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div id="faq3" class="collapse">
-              <div class="faq-body">
-                <p>
-                  نعم، نظام رايتو مبني بمرونة عالية وقابل للربط مع جميع الأنظمة
-                  الحكومية. نحن نعمل على استكمال الاعتماد الرسمي من وزارة
-                  الصناعة.
-                </p>
+              <h2 class="faq-title">الأسئلة الشائعة</h2>
+              <div class="content-description">
+                إجابات شاملة على أكثر الأسئلة التي يطرحها مشغلو مصانع المستقبل
               </div>
-            </div>
-          </div>
+              <br>
+              <!-- <p class="faq-description">
+                نظام رايتو ERP مصمم خصيصاً لتحقيق متطلبات مبادرة "مصانع المستقبل" بأحدث التقنيات
+                والتكامل الكامل مع أنظمة الإنتاج والمخزون. يوفر النظام حلاً
+                متكاملاً يجمع بين إدارة الإنتاج الفوري، الفواتير الإلكترونية،
+                ربط البنوك والمحافظ الرقمية، مع التوافق الكامل مع متطلبات وزارة
+                الصناعة والهيئة العامة للزكاة والدخل.
+                <br><br>
+                من خلال الأتمتة الذكية والتقارير اللحظية، يمكنك التحكم الكامل في
+                عمليات مصنعك وزيادة الكفاءة بنسبة تصل إلى 40%.
+              </p> -->
 
-          <div class="faq-item">
-            <button
-              class="faq-header"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq4"
-              aria-expanded="false"
-            >
-              <span>ما التكلفة المتوقعة للتطبيق؟</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div id="faq4" class="collapse">
-              <div class="faq-body">
-                <p>
-                  التكلفة تختلف حسب حجم مصنعك والوحدات المطلوبة. نقدم خيارات
-                  تسعير مرنة وحزم تدريب وتطبيق شاملة. تواصل معنا للحصول على عرض
-                  سعر مفصل.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button
-              class="faq-header"
-              data-bs-toggle="collapse"
-              data-bs-target="#faq5"
-              aria-expanded="false"
-            >
-              <span>هل ستوفرون دعماً وتدريباً للموظفين؟</span>
-              <i class="fas fa-chevron-down"></i>
-            </button>
-            <div id="faq5" class="collapse">
-              <div class="faq-body">
-                <p>
-                  بالتأكيد، نقدم تدريباً شاملاً للموظفين وفريق الدعم الفني
-                  المخصص. سيكون لديك دعم 24/7 خلال فترة التطبيق والتشغيل.
-                </p>
-              </div>
+              <h3 class="contact-title">هل لديك سؤال آخر؟</h3>
+              <p class="contact-description">
+                فريق رايتو المتخصص في قطاع الصناعة والتصنيع جاهز للإجابة على جميع
+                استفساراتك وتقديم الدعم الكامل
+              </p>
+              <form id="faqQuestionForm" onsubmit="handleFaqSubmit(event)">
+                <div class="contact-form">
+                  <div class="form-group">
+                    <textarea id="faqQuestion" placeholder="اكتب سؤالك هنا..."
+                      aria-label="السؤال" rows="5" required></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="submit-contact-btn"
+                  aria-label="إرسال">
+                  إرسال
+                </button>
+              </form>
+              <p class="support-text">
+                <i class="fas fa-check-circle"></i>
+                نرد على جميع الاستفسارات خلال 24 ساعة
+              </p>
             </div>
           </div>
         </div>
@@ -1772,258 +1632,162 @@
       </div>
     </div>
 
-    <footer class="footer bg-gray">
-      <div class="footer-bg">
-        <div class="footer-pattern"></div>
-      </div>
+    <footer class="footer">
+      <div class="footer-bg-overlay"></div>
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <div class="footer-logo">
-              <a
-                class="logo-icon"
-                href="index.html"
-                aria-label="الذهاب إلى الصفحة الرئيسية"
-              >
-                <img
-                  src="assets/img/logoar.webp"
-                  alt=""
-                  class="mw-100"
-                  loading="lazy"
-                />
-              </a>
+        <div class="footer-main-content">
+          <!-- Right Column: Logo and Social -->
+          <div class="footer-column footer-brand-col">
+            <div class="footer-logos-wrapper">
+              <div class="footer-main-logo">
+                <a href="index.html" aria-label="الذهاب إلى الصفحة الرئيسية">
+                  <img src="assets/img/logoar.webp"
+                    alt="شعار رايتو للحلول التقنية" loading="lazy" />
+                </a>
+              </div>
+              <p class="footer-description">تقنية معلومات رايتو تحقق حلول
+                للمستقبل</p>
             </div>
-            <!-- <h4 class="mb-2">متوافق مع</h4> -->
-            <!-- <a href="factories-future.html" class="mb-1"
-              >مبادرة برنامج مصانع المستقبل</a
-            > -->
+            <div class="footer-social-media">
+              <a href="https://www.facebook.com/Raitotec" target="_blank"
+                aria-label="زيارة صفحة فيسبوك"><i
+                  class="fab fa-facebook"></i></a>
+              <a href="https://twitter.com/raitotec" target="_blank"
+                aria-label="زيارة صفحة تويتر"><i
+                  class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.instagram.com/raitotec1/" target="_blank"
+                aria-label="زيارة صفحة إنستغرام"><i
+                  class="fab fa-instagram"></i></a>
+              <a
+                href="https://www.linkedin.com/in/raito-erp-software-830920234/"
+                target="_blank" aria-label="زيارة صفحة لينكدإن"><i
+                  class="fab fa-linkedin"></i></a>
+              <a href="https://www.youtube.com/@Raitotec" target="_blank"
+                aria-label="زيارة قناة يوتيوب"><i
+                  class="fab fa-youtube"></i></a>
+              <a
+                href="https://wa.me/+966539387625?text=I'm%20interested%20in%20your%20website"
+                target="_blank" aria-label="التواصل عبر واتساب"><i
+                  class="fab fa-whatsapp"></i></a>
+            </div>
             <div class="footer-logos">
-              <a class="Industry-icon"
-                href="https://www.mim.gov.sa/ar"
-                aria-label="زيارة موقع وزارة الصناعة والثروة المعدنية"
-              >
-                <img
-                  src="assets/img/industry.png"
-                  alt="شعار وزارة الصناعة والثروة المعدنية"
-                  class="mw-100"
-                  loading="lazy"
-                />
+              <a class="Industry-icon" href="https://www.mim.gov.sa/ar"
+                aria-label="زيارة موقع وزارة الصناعة والثروة المعدنية">
+                <img src="assets/img/industry.png"
+                  alt="شعار وزارة الصناعة والثروة المعدنية" class="mw-100"
+                  loading="lazy">
               </a>
-              <a class="Industry-icon"
-                href="https://www.moenergy.gov.sa/ar"
-                aria-label="زيارة موقع وزارة الطاقة"
-              >
-                <img
-                  src="assets/img/taqa.png"
-                  alt="شعار وزارة الطاقة"
-                  class="mw-100"
-                  loading="lazy"
-                />
+              <a class="Industry-icon" href="https://www.moenergy.gov.sa/ar"
+                aria-label="زيارة موقع وزارة الطاقة">
+                <img src="assets/img/taqa.png" alt="شعار وزارة الطاقة"
+                  class="mw-100" loading="lazy">
               </a>
               <a class="Industry-icon"
                 href="https://zatca.gov.sa/ar/Pages/default.aspx"
-                aria-label="زيارة موقع هيئة الزكاة والضريبة والجمارك"
-              >
-                <img
-                  src="assets/img/zakat.png"
-                  alt="شعار هيئة الزكاة والضريبة والجمارك"
-                  class="mw-100"
-                  loading="lazy"
-                />
+                aria-label="زيارة موقع هيئة الزكاة والضريبة والجمارك">
+                <img src="assets/img/zakat.png"
+                  alt="شعار هيئة الزكاة والضريبة والجمارك" class="mw-100"
+                  loading="lazy">
               </a>
-              <a class="Industry-icon"
-                href="https://www.geidea.net/egy/ar"
-                aria-label="زيارة موقع جيديا"
-              >
-                <img
-                  src="assets/img/geidea.png"
-                  alt="شعار جيديا"
-                  class="mw-100"
-                  loading="lazy"
-                />
+              <a class="Industry-icon" href="https://www.geidea.net/egy/ar"
+                aria-label="زيارة موقع جيديا">
+                <img src="assets/img/geidea.png" alt="شعار جيديا" class="mw-100"
+                  loading="lazy">
               </a>
             </div>
-            <!-- <p>
-              نحن شركة رائدة في مجال تطوير الحلول المحاسبية ERP، نقدم حلولًا
-              مبتكرة ومخصصة للشركات لتلبية احتياجاتها الفريدة
-            </p> -->
           </div>
-          <div class="footer-section">
-            <h3>عناوين سريعة</h3>
-            <ul>
+
+          <!-- Center Column: Quick Links -->
+          <div class="footer-column footer-links-col">
+            <h3 class="footer-column-title">روابط سريعة</h3>
+            <ul class="footer-links-list">
+              <li><a href="index.html">الصفحة الرئيسية</a></li>
+              <li><a href="about.html">من نحن</a></li>
+              <li><a href="pricing.html">اسعارنا</a></li>
+              <li><a href="blog.html">المدونة</a></li>
+              <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column footer-brand-col">
+            <h3 class="footer-column-title">خدماتنا</h3>
+            <ul class="footer-links-list">
               <li>
-                <a href="#" aria-label="الذهاب إلى الصفحة الرئيسية">الرئيسية</a>
+                <a href="#"
+                  aria-label="الذهاب إلى صفحة برنامج إدارة المبيعات والحسابات">برنامج
+                  إدارة المبيعات والحسابات</a>
               </li>
               <li>
-                <a href="#" aria-label="الذهاب إلى صفحة من نحن">من نحن</a>
+                <a href="#"
+                  aria-label="الذهاب إلى صفحة برنامج إدارة المخزون">برنامج إدارة
+                  المخزون</a>
               </li>
               <li>
-                <a href="#" aria-label="الذهاب إلى صفحة التطبيقات">تطبيقات</a>
+                <a href="#" aria-label="الذهاب إلى صفحة برنامج الصيانة">برنامج
+                  الصيانة</a>
               </li>
               <li>
-                <a href="#" aria-label="الذهاب إلى صفحة الأسعار">الأسعار</a>
+                <a href="#" aria-label="الذهاب إلى صفحة برنامج المحاماة">برنامج
+                  المحاماة</a>
               </li>
               <li>
-                <a href="#" aria-label="الذهاب إلى صفحة المدونة">المدونة</a>
+                <a href="#"
+                  aria-label="الذهاب إلى صفحة برنامج إدارة محطات الوقود">برنامج
+                  إدارة محطات الوقود</a>
               </li>
               <li>
-                <a href="#" aria-label="الذهاب إلى صفحة تواصل معنا"
-                  >تواصل معنا</a
-                >
+                <a href="#" aria-label="الذهاب إلى صفحة برنامج العقارات">برنامج
+                  العقارات</a>
+              </li>
+              <li>
+                <a href="#"
+                  aria-label="الذهاب إلى صفحة برنامج إدارة شؤون الموظفين">برنامج
+                  إدارة شؤون الموظفين</a>
               </li>
             </ul>
           </div>
-          <div class="footer-section">
-            <h3>خدماتنا</h3>
-            <ul>
-              <li>
-                <a
-                  href="#"
-                  aria-label="الذهاب إلى صفحة برنامج إدارة المبيعات والحسابات"
-                  >برنامج إدارة المبيعات والحسابات</a
-                >
-              </li>
-              <li>
-                <a href="#" aria-label="الذهاب إلى صفحة برنامج إدارة المخزون"
-                  >برنامج إدارة المخزون</a
-                >
-              </li>
-              <li>
-                <a href="#" aria-label="الذهاب إلى صفحة برنامج الصيانة"
-                  >برنامج الصيانة</a
-                >
-              </li>
-              <li>
-                <a href="#" aria-label="الذهاب إلى صفحة برنامج المحاماة"
-                  >برنامج المحاماة</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  aria-label="الذهاب إلى صفحة برنامج إدارة محطات الوقود"
-                  >برنامج إدارة محطات الوقود</a
-                >
-              </li>
-              <li>
-                <a href="#" aria-label="الذهاب إلى صفحة برنامج العقارات"
-                  >برنامج العقارات</a
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  aria-label="الذهاب إلى صفحة برنامج إدارة شؤون الموظفين"
-                  >برنامج إدارة شؤون الموظفين</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="footer-section">
-            <h3>تواصل معنا</h3>
-            <div class="contact-info">
-              <p>
-                <i class="fas fa-map-marker-alt"></i
-                ><a
-                  href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9"
-                  aria-label="زيارة موقعنا على الخريطة"
-                  >الرياض، المملكة العربية السعودية، 4000 طريق دائري 12993، 2</a
-                >
-              </p>
-              <p>
-                <i class="fas fa-phone"></i
-                ><a href="tel:+966538499438" aria-label="الاتصال بنا"
-                  >+966538499438</a
-                >
-              </p>
-              <p>
-                <i class="fas fa-envelope"></i
-                ><a
-                  href="mailto:info@raitotec.com"
-                  aria-label="إرسال بريد إلكتروني"
-                  >info@raitotec.com</a
-                >
-              </p>
+
+          <!-- Left Column: Contact Info -->
+          <div class="footer-column footer-contact-col">
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h4>اتصل بنا</h4>
+                <a href="tel:+966538499438">+966 5-0560 5643</a>
+              </div>
             </div>
-            <div class="footer-app">
-              <a
-                href="https://apps.apple.com/ae/developer/raitotec/id1545363149?l=ar&amp;see-all=i-phonei-pad-apps"
-                class="d-block app-store"
-                aria-label="تحميل التطبيق من متجر التطبيقات"
-              >
-                <img
-                  src="assets/img/app_store.svg"
-                  alt="أيقونة متجر التطبيقات"
-                  loading="lazy"
-                />
-              </a>
-              <a
-                href="https://play.google.com/store/apps/developer?id=Raitotec"
-                class="d-block google-play"
-                aria-label="تحميل التطبيق من جوجل بلاي"
-              >
-                <img
-                  src="assets/img/google_play.svg"
-                  alt="أيقونة جوجل بلاي"
-                  loading="lazy"
-                />
-              </a>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h4>استشرنا</h4>
+                <a href="mailto:example@gmail.com">example@gmail.com</a>
+              </div>
             </div>
-                        <div class="footer-social">
-              <a
-                href="https://www.facebook.com/Raitotec"
-                target="_blank"
-                aria-label="زيارة صفحة فيسبوك"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a
-                href="https://twitter.com/raitotec"
-                target="_blank"
-                aria-label="زيارة صفحة تويتر"
-                ><i class="fa-brands fa-x-twitter"></i
-              ></a>
-              <a
-                href="https://www.instagram.com/raitotec1/"
-                target="_blank"
-                aria-label="زيارة صفحة إنستغرام"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/in/raito-erp-software-830920234/"
-                target="_blank"
-                aria-label="زيارة صفحة لينكدإن"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-              <a
-                href="https://www.youtube.com/@Raitotec"
-                target="_blank"
-                aria-label="زيارة قناة يوتيوب"
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a
-                href="https://wa.me/+966539387625?text=I'm%20interested%20in%20your%20website"
-                target="_blank"
-                aria-label="التواصل عبر واتساب"
-                ><i class="fab fa-whatsapp"></i
-              ></a>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h4>موقعنا</h4>
+                <!-- <p>الرياض، المملكة العربية السعودية، شارع<br>44 دائري، شارع الدائري الشرقي، 8600<br>الرياض مكتب 23</p> -->
+                <!-- <a href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9" aria-label="زيارة موقعنا على الخريطة">الرياض، المملكة العربية السعودية، 4000 طريق دائري 12993، 2</a> -->
+                <a href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9"
+                  aria-label="زيارة موقعنا على الخريطة">الرياض، المملكة العربية
+                  السعودية،<br> 4000 طريق دائري 12993، 2</a>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- Copyright -->
         <div class="footer-bottom">
-          <div class="copyright">
-            <p>&copy; 2025 جميع الحقوق محفوظة لدى شركة رايتو للبرمجيات.</p>
-          </div>
-          <div class="footer-links">
-            <a href="#" aria-label="الذهاب إلى صفحة سياسة الخصوصية"
-              >سياسة الخصوصية</a
-            >
-            <a href="#" aria-label="الذهاب إلى صفحة شروط الاستخدام"
-              >شروط الاستخدام</a
-            >
-            <a href="#" aria-label="الذهاب إلى صفحة ملفات الارتباط"
-              >ملفات الارتباط</a
-            >
-          </div>
+          <p>© 2025 جميع الحقوق محفوظة لدى شركة رايتو للبرمجيات.</p>
         </div>
       </div>
     </footer>
