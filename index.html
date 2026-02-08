@@ -2394,7 +2394,7 @@
     <!-- <script src="assets/js/lottie.min.js" data-pages="index"></script> -->
 
     <script defer>
-      // دالة لتحميل ملف JS خارجي Lazy
+      // دالة لتحميل ملف JS خارجي
       function loadScript(src) {
         return new Promise((resolve, reject) => {
           const script = document.createElement("script");
@@ -2405,117 +2405,48 @@
         });
       }
 
-      // دالة لتهيئة أنيميشن لوتي
-      function setupLottie(containerId, jsonPath, startSec, endSec) {
+      // الأنيميشنات الـ 3 الرئيسية على الـ cards
+      const mainAnimations = [
+        { id: "fuelContainer", path: "assets/data/fuel.json" },
+        { id: "delegatesContainer", path: "assets/data/delegates.json" },
+        { id: "contractorsContainer", path: "assets/data/contractors.json" },
+      ];
+
+      // دالة تشغيل الأنيميشن مباشرة بـ loop مستمر
+      async function initAnimation(containerId, jsonPath) {
         const container = document.getElementById(containerId);
         if (!container) return;
 
-        const animation = lottie.loadAnimation({
-          container: container,
-          renderer: "svg",
-          loop: false,
-          autoplay: false,
-          path: jsonPath,
-        });
-
-        function secondsToFrames(seconds) {
-          const frameRate = animation.frameRate || 30;
-          return Math.round(seconds * frameRate);
+        // تحميل مكتبة Lottie إذا لم تكن موجودة
+        if (!window.lottie) {
+          await loadScript(
+            "https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"
+          );
         }
 
-        const start = secondsToFrames(startSec);
-        const end = secondsToFrames(endSec);
-
-        container.addEventListener("mouseenter", () => {
-          animation.setSpeed(1.5);
-          animation.playSegments([start, end], true);
-        });
-
-        container.addEventListener("mouseleave", () => {
-          animation.setSpeed(1.5);
-          animation.playSegments([end, secondsToFrames(0)], true);
+        // تشغيل الأنيميشن مباشرة بـ loop مستمر، بدون hover
+        lottie.loadAnimation({
+          container: container,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+          path: jsonPath,
         });
       }
 
-      // كل الـ containers اللي فيها لوتي
-      const lottieContainers = [
-        ["accountingContainer", "assets/data/accounting.json", 3, 5],
-        ["purchesContainer", "assets/data/purches.json", 0, 3],
-        ["storeContainer", "assets/data/store.json", 0, 2.4],
-        [
-          "personnelAffairsContainer",
-          "assets/data/personnel-affairs.json",
-          0,
-          3,
-        ],
-        ["mintinanceContainer", "assets/data/mintinance.json", 0, 3],
-        ["lawContainer", "assets/data/law.json", 0, 3],
-        ["delegatesContainer", "assets/data/delegates.json", 0, 3],
-        ["schoolsContainer", "assets/data/schools.json", 0, 3],
-        ["contractorsContainer", "assets/data/contractors.json", 0, 2],
-        [
-          "supplierManagementContainer",
-          "assets/data/supplierManagement.json",
-          0,
-          2.1,
-        ],
-        ["shippingContainer", "assets/data/shipping.json", 0, 3],
-        ["loyaltyContainer", "assets/data/loyalty.json", 0, 4],
-        [
-          "productionManufacturingContainer",
-          "assets/data/productionManufacturing.json",
-          0,
-          4,
-        ],
-        ["pointsOfSaleContainer", "assets/data/pointsOfSale.json", 0, 3.6],
-        ["fixedAssetsContainer", "assets/data/fixedAssets.json", 0, 4],
-        ["realEstateContainer", "assets/data/realEstate.json", 0, 3],
-        ["CRMContainer", "assets/data/CRM.json", 0, 4],
-        ["fuelContainer", "assets/data/fuel.json", 1, 5],
-        ["pointContainer", "assets/data/point.json", 0, 0], // الخاص بالـ loop
-      ];
+      // تشغيل جميع الأنيميشنات مباشرة عند تحميل الصفحة
+      async function initAllAnimations() {
+        for (const anim of mainAnimations) {
+          initAnimation(anim.id, anim.path);
+        }
+      }
 
-      // مراقبة العناصر بالـ IntersectionObserver
-      const observer2 = new IntersectionObserver(
-        (entries, obs) => {
-          entries.forEach(async (entry) => {
-            if (entry.isIntersecting) {
-              // أول مرة يدخل للشاشة → حمّل لوتي
-              if (!window.lottie) {
-                await loadScript(
-                  "https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js",
-                );
-              }
-
-              // شغل الأنيميشن
-              const [id, path, start, end] = lottieContainers.find(
-                (c) => c[0] === entry.target.id,
-              );
-              if (id === "pointContainer") {
-                const anim = lottie.loadAnimation({
-                  container: document.getElementById("pointContainer"),
-                  renderer: "svg",
-                  loop: true,
-                  autoplay: true,
-                  path: path,
-                });
-                anim.setSpeed(0.3);
-              } else {
-                setupLottie(id, path, start, end);
-              }
-
-              obs.unobserve(entry.target); // بطل تراقبه بعد ما يتشغل
-            }
-          });
-        },
-        { threshold: 0.1 },
-      );
-
-      // فعل المراقبة
-      lottieContainers.forEach(([id]) => {
-        const el = document.getElementById(id);
-        if (el) observer2.observe(el);
-      });
+      // بدء التشغيل فوراً
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initAllAnimations);
+      } else {
+        initAllAnimations();
+      }
     </script>
   </body>
 </html>
