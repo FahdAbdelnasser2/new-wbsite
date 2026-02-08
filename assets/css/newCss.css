@@ -403,7 +403,7 @@ body[dir="rtl"] .form-select {
   justify-content: space-between;
   min-height: 66px;
   margin: 0 auto;
-  padding: 0.5rem 2rem;
+  /* padding: 0.5rem 2rem; */
   width: 1200px;
 }
 
@@ -1817,7 +1817,7 @@ img.logo {
   padding: 80px 0 30px;
   background-image: url('../img/hero-team.jpg');
   background-size: cover;
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   color: #fff;
   overflow: hidden;
 }
@@ -2595,7 +2595,10 @@ a {
 }
 
 @media (max-width: 1100px) {
-
+.nav-container {
+  justify-content: space-between !important;
+  padding: 0.5rem 1rem;
+}
   .mega-menu,
   .mega-parent-last .mega-menu,
   .nav-item.mega-parent,
@@ -2851,6 +2854,9 @@ a {
 }
 
 @media (max-width: 1440px) {
+  .nav-container {
+  justify-content: space-around;
+}
   .img-man {
     left: 10%;
   }
@@ -13334,7 +13340,7 @@ max-width: 140px;
 .logos-carousel-wrapper {
   margin: 3rem 0 0;
   position: relative;
-  padding: 2rem 0;
+  /* padding: 2rem 0; */
   direction: rtl;
 }
 
@@ -17886,7 +17892,7 @@ textarea.form-control {
 /* Modern Testimonials Section */
 .testimonials-modern-wrapper {
     position: relative;
-    padding: 60px 0;
+    /* padding: 60px 0; */
 }
 
 .modern-testi-content {
@@ -17904,7 +17910,7 @@ textarea.form-control {
 }
 
 .testimonial-slider-area {
-    min-height: 300px;
+    min-height: 230px;
     position: relative;
 }
 
@@ -17994,7 +18000,7 @@ textarea.form-control {
     overflow: hidden;
     box-shadow: 0 20px 50px rgba(0,0,0,0.1);
     z-index: 2;
-    aspect-ratio: 3/4; 
+    aspect-ratio: 1/1; 
 }
 
 .main-customer-img {
