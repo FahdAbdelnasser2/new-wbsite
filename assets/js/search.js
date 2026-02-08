@@ -14,17 +14,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const desc = post.querySelector('p') ? post.querySelector('p').textContent.toLowerCase() : '';
             const category = post.querySelector('.post-category') ? post.querySelector('.post-category').textContent.toLowerCase() : '';
             
-            // Find the parent column to hide/show
-            // We look for the direct parent column div (col-lg-4, col-md-6)
-            const parentCol = post.closest('.col-lg-4, .col-md-6') || post.parentElement;
+            // Find the parent element - for new layout it's the blog-post itself inside blog-articles-container
+            const parentContainer = post.closest('.blog-articles-container') ? post : post.closest('.col-lg-4, .col-md-6');
             
             if (title.includes(searchTerm) || desc.includes(searchTerm) || category.includes(searchTerm)) {
-                parentCol.style.display = ''; // Reset display
-                parentCol.classList.add('fade-in'); // Add animation if desired
+                post.style.display = ''; // Reset display
+                if (parentContainer && parentContainer !== post) {
+                    parentContainer.style.display = '';
+                }
+                post.classList.add('fade-in'); // Add animation if desired
                 visibleCount++;
             } else {
-                parentCol.style.display = 'none';
-                parentCol.classList.remove('fade-in');
+                post.style.display = 'none';
+                if (parentContainer && parentContainer !== post) {
+                    parentContainer.style.display = 'none';
+                }
+                post.classList.remove('fade-in');
             }
         });
 
