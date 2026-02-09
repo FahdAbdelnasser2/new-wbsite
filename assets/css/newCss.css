@@ -16177,7 +16177,8 @@ a {
   overflow: hidden;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-image: url("../img/about-us.jpeg");
+  /* background-image: url("../img/about-us.jpeg"); */
+  background-image: url("../img/partners.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
