@@ -19358,3 +19358,39 @@ html { scroll-behavior: smooth; }
   }
 }
 
+/* Text Animation Styles - fadeInUp 0.8s */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.section-title,
+.hero-title,
+.section-subtitle,
+.hero-subtitle,
+.description-text,
+/* span,
+li,
+a, */
+.card,
+.item,
+.card-text,
+.widget,
+.trending-item {
+  animation: fadeInUp 0.8s ease;
+}
+
+/* Text Animation Styles - fadeInDown 0.6s */
+.section-label,
+.badge-item,
+.hero-badge,
+.icon-label,
+nav h6,
+.breadcrumb,
+.feature-title,
+.banner-title {
+  animation: fadeInDown 0.6s ease;
+}
+
