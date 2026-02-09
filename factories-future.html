@@ -6,55 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="keywords"
-      content="مصانع المستقبل، رايتو ERP، أتمتة المصانع، رؤية السعودية 2030"
-    />
+      content="مصانع المستقبل، رايتو ERP، أتمتة المصانع، رؤية السعودية 2030" />
     <meta
       name="description"
-      content="حول مصنعك إلى مصنع ذكي مع نظام رايتو ERP. واضمن مكانك بين 4,000 مصنع للمستقبل. تطبيق معايير وزارة الصناعة بسهولة."
-    />
+      content="حول مصنعك إلى مصنع ذكي مع نظام رايتو ERP. واضمن مكانك بين 4,000 مصنع للمستقبل. تطبيق معايير وزارة الصناعة بسهولة." />
     <meta name="author" content="Raitotec" />
     <meta
       property="og:title"
-      content="حول مصنعك إلى مصنع ذكي - مبادرة مصانع المستقبل - رايتو ERP"
-    />
+      content="حول مصنعك إلى مصنع ذكي - مبادرة مصانع المستقبل - رايتو ERP" />
     <meta property="og:type" content="Website" />
-    <meta property="og:url" content="" />
+    <meta property="og:url" content />
     <meta property="og:image" content="assets/img/LOGO.png" />
     <link href="assets/img/LOGO.png" rel="shortcut icon" />
     <title>مصانع المستقبل - نظام رايتو المحاسبية ERP</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link
       rel="preload"
       href="assets/css/bootstrap.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/bootstrap.min.css"
-    /></noscript>
+      onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet"
+        href="assets/css/bootstrap.min.css" /></noscript>
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/newCss.css" />
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <!-- <link rel="stylesheet" href="assets/css/newCss2.css" /> -->
-     <style>
+    <link rel="stylesheet" href="assets/css/newCss.css" />
+    <style>
       .features-grid{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 30px;
       }
+      .features-grid .feature-card {
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      }
+        @media (max-width: 1440px) {
+          .features-grid {
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+        }
+        @media (max-width: 992px) {
+          .features-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+        @media (max-width: 576px) {
+          .features-grid {
+            grid-template-columns: 1fr;
+          }
+        }
      </style>
   </head>
   <body>
@@ -65,9 +75,8 @@
           <a
             class="logo-icon"
             href="index.html"
-            aria-label="الذهاب إلى الصفحة الرئيسية"
-          >
-            <img src="assets/img/logoar.webp" alt="" class="mw-100" />
+            aria-label="الذهاب إلى الصفحة الرئيسية">
+            <img src="assets/img/logoar.webp" alt class="mw-100" />
           </a>
         </div>
         <ul class="nav-menu">
@@ -75,182 +84,125 @@
             <a
               href="index.html"
               class="nav-link active"
-              aria-label="الذهاب إلى الصفحة الرئيسية"
-              >الرئيسية</a
-            >
+              aria-label="الذهاب إلى الصفحة الرئيسية">الرئيسية</a>
           </li>
           <li>
             <a
               href="about.html"
               class="nav-link"
-              aria-label="الذهاب إلى صفحة من نحن"
-              >من نحن</a
-            >
+              aria-label="الذهاب إلى صفحة من نحن">من نحن</a>
           </li>
           <li class="nav-item mega-parent">
             <a
               href="business-sector.html"
               class="nav-link text-center"
-              aria-label="عرض قطاعات الأعمال"
-              >قطاعات اعمالنا ▾</a
-            >
+              aria-label="عرض قطاعات الأعمال">قطاعات اعمالنا ▾</a>
             <div class="mega-menu">
               <div class="container">
                 <div class="mega-row">
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
                     <h6>سلسلة التوريد</h6>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة إدارة المستودعات"
-                      >المستودعات</a
-                    >
+                      aria-label="الذهاب إلى صفحة إدارة المستودعات">المستودعات</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة إدارة التصنيع"
-                      >التصنيع</a
-                    >
+                      aria-label="الذهاب إلى صفحة إدارة التصنيع">التصنيع</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة إدارة المشتريات"
-                      >المشتريات</a
-                    >
+                      aria-label="الذهاب إلى صفحة إدارة المشتريات">المشتريات</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة إدارة الصيانة"
-                      >الصيانة</a
-                    >
+                      aria-label="الذهاب إلى صفحة إدارة الصيانة">الصيانة</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة إدارة الجودة"
-                      >الجودة</a
-                    >
+                      aria-label="الذهاب إلى صفحة إدارة الجودة">الجودة</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
                     <h6>المواقع الإلكترونية</h6>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة أداة بناء المواقع"
-                      >أداة بناء المواقع</a
-                    >
+                      aria-label="الذهاب إلى صفحة أداة بناء المواقع">أداة بناء
+                      المواقع</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة المتاجر الإلكترونية"
-                      >متاجر إلكترونية</a
-                    >
+                      aria-label="الذهاب إلى صفحة المتاجر الإلكترونية">متاجر
+                      إلكترونية</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة المدونة"
-                      >مدونة</a
-                    >
+                      aria-label="الذهاب إلى صفحة المدونة">مدونة</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة المنتدى"
-                      >منتدى</a
-                    >
+                      aria-label="الذهاب إلى صفحة المنتدى">منتدى</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
                     <h6>المبيعات</h6>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة إدارة علاقات العملاء"
-                      >إدارة علاقات العملاء</a
-                    >
+                      aria-label="الذهاب إلى صفحة إدارة علاقات العملاء">إدارة
+                      علاقات العملاء</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة إدارة المبيعات"
-                      >المبيعات</a
-                    >
+                      aria-label="الذهاب إلى صفحة إدارة المبيعات">المبيعات</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة نقطة البيع"
-                      >نقطة البيع</a
-                    >
+                      aria-label="الذهاب إلى صفحة نقطة البيع">نقطة البيع</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة الاشتراكات"
-                      >الاشتراكات</a
-                    >
+                      aria-label="الذهاب إلى صفحة الاشتراكات">الاشتراكات</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
                     <h6>الخدمات</h6>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة إدارة المشاريع"
-                      >المشاريع</a
-                    >
+                      aria-label="الذهاب إلى صفحة إدارة المشاريع">المشاريع</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة الجدول الزمني"
-                      >الجدول الزمني</a
-                    >
+                      aria-label="الذهاب إلى صفحة الجدول الزمني">الجدول
+                      الزمني</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة الخدمة الميدانية"
-                      >الخدمة الميدانية</a
-                    >
+                      aria-label="الذهاب إلى صفحة الخدمة الميدانية">الخدمة
+                      الميدانية</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة التخطيط"
-                      >التخطيط</a
-                    >
+                      aria-label="الذهاب إلى صفحة التخطيط">التخطيط</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
                     <h6>المالية</h6>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة المحاسبة"
-                      >المحاسبة</a
-                    >
+                      aria-label="الذهاب إلى صفحة المحاسبة">المحاسبة</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة الفواتير"
-                      >الفواتير</a
-                    >
+                      aria-label="الذهاب إلى صفحة الفواتير">الفواتير</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة النفقات"
-                      >النفقات</a
-                    >
+                      aria-label="الذهاب إلى صفحة النفقات">النفقات</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة المستندات"
-                      >المستندات</a
-                    >
+                      aria-label="الذهاب إلى صفحة المستندات">المستندات</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
                     <h6>الموارد البشرية</h6>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة إدارة الموظفين"
-                      >الموظفون</a
-                    >
+                      aria-label="الذهاب إلى صفحة إدارة الموظفين">الموظفون</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة التوظيف"
-                      >التوظيف</a
-                    >
+                      aria-label="الذهاب إلى صفحة التوظيف">التوظيف</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة الإجازات"
-                      >إجازات</a
-                    >
+                      aria-label="الذهاب إلى صفحة الإجازات">إجازات</a>
                     <a
                       href="business-sector.html"
-                      aria-label="الذهاب إلى صفحة التقييمات"
-                      >التقييمات</a
-                    >
+                      aria-label="الذهاب إلى صفحة التقييمات">التقييمات</a>
                   </div>
                 </div>
               </div>
@@ -260,197 +212,120 @@
             <a
               href="services.html"
               class="nav-link text-center"
-              aria-label="عرض التطبيقات"
-              >التطبيقات ▾</a
-            >
+              aria-label="عرض التطبيقات">التطبيقات ▾</a>
             <div class="mega-menu">
               <div class="container">
                 <div class="mega-row">
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة المحاسبة"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة المحاسبة"><i
                         class="fa-solid fa-calculator icon"
-                        style="color: #2563eb"
-                      ></i
-                      >نظام إدارة المحاسبة</a
-                    >
+                        style="color: #2563eb"></i>نظام إدارة المحاسبة</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة المشتريات"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة المشتريات"><i
                         class="fa-solid fa-cart-shopping icon"
-                        style="color: #16a34a"
-                      ></i
-                      >نظام إدارة المشتريات</a
-                    >
+                        style="color: #16a34a"></i>نظام إدارة المشتريات</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة نقاط البيع"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة نقاط البيع"><i
                         class="fa-solid fa-bag-shopping icon"
-                        style="color: #db2777"
-                      ></i
-                      >نظام إدارة نقاط البيع</a
-                    >
+                        style="color: #db2777"></i>نظام إدارة نقاط البيع</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة الموردين"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة الموردين"><i
                         class="fa-solid fa-people-group icon"
-                        style="color: #9333ea"
-                      ></i
-                      >نظام إدارة الموردين</a
-                    >
+                        style="color: #9333ea"></i>نظام إدارة الموردين</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة الصيانة"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة الصيانة"><i
                         class="fa-solid fa-screwdriver-wrench icon"
-                        style="color: #4b5563"
-                      ></i
-                      >نظام إدارة الصيانة</a
-                    >
+                        style="color: #4b5563"></i>نظام إدارة الصيانة</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة محطات الوقود"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة محطات الوقود"><i
                         class="fa-solid fa-gas-pump icon"
-                        style="color: #dc2626"
-                      ></i
-                      >نظام إدارة محطات الوقود</a
-                    >
+                        style="color: #dc2626"></i>نظام إدارة محطات الوقود</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة الأصول"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة الأصول"><i
                         class="fa-solid fa-database icon"
-                        style="color: #4f46e5"
-                      ></i
-                      >نظام إدارة الأصول</a
-                    >
+                        style="color: #4f46e5"></i>نظام إدارة الأصول</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة الإنتاج والتصنيع"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة الإنتاج والتصنيع"><i
                         class="fa-solid fa-industry icon"
-                        style="color: #0d9488"
-                      ></i
-                      >نظام إدارة الإنتاج والتصنيع</a
-                    >
+                        style="color: #0d9488"></i>نظام إدارة الإنتاج
+                      والتصنيع</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة الشحن والتوصيل"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة الشحن والتوصيل"><i
                         class="fa-solid fa-box icon"
-                        style="color: #0284c7"
-                      ></i
-                      >نظام إدارة الشحن والتوصيل</a
-                    >
+                        style="color: #0284c7"></i>نظام إدارة الشحن والتوصيل</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة الموارد البشرية"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة الموارد البشرية"><i
                         class="fa-solid fa-user-tie icon"
-                        style="color: #ec4899"
-                      ></i
-                      >نظام إدارة الموارد البشرية</a
-                    >
+                        style="color: #ec4899"></i>نظام إدارة الموارد
+                      البشرية</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام CRM"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام CRM"><i
                         class="fa-solid fa-handshake icon"
-                        style="color: #be123c"
-                      ></i
-                      >CRM</a
-                    >
+                        style="color: #be123c"></i>CRM</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام الولاء"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام الولاء"><i
                         class="fa-solid fa-gift icon"
-                        style="color: #dc2626"
-                      ></i
-                      >نظام الولاء</a
-                    >
+                        style="color: #dc2626"></i>نظام الولاء</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة المحاماة"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة المحاماة"><i
                         class="fa-solid fa-scale-balanced icon"
-                        style="color: #d97706"
-                      ></i
-                      >نظام إدارة المحاماة</a
-                    >
+                        style="color: #d97706"></i>نظام إدارة المحاماة</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة المدارس"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة المدارس"><i
                         class="fa-solid fa-graduation-cap icon"
-                        style="color: #1d4ed8"
-                      ></i
-                      >نظام إدارة المدارس</a
-                    >
+                        style="color: #1d4ed8"></i>نظام إدارة المدارس</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة المناديب"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة المناديب"><i
                         class="fa-solid fa-truck icon"
-                        style="color: #06b6d4"
-                      ></i
-                      >نظام إدارة المناديب</a
-                    >
+                        style="color: #06b6d4"></i>نظام إدارة المناديب</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة العقارات والعقود"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة العقارات والعقود"><i
                         class="fa-solid fa-house icon"
-                        style="color: #ec4899"
-                      ></i
-                      >نظام إدارة العقارات والعقود</a
-                    >
+                        style="color: #ec4899"></i>نظام إدارة العقارات
+                      والعقود</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة المخزون"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة المخزون"><i
                         class="fa-solid fa-boxes-stacked icon"
-                        style="color: #f97316"
-                      ></i
-                      >نظام إدارة المخزون</a
-                    >
+                        style="color: #f97316"></i>نظام إدارة المخزون</a>
                     <a
                       href="services.html"
-                      aria-label="الذهاب إلى صفحة نظام إدارة المقاولات"
-                      ><i
+                      aria-label="الذهاب إلى صفحة نظام إدارة المقاولات"><i
                         class="fa-solid fa-building icon"
-                        style="color: #ca8a04"
-                      ></i
-                      >نظام إدارة المقاولات</a
-                    >
+                        style="color: #ca8a04"></i>نظام إدارة المقاولات</a>
                   </div>
                 </div>
               </div>
@@ -460,114 +335,72 @@
             <a
               href="services.html"
               class="nav-link text-center"
-              aria-label="عرض مجتمعنا"
-              >مجتمعنا ▾</a
-            >
+              aria-label="عرض مجتمعنا">مجتمعنا ▾</a>
             <div class="mega-menu">
               <div class="container">
                 <div class="mega-row">
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                     <a
                       href="forum.html"
-                      aria-label="الذهاب إلى صفحة المنتدى والمناقشات"
-                      ><i
+                      aria-label="الذهاب إلى صفحة المنتدى والمناقشات"><i
                         class="fas fa-comments icon"
-                        style="color: #2563eb"
-                      ></i>
-                      المنتدى والمناقشات</a
-                    >
+                        style="color: #2563eb"></i>
+                      المنتدى والمناقشات</a>
                     <a
                       href="knowledge.html"
-                      aria-label="الذهاب إلى صفحة مكتبة المعرفة"
-                      ><i class="fas fa-book icon" style="color: #16a34a"></i
-                      >مكتبة المعرفة</a
-                    >
+                      aria-label="الذهاب إلى صفحة مكتبة المعرفة"><i
+                        class="fas fa-book icon"
+                        style="color: #16a34a"></i>مكتبة المعرفة</a>
                     <a
                       href="updates.html"
-                      aria-label="الذهاب إلى صفحة الإعلانات والتحديثات"
-                      ><i
+                      aria-label="الذهاب إلى صفحة الإعلانات والتحديثات"><i
                         class="fas fa-bullhorn icon"
-                        style="color: #db2777"
-                      ></i
-                      >الإعلانات والتحديثات</a
-                    >
+                        style="color: #db2777"></i>الإعلانات والتحديثات</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                     <a
                       href="education.html"
-                      aria-label="الذهاب إلى صفحة المحتوى التعليمي"
-                      ><i
+                      aria-label="الذهاب إلى صفحة المحتوى التعليمي"><i
                         class="fa-solid fa-graduation-cap icon"
-                        style="color: #9333ea"
-                      ></i
-                      >المحتوى التعليمي</a
-                    >
+                        style="color: #9333ea"></i>المحتوى التعليمي</a>
                     <a
                       href="gamification.html"
-                      aria-label="الذهاب إلى صفحة النقاط والشارات"
-                      ><i
+                      aria-label="الذهاب إلى صفحة النقاط والشارات"><i
                         class="fa-solid fa-trophy icon"
-                        style="color: #4b5563"
-                      ></i
-                      >النقاط والشارات</a
-                    >
+                        style="color: #4b5563"></i>النقاط والشارات</a>
                     <a
                       href="support.html"
-                      aria-label="الذهاب إلى صفحة الدعم الفني"
-                      ><i
+                      aria-label="الذهاب إلى صفحة الدعم الفني"><i
                         class="fa-solid fa-headset icon"
-                        style="color: #dc2626"
-                      ></i
-                      >الدعم الفني</a
-                    >
+                        style="color: #dc2626"></i>الدعم الفني</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                     <a
                       href="ideas.html"
-                      aria-label="الذهاب إلى صفحة مشاركة الأفكار"
-                      ><i
+                      aria-label="الذهاب إلى صفحة مشاركة الأفكار"><i
                         class="fa-solid fa-lightbulb icon"
-                        style="color: #4f46e5"
-                      ></i
-                      >مشاركة الأفكار</a
-                    >
+                        style="color: #4f46e5"></i>مشاركة الأفكار</a>
                     <a
                       href="networking.html"
-                      aria-label="الذهاب إلى صفحة التواصل بين الأعضاء"
-                      ><i
+                      aria-label="الذهاب إلى صفحة التواصل بين الأعضاء"><i
                         class="fa-solid fa-users icon"
-                        style="color: #0d9488"
-                      ></i
-                      >التواصل بين الأعضاء</a
-                    >
+                        style="color: #0d9488"></i>التواصل بين الأعضاء</a>
                     <a
                       href="search.html"
-                      aria-label="الذهاب إلى صفحة البحث المتقدم"
-                      ><i
+                      aria-label="الذهاب إلى صفحة البحث المتقدم"><i
                         class="fa-solid fa-search icon"
-                        style="color: #0284c7"
-                      ></i
-                      >البحث المتقدم</a
-                    >
+                        style="color: #0284c7"></i>البحث المتقدم</a>
                   </div>
                   <div
-                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3"
-                  >
+                    class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                     <a
                       href="integration.html"
-                      aria-label="الذهاب إلى صفحة التكامل مع السوشيال و CRM"
-                      ><i
+                      aria-label="الذهاب إلى صفحة التكامل مع السوشيال و CRM"><i
                         class="fa-solid fa-plug icon"
-                        style="color: #ec4899"
-                      ></i
-                      >التكامل مع السوشيال و CRM</a
-                    >
+                        style="color: #ec4899"></i>التكامل مع السوشيال و CRM</a>
                   </div>
                 </div>
               </div>
@@ -577,25 +410,19 @@
             <a
               href="prices.html"
               class="nav-link"
-              aria-label="الذهاب إلى صفحة الأسعار"
-              >اسعارنا</a
-            >
+              aria-label="الذهاب إلى صفحة الأسعار">اسعارنا</a>
           </li>
           <li>
             <a
               href="Blog.html"
               class="nav-link"
-              aria-label="الذهاب إلى صفحة المدونة"
-              >المدونة</a
-            >
+              aria-label="الذهاب إلى صفحة المدونة">المدونة</a>
           </li>
           <li>
             <a
               href="contact.html"
               class="nav-link"
-              aria-label="الذهاب إلى صفحة تواصل معنا"
-              >تواصل معنا</a
-            >
+              aria-label="الذهاب إلى صفحة تواصل معنا">تواصل معنا</a>
           </li>
           <li class="lang-item">
             <div class="language-switcher">
@@ -603,28 +430,24 @@
                 class="lang-btn btn border-0"
                 id="arabic-btn"
                 aria-label="التحويل إلى اللغة العربية"
-                title="التحويل إلى اللغة العربية"
-              >
+                title="التحويل إلى اللغة العربية">
                 <img
                   src="assets/Asset-system/icon/Flag-Saudi-Arabia.png"
                   alt="علم السعودية"
                   width="24"
-                  class="me-2 align-middle"
-                />
+                  class="me-2 align-middle" />
                 العربية
               </button>
               <button
                 class="lang-btn btn border-0"
                 id="english-btn"
                 aria-label="التحويل إلى اللغة الإنجليزية"
-                title="التحويل إلى اللغة الإنجليزية"
-              >
+                title="التحويل إلى اللغة الإنجليزية">
                 <img
                   src="assets/Asset-system/icon/united-kingdom.png"
                   alt="علم المملكة المتحدة"
                   width="24"
-                  class="ms-2 align-bottom"
-                />
+                  class="ms-2 align-bottom" />
                 English
               </button>
             </div>
@@ -638,19 +461,19 @@
       </div>
     </nav>
 
-    <!-- Section 1: Hero Section -->
-    <section id="hero" class="hero-section section-padding">
+    <main>
+          <!-- Section 1: Hero Section -->
+    <section id="hero" class="hero-section section-padding"
+      style="min-height: auto;">
       <div class="container">
         <div
-          class="hero-container row align-items-center justify-content-center mt-4 mt-lg-5"
-        >
+          class="hero-container row align-items-center justify-content-center mt-4 mt-lg-5">
           <div class="hero-content text-center col-lg-10 col-xl-9">
             <h1 class="hero-title">
               <span class="title-word">حـوّل مصنعك إلى</span>
               <span class="title-word highlight-2">"مصنع ذكي"</span>
-              <span class="title-word mt-1"
-                >واضـمـن مكانك بين الـ 4,000 مصنع للمستقبل</span
-              >
+              <span class="title-word mt-1">واضـمـن مكانك بين الـ 4,000 مصنع
+                للمستقبل</span>
             </h1>
             <p class="hero-subtitle">
               نظام رايتو (Raito ERP) يؤهلك تقنياً للاستفادة من مبادرة "مصانع
@@ -663,8 +486,7 @@
               <a
                 href="contact.html"
                 class="btn-primary"
-                aria-label="قيّم جاهزية مصنعك الآن"
-              >
+                aria-label="قيّم جاهزية مصنعك الآن">
                 <span>قيّم جاهزية مصنعك الآن - مجاناً</span>
                 <div class="btn-arrow">→</div>
               </a>
@@ -701,56 +523,47 @@
     </section>
 
     <!-- Section 2: Readiness Question -->
-    <section class="chaos-management-section bg-gray">
+    <section class="integration-section section-padding">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="section-title">
-            هل مصنعك جاهز لمواكبة رؤية المملكة الصناعية؟
-          </h2>
-        </div>
-
-        <div class="row justify-content-center mb-5">
-          <div class="col-lg-10">
-            <p class="section-text text-center fs-5 mb-4">
-              تهدف مبادرة "برنامج مصانع المستقبل" إلى تحويل 4,000 مصنع من
-              الاعتماد على العمالة المنخفضة المهارة إلى الكفاءة التشغيلية
-              والأتمتة. سواء كنت تؤسس مصنعاً جديداً أو تطور مصنعاً قائماً، فإن
-              التحدي ليس في "الإنتاج" بل في "الرقمنة".
-            </p>
+          <div class="section-label">
+            <i class="fas fa-industry"></i>
+            <span>هل مصنعك جاهز لمستقبل الصناعة؟</span>
           </div>
+          <h2 class="section-title">هل مصنعك جاهز لمواكبة رؤية المملكة
+            الصناعية؟</h2>
+          <p class="section-subtitle">
+            تهدف مبادرة "برنامج مصانع المستقبل" إلى تحويل 4,000 مصنع من
+            الاعتماد على العمالة المنخفضة المهارة إلى الكفاءة التشغيلية
+            والأتمتة. سواء كنت تؤسس مصنعاً جديداً أو تطور مصنعاً قائماً، فإن
+            التحدي ليس في "الإنتاج" بل في "الرقمنة".
+          </p>
         </div>
-
-        <!-- Pain Points -->
-        <div class="chaos-cards-grid">
-          <div class="chaos-card chaos-card-1">
-            <div class="card-icon-Business-wrapper">
-              <div class="icon-bg icon-bg-primary"></div>
-              <i class="fas fa-exclamation-triangle card-icon-Business"></i>
+        <div class="integration-grid">
+          <div class="integration-item">
+            <div class="integration-icon">
+              <i class="fas fa-check-circle"></i>
             </div>
-            <h3 class="card-title">الهدر والتكاليف</h3>
-            <p class="card-description mb-0">
+            <h3>الهدر والتكاليف</h3>
+            <p>
               هل تعاني من هدر المواد الخام وصعوبة تتبع التكاليف؟
             </p>
           </div>
-
-          <div class="chaos-card chaos-card-2">
-            <div class="card-icon-Business-wrapper">
-              <div class="icon-bg icon-bg-secondary"></div>
-              <i class="fas fa-user-clock card-icon-Business"></i>
+          <div class="integration-item">
+            <div class="integration-icon">
+              <i class="fas fa-gas-pump"></i>
             </div>
-            <h3 class="card-title">العمل اليدوي</h3>
-            <p class="card-description mb-0">
+            <h3>العمل اليدوي</h3>
+            <p>
               هل تعتمد كلياً على العمالة اليدوية في إدخال البيانات؟
             </p>
           </div>
-
-          <div class="chaos-card chaos-card-3">
-            <div class="card-icon-Business-wrapper">
-              <div class="icon-bg icon-bg-primary"></div>
-              <i class="fas fa-hand-holding-dollar card-icon-Business"></i>
+          <div class="integration-item">
+            <div class="integration-icon">
+              <i class="fas fa-credit-card"></i>
             </div>
-            <h3 class="card-title">فرص الدعم</h3>
-            <p class="card-description mb-0">
+            <h3>فرص الدعم</h3>
+            <p>
               هل تفقد فرص الدعم الحكومي لعدم وجود بنية تقنية متطورة؟
             </p>
           </div>
@@ -765,12 +578,11 @@
               <h2 class="section-title">
                 رايتو يجمع كل أعمالك في منصة واحدة موثوقة.
               </h2>
-              <h5 class="my-4">أوقف الهدر المالي والتلاعب الآن!</h5>
+              <h3 class="my-4">أوقف الهدر المالي والتلاعب الآن!</h3>
               <a
                 href="contact.html"
                 class="btn-primary text-decoration-none"
-                aria-label="فتح نموذج التسجيل المجاني"
-              >
+                aria-label="فتح نموذج التسجيل المجاني">
                 <span>اكتشف كيف تقلل تكاليف التشغيل والهدر</span>
                 <div class="btn-arrow">→</div>
               </a>
@@ -781,16 +593,20 @@
               src="assets/img/man-hand-mobile.webp"
               alt="صورة توضيحية للهاتف المحمول"
               class="img-man"
-              loading="lazy"
-            />
+              loading="lazy" />
           </div>
         </div>
       </div>
     </section>
     <!-- Section 3: Features & Benefits -->
-    <section id="features-section" class="features-section section-padding bg-gray">
+    <section id="features-section"
+      class="features-section section-padding bg-gray">
       <div class="container">
         <div class="section-header text-center mb-5">
+          <div class="section-label">
+            <i class="fas fa-cogs"></i>
+            <span>حلول شاملة لمصانع المستقبل</span>
+          </div>
           <h2 class="section-title">استعد السيطرة الكاملة على مشروعك</h2>
         </div>
 
@@ -856,8 +672,7 @@
           <a
             href="contact.html"
             class="btn-primary"
-            aria-label="احجز استشارة"
-          >
+            aria-label="احجز استشارة">
             <span>احجز استشارة لتخصيص النظام لمصنعك</span>
             <div class="btn-arrow">→</div>
           </a>
@@ -1094,7 +909,7 @@
                       <img src="assets/img/Eng_Abdalla.jpg" alt="User"
                         class="user-avatar">
                       <div class="user-details">
-                        <h4>م. عبدالله</h4>
+                        <h3>م. عبدالله</h3>
                         <p>مدير تشغيل شركة لتر بوينت</p>
                       </div>
                     </div>
@@ -1119,7 +934,7 @@
                       <img src="assets/img/Eng-Abdall.jpg" alt="User"
                         class="user-avatar">
                       <div class="user-details">
-                        <h4>م. عبدالله</h4>
+                        <h3>م. عبدالله</h3>
                         <p>اخصائي تشغيل محطات وقود</p>
                       </div>
                     </div>
@@ -1144,7 +959,7 @@
                       <img src="assets/img/hader03.webp" alt="User"
                         class="user-avatar">
                       <div class="user-details">
-                        <h4>Jon Doe</h4>
+                        <h3>Jon Doe</h3>
                         <p>Software Engineer</p>
                       </div>
                     </div>
@@ -1181,11 +996,16 @@
       <div class="container">
         <div class="cta-demo-content">
           <div class="cta-demo-header">
+            <div class="section-label">
+              <i class="fas fa-rocket"></i>
+              <span>انطلق نحو المستقبل</span>
+            </div>
             <h2 class="cta-demo-title">
               لا تنتظر حتى تصبح التكنولوجيا "إجبارية".. كن سبّاقاً اليوم
             </h2>
             <p class="cta-demo-subtitle">
-              تطبيق معايير "مصانع المستقبل" يحتاج إلى شريك تقني يفهم السوق ويدرس متطلبات مصنعك لتفصيل النظام بما يخدم أهدافك التوسعية
+              تطبيق معايير "مصانع المستقبل" يحتاج إلى شريك تقني يفهم السوق ويدرس
+              متطلبات مصنعك لتفصيل النظام بما يخدم أهدافك التوسعية
             </p>
           </div>
 
@@ -1196,13 +1016,17 @@
                 <i class="fas fa-trophy"></i>
               </div>
               <div>
-                <h3 class="success-story-title">التحول الرقمي لمصانع المستقبل</h3>
+                <h3 class="success-story-title">التحول الرقمي لمصانع
+                  المستقبل</h3>
                 <span class="success-story-badge">✓ شراكة استراتيجية</span>
               </div>
             </div>
-            
+
             <div class="success-story-content">
-              فريق رايتو جاهز لمساعدتك في تحقيق معايير مبادرة "مصانع المستقبل" من خلال نظام ERP متكامل يجمع بين التخطيط والإنتاج والمبيعات. نضمن لك الامتثال الكامل مع إمكانية التوسع المستقبلي ورفع كفاءة العمليات.
+              فريق رايتو جاهز لمساعدتك في تحقيق معايير مبادرة "مصانع المستقبل"
+              من خلال نظام ERP متكامل يجمع بين التخطيط والإنتاج والمبيعات. نضمن
+              لك الامتثال الكامل مع إمكانية التوسع المستقبلي ورفع كفاءة
+              العمليات.
             </div>
 
             <div class="success-story-metrics">
@@ -1225,18 +1049,16 @@
             <a
               href="contact.html"
               class="btn-primary cta-demo-primary"
-              aria-label="احجز جلسة استشارية لتأهيل مصنعك"
-            >
+              aria-label="احجز جلسة استشارية لتأهيل مصنعك">
               <span>احجز جلسة استشارية لتأهيل مصنعك</span>
               <div class="btn-arrow">→</div>
             </a>
             <a
-            href="https://wa.me/966538499438?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%83%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%B4%D8%B1%D9%88%D8%B7%20%D9%85%D8%A8%D8%A7%D8%AF%D8%B1%D8%A9%20%D9%85%D8%B5%D8%A7%D9%86%D8%B9%20%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%82%D8%A8%D9%84%20%D8%A8%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%20%D9%86%D8%B8%D8%A7%D9%85%20%D8%B1%D8%A7%D9%8A%D8%AA%D9%88"
+              href="https://wa.me/966538499438?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%83%D9%8A%D9%81%D9%8A%D8%A9%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D8%B4%D8%B1%D9%88%D8%B7%20%D9%85%D8%A8%D8%A7%D8%AF%D8%B1%D8%A9%20%D9%85%D8%B5%D8%A7%D9%86%D8%B9%20%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%82%D8%A8%D9%84%20%D8%A8%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%20%D9%86%D8%B8%D8%A7%D9%85%20%D8%B1%D8%A7%D9%8A%D8%AA%D9%88"
               class="btn-whatsapp-cta"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="تواصل معنا عبر واتساب"
-            >
+              aria-label="تواصل معنا عبر واتساب">
               <i class="fab fa-whatsapp"></i>
               <span>تحدث مع خبير أتمتة المصانع</span>
             </a>
@@ -1268,8 +1090,10 @@
                 <div id="faq1" class="collapse">
                   <div class="faq-body">
                     <p>
-                      المبادرة تتطلب من المصانع تطبيق معايير تقنية محددة تشمل رقمنة
-                      العمليات، أتمتة الإنتاج، وإدارة البيانات بكفاءة. نظام رايتو
+                      المبادرة تتطلب من المصانع تطبيق معايير تقنية محددة تشمل
+                      رقمنة
+                      العمليات، أتمتة الإنتاج، وإدارة البيانات بكفاءة. نظام
+                      رايتو
                       يدعم كل هذه المتطلبات بشكل كامل.
                     </p>
                   </div>
@@ -1294,7 +1118,8 @@
                   <div class="faq-body">
                     <p>
                       المدة تختلف حسب حجم المصنع وتعقيد العمليات. عادة ما يستغرق
-                      التطبيق من 4-8 أسابيع. سيقوم فريقنا بدراسة احتياجاتك وتقديم
+                      التطبيق من 4-8 أسابيع. سيقوم فريقنا بدراسة احتياجاتك
+                      وتقديم
                       جدول زمني دقيق.
                     </p>
                   </div>
@@ -1318,7 +1143,8 @@
                 <div id="faq3" class="collapse">
                   <div class="faq-body">
                     <p>
-                      نعم، نظام رايتو مبني بمرونة عالية وقابل للربط مع جميع الأنظمة
+                      نعم، نظام رايتو مبني بمرونة عالية وقابل للربط مع جميع
+                      الأنظمة
                       الحكومية. نحن نعمل على استكمال الاعتماد الرسمي من وزارة
                       الصناعة.
                     </p>
@@ -1344,7 +1170,8 @@
                   <div class="faq-body">
                     <p>
                       التكلفة تختلف حسب حجم مصنعك والوحدات المطلوبة. نقدم خيارات
-                      تسعير مرنة وحزم تدريب وتطبيق شاملة. تواصل معنا للحصول على عرض
+                      تسعير مرنة وحزم تدريب وتطبيق شاملة. تواصل معنا للحصول على
+                      عرض
                       سعر مفصل.
                     </p>
                   </div>
@@ -1400,7 +1227,8 @@
 
               <h3 class="contact-title">هل لديك سؤال آخر؟</h3>
               <p class="contact-description">
-                فريق رايتو المتخصص في قطاع الصناعة والتصنيع جاهز للإجابة على جميع
+                فريق رايتو المتخصص في المصانع جاهز للإجابة على
+                جميع
                 استفساراتك وتقديم الدعم الكامل
               </p>
               <form id="faqQuestionForm" onsubmit="handleFaqSubmit(event)">
@@ -1432,8 +1260,7 @@
       id="assessment-form"
       tabindex="-1"
       aria-labelledby="assessmentModalLabel"
-      aria-hidden="true"
-    >
+      aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header border-0">
@@ -1444,8 +1271,7 @@
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="إغلاق"
-            >
+              aria-label="إغلاق">
               <i class="fas fa-xmark"></i>
             </button>
           </div>
@@ -1460,8 +1286,7 @@
                     id="factory-name"
                     autocomplete="factory-name"
                     placeholder="اسم مصنعك"
-                    aria-label="اسم المصنع"
-                  />
+                    aria-label="اسم المصنع" />
                   <i class="fas fa-industry"></i>
                 </div>
                 <div class="form-group col-12 mb-3">
@@ -1471,8 +1296,7 @@
                     class="form-control"
                     id="factory-owner"
                     placeholder="اكتب اسمك هنا..."
-                    aria-label="أدخل الاسم بالكامل"
-                  />
+                    aria-label="أدخل الاسم بالكامل" />
                   <i class="fas fa-user"></i>
                 </div>
                 <div class="form-group col-12 mb-3">
@@ -1482,8 +1306,7 @@
                     class="form-control"
                     id="factory-phone"
                     placeholder="اكتب رقم جوالك هنا..."
-                    aria-label="أدخل رقم الجوال"
-                  />
+                    aria-label="أدخل رقم الجوال" />
                   <i class="fas fa-phone"></i>
                 </div>
                 <div class="form-group col-12 mb-3">
@@ -1491,8 +1314,7 @@
                   <select
                     class="form-control"
                     id="factory-sector"
-                    aria-label="اختر القطاع الصناعي"
-                  >
+                    aria-label="اختر القطاع الصناعي">
                     <option selected disabled>اختر القطاع</option>
                     <option>النسيج</option>
                     <option>المواد الكيميائية</option>
@@ -1507,8 +1329,7 @@
                 <button
                   type="submit"
                   class="btn btn-primary btn-full"
-                  aria-label="إرسال نموذج التسجيل"
-                >
+                  aria-label="إرسال نموذج التسجيل">
                   قيّم جاهزية مصنعي الآن
                 </button>
               </div>
@@ -1525,8 +1346,7 @@
       data-bs-keyboard="false"
       tabindex="-1"
       aria-labelledby="demo-formLabel"
-      aria-hidden="true"
-    >
+      aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -1537,8 +1357,7 @@
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="إغلاق النافذة المنبثقة"
-            >
+              aria-label="إغلاق النافذة المنبثقة">
               <i class="fas fa-xmark"></i>
             </button>
           </div>
@@ -1555,8 +1374,7 @@
                     autocomplete="name"
                     required
                     placeholder="اكتب اسمك هنا..."
-                    aria-label="أدخل الاسم بالكامل"
-                  />
+                    aria-label="أدخل الاسم بالكامل" />
                   <i class="fas fa-user"></i>
                 </div>
                 <div class="form-group col-12 mb-3">
@@ -1569,8 +1387,7 @@
                     autocomplete="email"
                     required
                     placeholder="اكتب بريدك الإلكتروني هنا..."
-                    aria-label="أدخل البريد الإلكتروني"
-                  />
+                    aria-label="أدخل البريد الإلكتروني" />
                   <i class="fas fa-envelope"></i>
                 </div>
                 <div class="form-group col-12 mb-3">
@@ -1583,8 +1400,7 @@
                     autocomplete="phone"
                     required
                     placeholder="اكتب رقم جوالك هنا..."
-                    aria-label="أدخل رقم الجوال"
-                  />
+                    aria-label="أدخل رقم الجوال" />
                   <i class="fas fa-phone"></i>
                 </div>
                 <div class="form-group col-12 mb-3">
@@ -1594,9 +1410,8 @@
                     class="form-control"
                     name="subject"
                     required
-                    aria-label="اختر نوع المشروع"
-                  >
-                    <option value="" disabled selected>اختر نوع المشروع</option>
+                    aria-label="اختر نوع المشروع">
+                    <option value disabled selected>اختر نوع المشروع</option>
                     <option value="1">مشروع محاسبة</option>
                     <option value="2">مشروع إدارة المخزون</option>
                     <option value="3">مشروع خدمات</option>
@@ -1611,8 +1426,7 @@
                     rows="5"
                     required
                     placeholder="اكتب رسالتك هنا..."
-                    aria-label="أدخل وصف المشروع"
-                  ></textarea>
+                    aria-label="أدخل وصف المشروع"></textarea>
                   <i class="fas fa-comment"></i>
                 </div>
               </div>
@@ -1620,8 +1434,7 @@
                 <button
                   type="submit"
                   class="btn btn-primary btn-full"
-                  aria-label="إرسال نموذج التسجيل"
-                >
+                  aria-label="إرسال نموذج التسجيل">
                   <i class="fas fa-paper-plane"></i>
                   سجل الآن
                 </button>
@@ -1631,6 +1444,7 @@
         </div>
       </div>
     </div>
+    </main>
 
     <footer class="footer">
       <div class="footer-bg-overlay"></div>
@@ -1680,19 +1494,22 @@
               <a class="Industry-icon" href="https://www.moenergy.gov.sa/ar"
                 aria-label="زيارة موقع وزارة الطاقة">
                 <img src="assets/img/taqa.png" alt="شعار وزارة الطاقة"
-                  class="mw-100" loading="lazy">
+                  class="mw-100" loading="lazy"
+                  width="100" height="100">
               </a>
               <a class="Industry-icon"
                 href="https://zatca.gov.sa/ar/Pages/default.aspx"
                 aria-label="زيارة موقع هيئة الزكاة والضريبة والجمارك">
                 <img src="assets/img/zakat.png"
                   alt="شعار هيئة الزكاة والضريبة والجمارك" class="mw-100"
-                  loading="lazy">
+                  loading="lazy"
+                  width="100" height="100">
               </a>
               <a class="Industry-icon" href="https://www.geidea.net/egy/ar"
                 aria-label="زيارة موقع جيديا">
                 <img src="assets/img/geidea.png" alt="شعار جيديا" class="mw-100"
-                  loading="lazy">
+                  loading="lazy"
+                  width="100" height="100">
               </a>
             </div>
           </div>
@@ -1796,10 +1613,9 @@
       <div class="chat-header">
         <div class="chat-avatar">
           <img
-            src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=50&h=50"
+            src="assets/img/logoar.webp"
             alt="صورة مساعد العملاء"
-            loading="lazy"
-          />
+            loading="lazy" />
         </div>
         <div class="chat-info">
           <h3>مساعد العملاء</h3>
@@ -1820,8 +1636,7 @@
           placeholder="اكتب رسالتك هنا..."
           id="AI-Massage"
           name="AI-Massage"
-          aria-label="أدخل رسالة المحادثة"
-        />
+          aria-label="أدخل رسالة المحادثة" />
         <button class="send-btn" aria-label="إرسال الرسالة">
           <i class="fas fa-paper-plane"></i>
         </button>

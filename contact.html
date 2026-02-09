@@ -23,6 +23,12 @@
     <link href="assets/img/LOGO.png" rel="shortcut icon" />
     <title>تواصل معنا - رايتو</title>
     <title>أنظمة رايتو المحاسبية - Raito ERP Systems</title>
+    <!-- Preconnect to critical origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://maps.googleapis.com" />
+    <link rel="preconnect" href="https://maps.gstatic.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -36,18 +42,48 @@
     <noscript
       ><link rel="stylesheet" href="assets/css/bootstrap.min.css"
     /></noscript>
-    <!-- Font Awesome CDN -->
+    <!-- Font Awesome CDN deferred to non-critical -->
     <link
-      rel="stylesheet"
+      rel="preload"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
       integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+    </noscript>
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-solid-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/webfonts/fa-brands-400.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    </noscript>
     <link rel="stylesheet" href="assets/css/newCss.css" />
   </head>
   <body>
@@ -602,6 +638,7 @@
                   src="assets/Asset-system/icon/Flag-Saudi-Arabia.png"
                   alt="علم السعودية"
                   width="24"
+                  height="24"
                   class="me-2 align-middle"
                 />
                 العربية
@@ -616,6 +653,7 @@
                   src="assets/Asset-system/icon/united-kingdom.png"
                   alt="علم المملكة المتحدة"
                   width="24"
+                  height="24"
                   class="ms-2 align-bottom"
                 />
                 English
@@ -632,7 +670,8 @@
     </nav>
 
     <!-- Hero Section (Same as about.html style) -->
-    <section class="contact-hero-section">
+    <main>
+    <section class="contact-hero-section" fetchpriority="high">
       <div class="contact-hero-overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(66, 131, 21, 0.75) 0%, rgba(11, 85, 94, 0.75) 100%);"></div>
       <div class="container contact-hero-content-wrapper">
         <div class="contact-hero-content text-center">
@@ -944,9 +983,9 @@
               <div class="method-icon">
                 <i class="fas fa-phone"></i>
               </div>
-              <h4 class="contact-method-title">
+              <h3 class="contact-method-title">
                 المبيعات
-              </h4>
+              </h3>
               <p class="contact-method-detail">
                 +966 50 123 4567
               </p>
@@ -964,9 +1003,9 @@
               <div class="method-icon">
                 <i class="fab fa-whatsapp"></i>
               </div>
-              <h4 class="contact-method-title">
+              <h3 class="contact-method-title">
                 واتساب
-              </h4>
+              </h3>
               <p class="contact-method-detail">
                 +966 50 123 4567
               </p>
@@ -984,9 +1023,9 @@
               <div class="method-icon">
                 <i class="fas fa-envelope"></i>
               </div>
-              <h4 class="contact-method-title">
+              <h3 class="contact-method-title">
                 البريد الإلكتروني
-              </h4>
+              </h3>
               <p class="contact-method-detail">
                 sales@raito.com
               </p>
@@ -1004,9 +1043,9 @@
               <div class="method-icon">
                 <i class="fas fa-clock"></i>
               </div>
-              <h4 class="contact-method-title">
+              <h3 class="contact-method-title">
                 ساعات العمل
-              </h4>
+              </h3>
               <p class="contact-method-detail">
                 الأحد - الخميس
               </p>
@@ -1040,6 +1079,7 @@
           <div class="col-lg-8">
             <div class="map-container">
               <iframe
+                title="خريطة جوجل تشير إلى موقع مقر رايتو الرئيسي"
                 src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d1855516.0703417114!2d47.48205!3d24.724998!3m2!1i1024!2i768!4f13.1!2m1!1zMjcg2K3ZiiA0MDAwINin2YTYt9ix2YrZgiDYp9mE2K_Yp9im2LHZiiDYp9mE2LrYsdio2YrYjCA2NzAw2Iwg2KfZhNiz2YjZitiv2Yog2KfZhNi62LHYqNmKINin2YTYsdmK2KfYtiAxMjk5M9iMINin2YTYs9i52YjYr9mK2KnigK0!5e0!3m2!1sar!2seg!4v1769937551856!5m2!1sar!2seg"
                 width="100%"
                 height="100%"
@@ -1165,13 +1205,16 @@
       </div>
     </div>
 
+    </main>
     <div class="chat-widget">
       <div class="chat-header">
         <div class="chat-avatar">
           <img
-            src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=50&h=50"
+            src="assets/img/logoar.webp"
             alt="صورة مساعد العملاء"
             loading="lazy"
+            width="50"
+            height="50"
           />
         </div>
         <div class="chat-info">
@@ -1221,7 +1264,7 @@
               <div class="footer-main-logo">
                 <a href="index.html" aria-label="الذهاب إلى الصفحة الرئيسية">
                   <img src="assets/img/logoar.webp"
-                    alt="شعار رايتو للحلول التقنية" loading="lazy" />
+                    alt="شعار رايتو للحلول التقنية" loading="lazy" width="109" height="55" />
                 </a>
               </div>
               <p class="footer-description">تقنية معلومات رايتو تحقق حلول

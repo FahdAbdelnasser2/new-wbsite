@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Security Headers -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src 'self' https://www.youtube-nocookie.com; connect-src 'self' https:;" /> -->
     <meta
       name="keywords"
       content="مع رايتو أحصل على حلول برمجية وأنظمة برمجية مبتكرة" />
@@ -19,6 +23,12 @@
     <meta property="og:image" content="assets/img/LOGO.png" />
     <link href="assets/img/LOGO.png" rel="shortcut icon" />
     <title>أنظمة رايتو المحاسبية - Raito ERP Systems</title>
+        <!-- Preconnect to critical origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://maps.googleapis.com" />
+    <link rel="preconnect" href="https://maps.gstatic.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
       rel="stylesheet" />
@@ -375,6 +385,7 @@
                   src="assets/Asset-system/icon/Flag-Saudi-Arabia.png"
                   alt="علم السعودية"
                   width="24"
+                  height="24"
                   class="me-2 align-middle" />
                 العربية
               </button>
@@ -387,6 +398,7 @@
                   src="assets/Asset-system/icon/united-kingdom.png"
                   alt="علم المملكة المتحدة"
                   width="24"
+                  height="24"
                   class="ms-2 align-bottom" />
                 English
               </button>
@@ -400,6 +412,7 @@
         </div>
       </div>
     </nav>
+    <main>
     <!-- <section id="hero" class="hero-section section-padding">
       <div class="container">
         <div class="hero-container row align-items-center mt-4 mt-lg-5">
@@ -645,7 +658,7 @@
             <div class="ratio ratio-16x9">
               <iframe
                 id="systemDemoVideo"
-                src="https://www.youtube.com/embed/1Q8fG0TtVAY"
+                src="https://www.youtube-nocookie.com/embed/1Q8fG0TtVAY"
                 title="شاهد النظام يعمل"
                 allow="autoplay; encrypted-media"
                 allowfullscreen
@@ -884,7 +897,7 @@
               <h2 class="section-title">
                 رايتو يجمع كل أعمالك في منصة واحدة موثوقة.
               </h2>
-              <h5 class="my-4">أوقف الهدر المالي والتلاعب الآن!</h5>
+              <h3 class="my-4">أوقف الهدر المالي والتلاعب الآن!</h3>
               <a
                 href="contact.html"
                 class="btn-primary"
@@ -1429,7 +1442,7 @@
                 <div class="chaos-card-overlay"></div>
                 <!-- Using hero-team.jpg as it likely contains people/team -->
                 <img src="assets/img/hero-team.jpg"
-                  onerror="this.src='https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&q=80'"
+                  onerror="this.src='assets/img/hero-team.jpg'"
                   alt="فريق رايتو" />
               </div>
 
@@ -1437,7 +1450,7 @@
               <div class="vision-img-secondary">
                 <!-- Using partners.jpg -->
                 <img src="assets/img/partners.jpg"
-                  onerror="this.src='https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=350&q=80'"
+                  onerror="this.src='assets/img/partners.jpg'"
                   alt="العمل الجماعي" />
               </div>
             </div>
@@ -1468,7 +1481,7 @@
                     <i class="fas fa-check"></i>
                   </div>
                   <div class="feature-text">
-                    <h4>تخصيص حقيقي يناسبك</h4>
+                    <h3>تخصيص حقيقي يناسبك</h3>
                     <p>بخلاف البرامج الجاهزة التي تفرض عليك طريقتها، فريقنا
                       الهندسي جاهز لتعديل النظام ليناسب طريقة عملك الخاصة.</p>
                   </div>
@@ -1479,7 +1492,7 @@
                     <i class="fas fa-check"></i>
                   </div>
                   <div class="feature-text">
-                    <h4>دعم محلي احترافي</h4>
+                    <h3>دعم محلي احترافي</h3>
                     <p>لا داعي لفتح تذاكر وانتظار أيام. فريق دعم فني احترافي معك
                       خطوة بخطوة حتى يستقر نظامك.</p>
                   </div>
@@ -1490,7 +1503,7 @@
                     <i class="fas fa-check"></i>
                   </div>
                   <div class="feature-text">
-                    <h4>سرعة في التنفيذ</h4>
+                    <h3>سرعة في التنفيذ</h3>
                     <p>ابدأ العمل الفعلي على نظامك خلال أسبوع واحد، دون مشاريع
                       تنفيذ تمتد لشهور.</p>
                   </div>
@@ -1501,7 +1514,7 @@
                     <i class="fas fa-check"></i>
                   </div>
                   <div class="feature-text">
-                    <h4>شريك حقيقي</h4>
+                    <h3>شريك حقيقي</h3>
                     <p>رايتو يساعدك في قرارات التوسع وبيع الامتياز التجاري
                       بسهولة.</p>
                   </div>
@@ -1746,7 +1759,7 @@
                       <img src="assets/img/Eng_Abdalla.jpg" alt="User"
                         class="user-avatar">
                       <div class="user-details">
-                        <h4>م. عبدالله</h4>
+                        <h3>م. عبدالله</h3>
                         <p>مدير تشغيل شركة لتر بوينت</p>
                       </div>
                     </div>
@@ -1771,8 +1784,7 @@
                       <img src="assets/img/Eng-Abdall.jpg" alt="User"
                         class="user-avatar">
                       <div class="user-details">
-                        <h4>م. عبدالله</h4>
-                        <p>اخصائي تشغيل محطات وقود</p>
+                        <h3>م. عبدالله</h3>
                       </div>
                     </div>
                   </div>
@@ -1796,8 +1808,7 @@
                       <img src="assets/img/hader03.webp" alt="User"
                         class="user-avatar">
                       <div class="user-details">
-                        <h4>Jon Doe</h4>
-                        <p>Software Engineer</p>
+                        <h3>Jon Doe</h3>
                       </div>
                     </div>
                   </div>
@@ -1818,7 +1829,7 @@
                 <div class="map-bg-decoration"></div>
                 <div class="hero-image-container">
                   <img
-                    src="https://images.unsplash.com/photo-1573496359-7013119ac635?w=500&q=80"
+                    src="assets/img/hader03.webp"
                     alt="Customer Success" class="main-customer-img">
                 </div>
               </div>
@@ -2071,6 +2082,7 @@
         </div>
       </div>
     </section>
+    </main>
 
     <footer class="footer">
       <div class="footer-bg-overlay"></div>
@@ -2194,7 +2206,7 @@
                 <i class="fas fa-phone"></i>
               </div>
               <div class="contact-details">
-                <h4>اتصل بنا</h4>
+                <h3>اتصل بنا</h3>
                 <a href="tel:+966538499438">+966 5-0560 5643</a>
               </div>
             </div>
@@ -2204,7 +2216,7 @@
                 <i class="fas fa-envelope"></i>
               </div>
               <div class="contact-details">
-                <h4>استشرنا</h4>
+                <h3>استشرنا</h3>
                 <a href="mailto:example@gmail.com">example@gmail.com</a>
               </div>
             </div>
@@ -2214,7 +2226,7 @@
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <div class="contact-details">
-                <h4>موقعنا</h4>
+                <h3>موقعنا</h3>
                 <!-- <p>الرياض، المملكة العربية السعودية، شارع<br>44 دائري، شارع الدائري الشرقي، 8600<br>الرياض مكتب 23</p> -->
                 <!-- <a href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9" aria-label="زيارة موقعنا على الخريطة">الرياض، المملكة العربية السعودية، 4000 طريق دائري 12993، 2</a> -->
                 <a href="https://maps.app.goo.gl/YTLGN9WXiyjrZhZK9"
@@ -2342,7 +2354,7 @@
       <div class="chat-header">
         <div class="chat-avatar">
           <img
-            src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=50&h=50"
+            src="assets/img/logoar.webp"
             alt="صورة مساعد العملاء"
             loading="lazy" />
         </div>
