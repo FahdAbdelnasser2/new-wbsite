@@ -1,0 +1,1289 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="keywords"
+            content="نظام إدارة النقليات، نقل الوقود، إدارة الأسطول، حساب العمولات، فاتورة إلكترونية، تطبيق السائقين" />
+        <meta
+            name="description"
+            content="نظام رايتو لإدارة نقليات الوقود. أتمتة كاملة لطلبات التحميل، توجيه السائقين، حساب العمولات التلقائي، وفواتير دقيقة 100% متوافقة مع ZATCA." />
+        <meta name="author" content="Raitotec" />
+        <meta
+            property="og:title"
+            content="نظام إدارة النقليات - رايتو" />
+        <meta property="og:type" content="Website" />
+        <meta property="og:url" content />
+        <meta property="og:image" content="assets/img/LOGO.png" />
+        <link href="assets/img/LOGO.png" rel="shortcut icon" />
+        <title>نظام إدارة النقليات - Raito Transportation Management System</title>
+        <link
+            rel="preload"
+            href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript><link rel="stylesheet"
+                href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" /></noscript>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        <link
+            rel="preload"
+            href="assets/css/bootstrap.min.css"
+            as="style"
+            onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      " />
+        <noscript><link rel="stylesheet"
+                href="assets/css/bootstrap.min.css" /></noscript>
+        <link
+            rel="preload"
+            href="assets/css/newCss.css"
+            as="style"
+            onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      " />
+        <noscript><link rel="stylesheet"
+                href="assets/css/newCss.css" /></noscript>
+        <link
+            rel="preload"
+            href="assets/css/newCss2.css"
+            as="style"
+            onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      " />
+        <noscript><link rel="stylesheet"
+                href="assets/css/newCss2.css" /></noscript>
+        <!-- Font Awesome CDN - Async Loading -->
+        <link
+            rel="preload"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <noscript>
+            <link
+                rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+                integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer" />
+        </noscript>
+        <link
+            rel="preload"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+            as="style"
+            onload="this.onload=null;this.rel='stylesheet'" />
+        <noscript>
+            <link rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+        </noscript>
+
+    </head>
+    <body>
+        <div class="overlay"></div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a
+                        class="logo-icon"
+                        href="index.html"
+                        aria-label="الذهاب إلى الصفحة الرئيسية">
+                        <img src="assets/img/logoar.webp" alt="شعار رايتو"
+                            class="mw-100" width="120" height="50" />
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li>
+                        <a
+                            href="index.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى الصفحة الرئيسية">الرئيسية</a>
+                    </li>
+                    <li>
+                        <a
+                            href="about.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة من نحن">من نحن</a>
+                    </li>
+                    <li class="nav-item mega-parent">
+                        <a
+                            href="business-sector.html"
+                            class="nav-link text-center"
+                            aria-label="عرض قطاعات الأعمال">قطاعات اعمالنا ▾</a>
+                        <div class="mega-menu">
+                            <div class="container">
+                                <div class="mega-row">
+                                    <div
+                                        class="mega-col col-xl-3 col-lg-4 col-md-4 col-sm-6 col-6 mb-3">
+                                        <h6>قطاع النقليات</h6>
+                                        <a
+                                            href="transportationManagementSystem.html"
+                                            aria-label="الذهاب إلى صفحة إدارة النقليات">النقليات</a>
+                                        <a
+                                            href="#"
+                                            aria-label="الذهاب إلى صفحة إدارة الوقود">الوقود</a>
+                                        <a
+                                            href="#"
+                                            aria-label="الذهاب إلى صفحة تطبيق السائقين">تطبيق السائقين</a>
+                                        <a
+                                            href="#"
+                                            aria-label="الذهاب إلى صفحة إدارة الأسطول">الأسطول</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a
+                            href="prices.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة الأسعار">اسعارنا</a>
+                    </li>
+                    <li>
+                        <a
+                            href="Blog.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة المدونة">المدونة</a>
+                    </li>
+                    <li>
+                        <a
+                            href="contact.html"
+                            class="nav-link"
+                            aria-label="الذهاب إلى صفحة تواصل معنا">تواصل
+                            معنا</a>
+                    </li>
+                    <li class="lang-item">
+                        <div class="language-switcher">
+                            <button
+                                class="lang-btn btn border-0"
+                                id="arabic-btn"
+                                aria-label="التحويل إلى اللغة العربية"
+                                title="التحويل إلى اللغة العربية">
+                                <img
+                                    src="assets/Asset-system/icon/Flag-Saudi-Arabia.png"
+                                    alt="علم السعودية"
+                                    width="24"
+                                    class="me-2 align-middle" />
+                                العربية
+                            </button>
+                            <button
+                                class="lang-btn btn border-0"
+                                id="english-btn"
+                                aria-label="التحويل إلى اللغة الإنجليزية"
+                                title="التحويل إلى اللغة الإنجليزية">
+                                <img
+                                    src="assets/Asset-system/icon/united-kingdom.png"
+                                    alt="علم المملكة المتحدة"
+                                    width="24"
+                                    height="24"
+                                    class="ms-2 align-bottom" />
+                                English
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main id="main-content">
+            <!-- Section 1: Hero Section -->
+            <section id="home" class="hero-section">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="hero-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h1 class="hero-title">
+                            نظام إدارة نقليات الوقود..<br>أتمت رحلة الوقود من <span
+                                class="color-green">"أرامكو" حتى تفريغ الحمولة</span>
+                            بضغطة زر.
+                        </h1>
+                        <p class="hero-subtitle">
+                            تخلص من الدفاتر الورقية وحسابات العمولات المعقدة. رايتو يقدم لك نظاماً صُمم خصيصاً لشركات نقل الوقود؛ يوزع الطلبات على تطبيق السائقين، يحسب الفواتير والعمولات آلياً، ويربط أسطولك بالإدارة المالية لحظياً.
+                        </p>
+                        <div class="hero-buttons">
+                            <a
+                                href="contact.html"
+                                class="btn-primary"
+                                aria-label="احجز ديمو">
+                                <span>احجز ديمو وشاهد دورة نقل الوقود الآلية</span>
+                                <div class="btn-arrow">→</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-particles"></div>
+                <div class="hero-waves"></div>
+            </section>
+
+            <!-- Section 2: Video -->
+            <section id="video" class="video-section-1">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="section-label">
+                            <i class="fas fa-play-circle"></i>
+                            <span>عرض توضيحي للنظام</span>
+                        </div>
+                        <h2 class="section-title">شاهد كيف ندير طلبات أرامكو وعمولات السائقين</h2>
+                        <p class="section-subtitle">فيديو دقيقة واحدة توضح
+                            الأتمتة الكاملة</p>
+                    </div>
+                    <div class="video-container">
+                        <div class="video-placeholder" id="video-placeholder">
+                            <picture>
+                                <source srcset="assets/img/LOGO.png"
+                                    type="image/png" />
+                                <img
+                                    src="assets/img/LOGO.png"
+                                    alt="بوستر الفيديو التعريفي"
+                                    loading="eager"
+                                    width="810"
+                                    height="405"
+                                    fetchpriority="high"
+                                    decoding="sync" />
+                            </picture>
+                            <button
+                                type="button"
+                                class="play-button"
+                                id="play-button"
+                                data-bs-toggle="modal"
+                                data-bs-target="#videoModal"
+                                aria-label="تشغيل الفيديو التعريفي للنظام">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Trust Bar / Standards -->
+            <section
+                class="digtal-marketing-logo testimonials-section section-padding bg-gray">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <div class="section-label">
+                            <i class="fas fa-certificate"></i>
+                            <span>المعايير والتطابقات</span>
+                        </div>
+                        <h2 class="section-title">نظام متوافق مع آليات قطاع الطاقة ومرتبط بـ</h2>
+                    </div>
+                    <!-- Swiper Container -->
+                    <div class="swiper logosCarousel">
+                        <div class="swiper-wrapper">
+                            <!-- سيتم إضافة اللوجوهات ديناميكيًا باستخدام JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Pain Points -->
+            <section class="problems-grid-section section-padding"
+                style="background: white;">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <div class="section-label">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>تحديات إدارة النقليات</span>
+                        </div>
+                        <h2 class="section-title">هل تُدار أسطول نقلياتك بـ "الورقة والقلم"؟</h2>
+                        <p class="section-subtitle">
+                            مشاكل إدارة النقليات التي تهدر الوقت وتؤثر على الأرباح
+                        </p>
+                    </div>
+                    <div class="problems-grid">
+                        <div class="problem-card shadow-sm">
+                            <div class="card-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3>صداع العمولات</h3>
+                            <p class="card-description">
+                                هل تعاني في حساب عمولات السائقين؟ <br> كل نقلة لها تسعيرة، وكل سائق له نسبة حسب العقد. حساب هذه العمولات يدوياً في نهاية الشهر يستنزف وقت الإدارة ويخلق خلافات دائمة مع السائقين.
+                            </p>
+                        </div>
+
+                        <div class="problem-card shadow-sm">
+                            <div class="card-icon">
+                                <i class="fas fa-clipboard"></i>
+                            </div>
+                            <h3>فوضى طلبات أرامكو</h3>
+                            <p class="card-description">
+                                هل تضيع الطلبات بين الإدارة والسائق؟ <br> استلام طلبات تحميل الوقود (من أرامكو أو غيرها) وتوزيعها على السائقين ومتابعة التفريغ ورقياً يعني تأخيراً في التسليم، وأخطاء في توجيه الشاحنات.
+                            </p>
+                        </div>
+
+                        <div class="problem-card shadow-sm">
+                            <div class="card-icon">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+                            <h3>تعقيد الفواتير والتكاليف</h3>
+                            <p class="card-description">
+                                هل تخسر بسبب التسعير الخاطئ؟ <br> نقل لمحطاتك، نقل للغير، أو بيع للغير.. كل عملية لها تكلفة مختلفة وبنود عقد مختلفة. الاعتماد على الذاكرة في إصدار الفواتير يؤدي حتماً لخسائر مالية.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Cost of Inaction / Comparison Table -->
+            <section class="cta-demo-section">
+                <div class="container">
+                    <div class="cta-demo-content">
+                        <div class="cta-demo-header">
+                            <div class="section-label">
+                                <i class="fas fa-balance-scale"></i>
+                                <span>المقارنة</span>
+                            </div>
+                            <h2 class="cta-demo-title">الأنظمة العامة vs نظام رايتو التخصصي</h2>
+                        </div>
+
+                        <table
+                            class="comparison-table table table-hover text-end rounded-4 overflow-hidden raito-responsive-table">
+                            <thead>
+                                <tr>
+                                    <th style="width:22%;color:#b6c2ca;">وجه
+                                        المقارنة</th>
+                                    <th style="width:39%;color:#e76a6a;">أنظمة النقليات العامة / الإكسل</th>
+                                    <th style="width:39%;color:#6cce69;">نظام رايتو التخصصي</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="وجه المقارنة:"><strong>ملاءمة القطاع</strong></td>
+                                    <td data-label="أنظمة عامة:"
+                                        style="color:#b6c2ca;">
+                                        <span
+                                            style="font-weight: 700;">عامة:</span> لا تفهم مصطلحات (طلبات أرامكو، تفريغ محطات، بيع للغير).
+                                    </td>
+                                    <td data-label="مع رايتو:"
+                                        style="color: white;">
+                                        <span
+                                            style="font-weight: 700;">متخصصة 100%:</span> صُمم خصيصاً ليطابق دورة عمل مقاولي وشركات نقل الوقود حرفياً.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="وجه المقارنة:"><strong>توجيه السائقين</strong></td>
+                                    <td data-label="أنظمة عامة:"
+                                        style="color:#b6c2ca;">
+                                        <span
+                                            style="font-weight: 700;">عشوائي:</span> اتصال هاتفي أو رسائل واتساب تضيع معها تفاصيل الطلب.
+                                    </td>
+                                    <td data-label="مع رايتو:"
+                                        style="color: white;">
+                                        <span
+                                            style="font-weight: 700;">متطبيق ذكي:</span> السائق يستلم الطلب (الكمية، الموقع) على تطبيق جواله، والإدارة تتابع الحالة لحظياً.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td data-label="وجه المقارنة:"><strong>حساب الفواتير</strong></td>
+                                    <td data-label="أنظمة عامة:"
+                                        style="color:#b6c2ca;">
+                                        <span
+                                            style="font-weight: 700;">يدوي وبطيء:</span> مراجعة العقود الورقية لكل عميل قبل إصدار الفاتورة.
+                                    </td>
+                                    <td data-label="مع رايتو:"
+                                        style="color: white;">
+                                        <span
+                                            style="font-weight: 700;">آلي وذكي:</span> النظام يقرأ بنود عقد العميل ويصدر الفاتورة بقيمتها الدقيقة فور تأكيد التفريغ.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Core Features -->
+            <section class="integration-section section-padding">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <div class="section-label">
+                            <i class="fas fa-star"></i>
+                            <span>الميزات الحصرية</span>
+                        </div>
+                        <h2 class="section-title">دورة مستندية تغطي شاحنتك من الصيانة للتفريغ</h2>
+                        <p class="section-subtitle">حلول متطورة لإدارة نقل الوقود بكفاءة عالية</p>
+                    </div>
+                    <div class="integration-grid why-raito-grid">
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <i class="fas fa-sync"></i>
+                            </div>
+                            <h3>دورة نقل متكاملة</h3>
+                            <p>
+                                إدارة كاملة للعملية تبدأ من تسجيل "طلب أرامكو"، توزيع الشحنات، وحتى تأكيد استلام العميل للوقود بتوثيق إلكتروني كامل.
+                            </p>
+                        </div>
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3>حاسبة العمولات الآلية</h3>
+                            <p>
+                                انسَ الإكسل. النظام يحسب عمولة كل سائق أوتوماتيكياً بناءً على سياسة السوق (بالمشوار، بالكمية، أو المسافة) وتُرحل لحسابه فوراً.
+                            </p>
+                        </div>
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3>تطبيق السائقين الذكي</h3>
+                            <p>
+                                حلقة الوصل المفقودة. تطبيق جوال للسائق يستقبل عليه أوامر التحميل والتفريغ، ويرفع من خلاله إثباتات التسليم لتراها الإدارة في نفس اللحظة.
+                            </p>
+                        </div>
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h3>تعدد نماذج العمل</h3>
+                            <p>
+                                سواء كنت تنقل لمحطاتك الخاصة، أو تنقل للغير كـ (مستأجر)، أو تشتري وتبيع للغير، النظام يفصل تكاليف وأرباح كل نموذج بدقة.
+                            </p>
+                        </div>
+                        <div class="integration-item">
+                            <div class="integration-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h3>التسعير المبني على العقود</h3>
+                            <p>
+                                أدخل عقود عملائك مرة واحدة. عند نقل أي شحنة، سيقوم النظام باحتساب الفاتورة آلياً بناءً على التسعيرة المتفق عليها مسبقاً في العقد.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Ecosystem & Integration -->
+            <section id="integration" class="integration-section bg-gray">
+                <div class="container">
+                    <div class="integration-content">
+                        <div class="integration-text">
+                            <div class="section-label">
+                                <i class="fas fa-link"></i>
+                                <span>المنظومة المتكاملة</span>
+                            </div>
+                            <h2 class="section-title">إدارة مركزية تربط الشارع بالمكتب</h2>
+                            <p class="section-description">
+                                تكامل شامل بين السائقين والمكتب الإداري والمالية
+                            </p>
+                            <div class="integration-benefits">
+                                <div class="benefit-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>تطبيق السائق: متاح للأجهزة الذكية لمتابعة الرحلات واستقبال الطلبات والتفاعل معها فوراً.</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-sync"></i>
+                                    <span>الربط المحاسبي (ERP): كل فاتورة تصدر، وكل عمولة تُحسب، تُسمّع مباشرة في نظام الحسابات كقيود آلية.</span>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-certificate"></i>
+                                    <span>الفوترة الإلكترونية: متوافق تماماً مع هيئة الزكاة والضريبة والجمارك (ZATCA) لترحيل الفواتير.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="integration-diagram">
+                            <div class="central-system">
+                                <div class="system-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <span
+                                    class="text-center">نظام<br />النقليات</span>
+                            </div>
+                            <div class="connected-systems">
+                                <div class="system-node" style="--angle: 60deg">
+                                    <div class="node-icon">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </div>
+                                    <span>تطبيق السائق</span>
+                                </div>
+                                <div class="system-node"
+                                    style="--angle: 120deg">
+                                    <div class="node-icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <span>الحسابات العامة</span>
+                                </div>
+                                <div class="system-node"
+                                    style="--angle: 180deg">
+                                    <div class="node-icon">
+                                        <i class="fas fa-receipt"></i>
+                                    </div>
+                                    <span>الفوترة الإلكترونية</span>
+                                </div>
+                            </div>
+                            <div class="connection-lines"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="integration-particles"></div>
+            </section>
+
+            <!-- Section 7: Safe Investment Guarantee -->
+            <section class="safe-investment-section section-padding">
+                <div class="container">
+                    <div class="section-header text-center mb-5">
+                        <div class="section-label">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>الاستثمار الآمن</span>
+                        </div>
+                        <h2 class="section-title">لماذا يخشى البعض الأنظمة وكيف كسرنا هذا الخوف؟</h2>
+                        <p class="section-subtitle">الرد على: "أخاف أن يعطلني النظام أو يحسب الفواتير خطأ!"</p>
+                    </div>
+
+                    <div class="investment-cards-grid">
+                        <!-- Card 1 -->
+                        <div class="investment-card">
+                            <div class="card-inner">
+                                <!-- Problem Side -->
+                                <div class="problem-side">
+                                    <div
+                                        class="card-icon-wrapper problem-icon-wrapper">
+                                        <div class="icon-bg problem-bg"></div>
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <h3 class="card-title">صُمم ليسرعك، لا ليعطلك</h3>
+                                    <p class="problem-text">
+                                        رايتو ليس نظاماً معقداً مليئاً بخانات لا تحتاجها. لأنه مخصص لنقل الوقود، شاشاته تحاكي طريقة عملك اليومية وتختصر ساعات من العمل الورقي.
+                                    </p>
+                                </div>
+
+                                <!-- Divider -->
+                                <div class="card-divider"></div>
+
+                                <!-- Solution Side -->
+                                <div class="solution-side">
+                                    <div class="solution-badge">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>الحل في رايتو</span>
+                                    </div>
+                                    <p class="solution-text">
+                                        تصميم مخصص للنقليات + تدريب مجاني + دعم فني فوري.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-shadow"></div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="investment-card">
+                            <div class="card-inner">
+                                <!-- Problem Side -->
+                                <div class="problem-side">
+                                    <div
+                                        class="card-icon-wrapper problem-icon-wrapper">
+                                        <div class="icon-bg problem-bg"></div>
+                                        <i class="fas fa-calculator"></i>
+                                    </div>
+                                    <h3 class="card-title">فواتير لا تخطئ</h3>
+                                    <p class="problem-text">
+                                        خوفك من الحساب الخاطئ ينتهي هنا. النظام يعتمد على "عقود محددة مسبقاً"، الآلة لا تنسى الخصومات ولا تخطئ في التسعير كما يفعل البشر.
+                                    </p>
+                                </div>
+
+                                <!-- Divider -->
+                                <div class="card-divider"></div>
+
+                                <!-- Solution Side -->
+                                <div class="solution-side">
+                                    <div class="solution-badge">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>الحل في رايتو</span>
+                                    </div>
+                                    <p class="solution-text">
+                                        فواتير تلقائية + عقود محددة مسبقاً + فحص مراجعة دقيق.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-shadow"></div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="investment-card">
+                            <div class="card-inner">
+                                <!-- Problem Side -->
+                                <div class="problem-side">
+                                    <div
+                                        class="card-icon-wrapper problem-icon-wrapper">
+                                        <div class="icon-bg problem-bg"></div>
+                                        <i class="fas fa-headset"></i>
+                                    </div>
+                                    <h3 class="card-title">تخصيص مجاني ودعم 24/7</h3>
+                                    <p class="problem-text">
+                                        نعلم أن قطاع النقليات لا ينام، لذا فريق الدعم الفني متواجد على مدار الساعة. كما نقدم لك تخصيصاً مجانياً للتقارير لتناسب سياسة شركتك حرفياً.
+                                    </p>
+                                </div>
+
+                                <!-- Divider -->
+                                <div class="card-divider"></div>
+
+                                <!-- Solution Side -->
+                                <div class="solution-side">
+                                    <div class="solution-badge">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>الحل في رايتو</span>
+                                    </div>
+                                    <p class="solution-text">
+                                        دعم فني 24/7 + تخصيص تقارير مجاني + تحديثات مستمرة.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-shadow"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 9: FAQ -->
+            <section class="faq-section-new section-padding">
+                <div class="container">
+                    <div class="faq-wrapper">
+                        <div class="faq-left">
+                            <div class="faq-container" id="faqAccordion">
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq1"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i
+                                                    class="fas fa-cogs"></i>
+                                            </div>
+                                            <span>هل النظام مخصص للنقليات العامة أم نقل الوقود تحديداً؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq1" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>النظام تم تصميمه وتطويره خصيصاً ليطابق آلية ودورة عمل "نقل الوقود" (من طلبات أرامكو إلى تفريغ المحطات)، وهو يدعم كافة حالات النقل المتبعة في السوق.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq2"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </div>
+                                            <span>كيف يعرف السائق وجهته وتفاصيل الحمولة؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq2" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>يوفر النظام تطبيق جوال (Mobile App) خاص بالسائقين. تقوم الإدارة بتعيين الطلب، ويظهر فوراً في تطبيق السائق مع كافة التفاصيل والوجهة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq3"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-calculator"></i>
+                                            </div>
+                                            <span>هل يحسب النظام عمولات السائقين بشكل آلي؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq3" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نعم، وهذه إحدى أهم ميزاتنا. يتم ضبط النظام مسبقاً بسياسة العمولات المتبعة في شركتك، وسيقوم بحساب عمولة السائق فور إغلاق الرحلة تلقائياً.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq4"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-file-contract"></i>
+                                            </div>
+                                            <span>لدي عقود بأسعار مختلفة لكل عميل، هل سيصعب ذلك إصدار الفواتير؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq4" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>بالعكس، النظام يسهل ذلك تماماً. تقوم بإدخال بنود وأسعار العقود لكل عميل مرة واحدة، وعند إتمام النقل، يصدر النظام الفاتورة آلياً بالتسعيرة الصحيحة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq5"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-wifi"></i>
+                                            </div>
+                                            <span>هل يعمل النظام إذا انقطع الإنترنت (Offline)؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq5" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>النظام السحابي (Back Office) وتطبيق السائق يتطلبان اتصالاً بالإنترنت لضمان نقل الحالة اللحظية للرحلات وتحديث الفواتير والكميات بين الإدارة والميدان فوراً.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq6"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-tools"></i>
+                                            </div>
+                                            <span>هل يدعم النظام إدارة صيانة الشاحنات؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq6" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نعم، الدورة المستندية في رايتو شاملة. تتيح لك إدارة أسطول الشاحنات، متابعة مواعيد صيانتها، وحساب تكاليف تشغيل كل شاحنة بدقة.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq7"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-file-alt"></i>
+                                            </div>
+                                            <span>ماذا لو احتجت تقارير غير موجودة في النظام؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq7" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نحن نقدم خدمة "التخصيص المجاني". إذا كنت بحاجة لتقرير مخصص يناسب طريقة إدارتك، سيقوم فريقنا ببرمجته وإضافته لك دون رسوم إضافية.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq8"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-sync"></i>
+                                            </div>
+                                            <span>كيف يتم الربط مع الحسابات العامة؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq8" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نظام النقليات متكامل مع نظام رايتو المالي (ERP). كافة الفواتير، عمولات السائقين، وتكاليف التشغيل تُرحل آلياً إلى شجرة الحسابات.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq9"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-certificate"></i>
+                                            </div>
+                                            <span>هل النظام معتمد للفاتورة الإلكترونية؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq9" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>بالتأكيد، النظام متوافق كلياً مع اشتراطات هيئة الزكاة والضريبة والجمارك (ZATCA) لترحيل الفواتير.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="faq-item">
+                                    <button
+                                        class="faq-header"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#faq10"
+                                        aria-expanded="false">
+                                        <div class="faq-header-wrapper">
+                                            <div class="faq-icon">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                            <span>هل يتوفر دعم فني في أوقات متأخرة؟</span>
+                                        </div>
+                                        <i
+                                            class="fas fa-chevron-down chevron"></i>
+                                    </button>
+                                    <div id="faq10" class="collapse"
+                                        data-bs-parent="#faqAccordion">
+                                        <div class="faq-body">
+                                            <p>نعم، نحن ندرك أن قطاع النقل يعمل بلا توقف، لذا نوفر دعماً فنياً سريعاً ومستمراً على مدار الساعة لحل أي مشكلة تقنية قد تواجهكم.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-right">
+                            <div class="faq-contact-box">
+                                <div class="section-label">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>هل لديك استفسار؟ نحن هنا
+                                        للمساعدة!</span>
+                                </div>
+                                <h2 class="faq-title">الأسئلة الشائعة</h2>
+                                <div class="content-description">
+                                    إجابات شاملة على أكثر الأسئلة التي يطرحها
+                                    مديرو النقليات والعمليات
+                                </div>
+                                <br>
+                                <p class="faq-description">
+                                    نظام رايتو لإدارة النقليات هو الحل الشامل
+                                    لإدارة نقل الوقود في شركتك. يوفر تطبيق جوال
+                                    للسائقين، توزيع ذكي للطلبات، حساب عمولات
+                                    تلقائي، وفواتير دقيقة 100%، مع ربط شامل مع
+                                    نظامك المحاسبي. يضمن لك الامتثال لمتطلبات
+                                    ZATCA للفوترة الإلكترونية، ويمنحك تقارير حية
+                                    وتحكم مركزي في جميع عمليات النقل، مع دعم فني
+                                    متخصص متواجد 24/7.
+                                </p>
+                                <h3 class="contact-title">هل لديك سؤال آخر؟</h3>
+                                <p class="contact-description">
+                                    فريق رايتو المتخصص في إدارة النقليات جاهز
+                                    للإجابة على جميع استفساراتك وتقديم الدعم
+                                    الكامل
+                                </p>
+                                <form id="faqQuestionForm"
+                                    onsubmit="handleFaqSubmit(event)">
+                                    <div class="contact-form">
+                                        <div class="form-group">
+                                            <textarea id="faqQuestion"
+                                                placeholder="اكتب سؤالك هنا..."
+                                                aria-label="السؤال" rows="5"
+                                                required></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit"
+                                        class="submit-contact-btn"
+                                        aria-label="إرسال">
+                                        إرسال
+                                    </button>
+                                </form>
+                                <p class="support-text">
+                                    <i class="fas fa-check-circle"></i>
+                                    نرد على جميع الاستفسارات خلال 24 ساعة
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 9: Final CTA -->
+                <section class="cta-demo-section">
+                    <div class="container">
+                        <div class="cta-demo-content">
+                            <h2 class="cta-demo-title">قد أسطولك بذكاء، <span
+                                    class="highlight-white">واترك الحسابات المعقدة لنا</span></h2>
+                            <p class="cta-demo-subtitle">
+                                انضم لشركات النقل التي أتمتت أعمالها وضاعفت أرباحها مع رايتو
+                            </p>
+
+                            <div class="cta-demo-buttons">
+                                <a
+                                    href="contact.html"
+                                    class="cta-demo-primary text-decoration-none"
+                                    aria-label="احجز جلسة استشارية مجانية">
+                                    <span>احجز جلسة استشارية مجانية</span>
+                                    <div class="btn-arrow">→</div>
+                                </a>
+                                <a
+                                    href="https://wa.me/966538499438"
+                                    class="btn-whatsapp-cta"
+                                    rel="noopener noreferrer"
+                                    aria-label="تواصل واتساب">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>تواصل واتساب</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-bg-overlay"></div>
+                <div class="container">
+                    <div class="footer-main-content">
+                        <!-- Right Column: Logo and Social -->
+                        <div class="footer-column footer-brand-col">
+                            <div class="footer-logos-wrapper">
+                                <div class="footer-main-logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/logoar.webp" alt="شعار رايتو" />
+                                    </a>
+                                </div>
+                                <p class="footer-description">تقنية معلومات
+                                    رايتو تحقق حلول
+                                    للمستقبل</p>
+                            </div>
+                            <div class="footer-social-media">
+                                <a href="https://www.facebook.com/Raitotec"
+                                    target="_blank"
+                                    aria-label="زيارة صفحة فيسبوك"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a href="https://twitter.com/raitotec"
+                                    target="_blank"
+                                    aria-label="زيارة صفحة تويتر"><i
+                                        class="fa-brands fa-x-twitter"></i></a>
+                                <a href="https://www.instagram.com/raitotec1/"
+                                    target="_blank"
+                                    aria-label="زيارة صفحة إنستغرام"><i
+                                        class="fab fa-instagram"></i></a>
+                                <a
+                                    href="https://www.linkedin.com/in/raito-erp-software-830920234/"
+                                    target="_blank"
+                                    aria-label="زيارة صفحة لينكدإن"><i
+                                        class="fab fa-linkedin"></i></a>
+                                <a href="https://www.youtube.com/@Raitotec"
+                                    target="_blank"
+                                    aria-label="زيارة قناة يوتيوب"><i
+                                        class="fab fa-youtube"></i></a>
+                                <a
+                                    href="https://wa.me/+966539387625?text=I'm%20interested%20in%20your%20website"
+                                    target="_blank"
+                                    aria-label="التواصل عبر واتساب"><i
+                                        class="fab fa-whatsapp"></i></a>
+                            </div>
+                            <div class="footer-logos">
+                                <a class="Industry-icon"
+                                    href="https://zatca.gov.sa/ar/Pages/default.aspx"
+                                    aria-label="زيارة موقع هيئة الزكاة والضريبة والجمارك">
+                                    <img src="assets/img/zakat.png"
+                                        alt="شعار هيئة الزكاة والضريبة والجمارك"
+                                        loading="lazy" />
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Center Column: Quick Links -->
+                        <div class="footer-column footer-links-col">
+                            <h3 class="footer-column-title">روابط سريعة</h3>
+                            <ul class="footer-links-list">
+                                <li><a href="index.html">الصفحة
+                                        الرئيسية</a></li>
+                                <li><a href="about.html">من نحن</a></li>
+                                <li><a href="prices.html">اسعارنا</a></li>
+                                <li><a href="blog.html">المدونة</a></li>
+                                <li><a href="contact.html">تواصل معنا</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-column footer-brand-col">
+                            <h3 class="footer-column-title">الخدمات</h3>
+                            <ul class="footer-links-list">
+                                <li><a href="transportationManagementSystem.html">إدارة النقليات</a></li>
+                                <li><a href="assetsManagementSystem.html">إدارة الأصول</a></li>
+                                <li><a
+                                        href="accountingManagementSystem.html">إدارة
+                                        الحسابات</a></li>
+                                <li><a href="#">إدارة الأسطول</a></li>
+                                <li><a href="#">الفواتير الإلكترونية</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Left Column: Contact Info -->
+                        <div class="footer-column footer-contact-col">
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>اتصل بنا</h4>
+                                    <a href="tel:+966538499438">+966 53-8499438</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>استشرنا</h4>
+                                    <a href="mailto:info@raito.sa">info@raito.sa</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-info-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>موقعنا</h4>
+                                    <a href="https://maps.google.com" target="_blank">
+                                        الرياض، المملكة العربية السعودية
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Copyright -->
+                    <div class="footer-bottom">
+                        <p>© 2025 جميع الحقوق محفوظة لدى شركة رايتو
+                            للبرمجيات.</p>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- Video Popup Modal -->
+            <div
+                class="modal fade"
+                id="videoModal"
+                tabindex="-1"
+                aria-labelledby="videoModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content video-modal-content">
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="إغلاق">
+                            <i class="fas fa-xmark"></i>
+                        </button>
+                        <div class="modal-body p-0">
+                            <div class="ratio ratio-16x9">
+                                <iframe
+                                    id="systemDemoVideo"
+                                    src="https://www.youtube.com/embed/1Q8fG0TtVAY"
+                                    title="شاهد نظام إدارة النقليات يعمل"
+                                    allow="autoplay; encrypted-media"
+                                    allowfullscreen
+                                    style="border-radius: 16px"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Widget -->
+            <div class="chat-widget">
+                <div class="chat-header">
+                    <div class="chat-avatar">
+                        <img
+                            src="assets/img/logoar.webp"
+                            alt="مساعد العملاء"
+                            loading="lazy" />
+                    </div>
+                    <div class="chat-info">
+                        <h3>مساعد العملاء</h3>
+                        <p>متاح الآن للمساعدة</p>
+                    </div>
+                    <button class="chat-close"
+                        aria-label="إغلاق نافذة المحادثة">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="chat-body">
+                    <div class="chat-message bot-message">
+                        <p>مرحباً! كيف يمكنني مساعدتك اليوم؟</p>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input
+                        type="text"
+                        placeholder="اكتب رسالتك هنا..."
+                        id="AI-Massage"
+                        name="AI-Massage"
+                        aria-label="أدخل رسالة المحادثة" />
+                    <button class="send-btn" aria-label="إرسال الرسالة">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chat-toggle">
+                <div class="chat-bubble">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="chat-notification">1</div>
+            </div>
+
+            <button class="back-to-top" aria-label="العودة إلى الأعلى"
+                id="backToTop">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+            <!-- Swiper JS -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+                defer></script>
+            <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+            <script src="assets/js/swiper.js" defer></script>
+            <script src="assets/js/chang-langth.js" defer></script>
+            <script src="assets/js/main.js" defer></script>
+            <script src="assets/js/chat.js" defer></script>
+            <script src="assets/js/animations.js" defer></script>
+            <script>
+      // FAQ Functionality
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', function() {
+          const faqItem = this.parentElement;
+          const isOpen = faqItem.classList.contains('active');
+          
+          document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+          });
+          
+          if (!isOpen) {
+            faqItem.classList.add('active');
+          }
+        });
+      });
+    </script>
+            <script>
+        // Initialize Swiper after all scripts are loaded
+        window.addEventListener('load', function() {
+            // بيانات اللوجوهات
+            const companyLogos = [
+                {
+                    name: "zatca",
+                    png: "assets/img/zakat.png",
+                    webp: "assets/img/zakat.png",
+                    width: 90,
+                    height: 24
+                },
+                {
+                    name: "ifrs",
+                    png: "assets/img/ifrs.png",
+                    webp: "assets/img/ifrs.png",
+                    width: 90,
+                    height: 24
+                }
+            ];
+
+            // إنشاء عناصر اللوجوهات في Swiper
+            const swiperWrapper = document.querySelector('.swiper-wrapper');
+            
+            // نكرر اللوجوهات عدة مرات لضمان استمرارية الحركة
+            for (let i = 0; i < 3; i++) {
+                companyLogos.forEach(logo => {
+                    const slide = document.createElement('div');
+                    slide.className = 'swiper-slide';
+                    
+                    slide.innerHTML = `
+                        <div class="company-logo">
+                            <picture>
+                                <source srcset="${logo.webp}" type="image/webp">
+                                <img src="${logo.png}" alt="${logo.name}" class="logo-img-cursolr"  loading="lazy" decoding="async">
+                            </picture>
+                        </div>
+                    `;
+                    
+                    swiperWrapper.appendChild(slide);
+                });
+            }
+
+            // تهيئة Swiper - only after it's loaded
+            if (typeof Swiper !== 'undefined') {
+                const swiper = new Swiper('.logosCarousel', {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    loop: true,
+                    autoplay: {
+                        delay: 0,
+                        disableOnInteraction: false,
+                    },
+                    speed: 5000,
+                    grabCursor: true,
+                    rtl: true,
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 1,
+                        },
+                        768: {
+                            slidesPerView: 1,
+                        },
+                        1024: {
+                            slidesPerView: 1,
+                        },
+                        1200: {
+                            slidesPerView: 1,
+                        },
+                    },
+                });
+
+                // إضافة تأثير عند التمرير بالماوس
+                swiper.el.addEventListener('mouseenter', () => {
+                    swiper.autoplay.stop();
+                });
+
+                swiper.el.addEventListener('mouseleave', () => {
+                    swiper.autoplay.start();
+                });
+            }
+        });
+    </script>
+        </body>
+    </html>
